@@ -1,0 +1,57 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZipArchive", "ZipArchive.vcproj", "{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Debug DLL = Debug DLL
+		Debug MFC Static = Debug MFC Static
+		Debug STL = Debug STL
+		Debug STL Unicode = Debug STL Unicode
+		Debug Unicode = Debug Unicode
+		Release = Release
+		Release DLL = Release DLL
+		Release MFC Static = Release MFC Static
+		Release STL = Release STL
+		Release STL Unicode = Release STL Unicode
+		Release Unicode = Release Unicode
+		Release Unicode DLL = Release Unicode DLL
+		Release Unicode MFC Static = Release Unicode MFC Static
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Debug.ActiveCfg = Debug|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Debug.Build.0 = Debug|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Debug DLL.ActiveCfg = Debug DLL|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Debug DLL.Build.0 = Debug DLL|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Debug MFC Static.ActiveCfg = Debug MFC Static|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Debug MFC Static.Build.0 = Debug MFC Static|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Debug STL.ActiveCfg = Debug STL|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Debug STL.Build.0 = Debug STL|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Debug STL Unicode.ActiveCfg = Debug STL Unicode|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Debug STL Unicode.Build.0 = Debug STL Unicode|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Debug Unicode.ActiveCfg = Debug Unicode|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Debug Unicode.Build.0 = Debug Unicode|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release.ActiveCfg = Release|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release.Build.0 = Release|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release DLL.ActiveCfg = Release DLL|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release DLL.Build.0 = Release DLL|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release MFC Static.ActiveCfg = Release MFC Static|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release MFC Static.Build.0 = Release MFC Static|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release STL.ActiveCfg = Release STL|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release STL.Build.0 = Release STL|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release STL Unicode.ActiveCfg = Release STL Unicode|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release STL Unicode.Build.0 = Release STL Unicode|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release Unicode.ActiveCfg = Release Unicode|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release Unicode.Build.0 = Release Unicode|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release Unicode DLL.ActiveCfg = Release Unicode DLL|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release Unicode DLL.Build.0 = Release Unicode DLL|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release Unicode MFC Static.ActiveCfg = Release Unicode MFC Static|Win32
+		{A51CF340-B0EA-4C9B-A2FA-4D7487692EF5}.Release Unicode MFC Static.Build.0 = Release Unicode MFC Static|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

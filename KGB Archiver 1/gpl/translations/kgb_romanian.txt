@@ -1,0 +1,128 @@
+IDD_KGB_ARCH_MFC
+Arhiva
+Format arhiva
+Nivel compresie
+Minim;Foarte slab;Slab;Normal;Mediu;Peste mediu;Bun;Foarte bun;Extrem;Maxim;
+Anvergura arhiva
+Parola
+Modul SFX 
+Creare modul SFX (doar Windows)
+Altele
+Pastreaza calea
+Fisierele pentru compresie
+Adauga fisier
+Adauga director
+Sterge
+Revocare
+Urmatorul >
+
+IDD_COMPRESS
+Compresie
+Fisier curent
+Progres fisier curent
+Progres total
+Statistici
+Marime inainte de compresie:
+Marime dupa compresie:
+Rata:
+Timp:
+Timp ramas:
+Prioritate:
+Inalta;Peste normala;Normala;Sub normala;Minima;
+Inchide computer dupa terminare
+Revocare
+
+STRING TABLE
+Desre KGB Archiver
+Nume fisier
+Marime
+Procesul nu poate accesa fisierul
+Ar trebui sa scrieti numele arhivei si/sau sa alegeti fisierele pentru compresie!
+Parola ar trebui sa aiba intre 4 si 32 de caractere!
+Compresia a fost revocata de utilizator!
+Compresie incheiata cu succes!\nMarime inainte de compresie:\t%s\nMarime dupa compresie:\t%s\nRata:\t\t\t%.1f%%\nTimp scurs:\t\t
+Va rugam sa alegeti directoru pentru compresie
+Nu se poate schimba prioritatea!
+Compresie
+preparare...
+preluare marime fisiere...
+sortare fisiere...
+adaugare modul SFX...
+codare...
+Arhive KGB (*.kgb)|*.kgb|Arhive ZIP (*.zip)|*.zip|Toate fisierele (*.*)|*.*|
+Toate fisierele (*.*)|*.*|
+In acest camp sunt acceptate doar cifre!
+Compresia va poate lua mai mult de 75% din memoria fizica, sunteti sigur ca doriti sa continuati?
+Utilizare memorie:\nCompresie KGB:\nMinim\t\t\t9MB\nFoarte slaba\t\t11MB\nSlaba\t\t\t15MB\nNormala\t\t\t27MB\nMedie\t\t\t66MB\nPeste medie\t\t154MB\nBuna\t\t\t202MB\nFoarte buna\t\t402MB\nExtrema\t\t\t800MB\nMaxima\t\t\t1600MB\n\nCompresie ZIP:\nToate modulele ocupa cam  10MB
+
+
+IDD_KGB_ARCH_DECOMPRESS
+Nume arhiva
+Extrage catre: (ignorata daca arhiva are selectata calea)
+Alegeti fisierele pentru dezarhivare
+Revocare
+Urmatorul >
+
+IDD_DECOMPRESS
+Extragere
+Fisier curent
+Progres fisier curent
+Progres total
+Statistici
+Marime inainte de compresie:
+Marime dupa compresie:
+Rata:
+Timp:
+Timp ramas:
+Prioritate:
+Inalta;Peste normala;Normala;Sub normala;Minima;
+Inchide computer dupa terminare
+Revocare
+
+IDD_DECODING
+Decriptare...
+Va rugam asteptati...
+
+IDD_PASSWD
+Parola
+Va rugam inserati parola
+Ok
+Revocare
+
+STRING TABLE
+Despre KGB Archiver
+Nume fisier
+Marime
+Tastati numele arhivei si/sau directorul destinatie!
+Fisier arhiva nu a fost gasit!
+Nu se poate extrage in directorul ce a fost tocmai creat!
+Alegeti fisierele pentru extas!
+Extragerea a fost anulata de utilizator!
+Extragere incheiata cu succes!\nMarime inainte de compresie:\t%s\nMarime dupa compresie:\t%s\nRata:\t\t\t%.1f%%\nTimp scurs:\t\t
+Va rugam alegeti directorul unde doriti extrage fisierele!
+Parola incorecta!
+Fisierul selectat nu e o arhiva KGB obisnuita!
+Nu se poate schimba prioritatea!
+Dezarhivare
+preparare...
+creare directoare...
+ocolire...
+Toate arhivele suportate|*.kgb; *.kge; *.exe; *.zip;|Arhive KGB (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|Arhive ZIP (*.zip)|*.zip|
+Compresie: %s Originala: %s Rata: %.1f%%
+
+IDD_ARCH_CONF_DIALOG
+Asociaza arhivele KGB cu KGB Archiver
+Asociaza arhivele ZIP cu KGB Archiver
+Creare meniu contextual in explorer
+Verifica dupa actualizari la pornire
+Verifica acum
+Despre
+Revocare
+OK
+
+STRING TABLE
+Despre KGB Archiver
+Arhiveaza cu KGB
+Nu ma pot conecta la serverul KGB!
+O noua versiune de KGB Archiver este valabila! Doriti sa o download-ati?
+NU au fost gasite versiuni noi.

@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>ZipArchive:
+        Progress Notifications: Using Callback Objects
+    </title>
+    <link href="articles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    body
+    {
+    	font-family: verdana, arial, helvetica, sans-serif;
+    }
+</style>
+</head>
+<body>
+    <div class="kbabody">
+        <div class="kbatitle">
+            Progress Notifications: Using Callback Objects
+        </div>
+        <div class="kbaappliesto">
+            Applies To: <strong>All</strong>
+        </div>
+        <div class="kbaindex">
+            <ul class="kbaindex">
+
+<li><a class="linkindex" href="#intro">Introduction</a></li>
+<li><a class="linkindex" href="#callback">Creating Callback Objects</a></li>
+<li><a class="linkindex" href="#api">See Also API Calls</a></li></ul>
+
+        </div>
+        <div class="kbacontents">
+            
+        <h2 id="intro" name="intro" class="kb">
+            Introduction</h2>
+        The ZipArchive Library uses callback objects to notify about the progress of an
+        archive processing.
+        <ul>
+            <li>You can set separate callback objects for different progress notifications.</li>
+            <li>You can set one callback object for multiple progress notifications. Examine <a class="linkapi" href="./structCZipActionCallback.html#bc0a90bcffefb9629ffa9c8421173338">CZipActionCallback::m_iType</a> to determine the current action
+                type.</li>
+            <li>To read about callbacks in a spanning archive, see <a class="linkkb" href="0610051553.html#span">Segmented Archives: Splitting and Spanning</a>.</li>
+        </ul>
+        <h2 id="callback" name="callback" class="kb">
+            Creating Callback Objects</h2>
+        To be notified about the progress of various actions (see <a class="linkapi" href="./classCZipArchive.html#07cdf46e463d58a346e8446f7e7b8730">CZipArchive::CallbackType</a>
+        for possibilities), you need to:
+        <ul class="dec">
+            <li>Define your own callback class derived from <a class="linkapi" href="./structCZipActionCallback.html">CZipActionCallback</a>.</li>
+            <li>Override at least the <a class="linkapi" href="./structCZipCallback.html#d9955f0dbd1b60f7b8f4ceb3da491c57">CZipCallback::Callback()</a> method.</li>
+            <li>Create an object of this class, and set it as a callback object with the <a class="linkapi" href="./classCZipArchive.html#332c3c24cc1542b8d4c12ded84966704">CZipArchive::SetCallback()</a> method. Make sure that the object
+                is not destroyed throughout the whole processing.</li>
+            <li>Start processing an archive, the notifications about the progress will be coming
+                through the overridden <a class="linkapi" href="./structCZipCallback.html#d9955f0dbd1b60f7b8f4ceb3da491c57">CZipCallback::Callback()</a> method.
+                <ul>
+                    <li>The value of the <code>uProgress</code> parameter of the callback method is the
+                        amount of data just processed.
+                        <ul>
+                            <li>When <a class="linkapi" href="./structCZipActionCallback.html#bc0a90bcffefb9629ffa9c8421173338">CZipActionCallback::m_iType</a> is <a class="linkapi" href="./classCZipArchive.html#07cdf46e463d58a346e8446f7e7b87302f8f6bb9fd9e9202684086c48967fef8">CZipArchive::cbDeleteCnt</a> or <a class="linkapi" href="./classCZipArchive.html#07cdf46e463d58a346e8446f7e7b873052a3798385e249265963a4efc15e270d">CZipArchive::cbSave</a>,
+                                the parameter informs about the number of files processed. The step (the frequency
+                                of calling the callback) can be controlled with the <a class="linkapi" href="./structCZipActionCallback.html#a6401bf86cbffbaa4aeea37e857b46e9">CZipActionCallback::m_iStep</a>
+                                member.</li>
+                            <li>When <a class="linkapi" href="./structCZipActionCallback.html#bc0a90bcffefb9629ffa9c8421173338">CZipActionCallback::m_iType</a> is set to other values
+                                than above, the parameter informs about the number of bytes processed. The callback
+                                is called each time after processing the number of bytes as specified by the <code>nBufSize</code>
+                                parameter in the <a class="linkapi" href="./classCZipArchive.html">CZipArchive</a> methods that use the callback
+                                feature. </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Examine members of the <a class="linkapi" href="./structCZipActionCallback.html">CZipActionCallback</a> object to
+                read the progress state.</li>
+            <li>To abort the processing, return <code>false</code> from the overridden callback
+                method.</li>
+        </ul>
+        You can also override other methods of the <a class="linkapi" href="./structCZipActionCallback.html">CZipActionCallback</a>
+        class to be notified about starting and ending stages of the process. The methods
+        are called in the following order:
+        <ul class="dec">
+            <li><a class="linkapi" href="./structCZipActionCallback.html#8fd783e7f5a87dd1bf874749d6899195">CZipActionCallback::Init()</a> - when the operation begins.</li>
+            <li><a class="linkapi" href="./structCZipActionCallback.html#0ced289838ea3cc2d61376d7786de95d">CZipActionCallback::SetTotal()</a> - when the amount of
+                data to process has been calculated.</li>
+            <li><a class="linkapi" href="./structCZipCallback.html#d9955f0dbd1b60f7b8f4ceb3da491c57">CZipCallback::Callback()</a> - the callback called after
+                processing a chunk of data.</li>
+            <li><a class="linkapi" href="./structCZipActionCallback.html#a644e3e72e4481fcfe03a8e97d0fcf2e">CZipActionCallback::CallbackEnd()</a> - when the operation
+                finishes.</li>
+        </ul>
+        <div class="codetitle">Sample Code</div><pre class="fragment"><span class="keyword">class </span>CProgressCallback : <span class="keyword">public</span> CZipActionCallback
+{    
+    <span class="keywordtype">void</span> Init(LPCTSTR lpszFileInZip, LPCTSTR lpszExternalFile) 
+    {
+        CZipActionCallback::Init(lpszFileInZip, lpszExternalFile);
+        <span class="comment">// we can display initial information here</span>
+        LPCTSTR lpszAction;
+        <span class="keywordflow">switch</span> (m_iType)
+        {
+            <span class="keywordflow">case</span> CZipArchive::cbAdd:
+                lpszAction = _T(<span class="stringliteral">"Adding"</span>);
+                <span class="keywordflow">break</span>;
+            <span class="keywordflow">case</span> CZipArchive::cbExtract:
+                lpszAction = _T(<span class="stringliteral">"Extracting"</span>);
+                <span class="keywordflow">break</span>;
+            <span class="keywordflow">case</span> CZipArchive::cbSave:
+                lpszAction = _T(<span class="stringliteral">"Saving"</span>);
+                <span class="keywordflow">break</span>;
+            <span class="keywordflow">default</span>:
+                lpszAction = _T(<span class="stringliteral">"???"</span>);
+        }
+        _tprintf(_T(<span class="stringliteral">"\r\n%s...\r\n"</span>), lpszAction);
+    }
+
+    <span class="keywordtype">bool</span> Callback(ZIP_U32_U64 uProgress)
+    {
+<span class="preprocessor">#ifdef _ZIP64</span>
+<span class="preprocessor"></span>        _tprintf(_T(<span class="stringliteral">"Processed %I64u of %I64u (%I64u left)            \r"</span>), 
+            m_uTotalSoFar, m_uTotalToDo, LeftToDo());
+<span class="preprocessor">#else</span>
+<span class="preprocessor"></span>        _tprintf(_T(<span class="stringliteral">"Processed %u of %u (%u left)            \r"</span>), 
+            m_uTotalSoFar, m_uTotalToDo, LeftToDo());
+<span class="preprocessor">#endif</span>
+<span class="preprocessor"></span>        <span class="comment">// return false here to abort processing</span>
+        <span class="keywordflow">return</span> <span class="keyword">true</span>;
+    }
+};
+
+<span class="keywordtype">void</span> Progress()
+{
+    LPCTSTR zipFileName = _T(<span class="stringliteral">"Z:\\Temp\\test.zip"</span>);
+    CZipArchive zip;    
+    CProgressCallback callback;
+    <span class="comment">// set one callback for all notifications</span>
+    zip.SetCallback(&amp;callback);
+    zip.Open(zipFileName, CZipArchive::zipCreate);    
+    zip.AddNewFile(_T(<span class="stringliteral">"Z:\\Temp\\file.dat"</span>));
+    zip.Close();
+    zip.Open(zipFileName);
+    zip.ExtractFile(0, _T(<span class="stringliteral">"Z:\\Temp"</span>), <span class="keyword">false</span>, _T(<span class="stringliteral">"file.ext"</span>));
+    zip.Close();
+}
+</pre>
+        <h2 id="api" name="api" class="kb">
+            See Also API Calls</h2>
+        <ul class="non">
+            <li><a class="linkapi" href="./classCZipArchive.html#332c3c24cc1542b8d4c12ded84966704">CZipArchive::SetCallback()</a></li>
+            <li><a class="linkapi" href="./structCZipActionCallback.html">CZipActionCallback</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#07cdf46e463d58a346e8446f7e7b8730">CZipArchive::CallbackType</a></li>
+        </ul>
+    
+        </div>
+        <div class="kbafooter">
+            <strong>Article ID:&nbsp;0610231200</strong>
+        </div>
+    </div>
+   <div style="font-size:11px; text-align:center;border-top:solid 1px gray;width:400px;margin:10px auto 5px auto;color:gray">
+Copyright &copy;&nbsp;2000 - 2006 Tadeusz Dracz.
+</div>
+</body>
+</html>

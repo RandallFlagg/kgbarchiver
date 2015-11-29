@@ -1,0 +1,4 @@
+base referer
+rect $classCZipCryptograph.html 8,32 131,59
+rect $classCZipAesCryptograph.html 187,7 334,34
+rect $classCZipCrc32Cryptograph.html 182,58 339,84

@@ -1,0 +1,680 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="gFilename.Text" xml:space="preserve">
+    <value>الملف الحالي</value>
+  </data>
+  <data name="gCurrentProgress.Text" xml:space="preserve">
+    <value>تقدم الملف</value>
+  </data>
+  <data name="gTotalProgress.Text" xml:space="preserve">
+    <value>التقدم الكلي</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lRemaining.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 84</value>
+  </data>
+  <data name="lTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 67</value>
+  </data>
+  <data name="lRatio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 50</value>
+  </data>
+  <data name="lProjected.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 33</value>
+  </data>
+  <data name="lBefore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 16</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 84</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>الوقت المتبقي: </value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 67</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>الوقت: </value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 50</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>النسبة: </value>
+  </data>
+  <data name="lProjectedDesc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 33</value>
+  </data>
+  <data name="lProjectedDesc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="lProjectedDesc.Text" xml:space="preserve">
+    <value>حجم الملف: </value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>255, 16</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>الحجم قبل الضغط: </value>
+  </data>
+  <data name="gStatistics.Text" xml:space="preserve">
+    <value>الإحصائيات</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>الأولوية: </value>
+  </data>
+  <data name="cPriority.Items" xml:space="preserve">
+    <value>عالي</value>
+  </data>
+  <data name="cPriority.Items1" xml:space="preserve">
+    <value>مرتفع</value>
+  </data>
+  <data name="cPriority.Items2" xml:space="preserve">
+    <value>عادي</value>
+  </data>
+  <data name="cPriority.Items3" xml:space="preserve">
+    <value>منخفض</value>
+  </data>
+  <data name="cPriority.Items4" xml:space="preserve">
+    <value>قليل</value>
+  </data>
+  <data name="cPriority.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 21</value>
+  </data>
+  <data name="cShutdown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 277</value>
+  </data>
+  <data name="cShutdown.Text" xml:space="preserve">
+    <value>إيقاف التشغيل عند الانتهاء</value>
+  </data>
+  <data name="bCancel.Text" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="iTrayList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABy
+        IQAAAk1TRnQBSQFMAgEBBgEAAQwBAAEEAQABEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABIAMAAQEBAAEgBgABIDIAAQgBOwGZAf8BCAE7AZkB/wE7AZkBzAH/AQgBOwGZAf8DDAH/AdYC5wH/
+        AdYC5wH/AwwB/yAAAQgBOwGZAf8BCAE7AZkB/wE7AZkBzAH/AQgBOwGZAf8DDAH/AdYC5wH/AdYC5wH/
+        AwwB/5QAAQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/AQgBOwGZAf8BOwGZAv8BOwGZAv8BOwGZAv8DDAH/
+        AdYC5wH/AdYC5wH/AwwB/xQAAQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/AQgBOwGZAf8BOwGZAv8BOwGZ
+        Av8BOwGZAv8DDAH/AdYC5wH/AdYC5wH/AwwB/4AAAZkBzAL/AQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/
+        AQgBOwGZAf8BCAFuAcwB/wE7AZkC/wE7AZkC/wE7AW4BzAH/AQgBOwGZAf8BCAFuAcwB/wE7AZkC/wMM
+        Af8B1gLnAf8B1gLnAf8DDAH/AZkBzAL/AQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/AQgBOwGZAf8BCAFu
+        AcwB/wE7AZkC/wE7AZkC/wE7AW4BzAH/AQgBOwGZAf8BCAFuAcwB/wE7AZkC/wMMAf8B1gLnAf8B1gLn
+        Af8DDAH/gAABOwGZAv8BOwGZAv8BOwFuAcwB/wEIAW4BzAH/AQgBOwGZAf8BOwGZAv8BOwGZAv8BOwGZ
+        Av8BCAE7AZkB/wFuAcwC/wFuAcwC/wE7AW4BzAH/AwwB/wHWAucB/wHWAucB/wMMAf8BOwGZAv8BOwGZ
+        Av8BOwFuAcwB/wEIAW4BzAH/AQgBOwGZAf8BOwGZAv8BOwGZAv8BOwGZAv8BCAE7AZkB/wFuAcwC/wFu
+        AcwC/wE7AW4BzAH/AwwB/wHWAucB/wHWAucB/wMMAf+AAAE7AZkC/wE7AZkC/wE7AZkC/wE7AZkC/wE7
+        AW4BzAH/ATsBmQL/ATsBmQL/ATsBbgGZAf8BCAFuAcwB/wFuAcwC/wFuAcwC/wFuAcwC/wMMAf8B1gLn
+        Af8B1gLnAf8DDAH/ATsBmQL/ATsBmQL/ATsBmQL/ATsBmQL/ATsBbgHMAf8BOwGZAv8BOwGZAv8BOwFu
+        AZkB/wEIAW4BzAH/AW4BzAL/AW4BzAL/AW4BzAL/AwwB/wHWAucB/wHWAucB/wMMAf+EAAE7AcwC/wE7
+        AcwC/wE7AZkC/wE7AZkC/wE7AZkC/wE7AZkC/wGZAcwC/wEIATsBmQH/AQgBbgGZAf8BOwFuAcwB/wEI
+        AW4BzAH/AwwB/wHWAucB/wHWAucB/wMMAf8EAAE7AcwC/wE7AcwC/wE7AZkC/wE7AZkC/wE7AZkC/wE7
+        AZkC/wGZAcwC/wEIATsBmQH/AQgBbgGZAf8BOwFuAcwB/wEIAW4BzAH/AwwB/wHWAucB/wHWAucB/wMM
+        Af+EAAFuAcwC/wFuAcwC/wFuAcwC/wE7AcwC/wE7AcwC/wE7AcwC/wGZAcwC/wE7AW4BmQH/AW4BzAL/
+        AW4BzAL/AW4BzAL/AwwB/wHWAucB/wHWAucB/wMMAf8EAAFuAcwC/wFuAcwC/wFuAcwC/wE7AcwC/wE7
+        AcwC/wE7AcwC/wGZAcwC/wE7AW4BmQH/AW4BzAL/AW4BzAL/AW4BzAL/AwwB/wHWAucB/wHWAucB/wMM
+        Af+EAAE7AZkC/wE7AZkC/wE7AZkC/wE7AZkC/wFuAcwC/wFuAcwC/wGZAcwC/wEIATsBmQH/ATsBbgHM
+        Af8BOwFuAcwB/wFuAcwC/wMMAf8B1gLnAf8B1gLnAf8DDAH/BAABOwGZAv8BOwGZAv8BOwGZAv8BOwGZ
+        Av8BbgHMAv8BbgHMAv8BmQHMAv8BCAE7AZkB/wE7AW4BzAH/ATsBbgHMAf8BbgHMAv8DDAH/AdYC5wH/
+        AdYC5wH/AwwB/4QAAQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/AQgBOwGZAf8BbgHMAv8BbgHMAv8BbgHM
+        Av8BCAFuAcwB/wGZAcwC/wFuAZkBzAH/ATsBbgGZAf8DDAH/AdYC5wH/AdYC5wH/AwwB/wQAAQgBOwGZ
+        Af8BCAE7AZkB/wEIATsBmQH/AQgBOwGZAf8BbgHMAv8BbgHMAv8BbgHMAv8BCAFuAcwB/wGZAcwC/wFu
+        AZkBzAH/ATsBbgGZAf8DDAH/AdYC5wH/AdYC5wH/AwwB/4wAAQgBOwGZAf8BCAE7AZkB/wFuAcwC/wFu
+        AcwC/wFuAcwC/wEIAW4BzAH/AW4BmQL/AW4BzAL/AZkBzAL/AwwB/wHWAucB/wHWAucB/wMMAf8MAAEI
+        ATsBmQH/AQgBOwGZAf8BbgHMAv8BbgHMAv8BbgHMAv8BCAFuAcwB/wFuAZkC/wFuAcwC/wGZAcwC/wMM
+        Af8B1gLnAf8B1gLnAf8DDAH/iAABCAE7AZkB/wEIATsBmQH/AW4BzAL/AW4BmQL/ATsBmQHMAf8BbgHM
+        Av8BbgHMAv8BCAFuAZkB/wE7AW4BzAH/AW4BzAL/AwwB/wHWAucB/wHWAucB/wMMAf8IAAEIATsBmQH/
+        AQgBOwGZAf8BbgHMAv8BbgGZAv8BOwGZAcwB/wFuAcwC/wFuAcwC/wEIAW4BmQH/ATsBbgHMAf8BbgHM
+        Av8DDAH/AdYC5wH/AdYC5wH/AwwB/4AAAQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/AW4BzAL/AW4BzAL/
+        AW4BmQHMAf8BCAE7AZkB/wEIATsBmQH/AQgBbgGZAf8BbgHMAv8BbgHMAv8BbgHMAv8DDAH/AwwB/wMM
+        Af8DDAH/AQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/AW4BzAL/AW4BzAL/AW4BmQHMAf8BCAE7AZkB/wEI
+        ATsBmQH/AQgBbgGZAf8BbgHMAv8BbgHMAv8BbgHMAv8DDAH/AdYC5wH/AdYC5wH/AwwB/4AAAQgBOwGZ
+        Af8BOwFuAcwB/wFuAcwC/wFuAcwC/wGZAcwC/wFuAZkBzAH/AQgBOwGZAf8EAAEIATsBmQH/AQgBOwGZ
+        Af8BCAE7AZkB/wFuAZkBzAH/AW4BmQHMAf8BCAE7AZkB/wgAAQgBOwGZAf8BOwFuAcwB/wFuAcwC/wFu
+        AcwC/wGZAcwC/wFuAZkBzAH/AQgBOwGZAf8EAAEIATsBmQH/AQgBOwGZAf8BCAE7AZkB/wFuAZkBzAH/
+        AwwB/wHWAucB/wHWAucB/wMMAf+AAAEIATsBmQH/AW4BzAL/AW4BzAL/AW4BzAL/AcwD/wE7AZkBzAH/
+        AQgBOwGZAf8MAAEIATsBmQH/AQgBOwGZAf8BCAE7AZkB/wwAAQgBOwGZAf8BbgHMAv8BbgHMAv8BbgHM
+        Av8BzAP/ATsBmQHMAf8BCAE7AZkB/wwAAQgBOwGZAf8BCAE7AZkB/wMMAf8B1gLnAf8B1gLnAf8DDAH/
+        gAABCAE7AZkB/wE7AZkBzAH/AZkBzAL/AZkD/wGZAcwC/wEIATsBmQH/AQgBOwGZAf8kAAEIATsBmQH/
+        ATsBmQHMAf8BmQHMAv8BmQP/AZkBzAL/AQgBOwGZAf8BCAE7AZkB/xQAAwwB/wMMAf8DDAH/AwwB/4AA
+        AQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/ATsBbgGZAf8BCAE7AZkB/wEIATsBmQH/KAABCAE7AZkB/wEI
+        ATsBmQH/AQgBOwGZAf8BOwFuAZkB/wEIATsBmQH/AQgBOwGZAf/IAAEIATsBmQH/AQgBOwGZAf8BOwGZ
+        AcwB/wEIATsBmQH/AQgBOwGZAf8BCAE7AZkB/ygAAQgBOwGZAf8BCAE7AZkB/wE7AZkBzAH/AQgBOwGZ
+        Af8DDAH/AdYC5wH/AdYC5wH/AwwB/yAAAQgBOwGZAf8BCAE7AZkB/wE7AZkBzAH/AQgBOwGZAf8DDAH/
+        AdYC5wH/AdYC5wH/AwwB/yAAAQgBOwGZAf8BCAE7AZkB/wE7AZkBzAH/AQgBOwGZAf8DDAH/AdYC5wH/
+        AdYC5wH/AwwB/xQAAQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/AQgBOwGZAf8BOwGZAv8BOwGZAv8BOwGZ
+        Av8BbgHMAv8BCAE7AZkB/xwAAQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/AQgBOwGZAf8BOwGZAv8BOwGZ
+        Av8BOwGZAv8DDAH/AdYC5wH/AdYC5wH/AwwB/xQAAQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/AQgBOwGZ
+        Af8BOwGZAv8BOwGZAv8BOwGZAv8DDAH/AdYC5wH/AdYC5wH/AwwB/xQAAQgBOwGZAf8BCAE7AZkB/wEI
+        ATsBmQH/AQgBOwGZAf8BOwGZAv8BOwGZAv8BOwGZAv8DDAH/AdYC5wH/AdYC5wH/AwwB/wGZAcwC/wEI
+        ATsBmQH/AQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/AQgBbgHMAf8BOwGZAv8BOwGZAv8BOwFuAcwB/wEI
+        ATsBmQH/AQgBbgHMAf8BOwGZAv8BbgHMAv8BOwGZAcwB/wgAAZkBzAL/AQgBOwGZAf8BCAE7AZkB/wEI
+        ATsBmQH/AQgBOwGZAf8BCAFuAcwB/wE7AZkC/wE7AZkC/wE7AW4BzAH/AQgBOwGZAf8BCAFuAcwB/wE7
+        AZkC/wMMAf8DDAH/AwwB/wMMAf8BmQHMAv8BCAE7AZkB/wEIATsBmQH/AQgBOwGZAf8BCAE7AZkB/wEI
+        AW4BzAH/ATsBmQL/ATsBmQL/ATsBbgHMAf8BCAE7AZkB/wEIAW4BzAH/ATsBmQL/AwwB/wHWAucB/wHW
+        AucB/wMMAf8BmQHMAv8BCAE7AZkB/wEIATsBmQH/AQgBOwGZAf8BCAE7AZkB/wEIAW4BzAH/ATsBmQL/
+        ATsBmQL/ATsBbgHMAf8BCAE7AZkB/wEIAW4BzAH/ATsBmQL/AwwB/wHWAucB/wHWAucB/wMMAf8BOwGZ
+        Av8BOwGZAv8BOwFuAcwB/wEIAW4BzAH/AQgBOwGZAf8BOwGZAv8BOwGZAv8BOwGZAv8BCAE7AZkB/wFu
+        AcwC/wFuAcwC/wE7AW4BzAH/AQgBbgGZAf8BOwFuAZkB/wgAATsBmQL/ATsBmQL/ATsBbgHMAf8BCAFu
+        AcwB/wEIATsBmQH/ATsBmQL/ATsBmQL/ATsBmQL/AQgBOwGZAf8BbgHMAv8BbgHMAv8BOwFuAcwB/wEI
+        AW4BmQH/ATsBbgGZAf8IAAE7AZkC/wE7AZkC/wE7AW4BzAH/AQgBbgHMAf8BCAE7AZkB/wE7AZkC/wE7
+        AZkC/wE7AZkC/wEIATsBmQH/AW4BzAL/AW4BzAL/ATsBbgHMAf8DDAH/AdYC5wH/AdYC5wH/AwwB/wE7
+        AZkC/wE7AZkC/wE7AW4BzAH/AQgBbgHMAf8BCAE7AZkB/wE7AZkC/wE7AZkC/wE7AZkC/wEIATsBmQH/
+        AW4BzAL/AW4BzAL/ATsBbgHMAf8DDAH/AdYC5wH/AdYC5wH/AwwB/wE7AZkC/wE7AZkC/wE7AZkC/wE7
+        AZkC/wE7AW4BzAH/ATsBmQL/ATsBmQL/ATsBbgGZAf8BCAFuAcwB/wFuAcwC/wFuAcwC/wFuAcwC/wFu
+        AZkBzAH/AQgBOwGZAf8IAAE7AZkC/wE7AZkC/wE7AZkC/wE7AZkC/wE7AW4BzAH/ATsBmQL/ATsBmQL/
+        ATsBbgGZAf8BCAFuAcwB/wFuAcwC/wFuAcwC/wFuAcwC/wFuAZkBzAH/AQgBOwGZAf8IAAE7AZkC/wE7
+        AZkC/wE7AZkC/wE7AZkC/wE7AW4BzAH/ATsBmQL/ATsBmQL/ATsBbgGZAf8BCAFuAcwB/wFuAcwC/wFu
+        AcwC/wFuAcwC/wMMAf8B1gLnAf8B1gLnAf8DDAH/ATsBmQL/ATsBmQL/ATsBmQL/ATsBmQL/ATsBbgHM
+        Af8BOwGZAv8BOwGZAv8BOwFuAZkB/wEIAW4BzAH/AW4BzAL/AW4BzAL/AW4BzAL/AwwB/wHWAucB/wHW
+        AucB/wMMAf8EAAE7AcwC/wE7AcwC/wE7AZkC/wE7AZkC/wE7AZkC/wE7AZkC/wGZAcwC/wEIATsBmQH/
+        AQgBbgGZAf8BOwFuAcwB/wEIAW4BzAH/AZkBzAL/AQgBOwGZAf8MAAE7AcwC/wE7AcwC/wE7AZkC/wE7
+        AZkC/wE7AZkC/wE7AZkC/wGZAcwC/wEIATsBmQH/AQgBbgGZAf8BOwFuAcwB/wEIAW4BzAH/AZkBzAL/
+        AQgBOwGZAf8MAAE7AcwC/wE7AcwC/wE7AZkC/wE7AZkC/wE7AZkC/wE7AZkC/wGZAcwC/wEIATsBmQH/
+        AQgBbgGZAf8BOwFuAcwB/wEIAW4BzAH/AwwB/wMMAf8DDAH/AwwB/wQAATsBzAL/ATsBzAL/ATsBmQL/
+        ATsBmQL/ATsBmQL/ATsBmQL/AZkBzAL/AQgBOwGZAf8BCAFuAZkB/wE7AW4BzAH/AQgBbgHMAf8DDAH/
+        AdYC5wH/AdYC5wH/AwwB/wQAAW4BzAL/AW4BzAL/AW4BzAL/ATsBzAL/ATsBzAL/ATsBzAL/AZkBzAL/
+        ATsBbgGZAf8BbgHMAv8BbgHMAv8BbgHMAv8BCAE7AZkB/wEIATsBmQH/DAABbgHMAv8BbgHMAv8BbgHM
+        Av8BOwHMAv8BOwHMAv8BOwHMAv8BmQHMAv8BOwFuAZkB/wFuAcwC/wFuAcwC/wFuAcwC/wEIATsBmQH/
+        AQgBOwGZAf8MAAFuAcwC/wFuAcwC/wFuAcwC/wE7AcwC/wE7AcwC/wE7AcwC/wGZAcwC/wE7AW4BmQH/
+        AW4BzAL/AW4BzAL/AW4BzAL/AQgBOwGZAf8BCAE7AZkB/wwAAW4BzAL/AW4BzAL/AW4BzAL/ATsBzAL/
+        ATsBzAL/ATsBzAL/AZkBzAL/ATsBbgGZAf8BbgHMAv8BbgHMAv8BbgHMAv8DDAH/AdYC5wH/AdYC5wH/
+        AwwB/wQAATsBmQL/ATsBmQL/ATsBmQL/ATsBmQL/AW4BzAL/AW4BzAL/AZkBzAL/AQgBOwGZAf8BOwFu
+        AcwB/wE7AW4BzAH/AW4BzAL/AZkBzAL/AQgBOwGZAf8MAAE7AZkC/wE7AZkC/wE7AZkC/wE7AZkC/wFu
+        AcwC/wFuAcwC/wGZAcwC/wEIATsBmQH/ATsBbgHMAf8BOwFuAcwB/wFuAcwC/wGZAcwC/wEIATsBmQH/
+        DAABOwGZAv8BOwGZAv8BOwGZAv8BOwGZAv8BbgHMAv8BbgHMAv8BmQHMAv8BCAE7AZkB/wE7AW4BzAH/
+        ATsBbgHMAf8BbgHMAv8BmQHMAv8BCAE7AZkB/wwAATsBmQL/ATsBmQL/ATsBmQL/ATsBmQL/AW4BzAL/
+        AW4BzAL/AZkBzAL/AQgBOwGZAf8BOwFuAcwB/wE7AW4BzAH/AW4BzAL/AwwB/wHWAucB/wHWAucB/wMM
+        Af8EAAEIATsBmQH/AQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/AW4BzAL/AW4BzAL/AW4BzAL/AQgBbgHM
+        Af8BmQHMAv8BbgGZAcwB/wE7AW4BmQH/ATsBbgHMAf8BOwGZAcwB/wwAAQgBOwGZAf8BCAE7AZkB/wEI
+        ATsBmQH/AQgBOwGZAf8BbgHMAv8BbgHMAv8BbgHMAv8BCAFuAcwB/wGZAcwC/wFuAZkBzAH/ATsBbgGZ
+        Af8BOwFuAcwB/wE7AZkBzAH/DAABCAE7AZkB/wEIATsBmQH/AQgBOwGZAf8BCAE7AZkB/wFuAcwC/wFu
+        AcwC/wFuAcwC/wEIAW4BzAH/AZkBzAL/AW4BmQHMAf8BOwFuAZkB/wE7AW4BzAH/ATsBmQHMAf8MAAEI
+        ATsBmQH/AQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/AW4BzAL/AW4BzAL/AW4BzAL/AQgBbgHMAf8BmQHM
+        Av8BbgGZAcwB/wE7AW4BmQH/AwwB/wMMAf8DDAH/AwwB/wwAAQgBOwGZAf8BCAE7AZkB/wFuAcwC/wFu
+        AcwC/wFuAcwC/wEIAW4BzAH/AW4BmQL/AW4BzAL/AZkBzAL/AW4BmQHMAf8BCAE7AZkB/xQAAQgBOwGZ
+        Af8BCAE7AZkB/wFuAcwC/wFuAcwC/wFuAcwC/wEIAW4BzAH/AW4BmQL/AW4BzAL/AZkBzAL/AW4BmQHM
+        Af8BCAE7AZkB/xQAAQgBOwGZAf8BCAE7AZkB/wFuAcwC/wFuAcwC/wFuAcwC/wEIAW4BzAH/AW4BmQL/
+        AW4BzAL/AZkBzAL/AW4BmQHMAf8BCAE7AZkB/xQAAQgBOwGZAf8BCAE7AZkB/wFuAcwC/wFuAcwC/wFu
+        AcwC/wEIAW4BzAH/AW4BmQL/AW4BzAL/AZkBzAL/AW4BmQHMAf8BCAE7AZkB/xAAAQgBOwGZAf8BCAE7
+        AZkB/wFuAcwC/wFuAZkC/wE7AZkBzAH/AW4BzAL/AW4BzAL/AQgBbgGZAf8BOwFuAcwB/wFuAcwC/wGZ
+        AcwC/wEIAW4BmQH/EAABCAE7AZkB/wEIATsBmQH/AW4BzAL/AW4BmQL/ATsBmQHMAf8BbgHMAv8BbgHM
+        Av8BCAFuAZkB/wE7AW4BzAH/AW4BzAL/AZkBzAL/AQgBbgGZAf8QAAEIATsBmQH/AQgBOwGZAf8BbgHM
+        Av8BbgGZAv8BOwGZAcwB/wFuAcwC/wFuAcwC/wEIAW4BmQH/ATsBbgHMAf8BbgHMAv8BmQHMAv8BCAFu
+        AZkB/xAAAQgBOwGZAf8BCAE7AZkB/wFuAcwC/wFuAZkC/wE7AZkBzAH/AW4BzAL/AW4BzAL/AQgBbgGZ
+        Af8BOwFuAcwB/wFuAcwC/wGZAcwC/wEIAW4BmQH/CAABCAE7AZkB/wEIATsBmQH/AQgBOwGZAf8BbgHM
+        Av8BbgHMAv8BbgGZAcwB/wEIATsBmQH/AQgBOwGZAf8BCAFuAZkB/wFuAcwC/wFuAcwC/wFuAcwC/wHM
+        A/8BOwFuAZkB/wgAAQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/AW4BzAL/AW4BzAL/AW4BmQHMAf8BCAE7
+        AZkB/wEIATsBmQH/AQgBbgGZAf8BbgHMAv8BbgHMAv8BbgHMAv8BzAP/ATsBbgGZAf8IAAEIATsBmQH/
+        AQgBOwGZAf8BCAE7AZkB/wFuAcwC/wFuAcwC/wFuAZkBzAH/AQgBOwGZAf8BCAE7AZkB/wEIAW4BmQH/
+        AW4BzAL/AW4BzAL/AW4BzAL/AcwD/wE7AW4BmQH/CAABCAE7AZkB/wEIATsBmQH/AQgBOwGZAf8BbgHM
+        Av8BbgHMAv8BbgGZAcwB/wEIATsBmQH/AQgBOwGZAf8BCAFuAZkB/wFuAcwC/wFuAcwC/wFuAcwC/wHM
+        A/8BOwFuAZkB/wgAAQgBOwGZAf8BOwFuAcwB/wFuAcwC/wFuAcwC/wGZAcwC/wFuAZkBzAH/AQgBOwGZ
+        Af8EAAEIATsBmQH/AQgBOwGZAf8BCAE7AZkB/wFuAZkBzAH/AW4BmQHMAf8BCAE7AZkB/wgAAQgBOwGZ
+        Af8BOwFuAcwB/wFuAcwC/wFuAcwC/wGZAcwC/wFuAZkBzAH/AQgBOwGZAf8EAAEIATsBmQH/AQgBOwGZ
+        Af8BCAE7AZkB/wFuAZkBzAH/AW4BmQHMAf8BCAE7AZkB/wgAAQgBOwGZAf8BOwFuAcwB/wFuAcwC/wFu
+        AcwC/wGZAcwC/wFuAZkBzAH/AQgBOwGZAf8EAAEIATsBmQH/AQgBOwGZAf8BCAE7AZkB/wFuAZkBzAH/
+        AW4BmQHMAf8BCAE7AZkB/wgAAQgBOwGZAf8BOwFuAcwB/wFuAcwC/wFuAcwC/wGZAcwC/wFuAZkBzAH/
+        AQgBOwGZAf8EAAEIATsBmQH/AQgBOwGZAf8BCAE7AZkB/wFuAZkBzAH/AW4BmQHMAf8BCAE7AZkB/wgA
+        AQgBOwGZAf8BbgHMAv8BbgHMAv8BbgHMAv8BzAP/ATsBmQHMAf8BCAE7AZkB/wwAAQgBOwGZAf8BCAE7
+        AZkB/wEIATsBmQH/DAABCAE7AZkB/wFuAcwC/wFuAcwC/wFuAcwC/wHMA/8BOwGZAcwB/wEIATsBmQH/
+        DAABCAE7AZkB/wEIATsBmQH/AQgBOwGZAf8MAAEIATsBmQH/AW4BzAL/AW4BzAL/AW4BzAL/AcwD/wE7
+        AZkBzAH/AQgBOwGZAf8MAAEIATsBmQH/AQgBOwGZAf8BCAE7AZkB/wwAAQgBOwGZAf8BbgHMAv8BbgHM
+        Av8BbgHMAv8BzAP/ATsBmQHMAf8BCAE7AZkB/wwAAQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/DAABCAE7
+        AZkB/wE7AZkBzAH/AZkBzAL/AZkD/wGZAcwC/wEIATsBmQH/AQgBOwGZAf8kAAEIATsBmQH/ATsBmQHM
+        Af8BmQHMAv8BmQP/AZkBzAL/AQgBOwGZAf8BCAE7AZkB/yQAAQgBOwGZAf8BOwGZAcwB/wGZAcwC/wGZ
+        A/8BmQHMAv8BCAE7AZkB/wEIATsBmQH/JAABCAE7AZkB/wE7AZkBzAH/AZkBzAL/AZkD/wGZAcwC/wEI
+        ATsBmQH/AQgBOwGZAf8kAAEIATsBmQH/AQgBOwGZAf8BCAE7AZkB/wE7AW4BmQH/AQgBOwGZAf8BCAE7
+        AZkB/ygAAQgBOwGZAf8BCAE7AZkB/wEIATsBmQH/ATsBbgGZAf8BCAE7AZkB/wEIATsBmQH/KAABCAE7
+        AZkB/wEIATsBmQH/AQgBOwGZAf8BOwFuAZkB/wEIATsBmQH/AQgBOwGZAf8oAAEIATsBmQH/AQgBOwGZ
+        Af8BCAE7AZkB/wE7AW4BmQH/AQgBOwGZAf8BCAE7AZkB/ygAAUIBTQE+BwABPgMAASgDAAFAAwABIAMA
+        AQEBAAEBBgABARYAA/8BAAH/AQAB/wUAAfgBAAH4HQABgAEAAYAFAAGAAQABgAUAAYABAAGABQABgAEA
+        AYAFAAHgAQAB4AUAAcABAAHADQABAQEDAQEFAAEBAccBAQHABAABAQH/AQEB8AQAAQMB/wEDAf8EAAH/
+        AQMB/wEAAf8BAAH/AQAB+AEDAfgBAAH4AQAB+AIAAQMHAAEDAQABAwUAAQMBAAEDBAABgAEDAYABAwGA
+        AQABgAEAAYABAwGAAQMBgAEDAYABAAGAAQMBgAEDAYABAwGAAQABgAEDAYABAwGAAQMBgAEAAeABAwHg
+        AQMB4AEDAeABAwHAAQMBwAEDAcABAwHAAQMBAAEDAQABAwEAAQMBAAEDAQEBAwEBAQMBAQEDAQEBAwEB
+        AccBAQHHAQEBxwEBAccBAQH/AQEB/wEBAf8BAQH/AQMB/wEDAf8BAwH/AQMB/ws=
+</value>
+  </data>
+  <data name="&gt;&gt;gStatistics.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lProjected.Text" xml:space="preserve">
+    <value>100MB</value>
+  </data>
+  <data name="&gt;&gt;gCurrentProgress.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lProjectedDesc.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lBefore.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pCurrent.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;cShutdown.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gFilename.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pCurrent.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label4.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label6.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lRatio.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lFilename.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label1.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;cPriority.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lRemaining.Text" xml:space="preserve">
+    <value>00:00:00</value>
+  </data>
+  <data name="&gt;&gt;gFilename.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gStatistics.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lProjected.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;$this.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;iTrayList.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="iTray.Text" xml:space="preserve">
+    <value>KGB Archiver 2</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>KGB Archiver 2</value>
+  </data>
+  <data name="&gt;&gt;lProjectedDesc.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lTime.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pThis.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gFilename.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;iTray.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gStatistics.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;iTrayList.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label3.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label1.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lTime.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;$this.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lFilename.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gTotalProgress.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pTotal.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lBefore.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lBefore.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lRemaining.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lTime.Text" xml:space="preserve">
+    <value>00:00:00</value>
+  </data>
+  <data name="&gt;&gt;pCurrent.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;cShutdown.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gTotalProgress.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label4.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gTotalProgress.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lProjected.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lProjected.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label6.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;bCancel.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label3.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label5.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lFilename.Text" xml:space="preserve">
+    <value>filename.fileextension</value>
+  </data>
+  <data name="&gt;&gt;pThis.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pTotal.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gFilename.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lFilename.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lRatio.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gTotalProgress.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lBefore.Text" xml:space="preserve">
+    <value>100MB</value>
+  </data>
+  <data name="&gt;&gt;lTime.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;cShutdown.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label5.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label4.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;iTray.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lRatio.Text" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="&gt;&gt;bCancel.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lRatio.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;cPriority.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lRatio.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pTotal.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lRemaining.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label3.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pCurrent.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;cPriority.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gStatistics.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lProjectedDesc.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;cPriority.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lProjectedDesc.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lRemaining.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;bCancel.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gCurrentProgress.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lRemaining.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;cShutdown.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label6.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gCurrentProgress.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lBefore.ZOrder" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lTime.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label5.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lFilename.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;label1.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;bCancel.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gCurrentProgress.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lProjected.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;pTotal.Type" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+</root>

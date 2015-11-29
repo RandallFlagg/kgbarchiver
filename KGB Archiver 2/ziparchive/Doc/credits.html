@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>ZipArchive:
+        Acknowledgements: Credits and Used Third-Party Code Licensing Information
+    </title>
+    <link href="articles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    body
+    {
+    	font-family: verdana, arial, helvetica, sans-serif;
+    }
+</style>
+</head>
+<body>
+    <div class="kbabody">
+        <div class="kbatitle">
+            Acknowledgements: Credits and Used Third-Party Code Licensing Information
+        </div>
+        <div class="kbaappliesto">
+            Applies To: <strong>All</strong>
+        </div>
+        <div class="kbaindex">
+            <ul class="kbaindex">
+
+<li><a class="linkindex" href="#intro">Introduction</a></li>
+<li><a class="linkindex" href="#used">Used Third-Party Code</a>
+<ul class="kbaindex">
+<li><a class="linkindex" href="#zlib">The Zlib Library by Jean-loup Gailly and Mark Adler</a></li>
+<li><a class="linkindex" href="#">AES Implementation by Dr Brian Gladman</a></li>
+<li><a class="linkindex" href="#match">Wildcard Matching by J. Kercheval</a></li>
+</ul>
+</li></ul>
+
+        </div>
+        <div class="kbacontents">
+            
+        <h2 id="intro" name="intro" class="kb">
+            Introduction</h2>
+        The ZipArchive Library incorporates third-party code for its functionality. All
+        used code is known to be patent-free and can be reused in commercial applications.
+        <h2 id="used" name="used" class="kb">Used Third-Party Code</h2>
+        <h3 id="zlib" name="zlib" class="kb">
+            The Zlib Library by Jean-loup Gailly and Mark Adler</h3>
+        <ul>
+            <li>The Zlib library provides deflate compression and decompression functionality.</li>
+            <li>The home page of the library is at <a class="linkindex" href="http://www.zlib.net" target="_blank">http://www.zlib.net</a>.</li>
+            <li>The licensing information can be found in the <span class="file">zlib.h</span> file
+                and is provided below.</li>
+        </ul>
+        <h4 class="kb">
+            License</h4>
+        <div class="license">
+            <p>
+                Copyright (C) 1995-2005 Jean-loup Gailly and Mark Adler
+            </p>
+            <p>
+                This software is provided 'as-is', without any express or implied warranty. In no
+                event will the authors be held liable for any damages arising from the use of this
+                software.
+            </p>
+            <p>
+                Permission is granted to anyone to use this software for any purpose, including
+                commercial applications, and to alter it and redistribute it freely, subject to
+                the following restrictions:
+            </p>
+            <ul class="dec">
+                <li>The origin of this software must not be misrepresented; you must not claim that
+                    you wrote the original software. If you use this software in a product, an acknowledgment
+                    in the product documentation would be appreciated but is not required. </li>
+                <li>Altered source versions must be plainly marked as such, and must not be misrepresented
+                    as being the original software.</li>
+                <li>This notice may not be removed or altered from any source distribution.</li>
+            </ul>
+        </div>
+        <h3 id="" name="" class="kb">
+            AES Implementation by Dr Brian Gladman</h3>
+        <ul>
+            <li>The used AES implementation provides strong encryption support.</li>
+            <li>The code is based on the source code written by Dr Brian Gladman and available at
+                <a class="linkindex" href="http://fp.gladman.plus.com/AES/index.htm" target="_blank">
+                    http://fp.gladman.plus.com/AES/index.htm</a>.</li>
+            <li>The licensing information is provided in all files that reuse the AES code (e.g.
+                in the <span class="file">Aes.h</span> file) and is provided below.</li>
+        </ul>
+        <h4 class="kb">
+            License</h4>
+        <div class="license">
+            <p>
+                Copyright (c) 2003, Dr Brian Gladman, Worcester, UK. All rights reserved.
+            </p>
+            <p>
+                LICENSE TERMS
+            </p>
+            <p>
+                The free distribution and use of this software in both source and binary form is
+                allowed (with or without changes) provided that:
+            </p>
+            <ul class="dec">
+                <li>distributions of this source code include the above copyright notice, this list
+                    of conditions and the following disclaimer;</li>
+                <li>distributions in binary form include the above copyright notice, this list of conditions
+                    and the following disclaimer in the documentation and/or other associated materials;</li>
+                <li>the copyright holder's name is not used to endorse products built using this software
+                    without specific written permission.</li>
+            </ul>
+            <p>
+                ALTERNATIVELY, provided that this notice is retained in full, this product may be
+                distributed under the terms of the GNU General Public License (GPL), in which case
+                the provisions of the GPL apply INSTEAD OF those given above.
+            </p>
+            <p>
+                DISCLAIMER
+            </p>
+            <p>
+                This software is provided 'as is' with no explicit or implied warranties in respect
+                of its properties, including, but not limited to, correctness and/or fitness for
+                purpose.</p>
+        </div>
+        <h3 id="match" name="match" class="kb">
+            Wildcard Matching by J. Kercheval</h3>
+        <ul>
+            <li>Wildcard matching is used in the <a class="linkapi" href="./classCZipArchive.html#b6d202ba9404fb24e27c23497638b6e0">CZipArchive::FindMatches()</a>
+                method.</li>
+            <li>The code is based on the source code written by J. Kercheval and released at <a class="linkindex" href="http://c.snippets.org" target="_blank">http://c.snippets.org</a>.</li>
+            <li>The original code was released as a public domain.</li>
+        </ul>
+        <h4 class="kb">
+            License</h4>
+        <div class="license">
+            <p>
+                REGEX Globber (Wild Card Matching)
+            </p>
+            <p>
+                A *IX SH style pattern matcher written in C<br />
+                V1.10 Dedicated to the Public Domain
+            </p>
+            <p>
+                March 12, 1991<br />
+                J. Kercheval<br />
+                [72450,3702] -- johnk@wrq.com<br />
+            </p>
+        </div>
+    
+        </div>
+        <div class="kbafooter">
+            <strong>Article ID:&nbsp;credits</strong>
+        </div>
+    </div>
+   <div style="font-size:11px; text-align:center;border-top:solid 1px gray;width:400px;margin:10px auto 5px auto;color:gray">
+Copyright &copy;&nbsp;2000 - 2006 Tadeusz Dracz.
+</div>
+</body>
+</html>

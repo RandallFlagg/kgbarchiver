@@ -1,0 +1,1089 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Polish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+#ifdef _WIN32
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ZipArc.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Polish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SAVEMODIFIED DIALOG  0, 0, 206, 88
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Yes",IDOK,7,47,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,149,47,50,14
+    CONTROL         " Always save and do not ask again.",IDC_ALWAYS,"Button",BS_AUTOCHECKBOX | BS_LEFT | BS_FLAT | WS_TABSTOP,7,73,192,8
+    LTEXT           "Do you want to save it?",IDC_STATIC,51,7,148,11
+    ICON            "",IDC_QUESTION,7,7,20,20
+    PUSHBUTTON      "&No",IDNO,78,47,50,14
+    LTEXT           " (not saving will result in a corrupted and non-usable archive)",IDC_STATIC,7,28,192,17
+END
+
+IDD_FILEINFO DIALOG  0, 0, 219, 175
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Display Comment",IDC_CHGDSP,7,154,79,14
+    DEFPUSHBUTTON   "Close",IDOK,162,154,50,14
+    EDITTEXT        IDC_INF,7,48,205,99,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    EDITTEXT        IDC_FILENAME,7,19,205,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Filename",IDC_STATIC,7,7,29,8
+    CTEXT           "Static",IDC_DISPLAYING,7,37,205,8
+END
+
+IDD_NEW DIALOGEX 0, 0, 211, 160
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Create new archive"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_FILENAME,7,25,196,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_BROWSE,160,7,42,14,BS_FLAT
+    GROUPBOX        "Archive segmentation",IDC_SPANNING,7,44,197,46,BS_LEFT | WS_TABSTOP
+    CONTROL         "Spanning (multiple disks)",IDC_PKSPAN,"Button",BS_AUTORADIOBUTTON | WS_GROUP,15,57,91,10
+    CONTROL         "Splitting\n(multiple parts in one folder)",IDC_TDSPAN,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,15,69,96,18
+    EDITTEXT        IDC_VOL,130,73,68,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Smart Options...",IDC_SMARTOPT,7,95,61,14
+    CONTROL         "Adding folders is recursive",IDC_RECURSIVE,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,7,117,95,10
+    COMBOBOX        IDC_LEVEL,130,112,68,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,7,139,50,14
+    PUSHBUTTON      "Set As Default",IDC_DEFAULT,76,139,59,14
+    PUSHBUTTON      "Cancel",IDCANCEL,154,139,50,14
+    LTEXT           "Enter the archive filename:",IDC_STATIC,10,10,138,8
+    LTEXT           "Volume Size[bytes]",IDC_STATICVOL,129,59,68,8
+    LTEXT           "Compression",IDC_STATIC,130,98,56,8
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,7,132,197,1
+END
+
+IDD_PASSWORD DIALOGEX 0, 0, 165, 178
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Encryption Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_PASS,7,27,104,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONF,7,58,104,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,157,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,108,157,50,14
+    LTEXT           "Enter the password \n(it will be cleared after the archive is closed):",IDC_STATIC,7,7,151,19
+    LTEXT           "Confirm",IDC_STATIC,7,46,64,8
+    PUSHBUTTON      "&Clear",IDC_CLEAR,123,27,35,14,BS_FLAT
+    GROUPBOX        "Encryption Method",IDC_STATIC,7,80,151,70
+    CONTROL         "&Standard PKZIP 2.0 ",IDC_RADIO_STD,"Button",BS_AUTORADIOBUTTON | WS_GROUP,13,94,75,10
+    CONTROL         "AES 12&8-bit WinZip",IDC_RADIO_AES128,"Button",BS_AUTORADIOBUTTON,13,107,73,10
+    CONTROL         "AES 19&2-bit WinZip",IDC_RADIO_AES192,"Button",BS_AUTORADIOBUTTON,13,120,73,10
+    CONTROL         "AES 25&6-bit WinZip",IDC_RADIO_AES256,"Button",BS_AUTORADIOBUTTON,13,133,73,10
+END
+
+IDD_REPORT DIALOG  0, 0, 203, 111
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Empty && Close",IDOK,7,89,70,14
+    PUSHBUTTON      "Close",IDCANCEL,126,89,70,14
+    EDITTEXT        IDC_COMMENT,7,7,189,75,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_EXTRACT DIALOG  0, 0, 187, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Extract files"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EXTRACT,7,25,173,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE,130,7,50,14,BS_FLAT
+    CONTROL         "Extract with full path",IDC_EXFULLPATH,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,86,43,94,10
+    DEFPUSHBUTTON   "OK",IDOK,36,74,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,100,74,50,14
+    LTEXT           "Extract folder:",IDC_STATIC,7,12,41,8
+    CONTROL         "Overwrite existing",IDC_OVERWRITE,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,86,56,94,10
+    CONTROL         "&All",IDC_EXALL,"Button",BS_AUTORADIOBUTTON | WS_GROUP,7,43,24,10
+    CONTROL         "&Selected only",IDC_EXSEL,"Button",BS_AUTORADIOBUTTON,7,56,57,10
+END
+
+IDD_SAPREFS DIALOG  0, 0, 295, 153
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Prefs"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_DLG_FRAME,"Static",SS_GRAYFRAME,96,20,195,127
+    LTEXT           "",IDC_CAPTION_BAR,96,5,195,12,SS_CENTERIMAGE
+    CONTROL         "Tree1",IDC_PAGE_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,4,5,91,73
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,4,81,91,66
+    PUSHBUTTON      "Set As &Default",IDC_SETDEFAULT,12,127,74,14
+    DEFPUSHBUTTON   "OK",IDOK,12,89,73,14
+    PUSHBUTTON      "Cancel",IDCANCEL,12,108,74,14
+END
+
+IDD_OPTSMART DIALOGEX 0, 0, 195, 127
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Use system default temporary path \n(only segmented archives)",IDC_USETEMP,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | BS_FLAT | WS_TABSTOP,13,73,127,18
+    EDITTEXT        IDC_TEMPPATH,13,99,169,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_TEMPBROWSE,153,77,29,14,BS_CENTER | BS_VCENTER | BS_FLAT
+    CONTROL         "Clear password for zero-sized files",IDC_CLPASS,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,7,7,118,10
+    GROUPBOX        "Store file if larger after compression",IDC_SMART,7,61,181,59
+    CONTROL         "Always store small files (less than 5 bytes)",IDC_STORESMALL,
+                    "Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,7,18,140,10
+    PUSHBUTTON      "",IDC_INFOBUTTON,167,7,21,19,BS_FLAT
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,7,43,181,2
+END
+
+IDD_OPTCOMPR DIALOGEX 0, 0, 195, 127
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_LEVEL,7,21,64,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Compression Level",IDC_STATIC,7,7,74,8
+    CONTROL         "Recursive Adding",IDC_RECURSIVE,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,7,42,70,10
+    COMBOBOX        IDC_SYSTCOMP,80,21,67,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "System Compatibility",IDC_STATIC,80,7,70,8
+    PUSHBUTTON      "",IDC_INFOBUTTON,167,7,21,19,BS_FLAT
+    GROUPBOX        "Check for duplicated filenames when adding files",IDC_REPLACE,7,64,181,56,WS_TABSTOP
+    COMBOBOX        IDC_REPLACE_ACTION,14,100,168,66,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "When the new file's name will duplicate the filename in the archive:",IDC_PROMPT,11,77,174,19
+    COMBOBOX        IDC_FILENAMES,80,41,108,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_OPTGENRAL DIALOGEX 0, 0, 195, 127
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Associate zip files with ZipArc (the current association will be restored when you uncheck)",IDC_ASSOCIATE,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | BS_FLAT | WS_TABSTOP,7,7,173,24
+    CONTROL         "Always save modified document (do not prompt to save)",IDC_ALWAYS,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | BS_FLAT | WS_TABSTOP,7,63,173,19
+    CONTROL         "When opening a segmented archive on a removable device assume it is a split archive (if not checked, assume a spanned archive)",IDC_ASSUMETD,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | BS_FLAT | WS_TABSTOP,7,32,173,30
+END
+
+IDD_OPTABOUT DIALOG  0, 0, 195, 127
+STYLE DS_SETFONT | DS_3DLOOK | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_FRAME,"Static",SS_ETCHEDFRAME,-1,-1,195,127
+END
+
+IDD_OPTAPPEAR DIALOG  0, 0, 195, 127
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Sort files on the list view in the alphabetical order (if not checked, show the real order of files in the archive)",IDC_SORTED,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | BS_FLAT | WS_TABSTOP,7,7,173,24
+    CONTROL         "Start document windows maximized",IDC_MAXIMIZED,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,7,34,121,10
+END
+
+IDD_CONTAINER DIALOG  0, 0, 209, 160
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,139,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,152,139,50,14
+    CONTROL         "",IDC_DLG_FRAME,"Static",SS_GRAYFRAME,7,7,195,128
+    PUSHBUTTON      "Set As &Default",IDC_SETDEFAULT,68,139,74,14
+END
+
+IDD_SELECT DIALOG  0, 0, 187, 89
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select with wildcard pattern matching"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_PATTERN,52,12,100,14,ES_AUTOHSCROLL
+    CONTROL         "Case-sensitive pattern",IDC_CS,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,8,36,172,10
+    CONTROL         "Search filenames only (omit a path)",IDC_FILENAMEONLY,
+                    "Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,7,48,172,10
+    DEFPUSHBUTTON   "OK",IDOK,32,68,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,105,68,50,14
+    PUSHBUTTON      "",IDC_INFOBUTTON,159,7,21,19,BS_FLAT
+    LTEXT           "Wildcard:",IDC_STATIC,7,15,30,8
+END
+
+IDD_REPLACE DIALOG  0, 0, 209, 109
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,80,87,50,14
+    LTEXT           "",IDC_PROMPT,34,7,168,32
+    ICON            "",IDC_ICON_Q,7,7,20,20
+    CONTROL         "&Don't ask again but apply this action when needed",IDC_DONT_ASK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,22,70,165,10
+    COMBOBOX        IDC_REPLACE_ACTION,14,50,180,65,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_GETFROM DIALOG  0, 0, 187, 93
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Get From Archive"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,33,72,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,103,72,50,14
+    LTEXT           "Static",IDC_PROMPT_GET_FROM_ARCH,7,7,173,23
+    COMBOBOX        IDC_GET_FROM,15,39,157,107,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SAVEMODIFIED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 199
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 81
+    END
+
+    IDD_FILEINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+    END
+
+    IDD_NEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 153
+    END
+
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 158
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_REPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_EXTRACT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_SAPREFS, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 291
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_OPTSMART, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_OPTCOMPR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_OPTGENRAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_OPTABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_OPTAPPEAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_CONTAINER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 153
+    END
+
+    IDD_SELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_REPLACE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_GETFROM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ZipArc.ico"
+IDI_MODIFIED            ICON                    "res\\modified.ico"
+IDI_READONLY            ICON                    "res\\readonly.ico"
+IDR_ZIPARCTYPE          ICON                    "res\\ZipArcDoc.ico"
+IDI_REPORT              ICON                    "res\\report.ico"
+IDI_EXCEPT              ICON                    "res\\except.ico"
+IDI_MULTIDISK           ICON                    "res\\multidis.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  24, 23
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_COMMAND_ADD_FILES
+    BUTTON      ID_COMMAND_ADD_FOLDERS
+    BUTTON      ID_COMMAND_PASTEFILES
+    SEPARATOR
+    BUTTON      ID_COMMAND_EXTRACT
+    BUTTON      ID_COMMAND_TEST_SELECTED
+    BUTTON      ID_COMMAND_DELETE_SELECTED
+    SEPARATOR
+    BUTTON      ID_COMMAND_STOP
+    BUTTON      ID_COMMAND_ABORT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New...\tCtrl+N",             ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "O&ptions...",                 ID_FILE_OPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Web Home Page",              ID_HELP_WEBHOMEPAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&About ZipArc...",            ID_APP_ABOUT
+    END
+END
+
+IDR_ZIPARCTYPE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New...\tCtrl+N",             ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "O&ptions...",                 ID_FILE_OPTIONS
+        MENUITEM "Information...",              ID_FILE_INFORMATION
+        POPUP "Set priority"
+        BEGIN
+            MENUITEM "Idle",                        ID_FILE_SETPRIORITY_IDLE
+            MENUITEM "Lowest",                      ID_FILE_SETPRIORITY_LOWEST
+            MENUITEM "Below Normal",                ID_FILE_SETPRIORITY_BELOWNORMAL
+            MENUITEM "Normal",                      ID_FILE_SETPRIORITY_NORMAL, CHECKED
+            MENUITEM "Above Normal",                ID_FILE_SETPRIORITY_ABOVENORMAL
+            MENUITEM "Highest",                     ID_FILE_SETPRIORITY_HIGHEST
+            MENUITEM "Time Critical",               ID_FILE_SETPRIORITY_TIMECRITICAL
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    MENUITEM "-",                           65535
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "Ref&resh",                    ID_VIEW_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "&File Info...",               ID_VIEW_FILEINFO
+        MENUITEM "Re&port...\tCtrl+R",          ID_VIEW_REPORT
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Web Home Page",              ID_HELP_WEBHOMEPAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&About ZipArc...",            ID_APP_ABOUT
+    END
+END
+
+IDR_COMMAND_ACTION MENU 
+BEGIN
+    MENUITEM "Add &Files...\tCtrl+I",       ID_COMMAND_ADD_FILES
+    MENUITEM "Add Fo&lder...\tCtrl+D",      ID_COMMAND_ADD_FOLDERS
+    MENUITEM "Add From &Clibpoard\tCtrl+V", ID_COMMAND_PASTEFILES
+    MENUITEM SEPARATOR
+    MENUITEM "&Extract...\tCtrl+E",         ID_COMMAND_EXTRACT
+    MENUITEM "&Delete\tDel",                ID_COMMAND_DELETE_SELECTED
+    MENUITEM "&Test\tCtrl+T",               ID_COMMAND_TEST_SELECTED
+    MENUITEM "&Rename\tCtrl+M",             ID_COMMAND_RENAME
+    MENUITEM "&Get From Archive\tCtrl+G",   ID_COMMAND_GETFROMARCHIVE
+    MENUITEM SEPARATOR
+    MENUITEM "Set E&ncryption Options...\tCtrl+E", ID_COMMAND_SETPASSWORD
+    MENUITEM SEPARATOR
+    MENUITEM "Select &All\tCtrl+A",         ID_SELECTALL
+    MENUITEM "Search&&Select...\tCtrl+F",   ID_COMMAND_SEARCHSELECT
+END
+
+IDR_COMMAND_STOP MENU 
+BEGIN
+    MENUITEM "&Stop",                       ID_COMMAND_STOP
+    MENUITEM "&Abort",                      ID_COMMAND_ABORT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "I",            ID_COMMAND_ADD_FILES,   VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_COMMAND_ADD_FOLDERS, VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_COMMAND_DELETE_SELECTED, VIRTKEY, NOINVERT
+    "E",            ID_COMMAND_EXTRACT,     VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_COMMAND_GETFROMARCHIVE, VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_COMMAND_PASTEFILES,  VIRTKEY, CONTROL, NOINVERT
+    "M",            ID_COMMAND_RENAME,      VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_COMMAND_SEARCHSELECT, VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_COMMAND_SETPASSWORD, VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_COMMAND_TEST_SELECTED, VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "A",            ID_SELECTALL,           VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_VIEW_REPORT,         VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,0
+ PRODUCTVERSION 2,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Artpol Software"
+            VALUE "FileDescription", "ZipArc - an archiver for zip archives"
+            VALUE "FileVersion", "2, 0, 0, 0"
+            VALUE "InternalName", "ZipArc"
+            VALUE "LegalCopyright", "Copyright (C) 2000 - 2006 Tadeusz Dracz"
+            VALUE "OriginalFilename", "ZipArc.EXE"
+            VALUE "ProductName", "ZipArc Application"
+            VALUE "ProductVersion", "2, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTCOMPR DLGINIT
+BEGIN
+    IDC_LEVEL, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_LEVEL, 0x403, 11, 0
+0x7553, 0x6570, 0x2072, 0x6146, 0x7473, "\000" 
+    IDC_LEVEL, 0x403, 5, 0
+0x6146, 0x7473, "\000" 
+    IDC_LEVEL, 0x403, 2, 0
+0x0033, 
+    IDC_LEVEL, 0x403, 2, 0
+0x0034, 
+    IDC_LEVEL, 0x403, 2, 0
+0x0035, 
+    IDC_LEVEL, 0x403, 8, 0
+0x6544, 0x6166, 0x6c75, 0x0074, 
+    IDC_LEVEL, 0x403, 2, 0
+0x0037, 
+    IDC_LEVEL, 0x403, 2, 0
+0x0038, 
+    IDC_LEVEL, 0x403, 5, 0
+0x6542, 0x7473, "\000" 
+    IDC_SYSTCOMP, 0x403, 8, 0
+0x6957, 0x646e, 0x776f, 0x0073, 
+    IDC_SYSTCOMP, 0x403, 5, 0
+0x6e55, 0x7869, "\000" 
+    IDC_REPLACE_ACTION, 0x403, 39, 0
+0x6c41, 0x6177, 0x7379, 0x7220, 0x7065, 0x616c, 0x6563, 0x7420, 0x6568, 
+0x6620, 0x6c69, 0x2065, 0x6e69, 0x7420, 0x6568, 0x6120, 0x6372, 0x6968, 
+0x6576, "\000" 
+    IDC_REPLACE_ACTION, 0x403, 15, 0
+0x7341, 0x206b, 0x6877, 0x7461, 0x7420, 0x206f, 0x6f64, "\000" 
+    IDC_REPLACE_ACTION, 0x403, 47, 0
+0x6552, 0x6c70, 0x6361, 0x2065, 0x6874, 0x2065, 0x6966, 0x656c, 0x6920, 
+0x206e, 0x6874, 0x2065, 0x7261, 0x6863, 0x7669, 0x2065, 0x6669, 0x6920, 
+0x2074, 0x7369, 0x6f20, 0x646c, 0x7265, "\000" 
+    IDC_REPLACE_ACTION, 0x403, 20, 0
+0x6f44, 0x6e20, 0x746f, 0x6120, 0x6464, 0x7420, 0x6568, 0x6620, 0x6c69, 
+0x0065, 
+    IDC_FILENAMES, 0x403, 25, 0
+0x7453, 0x726f, 0x2065, 0x6966, 0x656c, 0x616e, 0x656d, 0x2073, 0x6f6e, 
+0x6d72, 0x6c61, 0x796c, "\000" 
+    IDC_FILENAMES, 0x403, 24, 0
+0x7453, 0x726f, 0x2065, 0x6966, 0x656c, 0x616e, 0x656d, 0x2073, 0x7361, 
+0x5520, 0x4654, 0x0038, 
+    IDC_FILENAMES, 0x403, 28, 0
+0x5320, 0x6f74, 0x6572, 0x5520, 0x4654, 0x2038, 0x6e69, 0x6520, 0x7478, 
+0x6172, 0x6820, 0x6165, 0x6564, 0x0072, 
+    0
+END
+
+IDD_NEW DLGINIT
+BEGIN
+    IDC_LEVEL, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_LEVEL, 0x403, 11, 0
+0x7553, 0x6570, 0x2072, 0x6146, 0x7473, "\000" 
+    IDC_LEVEL, 0x403, 5, 0
+0x6146, 0x7473, "\000" 
+    IDC_LEVEL, 0x403, 2, 0
+0x0033, 
+    IDC_LEVEL, 0x403, 2, 0
+0x0034, 
+    IDC_LEVEL, 0x403, 2, 0
+0x0035, 
+    IDC_LEVEL, 0x403, 8, 0
+0x6544, 0x6166, 0x6c75, 0x0074, 
+    IDC_LEVEL, 0x403, 2, 0
+0x0037, 
+    IDC_LEVEL, 0x403, 2, 0
+0x0038, 
+    IDC_LEVEL, 0x403, 5, 0
+0x6542, 0x7473, "\000" 
+    0
+END
+
+IDD_REPLACE DLGINIT
+BEGIN
+    IDC_REPLACE_ACTION, 0x403, 32, 0
+0x6552, 0x6c70, 0x6361, 0x2065, 0x6874, 0x2065, 0x6966, 0x656c, 0x6920, 
+0x206e, 0x6874, 0x2065, 0x7261, 0x6863, 0x7669, 0x0065, 
+    IDC_REPLACE_ACTION, 0x403, 48, 0
+0x6441, 0x2064, 0x6874, 0x2065, 0x656e, 0x2077, 0x6966, 0x656c, 0x6e20, 
+0x726f, 0x616d, 0x6c6c, 0x2079, 0x7564, 0x6c70, 0x6369, 0x7461, 0x6e69, 
+0x2067, 0x6966, 0x656c, 0x616e, 0x656d, 0x0073, 
+    IDC_REPLACE_ACTION, 0x403, 47, 0
+0x6552, 0x6c70, 0x6361, 0x2065, 0x6874, 0x2065, 0x6966, 0x656c, 0x6920, 
+0x206e, 0x6874, 0x2065, 0x7261, 0x6863, 0x7669, 0x2065, 0x6669, 0x6920, 
+0x2074, 0x7369, 0x6f20, 0x646c, 0x7265, "\000" 
+    IDC_REPLACE_ACTION, 0x403, 20, 0
+0x6f44, 0x6e20, 0x746f, 0x6120, 0x6464, 0x7420, 0x6568, 0x6620, 0x6c69, 
+0x0065, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_MOVE                CURSOR                  "res\\move.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ADDFOLDER           "Select directory to add to the archive"
+    IDS_ARCHINFO            "Type:\t\t\t%s\n\nRead Only:\t\t%s\n\nNumber of files:\t\t%s\n\nNumber of disks:\t\t%d\n\nTotal Uncompressed Size:\t%s\nAvg. Compression Ratio:\t%.2f%%\n\nSize of central directory (bytes): \t%s\nIs central directory on disk:\t%s\n"
+    IDS_COL1                "File Name"
+    IDS_COL2                "Size"
+    IDS_COL3                "Time"
+    IDS_COL4                "Attr"
+    IDS_COL5                "Ratio"
+    IDS_COL6                "Comment"
+    IDS_ARICR               "being created"
+    IDS_ARIDS               "A segmented archive (%s), %s"
+    IDS_ARIEX               "existing"
+    IDS_PRCOMPRESS          "Compressing"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "ZipArc"
+    IDR_ZIPARCTYPE          "\narchive\nZipArc\nZip Files (*.zip)\n.zip\nZipArc.Document\nZipArc Document"
+    IDS_COMPRINFO           "\nMethod Opinion: \t\t%s"
+    IDS_DIR                 "Directory"
+    IDS_DUPLICATED          "Skipping adding file to avoid duplicated filenames in the archive."
+    IDS_ERR                 "Error occured. See the report for details (View->Report)"
+    IDS_ERRINFILE           "File: ""%s"""
+    IDS_EXISTS              "File already exists. Skipping."
+    IDS_EXTRACTTO           "Select a directory to extract the files to"
+    IDS_FIDISPCOMM          "Display &Comment"
+    IDS_FIDISPINFO          "Display &Info"
+    IDS_METH0               "Stored"
+    IDS_METH1               "Shrunk"
+    IDS_METH2               "Reduced with compression factor 1"
+    IDS_METH3               "Reduced with compression factor 2"
+    IDS_METH4               "Reduced with compression factor 3"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_INFOARCH            "Archive Information"
+    IDS_INFOFILE            "File Information"
+    IDS_INFOMFCOM           "Multiple files selected"
+    IDS_MAKING_SPACE        "Replacing (adjusting the space)"
+    IDS_MODIFYING           "The archive contents are now being modified."
+    IDS_NO                  "No"
+    IDS_NOGLOBAL            "These settings consider only the files added to the current archive from now on.\nTo make them global, use ""Set As Default"" button (however it will not affect options in other currently opened archives)."
+    IDS_NOTHING             "Action"
+    IDS_NOTREG              "Associating was not successfull."
+    IDS_NOTREMOVED          "The file %s could not be removed."
+    IDS_NOTSUCCESS          "Not successfull"
+    IDS_OPENFAILED          "Open failed"
+    IDS_PAGE1               "Compression"
+    IDS_PAGE2               "Smartness Settings"
+    IDS_PAGE3               "General"
+    IDS_PAGE4               "Appearance"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PAGE5               "About"
+    IDS_PASSNOTMATCH        "The password strings do not match."
+    IDS_PATTERN             "In the pattern string:\n* matches any sequence of characters (zero or more)\n? matches any character\n[SET] matches any character in the specified set,\n[!SET] or [^SET] matches any character not in the specified set.\n\nA set is composed of characters or ranges; a range looks like character hyphen character (as in 0 - 9 or A - Z).[0 - 9a - zA - Z_] is the\nminimal set of characters allowed in the[..] pattern construct.\n\nTo suppress the special syntactic significance of any of []*?!^-\\, and match the character exactly, precede it with a \\ \n(e.g. to find a file ""mydir\\myfile"", you'd enter as a pattern: ""mydir\\myfile"")\n\nIf you check ""Check filenames only"" the directories are treated as files (without a \\ at the end) "
+    IDS_RENAMING            "Moving data in file after file rename"
+    IDS_REPLACE_PROMPT      "The file with the name ""%s"" already exists in the archive.What do you want to do?"
+    IDS_PANE_INFO1          "Modified"
+    IDS_PANE_INFO2          "Read Only"
+    IDS_PANE_INFO3          "Report Active"
+    IDS_PANE_INFO4          "Segmented Archive"
+    IDS_PANE_INFO5          "Archive After Exception"
+    IDS_REPLACE_PROMPT_SPAN "\n(This is a segmented archive. You cannot replace files.)"
+    IDS_REPORT              "%s messages"
+    IDS_SAFEABORT           "Aborted Safely."
+    IDS_SAVETITLE           "%s has been modified"
+    IDS_SAVNOTSAFE          "Interrupting saving central directory action in a segmented archive will result in rubbish being left in the archive (however if saved again, the archive will be usable). Do you wish to abort?"
+    IDS_SELECTTEMP          "Select a directory for temporary files"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PREXTRACT           "Extracting"
+    IDS_ARINORMAL           "Normal archive"
+    IDS_PRTEST              "Testing"
+    IDS_ASSOCEXISTS         "The association for %s already exists (%s). Do you want to change it to ZipArc application? (If you later remove the association by changing Options or starting the program with \\unregister parameter, the original value will be restored)"
+    IDS_CANNOTCLOSE         "Interrupt first the current operation or wait for it to finish."
+    IDS_CANTINTERRUPT       "There is still an action in progress in %s . Interrupt it or wait for it to finish before closing the application."
+    IDS_CHGDSK              "Insert the disk number %d.\n%s"
+    IDS_CHGEX               "The file %s already exists on the disk. Do you want to delete the file?\nYes\tthe file will be deleted\nNo\tdelete the file manually or insert another disk\nCancel\tabort archive creation"
+    IDS_CHGNOTCR            "Cannot create a file on the currently inserted disk"
+    IDS_PRDELETE            "Deleting"
+    IDS_CHGSPACE            "Need at least %s bytes."
+    IDS_CHGWRPR             "The inserted disk is probably write protected. Insert another disk or unprotect it."
+    IDS_COMMAND             "&Command"
+    IDS_COMPREFF            "Efficient"
+    IDS_COMPREXTR           " (extra %d bytes are for the encryption header)"
+    IDS_COMPRINEFF          "Inefficient (the file is larger after compression)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_METH5               "Reduced with compression factor 4"
+    IDS_METH6               "Imploded"
+    IDS_METH7               "Tokenized"
+    IDS_METH8               "Deflated"
+    IDS_METH9               "Enhanced Deflating"
+    IDS_METH10              "PKWARE Date Compression Library Imploding"
+    IDS_FILE                "File"
+    IDS_FILE_SAVE           "&Save"
+    IDS_FILEINFO            "Type:\t\t\t%s\nEncrypted:\t\t%s\nStarting Disk:\t\t%d\nOffset:\t\t\t%s\n\nCompressed Size:\t\t%s\nUncompressed Size:\t\t%s\nCompression Ratio:\t\t%.2f%%\n\nCompression Method:\t%s%s\nCRC32:\t\t\t%lu (hex: %X)\n\nModification Date:\t\t%s\nExternal Attributes:\t\t%s (orig. hex: %X, Unix oct: %o)\nNative Platform:\t\t%s\nVersion Made By:\t\t%.1f\nVersion Needed To Extract:\t%.1f"
+    IDS_FINALIZE            "&Finalize"
+    IDS_FINISHED            "[%s] %s finished %s"
+    IDS_FINNO               ". Report is active."
+    IDS_FINOK               "successfully."
+    IDS_FROM                "From: %s"
+    IDS_INFCOMM             "Comment"
+    IDS_INFINF              "Information"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TO                  "To: %s"
+    IDS_UNKNOWN             "Unknown"
+    IDS_UNREG               "Unregister"
+    IDS_YES                 "Yes"
+    IDS_NOCDONREMOV         "The central directory was not found in the archive. If you're trying to open a multi-disk archive, make sure you have inserted the last disk. Retry?"
+    IDS_NO_ZIP_TO_GET_FROM  "There are no opened archives from which it is possible to get data (we cannot get data from read-only, multi-volume, empty or performing an action archives). You also need to select the files you want to get."
+    IDS_GETFROM_PROMPT      "Choose the archive to get selected files from to the archive [%s]."
+    IDS_GETTING_FROM_ARCHIVE "Getting compressed data from another archive"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "ZipArc"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+    IDS_COUNTING            "Counting"
+    IDS_PRCOMPRESSMOVE      "Moving data from temporary file."
+    IDS_PRCOMPRESSSTORE     "Compression is inefficient. Storing instead."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SETPRIORITY_LOWEST "Set the active archive priority"
+    ID_FILE_SETPRIORITY_BELOWNORMAL "Set the active archive priority"
+    ID_FILE_SETPRIORITY_NORMAL "Set the active archive priority"
+    ID_FILE_SETPRIORITY_ABOVENORMAL "Set the active archive priority"
+    ID_FILE_SETPRIORITY_HIGHEST "Set the active archive priority"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_COMMAND_SEARCHSELECT "Search for the files using a wildcard pattern matching and select what was found\nSearch&Select"
+    ID_COMMAND_SETPASSWORD  "Set the password (you can set it to be different for various files)\nSet Password"
+    ID_COMMAND_STOP         "Safely stop the current operation (cause no damage to the archive)\nStop"
+    ID_COMMAND_TEST_SELECTED "Test selected files\nTest"
+    ID_FILE_FINALIZE        "Finalize the archive (no further modifications possible)\nFinalize"
+    ID_FILE_INFORMATION     "Display information about the archive\nArchive Information"
+    ID_FILE_OPTIONS         "Change Options\nOptions"
+    ID_HELP_WEBHOMEPAGE     "Visit Artpol Software Web Home Page"
+    ID_INDICATOR_SEL        "Selected %d of %d"
+    ID_RENAME               "Rename selected file\nRename file"
+    ID_SELECTALL            "Select All Items\nSelect All"
+    ID_VIEW_FILEINFO        "Display the selected file information\nFile Info"
+    ID_VIEW_REFRESH         "Refresh the view\nRefresh"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_COMMAND_ABORT        "Abort the current action (if not testing, most probably data will be corrupted)\nAbort"
+    ID_COMMAND_ADD_FILES    "Add files to the active archive\nAdd files"
+    ID_COMMAND_ADD_FOLDERS  "Add the contents of the selected folder to the active archive\nAdd folder"
+    ID_COMMAND_COMMENT_FILE "Set the comment of the selected file(s)\nSet file(s) comment"
+    ID_COMMAND_COMMENT_GLOBAL "Set the global comment\nSet global comment"
+    ID_COMMAND_DELETE_SELECTED "Delete selected files\nDelete"
+    ID_COMMAND_EXTRACT      "Extract files\nExtract"
+    ID_COMMAND_PASTEFILES   "Add to the archive files which filenames are on the clipboard\nAdd From Clipboard"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new archive\nNew"
+    ID_FILE_OPEN            "Open an existing archive\nOpen"
+    ID_FILE_CLOSE           "Close the active archive\nClose"
+    ID_FILE_SAVE            "Save the archive and yet allow the modifications\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_REPORT          "View report from the last action (active only if an error occured)\nReport"
+    ID_COMMAND_GETFROMARCHIVE 
+                            "Copy selected files from another opened archive without decompression\nGet From Archive"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SETPRIORITY_IDLE "Set the active archive priority"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PRDELCHECK          "Checking files"
+    IDS_PRSAVING            "Saving central directory"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\ZipArc.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

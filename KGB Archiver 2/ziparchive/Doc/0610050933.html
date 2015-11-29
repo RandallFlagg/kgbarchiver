@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>ZipArchive:
+        Compilation of the ZipArchive Library and Integration with Applications
+    </title>
+    <link href="articles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    body
+    {
+    	font-family: verdana, arial, helvetica, sans-serif;
+    }
+</style>
+</head>
+<body>
+    <div class="kbabody">
+        <div class="kbatitle">
+            Compilation of the ZipArchive Library and Integration with Applications
+        </div>
+        <div class="kbaappliesto">
+            Applies To: <strong>All</strong>
+        </div>
+        <div class="kbaindex">
+            <ul class="kbaindex">
+
+<li><a class="linkindex" href="#preproc">Compilation Preprocessor Directives</a>
+<ul class="kbaindex">
+<li><a class="linkindex" href="#stlmfc">STL / MFC</a></li>
+<li><a class="linkindex" href="#winlin">Windows / Linux</a></li>
+<li><a class="linkindex" href="#endianess">Endianess Detection</a></li>
+<li><a class="linkindex" href="#app">Application Configuration</a></li>
+</ul>
+</li>
+<li><a class="linkindex" href="#compilation">Compilation and Integration</a>
+<ul class="kbaindex">
+<li><a class="linkindex" href="#msvs">Microsoft Visual Studio</a>
+<ul class="kbaindex">
+<li><a class="linkindex" href="#vsMethod1">Integration Method 1 (Simpler)</a></li>
+<li><a class="linkindex" href="#vsMethod2">Integration Method 2</a></li>
+<li><a class="linkindex" href="#vsnotes">Additional Considerations</a></li>
+</ul>
+</li>
+<li><a class="linkindex" href="#borland">Borland</a>
+<ul class="kbaindex">
+<li><a class="linkindex" href="#borlnotes">Additional Considerations</a></li>
+</ul>
+</li>
+<li><a class="linkindex" href="#linux">Linux</a>
+<ul class="kbaindex">
+<li><a class="linkindex" href="#linnotes">Additional Considerations</a></li>
+</ul>
+</li>
+<li><a class="linkindex" href="#mingw">MinGW</a></li>
+</ul>
+</li>
+<li><a class="linkindex" href="#dll">Compiling as DLL</a>
+<ul class="kbaindex">
+<li><a class="linkindex" href="#dllwin">Windows</a></li>
+<li><a class="linkindex" href="#dlllin">Linux</a></li>
+</ul>
+</li></ul>
+
+        </div>
+        <div class="kbacontents">
+            
+        <h2 id="preproc" name="preproc" class="kb">
+            Compilation Preprocessor Directives</h2>
+        The file <span class="file">_platform.h</span> contains preprocessor directives
+        that control the compilation process under various platforms. You can alter the definition
+        of these directives to produce the desired version of the ZipArchive Library.
+        <h3 id="stlmfc" name="stlmfc" class="kb">
+            STL / MFC</h3>
+        The ZipArchive Library by default compiles using STL. If you wish to compile the
+        library using MFC, make sure that <span class="preproc">ZIP_ARCHIVE_MFC</span> is
+        defined. If it is not defined, <span class="preproc">ZIP_ARCHIVE_STL</span> will
+        be automatically defined and the library will use STL.
+        <h3 id="winlin" name="winlin" class="kb">
+            Windows / Linux</h3>
+        The ZipArchive Library by default compiles for the Windows platform. If you wish
+        to compile the library for the Linux platform, make sure that <span class="preproc">
+            ZIP_ARCHIVE_LNX</span> is defined. If it is not defined, <span class="preproc">ZIP_ARCHIVE_WIN</span>
+        will be automatically defined and the library will compile for the Windows platform.
+        <h3 id="endianess" name="endianess" class="kb">
+            Endianess Detection</h3>
+        The ZipArchive Library can work on little-endian and big-endian architectures. It
+        tries a simple detection of the current architecture, but you may need to adjust
+        it. In most cases the library compiles for a little-endian architecture by defining
+        <span class="preproc">ZIP_ARCHIVE_LITTLE_ENDIAN</span>. If it is not defined, <span class="preproc">ZIP_ARCHIVE_BIG_ENDIAN</span> will be automatically defined
+        and the library will compile for a big-endian architecture.
+        <h3 id="app" name="app" class="kb">
+            Application Configuration</h3>
+        If you are using the Windows STL version only, just leave <span class="preproc">ZIP_ARCHIVE_MFC</span>
+        and <span class="preproc">ZIP_ARCHIVE_LNX</span> commented out in the <span class="file">
+            _platform.h</span> file and you only need to care about the endianess. Otherwise
+        read on.<p />
+        The ZipArchive Library MFC projects configurations already define <span class="preproc">
+            ZIP_ARCHIVE_MFC</span> and the <span class="file">makefile</span> for Linux
+        already defines <span class="preproc">ZIP_ARCHIVE_LNX</span>. You only need to make
+        sure that your application compiles with the same preprocessor directives as the
+        ZipArchive
+        Library. You can accomplish this in one of these ways:
+        <ul>
+            <li>Adjust the <span class="file">_platform.h</span> file. The defined directives in
+                this file will be visible to both the ZipArchive Library and your application.</li>
+            <li>If you are compiling applications for different platforms from the same ZipArchive
+                Library sources, you may want to avoid the recompilation of the ZipArchive Library,
+                which follows every <span class="file">_platform.h</span> file modification. In
+                this case, make sure that the ZipArchive Library project configuration has proper
+                preprocessor directives defined, and define the same directives in your application's
+                project configuration. </li>
+        </ul>
+        Taking advantage of the directives auto-definition, you only need to define <span class="preproc">ZIP_ARCHIVE_MFC</span> or <span class="preproc">ZIP_ARCHIVE_LNX</span>,
+        where needed.
+        <h2 id="compilation" name="compilation" class="kb">
+            Compilation and Integration</h2>
+        The ZipArchive Library uses Microsoft Visual Studio C++ 2005 project files by default.
+        To compile under a different environment, copy the appropriate project files to
+        the ZipArchive Library sources folder. The project files can be found in the <span class="file">
+            _projects</span> folder in the library distribution sources package.
+        <h3 id="msvs" name="msvs" class="kb">
+            Microsoft Visual Studio</h3>
+        To add the ZipArchive Library functionality to your application you need to link
+        the library with it. You can do this at least in two ways (in both cases you need
+        to include <span class="file">ZipArchive.h</span> header in your sources).
+        <h4 id="vsMethod1" name="vsMethod1" class="kb">
+            Integration Method 1 (Simpler)</h4>
+        Insert your application project and the ZipArchive Library project into the same
+        solution/workspace and:
+        <ul class="non">
+            <li><strong>VS 2005 and VS 2003</strong>
+                <ul class="non">
+                    <li>Set your project to reference the ZipArchive Library project (on the Solution Explorer,
+                        click <span class="navigation">References...</span>) and add the library.</li></ul>
+            </li>
+            <li><strong>VS 6.0</strong>
+                <ul class="non">
+                    <li>Set project dependencies: your project dependent on ZipArchive project (click <span class="navigation">Project -&gt; Dependencies</span> and check the ZipArchive project).</li></ul>
+            </li>
+        </ul>
+        When you use this method, the configurations in both your project and the ZipArchive
+        Library project should match. Best, if the configurations are named the same.
+        <h4 id="vsMethod2" name="vsMethod2" class="kb">
+            Integration Method 2</h4>
+        <ul class="dec">
+            <li>Add <span class="file">ZipArchive.lib</span> to
+                <ul class="non">
+                    <li><strong>VS 6.0</strong><ul class="non">
+                        <li><span class="navigation">Project Settings -&gt; Link -&gt; Input -&gt; Object/library modules</span></li>
+                    </ul>
+                    </li>
+                    <li><strong>VS 2003 and VS 2005</strong><ul class="non">
+                        <li><span class="navigation">Project Properties -&gt; Linker -&gt; Input -&gt; Additional Dependencies</span></li>
+                    </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Set the proper directories, so that Visual Studio can find the library and its
+                headers. You can do this locally (for the current project only), or globally (for
+                all the projects):
+                <ul>
+                    <li>To add the directories locally:
+                        <ul>
+                            <li>Add the <span class="file">ZipArchive.lib</span> directory to:
+                                <ul class="non">
+                                    <li><strong>VS 2005 and VS 2003</strong>
+                                        <ul class="non">
+                                            <li><span class="navigation">Project Properties -&gt; Linker -&gt; General -&gt; Additional Library
+                                                Directories</span></li></ul>
+                                    </li>
+                                    <li><strong>VS 6.0</strong>
+                                        <ul class="non">
+                                            <li><span class="navigation">Project Settings -&gt; Link -&gt; Input -&gt; Additional library
+                                                path</span></li></ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Add the ZipArchive Library source code directory to the preprocessor searches
+                                <ul class="non">
+                                    <li><strong>VS 2005 and VS 2003</strong>
+                                        <ul class="non">
+                                            <li><span class="navigation">Project Properties -&gt; C/C++ -&gt; General -&gt; Additional include
+                                                directories</span></li></ul>
+                                    </li>
+                                    <li><strong>VS 6.0</strong>
+                                        <ul class="non">
+                                            <li><span class="navigation">Project Settings -&gt; C++ -&gt; Preprocessor -&gt; Additional include
+                                                directories</span></li></ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>To add the directories globally into appropriate places (<span class="navigation">Include
+                        Files</span> and <span class="navigation">Library Files</span>)
+                        <ul class="non">
+                            <li><strong>VS 2005</strong><ul class="non">
+                                <li><span class="navigation">Tools -&gt; Options -&gt; Projects and Solutions -&gt; VC++ Directories</span></li></ul>
+                            </li>
+                            <li><strong>VS 2003</strong><ul class="non">
+                                <li><span class="navigation">Tools -&gt; Options -&gt; Projects -&gt; VC++ Directories</span></li>
+                            </ul>
+                            </li>
+                            <li><strong>VS 6.0</strong><ul class="non">
+                                <li><span class="navigation">Tools -&gt; Options -&gt; Directories</span></li>
+                            </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h4 id="vsnotes" name="vsnotes" class="kb">
+            Additional Considerations</h4>
+        <ul>
+            <li>Your project should use the MFC library and the Runtime Library
+                in same way as the ZipArchive Library project. This can be set in:
+                <ul class="non">
+                    <li><strong>VS 2005 and VS 2003</strong>
+                        <ul>
+                            <li><span class="navigation">Project Properties -&gt; General -&gt; Use of MFC</span> </li>
+                            <li><span class="navigation">Project Properties -&gt; C/C++ -&gt; Code Generation -&gt; Runtime
+                                library</span></li>
+                        </ul>
+                    </li>
+                    <li><strong>VS 6.0</strong>
+                        <ul>
+                            <li><span class="navigation">Project -&gt; Settings -&gt; General -&gt; Microsoft Fundation Classes</span></li>
+                            <li><span class="navigation">Project -&gt; Settings -&gt; C/C++ -&gt; Code Generation -&gt; Use
+                                run-time library</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>If you are compiling for Unicode, make sure that you have installed the necessary
+                libraries. During installation you need to select <strong>Static Libraries for Unicode</strong>
+                and <strong>Shared Libraries for Unicode</strong>. They are located in:
+                <ul>
+                    <li><strong>VS 2005 and VS 2003</strong>
+                        <ul class="non">
+                            <li><span class="navigation">Language Tools \ Visual C++ .NET \ Visual C++ Class &amp; Template
+                                Libraries</span></li>
+                        </ul>
+                    </li>
+                    <li><strong>VS 6.0</strong>
+                        <ul class="non">
+                            <li><span class="navigation">VC++ MFC and Template libraries \ MS Foundation Class Libraries</span></li>
+                        </ul>
+                    </li>
+                </ul>
+                You don't need to reinstall Visual Studio to add these libraries, just modify the installation.
+            </li>
+            <li>You should have defined (or undefined) Unicode in both your project and the ZipArchive Library project.
+            Note, that Visual Studio 2005 creates Unicode projects by default, while the default ZipArchive Library configuration
+            (Debug or Release) is not Unicode.</li>
+            <li>The ZipArchive Library does not support the Zip64 format for Visual Studio 6.0 when
+                using the MFC library, due to the fact that MFC in Visual Studio 6.0 lacks methods
+                for <code>&gt;2GB</code> files support. See <a class="linkkb" href="0610051629.html">Zip64 Format: Crossing the Limits of File Sizes and Number of Files and Segments</a>
+                for more information.</li>
+        </ul>
+        <h3 id="borland" name="borland" class="kb">
+            Borland</h3>
+        <ul>
+            <li>Project files for Borland C++ 6.0 are available. They were created using Visual
+                C++ Project Conversion Utility (<span class="file">VCTOBPR.EXE</span>). You can
+                start this tool from the menu <span class="navigation">Tools-&gt;Visual C++ Project Conversion
+                    Utility</span>. In case the projects provided don't work for you, you can create
+                your own in the mentioned way. Be sure to create <span class="file">Release</span>
+                subfolder first, otherwise you'll get a write error during compilation.</li>
+            <li>There are also makefiles available which should work with other versions of Borland.</li>
+            <li>When you are compiling your application, add the compiled ZipArchive Library (<span class="file">ZipArchive.lib</span>) to the project (<span class="navigation">Project-&gt;Add
+                    to Project</span>) and compile.</li>
+        </ul>
+        <h4 id="borlnotes" name="borlnotes" class="kb">
+            Additional Considerations</h4>
+        <ul>
+            <li>The ZipArchive Library does not support the Zip64 format for the Borland Compiler,
+                due to the fact that the Borland Compiler lacks functions for <code>&gt;2GB</code>
+                files support. See <a class="linkkb" href="0610051629.html">Zip64 Format: Crossing the Limits of File Sizes and Number of Files and Segments</a> for more information.</li>
+        </ul>
+        <h3 id="linux" name="linux" class="kb">
+            Linux</h3>
+        The ZipArchive Library does not use the Zlib library that is installed in the system.
+        The Zlib library included in the ZipArchive Library is slightly modified for it's
+        needs.
+        <ul class="dec">
+            <li>Compile the ZipArchive Library by typing: <span class="command">make</span> The resulting file
+                is a static library <span class="file">libziparch.a</span> </li>
+            <li>You can copy the library and the headers (if you have an appropriate rights) to
+                <span class="file">/usr/lib</span> and <span class="file">/usr/include/ziparchive</span>
+                (you can change them in <span class="file">Makefile</span>) with the command: <span class="command">make install</span></li><li>Now you can link the library to your application.
+                        If the library is in the same directory, as your application, you can for example,
+                        use the command:<span class="command">g++ $I. -o app app.cpp -lstdc++ -lziparch</span></li><li>
+                            If you wish to uninstall the library type:<span class="command">make uninstall</span></li></ul>
+        <h4 id="linnotes" name="linnotes" class="kb">
+            Additional Considerations</h4>
+        <ul>
+            <li>After you retrieve the system attributes with the <a class="linkapi" href="./classCZipFileHeader.html#a66d8b8be6c5b8da7932c02191891bd7">CZipFileHeader::GetSystemAttr()</a>
+                method, you need to shift the result right by 16 bits ( e.g. <code>uAttr = header.GetSystemAttr()
+                    &gt;&gt; 16</code> ). The reason for that is the way the attributes are stored in
+                the archive created under (or for) Linux.</li>
+        </ul>
+        <h3 id="mingw" name="mingw" class="kb">
+            MinGW</h3>
+        You can compile the ZipArchive Library using the provided <span class="file">Makefile.mingw</span>
+        file under both the MSYS shell and the Windows Command Line.
+        <ul>
+            <li>Under the MSYS shell type: <span class="command">make -f Makefile.mingw</span></li><li>
+                Under the Windows Command Line make sure that the path to the <span class="file">mingw32-make.exe</span>
+                file is known and then type: <span class="command">mingw32-make.exe -f Makefile.mingw</span></li></ul>
+        <h2 id="dll" name="dll" class="kb">
+            Compiling as DLL</h2>
+        <h3 id="dllwin" name="dllwin" class="kb">
+            Windows</h3>
+        <ul>
+            <li>Your application that uses the ZipArchive Library as the DLL version needs to have
+                <span class="preproc">ZIP_HAS_DLL</span> defined. The <span class="file">ZipArchive.dll</span>
+                must be accessible for your application at the runtime. You can put it in your application's
+                executable directory. </li>
+            <li>The ZipArchive Library project configuration that compiles the DLL version needs
+                to have <span class="preproc">ZIP_HAS_DLL</span> and <span class="preproc">ZIP_BUILD_DLL</span>
+                defined. </li>
+        </ul>
+        <h3 id="dlllin" name="dlllin" class="kb">
+            Linux</h3>
+        On some systems (m68k and the SPARC), when you want to compile the ZipArchive Library
+        for the dynamic linking, you need to modify <span class="file">makefile</span> files
+        (for the Zlib and ZipArchive) so that <span class="preproc">CFLAGS</span> definition
+        includes <span class="preproc">-fPIC</span>.
+    
+        </div>
+        <div class="kbafooter">
+            <strong>Article ID:&nbsp;0610050933</strong>
+        </div>
+    </div>
+   <div style="font-size:11px; text-align:center;border-top:solid 1px gray;width:400px;margin:10px auto 5px auto;color:gray">
+Copyright &copy;&nbsp;2000 - 2006 Tadeusz Dracz.
+</div>
+</body>
+</html>

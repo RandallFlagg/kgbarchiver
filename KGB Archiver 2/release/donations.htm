@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<style>
+body{margin:0px; font-family:Arial; font-size:8pt; color:#000000; background-color:#FFFFFF}
+</style>
+<script language=javascript>
+function update(){
+	var l = document.getElementById("loading");
+	var p = document.getElementById("page");
+	
+	l.style.display = "none";
+	p.style.display = "";
+}
+</script>
+</head>
+
+<body>
+<img id=loading border=0 src="loading.gif">
+<iframe id=page style="display:none;" onload="update();" src="http://kgbarchiver.sourceforge.net/top10donations.php" marginwidth="0" marginheight="0" height="100%" width="100%" scrolling="no" border="0" frameborder="0">
+An error has occured, please contact KGB Archiver support.
+</iframe>
+
+</body>
+</html>

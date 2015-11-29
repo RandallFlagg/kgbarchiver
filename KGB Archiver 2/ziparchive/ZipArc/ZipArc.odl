@@ -1,0 +1,44 @@
+// ZipArc.odl : type library source for ZipArc.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (ZipArc.tlb).
+
+[ uuid(FAC412EB-A2F0-474A-BE62-384B2048B8E7), version(1.0) ]
+library ZipArc
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CZipArcDoc
+	
+	[ uuid(CF49F80B-86E3-46ED-BF1F-B0D01B558200) ]
+	dispinterface IZipArc
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CZipArcDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CZipArcDoc)
+			[id(2)] VARIANT_BOOL OpenZipFile(BSTR lpszZipFileName, long iMode, long iVolumeSize);
+			[id(1)] void Close(VARIANT_BOOL bAfterException);
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CZipArcDoc
+	
+	[ uuid(737CCB50-E9A0-46FB-AC0C-409B5E943C40) ]
+	coclass Document
+	{
+		[default] dispinterface IZipArc;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

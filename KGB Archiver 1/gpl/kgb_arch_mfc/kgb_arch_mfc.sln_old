@@ -1,0 +1,41 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kgb_arch_compress", "kgb_arch_mfc.vcproj", "{E582D0CA-9F34-4C76-B898-699F87A22427}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kgb_arch_decompress", "..\kgb_arch_decompress\kgb_arch_decompress.vcproj", "{17E41F02-EE87-48A7-8CC4-A930F1A657FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8682D2B1-07D6-4AE1-A9A6-1B1C446A3CFD}"
+	ProjectSection(SolutionItems) = preProject
+		..\ico\document.ico = ..\ico\document.ico
+		..\file.ico = ..\file.ico
+		..\ico\kgb.ico = ..\ico\kgb.ico
+		..\ico\kge.ico = ..\ico\kge.ico
+		..\program.ico = ..\program.ico
+		..\ico\zip.ico = ..\ico\zip.ico
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kgb_arch_conf", "..\kgb_arch_conf\kgb_arch_conf.vcproj", "{F4D43739-8C81-42D3-BE3C-C2BCF4857181}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E582D0CA-9F34-4C76-B898-699F87A22427}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E582D0CA-9F34-4C76-B898-699F87A22427}.Debug|Win32.Build.0 = Debug|Win32
+		{E582D0CA-9F34-4C76-B898-699F87A22427}.Release|Win32.ActiveCfg = Release|Win32
+		{E582D0CA-9F34-4C76-B898-699F87A22427}.Release|Win32.Build.0 = Release|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Debug|Win32.Build.0 = Debug|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Release|Win32.ActiveCfg = Release|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Release|Win32.Build.0 = Release|Win32
+		{F4D43739-8C81-42D3-BE3C-C2BCF4857181}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F4D43739-8C81-42D3-BE3C-C2BCF4857181}.Debug|Win32.Build.0 = Debug|Win32
+		{F4D43739-8C81-42D3-BE3C-C2BCF4857181}.Release|Win32.ActiveCfg = Release|Win32
+		{F4D43739-8C81-42D3-BE3C-C2BCF4857181}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

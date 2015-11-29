@@ -1,0 +1,165 @@
+TRANSLATION ENGLISH NAME:
+TRANSLATION NATIVE NAME:
+
+IDD_KGB_ARCH_MFC
+Arkiv
+Arkiv Format
+Kompressions Typ
+Minimalt;Väldigt svag;Svag;Normal;Medium;Mer än Medium;Bra;Väldigt Bra;Extrem;Maximalt;
+Splitta Arkiv
+Lösenord
+SFX Modul
+Skapa SFX modul (Windows enbart)
+Annat
+Behåll full sökväg
+Filer att komprimera
+Lägg till Fil
+Lägg till Katalog
+Ta Bort
+Avbryt
+Nästa >
+
+IDD_COMPRESS
+Komprimering
+Aktuell Fil
+Nuvarande Fil Status
+Total status
+Statistik
+Storlek före komprimering:
+Storlek efter komprimering:
+Kvot:
+Tid:
+Återstående Tid:
+Prioritet:
+Hög>;Högre än Normal;Normal;Lägre Än Normal;Låg;
+Stäng av dator efter utförd uppgift
+Avbryt
+
+STRING TABLE
+Om KGB Archiver
+Filnamn
+Storlek
+Ej Access til fil
+Du bör skriva Arkiv-namn och/eller välja fil att komprimera
+LÖsen ska vara mellan 4 och 32 tecken
+Komprimering avbröts utav användaren !
+Komprimering Klar\nStorlek före komprimering:\t%s\nStorlek efter Komprimering:\t%s\nKvot:\t\t\t%.1f%%\nUtnyttjad tid:\t\t
+Välj katalog att komprimera
+Kan inte ändra Prioritet!
+Komprimering
+förbereder...
+kollar filstorlek...
+sorterar filer...
+lägger tll SFX modul...
+krypterar...
+KGB Arkiv (*.kgb)|*.kgb|ZIP Arkiv (*.zip)|*.zip|Alla filer (*.*)|*.*|
+Alla filer (*.*)|*.*|
+Enbart siffror tillåtna i detta fält!
+Komprimeringen kanske kräver mer än 75% av tillgängligt Fysiskt minne, vill du fortsätta?
+KGB Komprimering:\t\Minne\tHastighet\nMinimal\t\t\t      9MB\t200%\nVäldigt Svag\t\t    11MB\t190%\nSvag\t\t\t    15MB\t180%\nNormal\t\t\t    27MB\t100%\nMedium\t\t\t    66MB\t  29%\nÖver medium\t\t  154MB\t  17%\nGod\t\t\t  202MB\t  16%\nVäldigt god\t\t  402MB\t  15%\nExtrem\t\t\t  800MB\t  14%\nMaximum\t\t\t1600MB\t  13%\n\nZIP Komprimering:\nAlla nivåer kräver ungefär 10MB // \t BETYDER TAB, ANVÄND 2 TABBAR FÖR LÅNG ÖVERSÄTTNING OCH 3 FÖR KORT
+Det finns ej tillräckligt mycket fritt minne till att fortsätta!
+Fillistan innehåller filen, vilket är samma som Arkiv Namn!
+Är du säker på att du vill avbryta komprimering?
+KGB Archiver stöder enbart filer upp till 4GB!
+
+IDD_KGB_ARCH_DECOMPRESS
+Arkiv Namn
+Packa upp till: (Ignorerad om arkivet innehåller full sökväg)
+Välj filer att packa upp
+Arkiv Info
+Avbryt
+Nästa >
+
+IDD_DECOMPRESS
+Packa upp
+Nuvarande Fil
+Nuvarande Fil Status
+Total Status
+Statistik
+Storlek före Komprimering:
+Storlek efter Komprimering:
+Kvot:
+Tid:
+Återstående Tid:
+Prioritet:
+Hög;Mer än Normal;Normal;Mindre än Normal;Låg;
+Stäng av datorn efter utförd uppgift
+Avbryt
+
+IDD_DECODING
+De-Kryptering...
+Var god vänta...
+
+IDD_PASSWD
+Lösenord
+Var vänlig skriv in lösenord
+OK
+Avbryt
+
+IDD_OVERWRITE
+File overwrite confirm
+Fil överskrivning godkänn
+med denna //DEL AV MENING: Vill du skriva över existerande fil %.260s (DETAILED FILE INFO) med denna  (DETAILED FILE INFO)
+Ja till alla
+Ja
+Nej
+Nej till alla
+
+STRING TABLE
+Om KGB Archiver
+Filnamn
+Storlek
+Var vänlig ange Arkiv Namn och/eller målkatalog
+Arkiv kunde inte hittas!
+Kan inte packa upp till katalogen som inte kan skapas!
+Välj filer att packa upp!
+Uppackning avbryten av användaren!
+Uppackning klar!\nStorlek före komprimering:\t%s\nStorlek efter komprimering:\t%s\nKvot:\t\t\t%.1f%%\nTidsåtgång:\t\t
+Var vänlig välj katalog att packa up till!
+Felaktigt Lösenord!
+Vald fil är ej ett kompatibelt KGB arkiv
+Kan ej ändra Prioritet!
+Uppackning
+förbereder...
+skapar kataloger...
+hoppar över...
+Alla kompatibla arkiv|*.kgb; *.kge; *.exe; *.zip;|KGB Arkivs (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP Arkiv (*.zip)|*.zip|
+Komprimerad: %s\tOriginal: %s\tKvot: %.1f%%
+Finns ej tillräckligt med fritt minne för att fortsätta
+Vill du skriva över befintlig fil %.260s
+Är du säker på att du vill avbryta uppackningen?
+Storlek: %s
+Senast ändrad: %s
+
+IDD_ARCH_CONF_DIALOG
+'Shell' integering
+Associera KGB arkiv med KGB Archiver
+Associera ZIP arkiv med KGB Archiver
+Skapa Explorer Meny
+Språk
+VAR VÄNLIG ANGE DITT SPRÅK HÄR
+Annat
+Kolla efter uppdateringar vid uppstart
+Kolla nu
+Vissa statistik efter Komprimering/De-Komrimering
+Om
+Avbryt
+OK
+
+IDD_MAIN
+Var vänlig välj önskad aktivitet:
+Komprimera filer
+De-Komprimera filer
+Inställnings alternativ
+Top 10 donatorer
+Om
+Avbryt
+Nästa >
+
+STRING TABLE
+Om KGB Archiver
+Komprimera till KGB
+Kan inte ansluta till KGB Server!
+Ny Version av KGB Archiver tillgänglig! Vill du hämta den?
+Inga uppdateringar funna
+Packa upp här

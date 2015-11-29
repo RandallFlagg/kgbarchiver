@@ -1,0 +1,129 @@
+IDD_KGB_ARCH_MFC
+Arhívum
+Arhívum forma
+Tömörítési szint
+Minimális;Nagyon gyenge;Gyenge;Normál;Közepes;Közepesnél jobb;Jó;Nagyon jó;Extrém;Maximum;
+Arhívum darabolás
+Jelszó
+SFX Modul
+SFX Modul készítése (csak Windows)
+Egyéb
+Örizze meg a teljes útvonalat
+Tömörítendõ fájlok
+Fájl hozzáadás
+Könyvtár hozzáadás
+Törlés
+Mégse
+Következõ >
+
+IDD_COMPRESS
+Tömörítés
+Jelenlegi fájl
+Jelenlegi fájl állapot
+Teljes állapot
+Statisztika
+Méret tömörítés elõtt:
+Méret tömörítés után:
+Arány:
+Idõ:
+Hátralévõ idõ:
+Prioritás:
+Magas;Jobb mint a normál;Normál;Normál kisebb;Alacsony;
+Gép kikapcs a végén
+Mégse
+
+STRING TABLE
+KGB Archiver névjegy
+Fájlnév
+Méret
+Az eljárás nem tud hozzáférni a fájlhoz
+Add meg az arhívum nevét és/vagy a fájlokat a tömörítéshez!
+A jelszónak 4 és 32 karakter közötti hosszúságúnak kell lennie!
+Tömörítést megszakította a felhasználó!
+Tömörítés kész!\nMéret tömörítés elõtt:\t%s\nMéret tömörítés után:\t%s\nArány:\t\t\t%.1f%%\nEltelt Idõ:\t\t
+Válassz könyvtárat a tömörítéshez!
+A prioritás nem változtatható!
+Tömörítés
+elõkészítés...
+Fájlméret beolvasás...
+Sorbarendezés...
+SFX Modul hozzáadása...
+kódolás...
+KGB Arhívumok (*.kgb)|*.kgb|ZIP Arhívumok (*.zip)|*.zip|Minden fájl (*.*)|*.*|
+Minden fájl (*.*)|*.*|
+Ebben a mezõben csak szám adható meg!
+A tömörítés 75%-os fizikai memória használatot igényel, biztsan folytatod?
+Memória használat:\nKGB Tömörítés:\nMinimális\t\t\t9MB\nNagyon gyenge\t\t11MB\nGyenge\t\t\t15MB\nNormál\t\t\t27MB\nKözepes\t\t\t66MB\nAbove Közepes\t\t154MB\nJó\t\t\t202MB\nNagyon jó\t\t402MB\nExtrém\t\t\t800MB\nMaximum\t\t\t1600MB\n\nZIP tömörítés:\nMinden mód kb. 10MB
+
+
+IDD_KGB_ARCH_DECOMPRESS
+Arhívum név
+Kitömörítés ide: (csak ha nem tartalmazza a teljes útvonalat)
+Válassz fájlt a kicsomagoláshoz
+Mégse
+Következõ >
+
+IDD_DECOMPRESS
+Kitömörítés
+Jelenlegi fájl
+Jelenlegi fájl állapot
+Teljes állapot
+Statisztika
+Méret tömörítés elõtt:
+Méret tömörítés után:
+Arány:
+Idõ:
+Hátralévõ idõ:
+Prioritás:
+Magas;Jobb mint a normál;Normál;Normálnál kisebb;Alacsony;
+Számítógép kikapcsolása ha végzett
+Mégse
+
+IDD_DECODING
+Titkosítás...
+Légy türelemmel...
+
+IDD_PASSWD
+Jelszó
+Add meg a jelszót
+OK
+Mégse
+
+STRING TABLE
+KGB Archiver névjegy
+Fájlnév
+Méret
+Add meg az arhívum nevét és/vagy a célkönyvtárat!
+Nincs mega a megadott arhívum fájl!
+Nem lehet kitömöríteni mert nem lehet létrehozni!
+Válassz fájlt a kitömörítéshez!
+A kitömörítést megszakította a felhasználó!
+Kitömörítés kész!\nMéret tömörítés elõtt:\t%s\nMéret tömörítés után:\t%s\nArány:\t\t\t%.1f%%\nEltelt idõ:\t\t
+Válassz célkönyvtárat a kitömörítéshez!
+Érvénytelen jelszó!
+A választott fájl nem KGB arhívum!
+Nem változtatható a prioritás!
+Kitömörítés
+elõkészítés...
+Könyvtárak létrehozása...
+átlépés...
+Minden támogatott arhívum|*.kgb; *.kge; *.exe; *.zip;|KGB arhívumok (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP arhívumok (*.zip)|*.zip|
+Tömörített: %s Eredeti: %s Arány: %.1f%%
+
+IDD_ARCH_CONF_DIALOG
+KGB arhívumok hozzárendelése a KGB programhoz
+ZIP arhívumok hozzárendelése a KGB programhoz
+Explórer menü létrehozása
+Frissítések ellenõrzése induláskor
+Ellenõrzés most
+Névkegy
+Mégse
+OK
+
+STRING TABLE
+KGB Archiver névjegy
+Kapcsolódás a KGB szerverhez
+Nem lehet kapcsolódni a KGB szerverhez!
+Új KGB verzó érhetõ el! Szeretnéd most letölteni?
+Jelenleg nincs új elérhetõ frissítés
+Kitömörítés ide

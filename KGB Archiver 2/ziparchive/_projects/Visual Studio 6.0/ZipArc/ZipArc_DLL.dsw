@@ -1,0 +1,47 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "ZipArc"=.\ZipArc_DLL.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ZipArchive
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ZipArchive_DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ZipArchive"=..\ZipArchive\ZipArchive_DLL.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

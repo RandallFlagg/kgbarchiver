@@ -1,0 +1,2779 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,12,20,20
+    LTEXT           "KGB Archiver v1.2",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "©2005-2006 Tomasz Pawlak.\nSpread under GNU GPL v2 license",IDC_STATIC,40,25,137,23
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Czech resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+#ifdef _WIN32
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Asociovat archívy KGB s KGB Archiverem",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,145,10
+    CONTROL         "Pøidat do nabídky Prùzkumníka",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,113,10
+    PUSHBUTTON      "O programu",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Zrušit",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Po spuštìní aktualizovat",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,93,10
+    PUSHBUTTON      "Zkontrolovat nyní",IDC_BUTTON4,105,93,62,14
+    CONTROL         "Asociovat archívy ZIP s KGB Archiverem",IDC_CHECK4,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,143,10
+    GROUPBOX        "Jazyk",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Vnitøní integrace",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Others",IDC_STATIC,6,86,306,36
+    CONTROL         "Zobrazit statistiky po kompresi/dekompresi",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,151,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Dále >",IDOK,264,220,50,14
+    PUSHBUTTON      "Zrušit",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Prosím vyber, co chceš udìlat:",IDC_STATIC,102,6,210,54
+    CONTROL         "Zabalit soubory",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Rozbalit archív",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Pøizpùsobit možnosti",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "O programu",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 dárcù",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "O KGB Archiveru"
+    IDS_COMPRESS2KGB        "Komprese do KGB"
+    IDS_CANT_CONNECT_TO_SERVER "Nemohu se pøipojit na KGB server!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "Je dostupná nová verze KGB Archiveru! Chceš jí stáhnout?"
+    IDS_NO_UPDATES          "Aktualizace nenalezeny"
+    IDS_DECOMPRESS_HERE     "Rozbalit sem"
+END
+
+#endif    // Czech resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Hungarian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_HUN)
+#ifdef _WIN32
+LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "KGB arhívumok hozzárendelése a KGB programhoz",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,176,10
+    CONTROL         "Explórer menü létrehozása",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,101,10
+    PUSHBUTTON      "Névkegy",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Mégse",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Frissítések ellenõrzése induláskor",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,121,10
+    PUSHBUTTON      "Ellenõrzés most",IDC_BUTTON4,132,94,54,14
+    CONTROL         "ZIP arhívumok hozzárendelése a KGB programhoz",IDC_CHECK4,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,174,10
+    GROUPBOX        "Language",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Shell integration",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Others",IDC_STATIC,6,86,306,36
+    CONTROL         "Show statistics after compression/decompression",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,173,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDOK,264,220,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Please choose, what would you like to do:",IDC_STATIC,102,6,210,54
+    CONTROL         "Compress files",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Decompress archive",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Customize options",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "About",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 donators",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "KGB Archiver névjegy"
+    IDS_COMPRESS2KGB        "Kapcsolódás a KGB szerverhez"
+    IDS_CANT_CONNECT_TO_SERVER "Nem lehet kapcsolódni a KGB szerverhez!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "Új KGB verzó érhetõ el! Szeretnéd most letölteni?"
+    IDS_NO_UPDATES          "Jelenleg nincs új elérhetõ frissítés"
+    IDS_DECOMPRESS_HERE     "Kitömörítés ide"
+END
+
+#endif    // Hungarian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Polish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+#ifdef _WIN32
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Skojarz KGB z archiwami kgb i kge",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,123,10
+    CONTROL         "Utwórz menu kontekstowe explorera",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,133,10
+    PUSHBUTTON      "O programie",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Anuluj",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "SprawdŸ dostêpnoœæ nowej wersji przy uruchamianiu",IDC_CHECK3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,180,10
+    PUSHBUTTON      "SprawdŸ teraz",IDC_BUTTON4,196,94,50,14
+    CONTROL         "Skojarz KGB z archiwami ZIP",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,114,10
+    GROUPBOX        "Jêzyk",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Integracja z pow³ok¹",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Inne",IDC_STATIC,6,86,306,36
+    CONTROL         "Wyœwietlaj statystykê po kompresji/dekompresji",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,169,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Dalej >",IDOK,264,220,50,14
+    PUSHBUTTON      "Anuluj",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Wybierz, co chcesz zrobiæ:",IDC_STATIC,102,6,210,54
+    CONTROL         "Kompresja plików",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Dekompresja archiwów",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Zmiana ustawieñ",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "O programie",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 dotacji",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)\r\n"
+    "LANGUAGE 21, 1\r\n"
+    "#pragma code_page(1250)\r\n"
+    "#include ""res\\kgb_arch_conf.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,1,24
+ PRODUCTVERSION 1,2,1,24
+ FILEFLAGSMASK 0x1fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004e2"
+        BEGIN
+            VALUE "CompanyName", "Tomasz Pawlak"
+            VALUE "FileDescription", "KGB Archiver"
+            VALUE "FileVersion", "1.2.1.24"
+            VALUE "InternalName", "kgb_arch_conf.exe"
+            VALUE "LegalCopyright", "©2005-2006 Tomasz Pawlak. Spread under GNU GPL v2 license"
+            VALUE "OriginalFilename", "kgb_arch_conf.exe"
+            VALUE "ProductName", "KGB Archiver"
+            VALUE "ProductVersion", "1.2.1.24"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1250
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "..\\program.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+IDR_RT_MANIFEST1        RT_MANIFEST             "..\\kgb_arch_mfc\\res\\kgb_arch_mfc.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOGO                BITMAP                  "..\\logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "O programie..."
+    IDS_COMPRESS2KGB        "Kompresuj do KGB"
+    IDS_CANT_CONNECT_TO_SERVER "Nie mo¿na siê po³¹czyæ z serwerem KGB!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "Pojawi³a siê nowa wersja KGB Archiver! Czy chcesz j¹ pobraæ?"
+    IDS_NO_UPDATES          "Nie ma dostêpnych aktualizacji"
+    IDS_DECOMPRESS_HERE     "Rozpakuj tutaj"
+END
+
+#endif    // Polish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Romanian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ROM)
+#ifdef _WIN32
+LANGUAGE LANG_ROMANIAN, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Asociaza arhivele KGB cu KGB Archiver",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,139,10
+    CONTROL         "Creare meniu contextual in explorer",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,131,10
+    PUSHBUTTON      "Despre",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Revocare",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Verifica dupa actualizari la pornire",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,123,10
+    PUSHBUTTON      "Verifica acum",IDC_BUTTON4,136,94,50,14
+    CONTROL         "Asociaza arhivele ZIP cu KGB Archiver",IDC_CHECK4,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,137,10
+    GROUPBOX        "Language",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Shell integration",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Others",IDC_STATIC,6,86,306,36
+    CONTROL         "Show statistics after compression/decompression",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,173,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDOK,264,220,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Please choose, what would you like to do:",IDC_STATIC,102,6,210,54
+    CONTROL         "Compress files",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Decompress archive",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Customize options",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "About",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 donators",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Despre KGB Archiver"
+    IDS_COMPRESS2KGB        "Arhiveaza cu KGB"
+    IDS_CANT_CONNECT_TO_SERVER "Nu ma pot conecta la serverul KGB!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "O noua versiune de KGB Archiver este valabila! Doriti sa o download-ati?"
+    IDS_NO_UPDATES          "NU au fost gasite versiuni noi."
+    IDS_DECOMPRESS_HERE     "Extrage catre"
+END
+
+#endif    // Romanian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "KGB Archive dem KGB Archiver zuordnen",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,145,10
+    CONTROL         "Erzeuge Explorer-Kontextmenü",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,116,10
+    PUSHBUTTON      "Über",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Abbrechen",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Beim Start auf Updates überprüfen",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,128,10
+    PUSHBUTTON      "Nun überprüfen",IDC_BUTTON4,137,94,58,14
+    CONTROL         "ZIP Archive dem KGB Archiver zuordnen",IDC_CHECK4,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,143,10
+    GROUPBOX        "Sprache",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Oberflächenintegration",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Weiteres",IDC_STATIC,6,86,306,36
+    CONTROL         "Zeige Statistik nach Kompression/Dekompression",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,171,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Weiter >",IDOK,264,220,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Bitte wählen Sie ihr Vorhaben:",IDC_STATIC,102,6,210,54
+    CONTROL         "Dateien komprimieren",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Archiv dekomprimieren",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Optionen anpassen",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "Über",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 Spender",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Über KGB Archiver"
+    IDS_COMPRESS2KGB        "Zu KGB komprimieren"
+    IDS_CANT_CONNECT_TO_SERVER 
+                            "Konnte keine Verbindung zum KGB Server aufbauen!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "Eine neue Version von KGB Archiver ist verfügbar! Möchten Sie diese herunterladen?"
+    IDS_NO_UPDATES          "Es wurden keine Updates gefunden"
+    IDS_DECOMPRESS_HERE     "Hierher extrahieren"
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDOK,264,220,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Please choose, what would you like to do:",IDC_STATIC,102,6,210,54
+    CONTROL         "Compress files",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Decompress archive",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Customize options",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "About",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 donators",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Associate KGB archives with KGB Archiver",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,149,10
+    CONTROL         "Create explorer context menu",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,113,10
+    PUSHBUTTON      "About",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Check for updates at startup",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,109,10
+    PUSHBUTTON      "Check now",IDC_BUTTON4,126,94,50,14
+    CONTROL         "Associate ZIP archives with KGB Archiver",IDC_CHECK4,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,147,10
+    GROUPBOX        "Language",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Shell integration",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Others",IDC_STATIC,6,86,306,36
+    CONTROL         "Show statistics after compression/decompression",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,173,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "About KGB Archiver"
+    IDS_COMPRESS2KGB        "Compress to KGB"
+    IDS_CANT_CONNECT_TO_SERVER "Cannot connect to KGB server!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "New version of KGB Archiver is available! Would you like to download it?"
+    IDS_NO_UPDATES          "No updates have been found"
+    IDS_DECOMPRESS_HERE     "Extract here"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Associer les archives KGB avec KGB Archiver",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,157,10
+    CONTROL         "Ajouter dans le menu contextuel de l’exploreur",IDC_CHECK2,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,165,10
+    PUSHBUTTON      "Au sujet de",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Annuler",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Vérifier les mises-a-jour au démarrage",IDC_CHECK3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,136,10
+    PUSHBUTTON      "Vérifier maintenant",IDC_BUTTON4,145,94,66,14
+    CONTROL         "Associer les archives ZIP avec KGB Archiver",IDC_CHECK4,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,155,10
+    GROUPBOX        "Langue",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Intégration au systeme",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Autres",IDC_STATIC,6,86,306,36
+    CONTROL         "Montrer les statistiques apres la compression/décompression",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,209,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Suivant >",IDOK,264,220,50,14
+    PUSHBUTTON      "Ignorer",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Quelle opération désirez-vous effectuer?",IDC_STATIC,102,6,210,54
+    CONTROL         "Compresser un ou plusieurs fichiers",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Décompresser l'archive",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Paramétrer KGB Archiver",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "Au sujet de",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 des donateurs",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Au sujet de KGB Archiver"
+    IDS_COMPRESS2KGB        "Ajouter a l'archive KGB..."
+    IDS_CANT_CONNECT_TO_SERVER "Connection au server KGB impossible!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "Nouvelle version de KGB Archiver disponible! Désirez-vous la télécharger?"
+    IDS_NO_UPDATES          "Aucune mise-a-jour disponible"
+    IDS_DECOMPRESS_HERE     "Extraire ici l'archive KGB"
+END
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Associa gli archivi KGB a KGB Archiver",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,135,10
+    CONTROL         "Crea menu context per explorer",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,119,10
+    PUSHBUTTON      "Informazioni",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Annulla",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Controlla la presenza di aggiornamenti all'avvio",IDC_CHECK3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,165,10
+    PUSHBUTTON      "Controlla ora",IDC_BUTTON4,178,94,50,14
+    CONTROL         "Associa gli archivi ZIP a KGB Archiver",IDC_CHECK4,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,133,10
+    GROUPBOX        "Lingua",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Integrazione con sistema operativo",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Altro",IDC_STATIC,6,86,306,36
+    CONTROL         "Mostra le statistiche dopo la compressione/decompressione",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,205,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Avanti >",IDOK,264,220,50,14
+    PUSHBUTTON      "Annulla",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Per favore seleziona cosa vuoi fare:",IDC_STATIC,102,6,210,54
+    CONTROL         "Comprimi file",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Decomprimi archivio",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Opzioni personalizzabili",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "Informazioni",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Primi 10 donatori",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Inormazioni su KGB Archiver"
+    IDS_COMPRESS2KGB        "Comprimi in KGB"
+    IDS_CANT_CONNECT_TO_SERVER "Impossibile connettersi al server KGB!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "E' disponibile una versione piu' recente di KGB Archiver! La vuoi scaricare?"
+    IDS_NO_UPDATES          "Non sono stati trovati aggiornamenti"
+    IDS_DECOMPRESS_HERE     "Estrai qui"
+END
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Dutch (Netherlands) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NLD)
+#ifdef _WIN32
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Associeer KGB archieven met KGB Archiver",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,152,10
+    CONTROL         "Windows Explorer context menu",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,119,10
+    PUSHBUTTON      "Over",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Annuleren",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Controleren op een nieuwe versie bij het opstarten",IDC_CHECK3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,179,10
+    PUSHBUTTON      "Controleer nu",IDC_BUTTON4,192,94,50,14
+    CONTROL         "Associeer ZIP archieven met KGB Archiver",IDC_CHECK4,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,150,10
+    GROUPBOX        "Language",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Shell Intergration",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Others",IDC_STATIC,6,86,306,37
+    CONTROL         "Show statistics after compression/decompression",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,173,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDOK,264,220,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Please choose, what would you like to do:",IDC_STATIC,102,6,210,54
+    CONTROL         "Compress files",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Decompress archive",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Customize options",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "About",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 donators",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Over KGB Archiver"
+    IDS_COMPRESS2KGB        "Comprimeer met KGB"
+    IDS_CANT_CONNECT_TO_SERVER "Kan niet verbinden met de KGB server!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "Er is een nieuwe versie van KGB Archiver beschikbaar! Wilt u deze downloaden?"
+    IDS_NO_UPDATES          "Geen updates gevonden"
+    IDS_DECOMPRESS_HERE     "Extract here"
+END
+
+#endif    // Dutch (Netherlands) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Portuguese (Brazil) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PTB)
+#ifdef _WIN32
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Associar arquivos KGB com KGB Archiver",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,145,10
+    CONTROL         "Criar menu no Explorer",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,89,10
+    PUSHBUTTON      "Sobre",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Cancelar",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Checar atualizaçoes ao iniciar",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,110,10
+    PUSHBUTTON      "Checar agora",IDC_BUTTON4,126,94,50,14
+    CONTROL         "Associar arquivos ZIP com KGB Archiver",IDC_CHECK4,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,143,10
+    GROUPBOX        "Idiomas",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,65,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Shell integration",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Others",IDC_STATIC,6,86,306,37
+    CONTROL         "Show statistics after compression/decompression",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,173,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDOK,264,220,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Please choose, what would you like to do:",IDC_STATIC,102,6,210,54
+    CONTROL         "Compress files",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Decompress archive",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Customize options",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "About",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 donators",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Sobre KGB Archiver"
+    IDS_COMPRESS2KGB        "Comprimir para KGB"
+    IDS_CANT_CONNECT_TO_SERVER "Nao pode conectar ao servidor KGB!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "Existe uma nova versao disponível! Gostaria de atualizar?"
+    IDS_NO_UPDATES          "Nenhuma atualizaçao foi encontrada"
+    IDS_DECOMPRESS_HERE     "Extrair Aqui"
+END
+
+#endif    // Portuguese (Brazil) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Swedish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_SVE)
+#ifdef _WIN32
+LANGUAGE LANG_SWEDISH, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Associera KGB arkiv med KGB Archiver",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,137,10
+    CONTROL         "Skapa Explorer Meny",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,83,10
+    PUSHBUTTON      "Om",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Avbryt",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Kolla efter uppdateringar vid uppstart",IDC_CHECK3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,137,10
+    PUSHBUTTON      "Kolla nu",IDC_BUTTON4,146,94,50,14
+    CONTROL         "Associera ZIP arkiv med KGB Archiver",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,135,10
+    GROUPBOX        "Sprak",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "'Shell' integering",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Annat",IDC_STATIC,6,86,306,36
+    CONTROL         "Vissa statistik efter Komprimering/De-Komrimering",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,174,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Nästa >",IDOK,264,220,50,14
+    PUSHBUTTON      "Avbryt",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Var vänlig välj önskad aktivitet:",IDC_STATIC,102,6,210,54
+    CONTROL         "Komprimera filer",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "De-Komprimera filer",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Inställnings alternativ",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "Om",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 donatorer",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Om KGB Archiver"
+    IDS_COMPRESS2KGB        "Komprimera till KGB"
+    IDS_CANT_CONNECT_TO_SERVER "Kan inte ansluta till KGB Server!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "Ny Version av KGB Archiver tillgänglig! Vill du hämta den?"
+    IDS_NO_UPDATES          "Inga uppdateringar funna"
+    IDS_DECOMPRESS_HERE     "Packa upp här"
+END
+
+#endif    // Swedish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Asociar archivos KGB con KGB Archiver",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,139,10
+    CONTROL         "Crear menú contextual en el Explorador de Windows",IDC_CHECK2,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,184,10
+    PUSHBUTTON      "Acerca de",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Cancelar",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Buscar actualizaciones al ejecutar",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,123,10
+    PUSHBUTTON      "Buscar ahora",IDC_BUTTON4,135,94,58,14
+    CONTROL         "Asociar archivos ZIP con KGB Archiver",IDC_CHECK4,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,137,10
+    GROUPBOX        "Idioma",IDC_STATIC,6,57,306,27
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Shell intergation",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Others",IDC_STATIC,6,86,306,36
+    CONTROL         "Show statistics after compression/decompression",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,173,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDOK,264,220,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Please choose, what would you like to do:",IDC_STATIC,102,6,210,54
+    CONTROL         "Compress files",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Decompress archive",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Customize options",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "About",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 donators",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Acerca de KGB Archiver"
+    IDS_COMPRESS2KGB        "Comprimir en KGB"
+    IDS_CANT_CONNECT_TO_SERVER "No se puede conectar con el servidor de KGB!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "Nueva versión de KGB Archiver está disponible! ?Desea descargarla?"
+    IDS_NO_UPDATES          "No se han encontrado actualizaciones"
+    IDS_DECOMPRESS_HERE     "Extraer aquí"
+END
+
+#endif    // Spanish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Chile) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESL)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_CHILE
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Asociar archivos KGB con KGB Archiver",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,139,10
+    CONTROL         "Crear menú contextual en Explorer",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,128,10
+    PUSHBUTTON      "Acerca de",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Cancelar",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Chequear por actualizaciones al inicio",IDC_CHECK3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,135,10
+    PUSHBUTTON      "Chequear ahora",IDC_BUTTON4,144,94,58,14
+    CONTROL         "Asociar archivos ZIP con KGB Archiver",IDC_CHECK4,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,137,10
+    GROUPBOX        "Idioma",IDC_STATIC,6,57,306,27
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Shell intergation",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Others",IDC_STATIC,6,86,306,36
+    CONTROL         "Show statistics after compression/decompression",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,173,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDOK,264,220,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Please choose, what would you like to do:",IDC_STATIC,102,6,210,54
+    CONTROL         "Compress files",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Decompress archive",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Customize options",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "About",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 donators",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Acerca de KGB Archiver"
+    IDS_COMPRESS2KGB        "Comprimir con KGB"
+    IDS_CANT_CONNECT_TO_SERVER "No se puede conectar al servidor KGB!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "Está disponible una nueva versión de KGB Archiver! Quieres descargarla?"
+    IDS_NO_UPDATES          "No se encontraron actualizaciones"
+    IDS_DECOMPRESS_HERE     "Extraer aquí"
+END
+
+#endif    // Spanish (Chile) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Turkish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_TRK)
+#ifdef _WIN32
+LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+#pragma code_page(1254)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "KGB Arsivlerini KGB Archiver ile aç",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,123,10
+    CONTROL         "Windows Explorer menusü olustur(Sag tik menüsüne ""KGB Archiver ile sikistir"" seçenegi gelir.)",IDC_CHECK2,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,312,10
+    PUSHBUTTON      "Hakkinda...",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Iptal",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "Tamam",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Güncellemeleri her Windows basladiginda kontrol et",IDC_CHECK3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,179,10
+    PUSHBUTTON      "Kontrol Et...",IDC_BUTTON4,193,94,50,14
+    CONTROL         "ZIP Arsivlerini KGB Archiver ile aç",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,121,10
+    GROUPBOX        "Dil",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Bütünlesme Ayarlari",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Digerleri",IDC_STATIC,6,86,306,36
+    CONTROL         "Sikistirma/Açma isleminden sonra istatistikleri göster",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,180,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Ileri >",IDOK,264,220,50,14
+    PUSHBUTTON      "Geri",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Lütfen seçin, ne yapmak istiyorsunuz:",IDC_STATIC,102,6,210,54
+    CONTROL         "Dosyalari sikistir",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Arsivi Çikart",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Seçenekleri Düzenle",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "Hakkinda...",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 Bagis Yapanlar",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "KGB Archiver Hakkinda"
+    IDS_COMPRESS2KGB        "KGB Archiver ile Sikistir"
+    IDS_CANT_CONNECT_TO_SERVER "KGB Sunuculari ile baglanti kurulamadi!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "KGB Archiver'in yeni versiyonu mevcut! Indirmek ister misiniz?"
+    IDS_NO_UPDATES          "Güncelleme bulunamadi"
+    IDS_DECOMPRESS_HERE     "Buraya çikart"
+END
+
+#endif    // Turkish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Estonian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ETI)
+#ifdef _WIN32
+LANGUAGE LANG_ESTONIAN, SUBLANG_DEFAULT
+#pragma code_page(1257)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Seosta KGB arhiive KGB Arhiiveerijaga",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,137,10
+    CONTROL         "Tekita exploreri kontekstimenüü",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,117,10
+    PUSHBUTTON      "Teave",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "Tühista",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Kontrolli uuendusi käivitusel",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,103,10
+    PUSHBUTTON      "Kontrolli nüüd",IDC_BUTTON4,114,94,50,14
+    CONTROL         "Seosta ZIP arhiive KGB Arhiveerijaga",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,133,10
+    GROUPBOX        "Keel",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Shell integration",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Others",IDC_STATIC,6,86,306,36
+    CONTROL         "Show statistics after compression/decompression",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,173,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDOK,264,220,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Please choose, what would you like to do:",IDC_STATIC,102,6,210,54
+    CONTROL         "Compress files",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "Decompress archive",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Customize options",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "About",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 donators",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "KGB Archiver kohta"
+    IDS_COMPRESS2KGB        "Paki KGB'ks"
+    IDS_CANT_CONNECT_TO_SERVER "Ei suuda ühendada KGB serveriga!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "Uus versioon KGB Arhiveerijast on olemas! Kas te tahaks seda tommata?"
+    IDS_NO_UPDATES          "Uuendusi ei leitud"
+    IDS_DECOMPRESS_HERE     "Paki siia lahti"
+END
+
+#endif    // Estonian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Lithuanian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_LTH)
+#ifdef _WIN32
+LANGUAGE LANG_LITHUANIAN, SUBLANG_DEFAULT
+#pragma code_page(1257)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Asocijuoti KGB archivus su KGB Archiver",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,143,10
+    CONTROL         "Sukurti nar?ykles kontekstini meniu",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,42,127,10
+    PUSHBUTTON      "Apie",IDC_BUTTON1,6,221,50,14
+    PUSHBUTTON      "At?aukti",IDC_BUTTON2,210,221,50,14
+    DEFPUSHBUTTON   "OK",IDC_BUTTON3,264,221,50,14
+    CONTROL         "Patikrinti ar nera nauja versija programai startavus",IDC_CHECK3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,97,179,10
+    PUSHBUTTON      "Patikrinti dabar",IDC_BUTTON4,188,94,54,14
+    CONTROL         "Asocijuoti ZIP archivus su KGB Archiver",IDC_CHECK4,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,30,141,10
+    GROUPBOX        "Kalba",IDC_STATIC,6,56,306,28
+    COMBOBOX        IDC_LANG,11,66,295,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "?elo integravimas",IDC_STATIC,6,6,306,49
+    GROUPBOX        "Kitos",IDC_STATIC,6,86,306,36
+    CONTROL         "Ar rodyti statistik1 po i?pakavimo/suarchyvavimo",IDC_CHECK5,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,172,10
+END
+
+IDD_MAIN DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Toliau >",IDOK,264,220,50,14
+    PUSHBUTTON      "At?aukti",IDCANCEL,210,220,50,14
+    CONTROL         136,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,100,234
+    GROUPBOX        "Pra?ome pasirinkti k1 norite daryti:",IDC_STATIC,102,6,210,54
+    CONTROL         "Suspausti failus",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,108,18,198,10
+    CONTROL         "I?pakuoti archyv1",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,30,198,10
+    CONTROL         "Nustatymai",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,108,42,198,10
+    PUSHBUTTON      "Apie",IDC_BUTTON1,102,220,50,14
+    GROUPBOX        "Top 10 aukotoju",IDC_STATIC,102,66,210,150,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOP10,"{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,108,76,198,136
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_CONF_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KGB_ARCH_CONF_DIALOG DLGINIT
+BEGIN
+    IDC_LANG, 0x403, 7, 0
+0x6f50, 0x736c, 0x696b, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6e45, 0x6c67, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7246, 0x6e61, 0x61e7, 0x7369, "\000" 
+    IDC_LANG, 0x403, 22, 0
+0x6f50, 0x7472, 0x6775, 0x6575, 0x6573, 0x2820, 0x7242, 0x7a61, 0x6c69, 
+0x6169, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x5328, 0x6170, 0x6e69, 0x0029, 
+    IDC_LANG, 0x403, 16, 0
+0x7345, 0x6170, 0x6f6e, 0x206c, 0x4328, 0x6968, 0x656c, 0x0029, 
+    IDC_LANG, 0x403, 9, 0
+0x6f52, 0x616d, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x7449, 0x6c61, 0x6169, 0x6f6e, "\000" 
+    IDC_LANG, 0x403, 10, 0
+0x7548, 0x676e, 0x7261, 0x6169, 0x006e, 
+    IDC_LANG, 0x403, 6, 0
+0x7544, 0x6374, 0x0068, 
+    IDC_LANG, 0x403, 6, 0
+0x65c8, 0x6b73, 0x0079, 
+    IDC_LANG, 0x403, 7, 0
+0xfc54, 0x6b72, 0x65e7, "\000" 
+    IDC_LANG, 0x403, 9, 0
+0x694c, 0x7465, 0x7675, 0x7569, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x7753, 0x6465, 0x7369, 0x0068, 
+    IDC_LANG, 0x403, 9, 0
+0x7345, 0x6f74, 0x696e, 0x6e61, "\000" 
+    IDC_LANG, 0x403, 8, 0
+0x6544, 0x7475, 0x6373, 0x0068, 
+    0
+END
+
+IDD_MAIN DLGINIT
+BEGIN
+    IDC_TOP10, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1eb2, 0x0000, 0x16d7, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0002, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Apie KGB Archiver"
+    IDS_COMPRESS2KGB        "Suspausti i KGB archyv1"
+    IDS_CANT_CONNECT_TO_SERVER 
+                            "Negalima prisijungti prie KGB Archiver serverio!"
+    IDS_NEW_VERSION_AVAILABLE 
+                            "Nauja KGB Archiver versija jau i?leista! Ar norite parsisusti?"
+    IDS_NO_UPDATES          "Atnaujinimu nerasta"
+    IDS_DECOMPRESS_HERE     "I?pakuoti èia"
+END
+
+#endif    // Lithuanian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+LANGUAGE 21, 1
+#pragma code_page(1250)
+#include "res\kgb_arch_conf.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

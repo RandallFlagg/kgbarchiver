@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>ZipArchive:
+        Segmented Archives: Splitting and Spanning
+    </title>
+    <link href="articles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    body
+    {
+    	font-family: verdana, arial, helvetica, sans-serif;
+    }
+</style>
+</head>
+<body>
+    <div class="kbabody">
+        <div class="kbatitle">
+            Segmented Archives: Splitting and Spanning
+        </div>
+        <div class="kbaappliesto">
+            Applies To: <strong>All</strong>
+        </div>
+        <div class="kbaindex">
+            <ul class="kbaindex">
+
+<li><a class="linkindex" href="#general">Introduction</a>
+<ul class="kbaindex">
+<li><a class="linkindex" href="#conv">Conversion Between Split and Spanned Archives</a></li>
+<li><a class="linkindex" href="#limits">Limits in Number of Segments</a></li>
+</ul>
+</li>
+<li><a class="linkindex" href="#span">Spanning: Use on Removable Media</a>
+<ul class="kbaindex">
+<li><a class="linkindex" href="#spanlast">Detecting the Last Disk in a Drive</a></li>
+</ul>
+</li>
+<li><a class="linkindex" href="#split">Splitting: All Segments in One Folder</a></li>
+<li><a class="linkindex" href="#callbacks">Callbacks Called</a></li>
+<li><a class="linkindex" href="#api">See Also API Calls</a></li></ul>
+
+        </div>
+        <div class="kbacontents">
+            
+        <h2 id="general" name="general" class="kb">
+            Introduction</h2>
+        The ZipArchive Library can create segmented archives using two methods: spanning
+        and splitting. The internal structure of archives created in both ways is the same;
+        the difference in use is summarized below:<br />
+        <br />
+        <div style="text-align: center;">
+            <table border="0" cellpadding="3" cellspacing="0" class="kb">
+                <tr class="kbheader">
+                    <td>
+                    </td>
+                    <td>
+                        Spanning</td>
+                    <td>
+                        Splitting</td>
+                </tr>
+                <tr>
+                    <td>
+                        Destination media</td>
+                    <td>
+                        removable</td>
+                    <td>
+                        non-removable</td>
+                </tr>
+                <tr>
+                    <td>
+                        Archive Structure</td>
+                    <td>
+                        spans multiple disks</td>
+                    <td>
+                        split into parts in the same folder</td>
+                </tr>
+                <tr>
+                    <td>
+                        Naming</td>
+                    <td>
+                        each segment has the same name</td>
+                    <td>
+                        extension is based on the segment number, the last segment's extension is "zip"</td>
+                </tr>
+                <tr>
+                    <td>
+                        Single Segment Size</td>
+                    <td>
+                        auto-detected from the free space on the current disk</td>
+                    <td>
+                        declared by the user when creating an archive</td>
+                </tr>
+                <tr>
+                    <td>
+                        Callback</td>
+                    <td>
+                        needed for changing disks</td>
+                    <td>
+                        not needed</td>
+                </tr>
+            </table>
+        </div>
+        <ul>
+            <li>Splitting and spanning is intended to be compatible with PKZIP and WinZip.</li>
+            <li>The ZipArchive Library does not allow modification of existing segmented archives.</li>
+            <li>Class <code>CZipArchive</code> uses a write buffer to make write operations as fast
+                as possible. You can change its size with the <a class="linkapi" href="./classCZipArchive.html#be06c912f3dbacfe3d327d7c7a2d0e88">CZipArchive::SetAdvanced</a>
+                method (set the first argument). While creating a segmented archive, set the size
+                of the buffer to the maximum size of the volume for the best performance. </li>
+        </ul>
+        <h3 id="conv" name="conv" class="kb">
+            Conversion Between Split and Spanned Archives</h3>
+        To convert between split and spanned archives, it is enough to change the names
+        of segments and copy the segments to appropriate locations.
+        <ul>
+            <li>To convert a spanned archive to a split archive, copy all the segments into one
+                location and rename their extensions according to the <code>printf</code> function
+                format using the pattern: <code>z%.2d</code>. For the segments numbers greater than
+                99 this pattern becomes <code>z%d</code>. Use the one-based segment number as an
+                argument. Use the "zip" extension for the last segment. This way the segments
+                are names this way:
+                <ul class="non">
+                    <li>name.z01</li>
+                    <li>name.z02</li>
+                    <li>...</li>
+                    <li>name.z100</li>
+                    <li>...</li>
+                    <li>name.zip</li>
+                </ul>
+                <br />
+            </li>
+            <li>To convert a split archive to a spanned archive, copy each segment to a separate
+                removable media, giving it the "zip" extension. You also should label each disk
+                with the appropriate label starting from <span class="nowrap">"pkback# 001"</span>
+                (note the space between '#' and '0'). </li>
+        </ul>
+        <h3 id="limits" name="limits" class="kb">
+            Limits in Number of Segments</h3>
+        In the standard zip format, the number of segments is limited to:
+        <br />
+        <br />
+        <div style="text-align: center;">
+            <table border="0" cellpadding="3" cellspacing="0" class="kb">
+                <tr class="kbheader">
+                    <td>
+                    </td>
+                    <td>
+                        Spanning</td>
+                    <td>
+                        Splitting</td>
+                </tr>
+                <tr>
+                    <td>
+                        Standard Zip Format</td>
+                    <td>
+                        999</td>
+                    <td>
+                        65,535</td>
+                </tr>
+                <tr>
+                    <td>
+                        Zip64 Format</td>
+                    <td>
+                        <span class="nowrap">4,294,967,295 - 1</span></td>
+                    <td>
+                        <span class="nowrap">4,294,967,295 - 1</span></td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        For more information on the Zip64 format, see <a class="linkkb" href="0610051629.html">Zip64 Format: Crossing the Limits of File Sizes and Number of Files and Segments</a>.
+        <h2 id="span" name="span" class="kb">
+            Spanning: Use on Removable Media</h2>
+        <ul>
+            <li>A spanned archive is located on removable media and you need to specify a callback
+                object with the <a class="linkapi" href="./classCZipArchive.html#a3dbddb407a5bf8c2100183534654960">CZipArchive::SetSpanCallback()</a> method.
+                Setting the callback object is needed for creation as well as for extraction of
+                spanned archives.</li>
+            <li>The <a class="linkapi" href="./structCZipCallback.html#d9955f0dbd1b60f7b8f4ceb3da491c57">CZipCallback::Callback</a> method will be called each
+                time a disk change is needed.
+                <ul>
+                    <li>The reason for calling the callback is stored in <a class="linkapi" href="./structCZipSpanCallback.html#aee53ce197b625cefda171597912cea6">CZipSpanCallback::m_iCode</a>
+                        and takes one of the <a class="linkapi" href="./structCZipSpanCallback.html#588b579d472af27cd3e921d78331baef">CZipSpanCallback::SpanCodes</a> values.</li>
+                    <li>The value of the <code>uProgress</code> parameter of the callback method is the
+                        minimum number of free bytes required on the disk. </li>
+                    <li>The number of the disk needed for reading or writing is stored in
+                        <br />
+                        <a class="linkapi" href="./structCZipSpanCallback.html#b873e37244efce30fa989cb3c800d95b">CZipSpanCallback::m_uDiskNeeded</a>.</li>
+                    <li>To abort the archive processing, return <code>false</code> from this method. A <a class="linkapi" href="./classCZipException.html">CZipException</a> will be thrown with the <a class="linkapi" href="./classCZipException.html#a4f3fc7c792e57a0a6881b6ea48725afa9beec1f47e84433e4e60b98e922f6d0">CZipException::aborted</a>
+                        code.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="codetitle">Sample Code</div><pre class="fragment"><span class="preprocessor">#include &lt;conio.h&gt;</span> <span class="comment">// for _getch()</span>
+
+<span class="keyword">class </span>SpanCallback : <span class="keyword">public</span> CZipSpanCallback
+{
+     <span class="keywordtype">bool</span> Callback(ZIP_U32_U64 uProgress)
+     {
+         <span class="keywordflow">switch</span> (m_iCode)
+         {
+             <span class="keywordflow">case</span> scDiskNeededForRead:
+             <span class="keywordflow">case</span> scDiskNeededForWrite:
+                 _tprintf(_T(<span class="stringliteral">"Insert the disk number %d\r\n"</span>), m_uDiskNeeded);
+                 <span class="keywordflow">break</span>;
+             <span class="keywordflow">case</span> scFileNameDuplicated:
+                 _tprintf(_T(<span class="stringliteral">"The file with the given name already \</span>
+<span class="stringliteral">exists on the disk.\r\n"</span>));
+                 <span class="keywordflow">break</span>;
+             <span class="keywordflow">case</span> scCannotSetVolLabel:
+                 _tprintf(_T(<span class="stringliteral">"Cannot set the volume label. \</span>
+<span class="stringliteral">Check if the disk is not write-protected.\r\n"</span>));
+                 <span class="keywordflow">break</span>;
+             <span class="keywordflow">case</span> scFileCreationFailure:
+                 _tprintf(_T(<span class="stringliteral">"Could not create file. \</span>
+<span class="stringliteral">Check if the disk is not write-protected.\r\n"</span>));             
+                 <span class="keywordflow">break</span>;
+         }         
+         _getch();
+         _tprintf(_T(<span class="stringliteral">"...\r\n"</span>));
+         <span class="comment">// return false here to abort processing</span>
+         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+     }
+};
+
+<span class="keywordtype">void</span> Spanning()
+{    
+    LPCTSTR zipFileName = _T(<span class="stringliteral">"a:\\test.zip"</span>);
+    CZipArchive zip;    
+    SpanCallback callback;
+    <span class="comment">// set the callback before creating the archive</span>
+    zip.SetSpanCallback(&amp;callback);
+    zip.Open(zipFileName, CZipArchive::zipCreateSegm, ZIP_AUTODETECT_VOLUME_SIZE);    
+    zip.AddNewFile(_T(<span class="stringliteral">"Z:\\Temp\\big.dat"</span>));
+    zip.Close();    
+    <span class="comment">// the callback is already set</span>
+    <span class="comment">// and the segmentation type will be auto-detected as spanning</span>
+    <span class="comment">// (the archive is on a removable device)</span>
+    zip.Open(zipFileName);
+    zip.ExtractFile(0, _T(<span class="stringliteral">"Z:\\Temp"</span>), <span class="keyword">false</span>, _T(<span class="stringliteral">"big.ext"</span>));
+    zip.Close();
+}
+</pre>
+        <h3 id="spanlast" name="spanlast" class="kb">
+            Detecting the Last Disk in a Drive</h3>
+        When extracting a spanned archive, you need to insert the last disk into the drive
+        before opening the archive. The central directory written on it and the extraction
+        starts from reading the central directory. There is no simple way to detect, if
+        the right disk is in the drive, but the ZipArchive Library throws the <a class="linkapi" href="./classCZipException.html">CZipException</a> with the <a class="linkapi" href="./classCZipException.html#a4f3fc7c792e57a0a6881b6ea48725af62c9a10984629c00e661ef7e218dc1b0">CZipException::cdirNotFound</a>
+        code, when the archive you are trying to open does not have the central directory.
+        In case of a spanned archive, it may mean that the user has not inserted the last
+        disk into the drive. You can catch this exception and keep prompting the user for
+        the right disk until the archive is successfully opened.
+        <h2 id="split" name="split" class="kb">
+            Splitting: All Segments in One Folder</h2>
+        The segments of a split archive are located in the same folder. You need to specify
+        a size of a single segment when creating a split archive. Internal zip structures
+        such as file headers, are not split across the segments, so a segment size may be
+        slightly smaller from the declared size if such a structure could not fit entirely
+        into the current segment and was stored in the next one. If the declared segment
+        size is too small to hold an entire internal structure, this particular segment
+        will be enlarged. Generally you should not use values less than 64KB for segment
+        sizes.
+        <p />
+        Under Linux, when you are opening an existing split archive, set <code>iVolumeSize</code>
+        to a value different from <code>0</code> when calling the <a class="linkapi" href="./classCZipArchive.html#451188ca55b5056aa7bd4f33d37ef089">CZipArchive::Open(LPCTSTR,             int, ZIP_U32_U64)</a> method. This is caused by the lack of the implementation
+        of <a class="linkapi" href="./namespaceZipPlatform.html#fd9f8021d83764be0fb27ea940222796">ZipPlatform::IsDriveRemovable()</a> and the device containing
+        the archive is always assumed to be removable.
+        <div class="codetitle">Sample Code</div><pre class="fragment">    LPCTSTR zipFileName = _T(<span class="stringliteral">"Z:\\Temp\\test.zip"</span>);
+    CZipArchive zip;    
+    <span class="comment">// specify the segment size to be 64KB</span>
+    zip.Open(zipFileName, CZipArchive::zipCreateSegm, 64 * 1024);    
+    zip.AddNewFile(_T(<span class="stringliteral">"Z:\\Temp\\big.dat"</span>));
+    zip.Close();    
+    <span class="comment">// the segmentation type will be auto-detected as splitting</span>
+    <span class="comment">// (the archive is on a non-removable device)</span>
+    zip.Open(zipFileName);
+    <span class="comment">// under Linux, call instead: zip.Open(zipFileName, CZipArchive::zipOpen, 1);</span>
+    zip.ExtractFile(0, _T(<span class="stringliteral">"Z:\\Temp"</span>), <span class="keyword">false</span>, _T(<span class="stringliteral">"big.ext"</span>));
+    zip.Close();
+</pre>
+        <h2 id="callbacks" name="callbacks" class="kb">
+            Callbacks Called</h2>
+        While processing a segmented archive the following callbacks are the most important:
+        <ul class="non">
+            <li><a class="linkapi" href="./classCZipArchive.html#07cdf46e463d58a346e8446f7e7b873014b711d1dbb739d199005985577f4f32">CZipArchive::cbAdd</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#07cdf46e463d58a346e8446f7e7b87306478bc9f37fe47fcbf0ac5ffd135d3f9">CZipArchive::cbAddTmp</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#07cdf46e463d58a346e8446f7e7b8730ebe34a5bed165c1ceda907c72a096052">CZipArchive::cbAddStore</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#07cdf46e463d58a346e8446f7e7b8730a771f1d82703b548bf60e1203d7b6cca">CZipArchive::cbExtract</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#07cdf46e463d58a346e8446f7e7b873052a3798385e249265963a4efc15e270d">CZipArchive::cbSave</a></li>
+        </ul>
+        To read more about using callback objects, see <a class="linkkb" href="0610231200.html">Progress Notifications: Using Callback Objects</a>.
+        <h2 id="api" name="api" class="kb">
+            See Also API Calls</h2>
+        <ul class="non">
+            <li><a class="linkapi" href="./classCZipArchive.html#451188ca55b5056aa7bd4f33d37ef089">CZipArchive::Open(LPCTSTR, int, ZIP_U32_U64)</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#a3dbddb407a5bf8c2100183534654960">CZipArchive::SetSpanCallback()</a></li>
+            <li><a class="linkapi" href="./structCZipSpanCallback.html">CZipSpanCallback</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#57b5e58cf7278484892cf6fa9fbaa9b5">CZipArchive::GetSegmMode()</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#be06c912f3dbacfe3d327d7c7a2d0e88">CZipArchive::SetAdvanced()</a></li>
+        </ul>
+    
+        </div>
+        <div class="kbafooter">
+            <strong>Article ID:&nbsp;0610051553</strong>
+        </div>
+    </div>
+   <div style="font-size:11px; text-align:center;border-top:solid 1px gray;width:400px;margin:10px auto 5px auto;color:gray">
+Copyright &copy;&nbsp;2000 - 2006 Tadeusz Dracz.
+</div>
+</body>
+</html>

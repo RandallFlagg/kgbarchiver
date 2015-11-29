@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>ZipArchive:
+        Zip64 Format: Crossing the Limits of File Sizes and Number of Files and Segments
+    </title>
+    <link href="articles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    body
+    {
+    	font-family: verdana, arial, helvetica, sans-serif;
+    }
+</style>
+</head>
+<body>
+    <div class="kbabody">
+        <div class="kbatitle">
+            Zip64 Format: Crossing the Limits of File Sizes and Number of Files and Segments
+        </div>
+        <div class="kbaappliesto">
+            Applies To: <strong>All But Borland and Visual Studio 6.0 MFC. Zip64 needs the commercial version.</strong>
+        </div>
+        <div class="kbaindex">
+            <ul class="kbaindex">
+
+<li><a class="linkindex" href="#general">Introduction</a>
+<ul class="kbaindex">
+<li><a class="linkindex" href="#enabling">Enabling Zip64 Extensions in the ZipArchive Library</a></li>
+<li><a class="linkindex" href="#using">Using Archives in Zip64 Format</a></li>
+</ul>
+</li>
+<li><a class="linkindex" href="#limits">Limits Compared: the Standard Format Versus Zip64 Format</a></li>
+<li><a class="linkindex" href="#limitations">Platforms Limitations in Processing Large Data</a>
+<ul class="kbaindex">
+<li><a class="linkindex" href="#limitfiles">Large Files</a></li>
+<li><a class="linkindex" href="#limitcoll">Large Collections</a></li>
+</ul>
+</li></ul>
+
+        </div>
+        <div class="kbacontents">
+            
+        <h2 id="general" name="general" class="kb">
+            Introduction</h2>
+        The Zip64 format is an extension to the standard zip format that practically removes
+        limits in sizes and item numbers within a zip archive. It does not support self-extract
+        archives.<h3 id="enabling" name="enabling" class="kb">
+            Enabling Zip64 Extensions in the ZipArchive Library</h3>
+        To use the Zip64 extensions, you need to make sure that <span class="preproc">_ZIP64</span>
+        is defined in the file <span class="file">_features.h</span>. It is disabled by
+        default. Rebuild the ZipArchive
+        Library and your application, if you modify this definition. You should keep the
+        extensions disabled, if you don't use them, otherwise the library will use <span class="nowrap">64-bit</span> types and perform more processing, which may
+        slow down your application.
+        <h3 id="using" name="using" class="kb">
+            Using Archives in Zip64 Format</h3>
+        The ZipArchive Library will automatically use the Zip64 extensions while modifying
+        an archive, when at least one of the standard zip format limits is exceeded. The
+        library will also automatically detect an archive in the Zip64 format.
+        <h2 id="limits" name="limits" class="kb">
+            Limits Compared: the Standard Format Versus Zip64 Format</h2>
+        The maximum values allowed in each format are summarized below:
+        <br />
+        <br />
+        <div style="text-align: center;">
+            <table border="0" cellpadding="3" cellspacing="0" class="kb">
+                <tr class="kbheader">
+                    <td>
+                    </td>
+                    <td>
+                        Standard Format</td>
+                    <td>
+                        Zip64 Format</td>
+                </tr>
+                <tr>
+                    <td>
+                        Number of Files Inside an Archive</td>
+                    <td>
+                        65,535</td>
+                    <td>
+                        2^64 - 1</td>
+                </tr>
+                <tr>
+                    <td>
+                        Size of a File Inside an Archive [bytes]</td>
+                    <td>
+                        4,294,967,295</td>
+                    <td>
+                        2^64 - 1</td>
+                </tr>
+                <tr>
+                    <td>
+                        Size of an Archive [bytes]</td>
+                    <td>
+                        4,294,967,295</td>
+                    <td>
+                        2^64 - 1</td>
+                </tr>
+                <tr>
+                    <td>
+                        Number of Segments in a Segmented Archive</td>
+                    <td>
+                        999 (spanning)<br />
+                        65,535 (splitting)</td>
+                    <td>
+                        <span class="nowrap">4,294,967,295 - 1</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        Central Directory Size [bytes]</td>
+                    <td>
+                        4,294,967,295</td>
+                    <td>
+                        2^64 - 1</td>
+                </tr>
+            </table>
+        </div>
+        <h2 id="limitations" name="limitations" class="kb">
+            Platforms Limitations in Processing Large Data</h2>
+        When processing files and collections, the ZipArchive Library relies on external
+        libraries, such as STL and MFC. If you wish to use Zip64 extensions, you need to
+        make sure that the implementation of STL or MFC that you use, supports large files
+        and large collections.
+        <h3 id="limitfiles" name="limitfiles" class="kb">
+            Large Files</h3>
+        Most of the implementations support large files (&gt; 4GB) processing. This is not
+        the case for the Borland C++ (STL &amp; MFC) and Microsoft Visual Studio 6.0 (MFC);
+        that's why the Zip64 format is not supported under these environments.
+        <h3 id="limitcoll" name="limitcoll" class="kb">
+            Large Collections</h3>
+        The maximum number of items a collection can hold, limits the maximum number of
+        files in an archive that the ZipArchive Library can process. This limit can be determined
+        by examining the <span class="preproc">ZIP_ARRAY_SIZE_TYPE</span> definition. This
+        is defined as:
+        <ul>
+            <li><code>size_t</code> in the STL version</li>
+            <li><code>INT_PTR</code> in the MFC version</li>
+        </ul>
+        The MFC version also depends on <code>size_t</code> type when sorting.
+        <p />
+        These types are usually defined as unsigned <span class="nowrap">32-bit</span> integer
+        types. You may need to use a <span class="nowrap">64-bit</span> compiler for a larger
+        collections support.
+    
+        </div>
+        <div class="kbafooter">
+            <strong>Article ID:&nbsp;0610051629</strong>
+        </div>
+    </div>
+   <div style="font-size:11px; text-align:center;border-top:solid 1px gray;width:400px;margin:10px auto 5px auto;color:gray">
+Copyright &copy;&nbsp;2000 - 2006 Tadeusz Dracz.
+</div>
+</body>
+</html>

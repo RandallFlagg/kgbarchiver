@@ -1,0 +1,973 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>ZipArchive:
+        History of Changes in the ZipArchive Library
+    </title>
+    <link href="articles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    body
+    {
+    	font-family: verdana, arial, helvetica, sans-serif;
+    }
+</style>
+</head>
+<body>
+    <div class="kbabody">
+        <div class="kbatitle">
+            History of Changes in the ZipArchive Library
+        </div>
+        <div class="kbaappliesto">
+            Applies To: <strong>All</strong>
+        </div>
+        <div class="kbaindex">
+            <ul class="kbaindex">
+
+<li><a class="linkindex" href="#3.0.0 beta">3.0.0 beta (2006-11-27)</a></li>
+<li><a class="linkindex" href="#2.4.11">2.4.11 (2006-07-01)</a></li>
+<li><a class="linkindex" href="#2.4.10">2.4.10 (2006-04-01)</a></li>
+<li><a class="linkindex" href="#2.4.9">2.4.9 (2006-02-01)</a></li>
+<li><a class="linkindex" href="#2.4.8">2.4.8 (2005-10-01)</a></li>
+<li><a class="linkindex" href="#2.4.7">2.4.7 (2005-08-01)</a></li>
+<li><a class="linkindex" href="#2.4.6">2.4.6 (2005-07-01)</a></li>
+<li><a class="linkindex" href="#2.4.5">2.4.5 (2005-06-01)</a></li>
+<li><a class="linkindex" href="#2.4.4">2.4.4 (2005-04-01)</a></li>
+<li><a class="linkindex" href="#2.4.3">2.4.3 (2005-03-01)</a></li>
+<li><a class="linkindex" href="#2.4.2">2.4.2 (2005-02-01)</a></li>
+<li><a class="linkindex" href="#2.4.1">2.4.1 (2004-06-01)</a></li>
+<li><a class="linkindex" href="#2.4.0">2.4.0 (2004-03-01)</a></li>
+<li><a class="linkindex" href="#2.3.6">2.3.6 (2003-11-01)</a></li>
+<li><a class="linkindex" href="#2.3.5">2.3.5 (2003-09-01)</a></li>
+<li><a class="linkindex" href="#2.3.4">2.3.4 (2003-06-01)</a></li>
+<li><a class="linkindex" href="#2.3.3">2.3.3 (2003-01-01)</a></li>
+<li><a class="linkindex" href="#2.3.2">2.3.2 (2002-08-01)</a></li>
+<li><a class="linkindex" href="#2.3.1">2.3.1 (2002-05-01)</a></li>
+<li><a class="linkindex" href="#2.3.0">2.3.0 (2002-04-01)</a></li>
+<li><a class="linkindex" href="#2.2.0">2.2.0 (2001-10-15)</a></li>
+<li><a class="linkindex" href="#2.1.1">2.1.1 (2001-10-01)</a></li>
+<li><a class="linkindex" href="#1.6.6">1.6.6 (2001-08-01)</a></li>
+<li><a class="linkindex" href="#1.6.5">1.6.5 (2001-07-01)</a></li>
+<li><a class="linkindex" href="#1.6.4">1.6.4 (2001-06-01)</a></li>
+<li><a class="linkindex" href="#1.6.3">1.6.3 (2001-05-01)</a></li>
+<li><a class="linkindex" href="#1.6.2">1.6.2 (2001-04-01)</a></li>
+<li><a class="linkindex" href="#1.6.1">1.6.1 (2001-03-01)</a></li>
+<li><a class="linkindex" href="#1.5.1">1.5.1 (2001-02-01)</a></li>
+<li><a class="linkindex" href="#1.4.1">1.4.1 (2001-01-01)</a></li>
+<li><a class="linkindex" href="#1.3.1">1.3.1 (2000-11-01)</a></li>
+<li><a class="linkindex" href="#1.2.2">1.2.2 (2000-08-01)</a></li>
+<li><a class="linkindex" href="#1.2.1">1.2.1 (2000-06-01)</a></li>
+<li><a class="linkindex" href="#1.1.3">1.1.3 (2000-03-01)</a></li>
+<li><a class="linkindex" href="#1.1.1">1.1.1 (2000-01-01)</a></li></ul>
+
+        </div>
+        <div class="kbacontents">
+            
+      <h2 class="kb" id="3.0.0 beta" name="3.0.0 beta">3.0.0 beta (2006-11-27)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>
+        Zip64 support - see <a class="linkkb" href="0610051629.html">Zip64 Format: Crossing the Limits of File Sizes and Number of Files and Segments</a>
+        for more information. Available in the commercial version only.
+      </li>
+        <li>
+        WinZip AES (128-bit, 192-bit and 256-bit) encryption support - see <a class="linkkb" href="0610201627.html">Encryption Methods: How to Best Protect Your Data</a> for more information. Available in the commercial version only.
+      </li>
+        <li>
+        Possibility to store UTF7, UTF8 or different code page encoded filenames in extra headers (the standard zip format is preserved and it is possible to extract original Unicode filenames with the ZipArchive Library) (thanks to Somnath for remarks) - see <a class="linkkb" href="0610051525.html">Unicode Support: Using Non-English Characters in Filenames and Comments</a> for more information.
+      </li>
+        <li>
+        Possibility to use custom extra fields for storing user-defined data inside the archive  - see <a class="linkkb" href="0610242300.html">Providing Custom Data: Extra Fields</a> for more information.
+      </li>
+        <li>There is no need to copy additional files and use configuration scripts when compiling under different platforms and environments.</li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#c497dc2ebb4b65be1f5b7d08fe024a29">CZipArchive::SetStringStoreSettings()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#54f26713f4bc6c808250fe5a0b8b0565">CZipArchive::GetStringStoreSettings()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#d4e9947c1332f93dba691fc5316cde8b">CZipArchive::GetFileComment()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipFileHeader.html#d4d29775356f406d8f1e6864f90681a0">CZipFileHeader::GetStringStoreSettings()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./structCZipSpanCallback.html#aee53ce197b625cefda171597912cea6">CZipSpanCallback::m_iCode</a> added.
+      </li>
+        <li>ZipArc and Zippie updated to support Zip64 and AES features.</li>
+        <li>Documentation updated and extended.</li>
+        <li>More samples added.</li>
+        <li>Web site refreshed.</li>
+      </ul>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        Indexes of files in an archive are unsigned, use <span class="preproc">ZIP_FILE_INDEX_UNSPECIFIED</span> instead of <code>-1</code> and <span class="preproc">ZIP_FILE_INDEX_NOT_FOUND</span> as a test for the return value from find methods.
+      </li>
+        <li>The numbers of segments in multi-segment archive are now of an unsigned type.</li>
+        <li>
+        The terminology for creation and extraction of multi-part archives is changed (splitting &amp; spanning). A "pkzipSpan" archive is now called a "spanned archive" (segments of an archive are stored on removable devices). A "tdSpan" archive is now called a "split archive" (segments of an archive are stored in the same folder).
+      </li>
+        <li>
+        Minor tweaks for maintaining compatibility with PKZIP &amp; WinZip - see <a class="linkkb" href="0610051553.html">Segmented Archives: Splitting and Spanning</a> for more information. A split archive (formerly tdSpan) uses now a different segment's extension naming format (<code>z%.2d</code> instead of <code>z%.5d</code>) - it becomes <code>z%d</code> for segments number greater than 99.
+      </li>
+        <li>
+        <code>CZipStorage::pkzipSpan</code> renamed to <a class="linkapi" href="./classCZipStorage.html#7a9b670568cc2e729325e366a67891fda2b4b8de7a18d21dd68fa2b2e51d613e">CZipStorage::spannedArchive</a>.
+      </li>
+        <li>
+        <code>CZipStorage::tdSpan</code> renamed to <a class="linkapi" href="./classCZipStorage.html#7a9b670568cc2e729325e366a67891fd5696016758e2bfa325be7fd5f3a4d1bb">CZipStorage::splitArchive</a>.
+      </li>
+        <li>
+        <code>CZipStorage::suggestedTD</code> renamed to <a class="linkapi" href="./classCZipStorage.html#7a9b670568cc2e729325e366a67891fd11f0b447309de468a6575f3606a62f50">CZipStorage::suggestedSplit</a>.
+      </li>
+        <li>
+        <a class="linkapi" href="./structCZipCallback.html">CZipCallback</a> and its subclasses use unsigned types instead of signed.
+      </li>
+        <li>
+        In the <a class="linkapi" href="./structCZipCallback.html#d9955f0dbd1b60f7b8f4ceb3da491c57">CZipCallback::Callback()</a> method, the parameter <code>uProgress</code> does not provide additional information about the reason for callback - check <a class="linkapi" href="./structCZipSpanCallback.html#aee53ce197b625cefda171597912cea6">CZipSpanCallback::m_iCode</a> instead.
+      </li>
+        <li>The Zlib library modified slightly for the needs of the ZipArchive Library, you should use the version distributed with the ZipArchive Library instead of the standard Zlib library.</li>
+        <li>
+        Makefiles for the Zlib library removed - the <span class="file">Makefile</span> for the ZipArchive library compiles now the Zlib library as well.
+      </li>
+        <li>
+        <code>CZipArchive::WideConversionUseAnsi()</code> and<br />
+          <code>CZipArchive::EnableOemConversion()</code>replaced by the<br />
+          <a class="linkapi" href="./classCZipArchive.html#c497dc2ebb4b65be1f5b7d08fe024a29">CZipArchive::SetStringStoreSettings()</a> method.
+      </li>
+        <li>
+        <code>CZipArchive::SingleToWide()</code> and <code>CZipArchive::WideToSingle()</code> removed, if you need their functionality, check the methods in the <a class="linkapi" href="./namespaceZipCompatibility.html">ZipCompatibility</a> namespace.
+      </li>
+        <li>
+        <code>CZipArchive::GetCRCTable()</code> moved to the <a class="linkapi" href="./classCZipCrc32Cryptograph.html">CZipCrc32Cryptograph</a> class.
+      </li>
+        <li>
+        <code>CZipArchive::GetSpanMode()</code> renamed to <a class="linkapi" href="./classCZipArchive.html#57b5e58cf7278484892cf6fa9fbaa9b5">CZipArchive::GetSegmMode()</a>.
+      </li>
+        <li>
+        <code>CZipArchive::SetTreatAsSingleDisk()</code> removed, the detection is automatic.
+      </li>
+        <li>
+        Filenames are converted when accessed for the first time and the <code>CZipArchive::SetConvertAfterOpen()</code> was no longer needed and was removed.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#b6d202ba9404fb24e27c23497638b6e0">CZipArchive::FindMatches()</a> it not <code>const</code> anymore (a filename update is possible during executing this method).
+      </li>
+        <li>
+        <code>CZipArchive::SetExtraField()</code> removed, you can now use<br />
+          <a class="linkapi" href="./classCZipFileHeader.html#e4cbf85b55f10be47fa3782a0bb812b8">CZipFileHeader::m_aLocalExtraData</a> and<br />
+          <a class="linkapi" href="./classCZipFileHeader.html#a9d85b6500481bb3067106d908a8766f">CZipFileHeader::m_aCentralExtraData</a>.
+      </li>
+        <li>
+        <code>CZipArchive::GetLocalExtraField()</code> removed (see <a class="linkkb" href="0610242300.html#read">Providing Custom Data: Extra Fields</a> for the information about reading extra fields).
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#eba3616f735e840f0fbc1842349c867a">CZipArchive::PredictMaximumFileSizeInArchive()         </a>uses now <br />
+          <a class="linkapi" href="./classCZipFileHeader.html#45ab3c2119a25a3a3c95fa65eba60654">CZipFileHeader::m_uLocalComprSize</a> instead of <br />
+          <a class="linkapi" href="./classCZipFileHeader.html#88ec251f0caee80f40deb5e5b6de20b9">CZipFileHeader::m_uUncomprSize</a> for calculations.
+      </li>
+        <li>
+        <code>CZipArchive::CloseFileWithNoUpdate()</code> removed, call the<br />
+          <a class="linkapi" href="./classCZipArchive.html#90e6ef00e6b003871886f18e94e79360">CZipArchive::CloseFile()</a> method instead and set the <code>bAfterException</code> parameter to <code>true</code>.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#95573d33042d4adc73f36f4b1a7a0b3a">CZipArchive::GetIndexes()</a> adds an index to the resulting array, even if it is <span class="preproc">ZIP_FILE_INDEX_NOT_FOUND</span>; this way you know which files were not found.
+      </li>
+        <li>
+        In the <a class="linkapi" href="./classCZipArchive.html#9d875516849ce5632a024b3acb4613cf">CZipArchive::PredictFileNameInZip()</a> method, the parameter <code>bExactly</code> was removed.
+      </li>
+        <li>
+        <code>CZipArchive::cbGetFromArchive</code> renamed to <a class="linkapi" href="./classCZipArchive.html#07cdf46e463d58a346e8446f7e7b8730e023d4da2a341ad57f04f13983ba9cb9">CZipArchive::cbGet</a>.
+      </li>
+        <li>
+        <code>CZipWordArray</code> renamed to <code>CZipIndexesArray</code>.
+      </li>
+        <li>
+        <code>CZipAddNewFileInfo::m_iReplaceIndex</code> renamed to<br />
+          <a class="linkapi" href="./structCZipAddNewFileInfo.html#bb892e3bf51186fd7697f94b70af0b16">CZipAddNewFileInfo::m_uReplaceIndex</a> and it cannot have the <code>-2</code> value anymore.
+      </li>
+        <li>
+        Encryption methods moved from the <a class="linkapi" href="./classCZipArchive.html">CZipArchive</a> class to the <a class="linkapi" href="./classCZipCrc32Cryptograph.html">CZipCrc32Cryptograph</a> class.
+      </li>
+        <li>
+        The meaning for the <code>uProgress</code> parameter changed when using <a class="linkapi" href="./structCZipSpanCallback.html">CZipSpanCallback</a> - see <a class="linkkb" href="0610051553.html#span">Segmented Archives: Splitting and Spanning</a> for more information.
+      </li>
+        <li>
+        <code>CZipException::tooLongFileName</code> renamed to <a class="linkapi" href="./classCZipException.html#a4f3fc7c792e57a0a6881b6ea48725af6e71d4629bc459c6270a8d69eceecb5f">CZipException::tooLongData</a>.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipFileHeader.html#824c038417d8557b1b9977f512550df2">CZipFileHeader::SetFileName()</a> returns <code>void</code> instead of <code>bool</code>.
+      </li>
+        <li>
+        <code>CZipFileHeader::GetEffComprSize()</code> replaced by the<br />
+          <a class="linkapi" href="./classCZipFileHeader.html#d87cf27f8a60c14c3f0e61792984ceea">CZipFileHeader::GetDataSize()</a> method.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipFileHeader.html#bb28194e5208196f141c931da28fde77">CZipFileHeader::GetLocalSize()</a> made public.
+      </li>
+        <li>
+        <code>CZipFileHeader::GetFileNameSize()</code> renamed to<br />
+          <a class="linkapi" href="./classCZipFileHeader.html#ad29e53f924aa4369ac77320d8077aa5">CZipFileHeader::PredictFileNameSize()</a>.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipFileHeader.html#a66d8b8be6c5b8da7932c02191891bd7">CZipFileHeader::GetSystemAttr()</a> is not <code>const</code> anymore (a filename update is possible).
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipFileHeader.html#f91e3a823dd8c1dd8b77f106f517ee3c">CZipFileHeader::IsDirectory()</a> is not <code>const</code> anymore (a filename update is possible).
+      </li>
+        <li>
+        <code>CZipCentralDir::Info::m_uCentrDirPos</code> renamed to<br />
+          <a class="linkapi" href="./structCZipCentralDir_1_1Info.html#5d90bc29b97617e7b58c6dd22cdfcc77">CZipCentralDir::Info::m_uEndOffset</a>.
+      </li>
+        <li>
+        <code>CZipCentralDir::Info::m_uThisDisk</code> renamed to<br />
+          <a class="linkapi" href="./structCZipCentralDir_1_1Info.html#e432c85128ba395a3e3c8c03b7c5354e">CZipCentralDir::Info::m_uLastDisk</a>.
+      </li>
+        <li>
+        In <a class="linkapi" href="./namespaceZipPlatform.html#b838a22809f0c1382843e275ce1e6281">ZipPlatform::WideToSingle()</a>, the argument <code>bUseAnsi</code> replaced with <code>uCodePage</code>.
+      </li>
+        <li>
+        In <a class="linkapi" href="./namespaceZipPlatform.html#0ecfd462b5f0460f905a7b1bc02435c7">ZipPlatform::SingleToWide()</a>, the argument <code>bUseAnsi</code> replaced with <code>uCodePage</code>.
+      </li>
+        <li>
+        <code>ZipCompatibility::IsBigEndian()</code> removed.
+      </li>
+        <li>
+        Endianess determined by preprocessor definitions (check out the <span class="file">_platform.h</span> file if the value is correct).
+      </li>
+        <li>
+        Endian-aware methods that read and write bytes, moved from the <a class="linkapi" href="./namespaceZipCompatibility.html">ZipCompatibility</a> namespace and encapsulated in the <a class="linkapi" href="./classCBytesWriter.html">CBytesWriter</a> class.
+      </li>
+        <li>
+        <code>ZipCompatibility::FileNameUpdate()</code> replaced by the<br />
+          <a class="linkapi" href="./namespaceZipCompatibility.html#a402742c3a1e4fd01ab484fb64d23946">ZipCompatibility::ConvertBufferToString()</a> and<br />
+          <a class="linkapi" href="./namespaceZipCompatibility.html#93c1a56db5d0ea9f1ba7fcdbc5ca9f84">ZipCompatibility::ConvertStringToBuffer()</a> methods.
+      </li>
+        <li>
+        You can remove <span class="preproc">ZIP_ARCHIVE_MFC_PROJ</span> and <span class="preproc">ZIP_ARCHIVE_STL_PROJ</span> preprocessor definitions from your projects.
+      </li>
+        <li>
+        You should define <span class="preproc">ZIP_ARCHIVE_MFC</span> in your applications that use the MFC version of the ZipArchive Library.
+      </li>
+        <li>
+        You should define <span class="preproc">ZIP_ARCHIVE_LNX</span> in your applications that use the Linux version of the ZipArchive Library.
+      </li>
+        <li>The library uses now Visual Studio 2005 project files by default. Project files for other compilers are available and maintained.</li>
+      </ul>
+      <h2 class="kb" id="2.4.11" name="2.4.11">2.4.11 (2006-07-01)
+            </h2>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>The web site rebuilt, which led to links changes in the documentation.</li>
+        <li>Minor tweaks.</li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>Files were opened in the text mode under some gcc versions.</li>
+      </ul>
+      <h2 class="kb" id="2.4.10" name="2.4.10">2.4.10 (2006-04-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#7519cb67cca7ea5130f614987dfb53ae">CZipArchive::GetOccupiedSpace()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#eba3616f735e840f0fbc1842349c867a">CZipArchive::PredictMaximumFileSizeInArchive()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipFileHeader.html#bb28194e5208196f141c931da28fde77">CZipFileHeader::GetLocalSize()</a> added.
+      </li>
+      </ul>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        <a class="linkapi" href="./classCZipFileHeader.html#531c506c64162d49440c7045aa687785">CZipFileHeader::GetSize()</a> can only return the size of the info in the central directory.
+      </li>
+        <li>The limit of number of archive parts has been changed to 99999 for split archives (the compatibility with other archivers is kept up to 99 parts).</li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#5383b01b21c840e35ba8391efb7fb5cd">CZipArchive::ExtractFile(ZIP_U16_U64, CZipMemFile&, bool, DWORD)</a> does not perform moving the current position pointer of the memory file to the end, before writing decompressed data to it. The decompressed data is written at the current file position (existing data may be overwritten) (thanks to Jennis Meyer-Spradow for the suggestion).
+      </li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        The <code>CZipArchive::GetFromArchive()</code> methods would not work, if a local filename size or an extra field size were different from the corresponding sizes in the central directory.
+      </li>
+        <li>Compilation error under gcc-4.1 (thanks to Miroslav Rajcic and Tuncer Ayaz for the fix).</li>
+        <li>Problems with directory creation under Linux (thanks to Neil Youngman for the fix).</li>
+        <li>Problems with extraction in Zippie (thanks to Neil Youngman for reporting it).</li>
+        <li>Zippie was not restoring the global locale. It was not causing problems with Zippie, but nevertheless it is a good practice (thanks to Cecilia Herrera for reporting it).</li>
+      </ul>
+      <h2 class="kb" id="2.4.9" name="2.4.9">2.4.9 (2006-02-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>
+        <code>CZipArchive::SetTreatAsSingleDisk()</code> added for treating archives that have different disk numbers inside and yet are a single-disk archives.
+      </li>
+        <li>Visual Studio .NET 2005 compatibility.</li>
+      </ul>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>The library now decompresses correctly the archive, if the filename in the local file header is different from the filename in the central directory - it was considered an error in the archive so far.</li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>Renaming files corrupted archive, if a local extra field size was different than the size of extra filed in the central directory (thanks to Dragan Milic for reporting and the fix).</li>
+        <li>Renaming files corrupted archive, if a local filename size was different than the size of the filename in the central directory.</li>
+        <li>Renaming files was not reflected in the local header, if the new filename size was the same as the old ones (thanks to Dragan Milic for reporting and the fix).</li>
+      </ul>
+      <h2 class="kb" id="2.4.8" name="2.4.8">2.4.8 (2005-10-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>
+        Users contributions:
+        <ul>
+          <li>Necessary files for compiling with autotools (thanks to Brian Oxley).</li>
+          <li>MinGW makefiles (thanks to Miroslav Rajcic).</li>
+          <li>Partial Zip64 support for ZipArchive STL version 2.4.5 (thanks to Andre Pham).</li>
+        </ul>
+      </li>
+        <li>
+        Tip on compiling the library for dynamic linking (using <span class="preproc">-fPIC</span> with <span class="preproc">CFLAGS</span> in makefiles) added to the documentation (thanks to Victor Zverovich).
+      </li>
+      </ul>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>The library now uses Visual Studio 2003 projects (Visual Studio 6.0 projects are still available for download separately).</li>
+        <li>
+        Removed check for characters with codes greater than 128 in the <a class="linkapi" href="./classCZipArchive.html#bbe0d1ba17c664a8c9c15bfecb37a274">CZipArchive::SetPassword()</a> method. It restricted the password unnecessarily (thanks to Daniel Yerushalmi for the suggestion).
+      </li>
+      </ul>
+      <h2 class="kb" id="2.4.7" name="2.4.7">2.4.7 (2005-08-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>The support for machines with the big-endian architecture added (thanks to Dragan Milic for help).</li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>Incorrect progress values were reported while saving a central directory and deleting files (thanks Patrick Banks for help).</li>
+      </ul>
+      <h2 class="kb" id="2.4.6" name="2.4.6">2.4.6 (2005-07-01)
+            </h2>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        The Zlib library updated to version 1.2.3; see <a class="linkindex" href="http://www.gzip.org/zlib/ChangeLog.txt" target="_blank">the Zlib library change log</a> for more information.
+      </li>
+      </ul>
+      <h2 class="kb" id="2.4.5" name="2.4.5">2.4.5 (2005-06-01)
+            </h2>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#56f52e22fca716baa1178068224a1086">CZipArchive::Open(CZipAbstractFile&, int)</a> now accepts <code>CZipAbstractFile</code> instead of <code>CZipMemFile</code> (thanks to Markus Minichmayr for suggestion).
+      </li>
+        <li>
+        <code>mktemp</code> and <code>tempnam</code> replaced with <code>mkstemp</code> in <a class="linkapi" href="./namespaceZipPlatform.html#a42039536df0b66c7c2217c33e4f5b13">ZipPlatform::GetTmpFileName()</a> under Linux version.
+      </li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>An exception was thrown when closing an archive and another exception had already been thrown before (thanks to Roman Scherzer for reporting it).</li>
+      </ul>
+      <h2 class="kb" id="2.4.4" name="2.4.4">2.4.4 (2005-04-01)
+            </h2>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>Corrected problems with compilation under gcc 3.4.2 (thanks to all the people who reported it).</li>
+      </ul>
+      <h2 class="kb" id="2.4.3" name="2.4.3">2.4.3 (2005-03-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>
+        <code>CZipArchive::WideConversionUseAnsi()</code> added.
+      </li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        Crash caused by an invalid date used in <a class="linkapi" href="./classCZipFileHeader.html#d797bfa80527d5172621560dd41aefd1">CZipFileHeader::SetTime()</a> (thanks to Roman Scherzer for reporting it).
+      </li>
+        <li>Invalid string handling in Unicode (bug introduced when trying to support languages such as Japanese or Korean - thanks to Mark Gladding for reporting it).</li>
+      </ul>
+      <h2 class="kb" id="2.4.2" name="2.4.2">2.4.2 (2005-02-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>
+        Allowed proper handling of Unicode names in some languages such as Japanese or Korean: added <code>CZipArchive::EnableOemConversion</code> (thanks to Michael Frossard for suggestions).
+      </li>
+        <li>Split archives can now be extracted (from a non-removable device) by WinZip or WinRar (thanks to Martin Hoefler for the suggestion).</li>
+        <li>
+        The copy constructor added to the <a class="linkapi" href="./classCZipMemFile.html">CZipMemFile</a> class (thanks to Sofia Massimo for suggestion).
+      </li>
+      </ul>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        The Zlib library updated to version 1.2.2; see <a class="linkindex" href="http://www.gzip.org/zlib/ChangeLog.txt" target="_blank">the Zlib library change log</a> for more information.
+      </li>
+        <li>When creating a segmented archive, the whole central directory is placed on a single volume.</li>
+        <li>The number of archive parts is now limited to 99 for split archives (for the compatibility with other archivers).</li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        Wildcard matching was not handled properly (e.g. <span class="file">*.exe</span> was not matched against <span class="file">a.b.exe</span>).
+      </li>
+        <li>Corrected problems when working on 64 bit platforms (thanks to Miha for noticing it and for most of the fixes).</li>
+        <li>Corrected problems with compilation under gcc 3.3.4 (thanks to Miha for the fix).</li>
+      </ul>
+      <h2 class="kb" id="2.4.1" name="2.4.1">2.4.1 (2004-06-01)
+            </h2>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        Workaround for the case when an exception was thrown in <code>CFile::GetFilePath()</code> by MFC when working on offline files under Windows XP (thanks to Richard Stooke for spotting and solving this).
+      </li>
+      </ul>
+      <h2 class="kb" id="2.4.0" name="2.4.0">2.4.0 (2004-03-01)
+            </h2>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        The Zlib library updated to version 1.2.1; see <a class="linkindex" href="http://www.gzip.org/zlib/ChangeLog.txt" target="_blank">the Zlib library change log</a> for more information.
+      </li>
+        <li>
+        <code>CZipArchive::CloseFileAfterTestFailed()</code> renamed to<br />
+          <code>CZipArchive::CloseFileWithNoUpdate()</code>.
+      </li>
+      </ul>
+      <h2 class="kb" id="2.3.6" name="2.3.6">2.3.6 (2003-11-01)
+            </h2>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        Incorrect string comparison in the <a class="linkapi" href="./classCZipCentralDir.html#0386beaee08584540bf022473087efbb">CZipCentralDir::FindFile()</a> method (thanks to Igor Green for reporting it).
+      </li>
+      </ul>
+      <h2 class="kb" id="2.3.5" name="2.3.5">2.3.5 (2003-09-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#5383b01b21c840e35ba8391efb7fb5cd">CZipArchive::ExtractFile(ZIP_U16_U64, CZipMemFile&, bool, DWORD)</a> has the <code>bRewind</code> parameter added, which determines whether to position the memory file pointer at the beginning of the decompressed data or not (thanks to Tim Musschoot for the remark).
+      </li>
+      </ul>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#5383b01b21c840e35ba8391efb7fb5cd">CZipArchive::ExtractFile(ZIP_U16_U64, CZipMemFile&, bool, DWORD)</a> positions the memory file pointer at the beginning of the compressed data after compression.
+      </li>
+        <li>
+        <code>CZipArchive::AddNewFile()</code> methods now automatically set the value of the file pointer <a class="linkapi" href="./structCZipAddNewFileInfo.html#cd656262c3f3f2c454c80b3f28f16d3f">CZipAddNewFileInfo::m_pFile</a>, to the beginning of the file - by calling the <code>CZipAbstractFile::SeekToBegin()</code> method (thanks to Michael A. Rusakov for pointing this out).
+      </li>
+        <li>
+        Compatibility with <a class="linkindex" href="http://www.stlport.org" target="_blank">STLPort</a> (thanks to Ben Discoe for the changes).
+      </li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>Compilation errors on Solaris and Linux box gcc 3.2.2 (thanks to Aditya Dwivedula for the fixes).</li>
+        <li>
+        When creating a segmented archive volume, the <span class="file">.zip</span> extension was not properly appended.
+      </li>
+        <li>
+        In the <code>CZipArchive::AddNewFile()</code> methods, the smartness level was always set to <a class="linkapi" href="./classCZipArchive.html#578cdd94533678eb97c099102eaf669f54480b73a36e09e82defde88ab7a6a38">CZipArchive::zipsmSafeSmart</a> regardless of <code>iSmartLevel</code> parameter (thanks to Antonio Maiorano for reporting).
+      </li>
+        <li>Rare problems under Windows with STL version (thanks to Daniel Walton for the fix).</li>
+      </ul>
+      <h2 class="kb" id="2.3.4" name="2.3.4">2.3.4 (2003-06-01)
+            </h2>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#2f16e0e82da4b8efcc42a07d824e38eb">CZipArchive::TestFile()</a> throws now an exception if the <a class="linkapi" href="./classCZipArchive.html#90e6ef00e6b003871886f18e94e79360">CZipArchive::CloseFile()</a> returned <code>-1</code>; this way the method works as described in the documentation that an exception is thrown when a file is corrupted (thanks to Silvio Scarpati for pointing this out).
+      </li>
+        <li>It is now possible to add an already opened file to an archive (thanks to Kristjan Bjarnason for the change).</li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>Problems with extracting some archives (very rare) (thanks to Ben Jos Walbeehm for the fix).</li>
+        <li>Problems with extracting some archives created under Linux (thanks to Jurgen Marquardt for reporting).</li>
+        <li>Small compilation errors under MSVC++ .NET (thanks to Darren Whobrey for the fixes).</li>
+        <li>Setting password in the Zippie application (thanks to Amnon David for the fix).</li>
+      </ul>
+      <h2 class="kb" id="2.3.3" name="2.3.3">2.3.3 (2003-01-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#940810c83896365f88e4be14809674c9">CZipArchive::m_bRemoveDriveLetter</a> option added.
+      </li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        Not extracting files from the last volume when opening an existing split archive, where the last volume filename has other extension than <span class="file">.zip</span>.
+      </li>
+        <li>
+        Added <span class="preproc">PKZIP_BUG_WORKAROUND</span> definition to the <span class="file">zlib.h</span> file distributed with the ZipArchive Library as well as to the ZipArchive Library project files (in case the Zlib library is replaced with a new version); it deals with PKZIP bug existing in some archives (thanks to Ben Jos Walbeehm for reporting).
+      </li>
+      </ul>
+      <h2 class="kb" id="2.3.2" name="2.3.2">2.3.2 (2002-08-01)
+            </h2>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>Problem with creating segmented archives in the STL version of the library (thanks to Luiz Rafael Culik for reporting).</li>
+      </ul>
+      <h2 class="kb" id="2.3.1" name="2.3.1">2.3.1 (2002-05-01)
+            </h2>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        Using the <a class="linkapi" href="./classCZipMemFile.html#c2f62e15c29390229f1a0be88544b363">CZipMemFile::CZipMemFile(BYTE*, UINT, long)</a> constructor could cause memory errors (thanks to Laurent Dore).
+      </li>
+      </ul>
+      <h2 class="kb" id="2.3.0" name="2.3.0">2.3.0 (2002-04-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>Visual Studio .NET compatibility.</li>
+        <li>
+        <code>CZipArchive::GetFromArchive()</code> methods added, that allow copying files from another archive without decompressing them.
+      </li>
+        <li>
+        Replacing of files in the archive. It works with <code>CZipArchive::GetFromArchive()</code> and the new <a class="linkapi" href="./classCZipArchive.html#835a92a9a94ae71ab1742c50d282d0d2">CZipArchive::AddNewFile(CZipAddNewFileInfo&)</a> which was introduced due to increasing parameters count.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#697bc042151f49dee54f9a3e2608e644">CZipArchive::RenameFile()</a> added, which renames a file in an archive maintaining its physical position inside the archive.
+      </li>
+        <li>
+        Added projects and necessary changes for compiling ZipArchive as a DLL version (courtesy of Jonathan Reis).
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#ce5d6f4b31b02af4a674890eb8a5245c">CZipArchive::WillBeDuplicated()</a> added, which lets you check quickly, if the given filename would duplicate an existing one in the archive.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#daec12f7aa2462e27a2d8bcafdc3d58f">CZipArchive::GetCount()</a> has now an additional parameter and can return the number of files in the archive not counting the directories.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#2477a9a1c292015338622027375665de">CZipArchive::Close()</a> has now an additional parameter (<code>bUpdateTimeStamp</code>) and can set the modification time of the zip archive to the modification time of the newest file inside the archive.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#95573d33042d4adc73f36f4b1a7a0b3a">CZipArchive::GetIndexes()</a> added.
+      </li>
+        <li>The ZipArc application was updated to support renaming, replacing (as well as updating files in an archive) and getting compressed files from another archive.</li>
+      </ul>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        The Zlib library updated to version 1.1.4 that fixes the security vulnerability in version 1.1.3      as described in <a class="linkindex" href="http://www.zlib.org/advisory-2002-03-11.txt" target="_blank">http://www.zlib.org/advisory-2002-03-11.txt</a>.
+      </li>
+        <li>If a file inside an archive has the wrong date/time stamp set, then the extracted file is given the current time instead of reporting an error.</li>
+        <li>
+        In the <a class="linkapi" href="./classCZipArchive.html#9d875516849ce5632a024b3acb4613cf">CZipArchive::PredictFileNameInZip()</a> method, parameter <code>bAnsiOem</code> changed to <code>bExactly</code> (apart from the name, the meaning has also been changed).
+      </li>
+        <li>
+        <code>bFileNameOnly</code> parameter removed from the<br />
+          <a class="linkapi" href="./classCZipArchive.html#13d84b18cc4bc302c0f5810dadf8e948">CZipArchive::DeleteFiles(const CZipStringArray&)</a> method.
+      </li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        Eliminated possible errors when using <a class="linkapi" href="./classCZipArchive.html#578cdd94533678eb97c099102eaf669fc8091f3b3088e300ce6eb90ee0e79858">CZipArchive::zipsmCheckForEff</a> with segmented archives.
+      </li>
+        <li>
+        Reading some files created with other archivers failed occasionally in <a class="linkapi" href="./classCZipFileHeader.html#a9a71ccc45484211cea731d905d98d1f">CZipFileHeader::ReadLocal()</a> (thanks to Christian von Seydlitz).
+      </li>
+        <li>
+        While a file recompression (smartness level includes <a class="linkapi" href="./classCZipArchive.html#578cdd94533678eb97c099102eaf669fc8091f3b3088e300ce6eb90ee0e79858">CZipArchive::zipsmCheckForEff</a>), if the AutoFlush feature was enabled, there were redundant bytes added to the archive (thanks to Roman Scherzer).
+      </li>
+        <li>Aborting extraction of a segmented archive caused errors (thanks to Sabina Terenzi).</li>
+        <li>Some GUI fixes in ZipArc.</li>
+      </ul>
+      <h2 class="kb" id="2.2.0" name="2.2.0">2.2.0 (2001-10-15)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>Deleting multiple files from an archive is now much faster - the files are not deleted separately as it was so far, but the library creates a map of holes and continuous areas and moves the data to remain in file over the holes. It means that the data is copied only once and not for every file to delete.</li>
+        <li>
+        Callback functions has been replaced by callback objects to make the code cleaner and to make possible to pass more information during a callback call (see the <a class="linkapi" href="./classCZipArchive.html#332c3c24cc1542b8d4c12ded84966704">CZipArchive::SetCallback()</a>method for more information). The new solution has proven to be about 15% faster than the previous one.<br />Please note:
+        <ul>
+          <li>
+            This change affects the parameters of the following methods:
+            <ul>
+              <li>
+                <code>CZipArchive::AddNewFile()</code>
+              </li>
+              <li>
+                <code>CZipArchive::ExtractFile()</code>
+              </li>
+              <li>
+                <code>CZipArchive::TestFile()</code>
+              </li>
+              <li>
+                <code>CZipArchive::SetSpanCallback()</code>
+              </li>
+            </ul>
+          </li>
+          <li>The meaning of parameters passed to callback objects is different from the ones passed to the callback functions.</li>
+        </ul>
+      </li>
+        <li>Added the callback notification when deleting files.</li>
+        <li>Added the callback notification when saving the central directory.</li>
+        <li>
+        Added possibility to extract or delete files which filenames match the specified wildcard pattern (see the <a class="linkapi" href="./classCZipArchive.html#b6d202ba9404fb24e27c23497638b6e0">CZipArchive::FindMatches()</a> method for more information).
+      </li>
+        <li>Iterating over the central directory elements speeded up (as a result, all operations that iterate the central directory were speeded up, especially sorting, multiple adding, extracting, testing).</li>
+        <li>The library no longer throws an exception, if the platform the archive was created under, is not supported, but tries to distinguish files from directories anyway.</li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#cc840dff8be8b48c36ada19d1c662626">CZipArchive::Flush()</a> can be called now for a segmented archive in creation (finalizing it then), and still allowing extracting or testing.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#773bab3d901e5fa03ed9118b53af5a24">CZipArchive::CloseNewFile()</a> can be called after an exception was thrown, to allow repairing the archive later.
+      </li>
+        <li>
+        Adding files with one of the <code>CZipArchive::AddNewFile()</code> methods can be safely aborted in a not segmented archive (the added data is removed from the archive).
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipException.html#aeca993ac407e8954fa229123eca3664">CZipException::GetErrorMessage()</a> added for the MFC compatibility.
+      </li>
+        <li>
+        Added parameter <code>bForce</code> to <a class="linkapi" href="./classCZipArchive.html#c20345ce4f4760630d6514600fe3cbe0">CZipArchive::SetTempPath()</a> that creates the directory, if it doesn't exists.
+      </li>
+        <li>An archive created by the library under Windows can be now correctly extracted under Linux and vice versa without the need for setting the system compatibility for the files.</li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#dfa8fac6a0fed81431908febedadd13c">CZipArchive::SetIgnoreCRC()</a> added to make possible working with Java <sup>
+          <small>TM</small>
+        </sup> Archives (JAR).
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#061bf282ada2d1befa2476a476caf48f">CZipArchive::GetFindFastIndex()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#4592d2f51d07dd79a7e9b89cd34ff449">CZipArchive::GetCentralDirInfo()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#3c8dd12deab7ecd02d8a760fd9709259">CZipArchive::GetCentralDirSize()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#9b2278dc8561a0d484fb9018fed98531">CZipArchive::GetCurrentDisk()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#c50bc9678b14ae075d2c252f0b38bd0d">CZipArchive::IsReadOnly()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipFileHeader.html#21a76d9ede8909e7b35b88ad0087c0b2">CZipFileHeader::CompressionEfficient()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipFileHeader.html#e80838388b3587fe2d43109b1177016a">CZipFileHeader::GetCompressionRatio()</a> added.
+      </li>
+        <li>
+        <code>const</code> keywords added to methods.
+      </li>
+        <li>
+        <span class="preproc">TRACE</span> messages are now easier to locate in MSVC++ (double clicking gets you directly to the code now).
+      </li>
+      </ul>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        If the <a class="linkapi" href="./structCZipCallback.html#d9955f0dbd1b60f7b8f4ceb3da491c57">CZipCallback::Callback()</a> returns <code>false</code>,
+        a <a class="linkapi" href="./classCZipException.html">CZipException</a> is thrown with one of the codes: <a class="linkapi" href="./classCZipException.html#a4f3fc7c792e57a0a6881b6ea48725af31e9bf7d432cd9431e3e99ed5bbd6b7f">CZipException::abortedAction</a> or <a class="linkapi" href="./classCZipException.html#a4f3fc7c792e57a0a6881b6ea48725af4c8194333518ced64f77b2ee9640a44d">CZipException::abortedSafely</a>.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#13d84b18cc4bc302c0f5810dadf8e948">CZipArchive::DeleteFiles(const CZipStringArray&)</a> uses now a Find Fast array. <code>bFileNameOnly</code> parameter added.
+      </li>
+        <li>
+        <code>CZipArchive::GetNoEntries()</code> renamed to <a class="linkapi" href="./classCZipArchive.html#daec12f7aa2462e27a2d8bcafdc3d58f">CZipArchive::GetCount()</a>.
+      </li>
+        <li>
+        An encrypted file is not recompressed again, if the difference in sizes before and after compression equals the length of the encryption header.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#33d6ca3bf54fdb73fbf3dfd51c5d880e">CZipArchive::OpenFile()</a> throws an exception with the <a class="linkapi" href="./classCZipException.html#a4f3fc7c792e57a0a6881b6ea48725af334b595e9aba2d89c1e84e98947164eb">CZipException::badPassword</a> code if the password was not set for an encrypted file instead of returning <code>false</code>.
+      </li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        <a class="linkapi" href="./classCZipStorage.html#1230b2132fff67e636139c204735910f">CZipStorage::Flush()</a> doesn't call now <code>m_pFile-&gt;Flush()</code> (it has proven to slow down the archive creation speed significantly) - it is called in different places instead.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#2f16e0e82da4b8efcc42a07d824e38eb">CZipArchive::TestFile()</a> sometimes was not detecting an incorrect password.
+      </li>
+        <li>
+        Filenames in archives are now correctly converted after calling <a class="linkapi" href="./classCZipArchive.html#cc840dff8be8b48c36ada19d1c662626">CZipArchive::Flush()</a>.
+      </li>
+        <li>
+        Fixed the numerical value of the <a class="linkapi" href="./classCZipArchive.html#578cdd94533678eb97c099102eaf669f1937c9053c208a1509601d1b83167e64">CZipArchive::zipsmCheckForEffInMem</a> flag; the bug caused the temporary file to be always created in memory.
+      </li>
+        <li>
+        <a class="linkapi" href="./namespaceZipPlatform.html#a4b9c23d75e98cfe8e49b2cf419ac655">ZipPlatform::GetDeviceFreeSpace()</a> was not working on Windows with other devices than removable (in spite of what is written in MSDN, it is sometimes needed to add a slash when passing a drive name to the <code>GetDiskFreeSpace()</code> method and sometimes not). This bug was detected on Windows 2000.
+      </li>
+        <li>
+        Crash eliminated when a file modification time could not be retrieved (in case of an impossible value e.g. a year is 28980).
+      </li>
+        <li>Unix attributes corrected.</li>
+        <li>
+        <code>CZipArchive::ExtractFile()</code> was passing an incorrect value to the callback method.
+      </li>
+      </ul>
+      <h2 class="kb" id="2.1.1" name="2.1.1">2.1.1 (2001-10-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>Linux version at the beta stage (thanks to Luiz Rafael Culik for help).</li>
+        <li>
+        Smart and efficient compression added to the <code>CZipArchive::AddNewFile</code> method (see <a class="linkapi" href="./classCZipArchive.html#578cdd94533678eb97c099102eaf669f">CZipArchive::Smartness</a> for more information).
+      </li>
+        <li>
+        Integration of the Visual Studio help system with MSDN (see <a class="linkkb" href="0610250032.html">Integrating Help Files with MSDN</a> for more information).
+      </li>
+        <li>Adding a file with the user-specified filename in zip.</li>
+        <li>Adding files from memory and extracting files to memory.</li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#cc840dff8be8b48c36ada19d1c662626">CZipArchive::Flush()</a> added - it increases the safety when working with zip archives (thanks to Brad Kremer for the idea).
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#ec981beb4dfb55e4a2f054c410ee3031">CZipArchive::SetCaseSensitivity()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#9d875516849ce5632a024b3acb4613cf">CZipArchive::PredictFileNameInZip()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#34433c0c9f71ee948430c24137cc0427">CZipArchive::PredictExtractedFileName()</a> added.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#09fc55e424f502c8a402cef0e8dd3ed6">CZipArchive::FindFile()</a> speeded up again, the meaning of the case-sensitivity parameter changed, added possibility to find a filename only without a path.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#fc6cc02d96d436dd046b01cbe31a1c8e">CZipArchive::TrimRootPath()</a> improved.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#2477a9a1c292015338622027375665de">CZipArchive::Close()</a> allows now writing the central directory to an archive even after an exception, which lets you e.g. attempt to reuse the archive later.
+      </li>
+        <li>
+        Error descriptions - see <a class="linkapi" href="./classCZipException.html#f9200592c6ce597bc4a06e937058d84c">CZipException::GetErrorDescription()</a>.
+      </li>
+        <li>STL sample application added (a command line archiver which works for both Windows and Linux.</li>
+        <li>In the MFC sample application added a switch in options to allow an effective compression.</li>
+        <li>Several minor enhancements.</li>
+      </ul>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        <a class="linkapi" href="./classCZipPathComponent.html">CZipPathComponent</a> methods renamed : <code>GetFullFileName()</code> -&gt; <code>GetFileName()</code>, <code>GetFileName()</code> -&gt; <code>GetFileTitle()</code>, <code>SetFileName()</code> -&gt; <code>SetFileTitle()</code>.
+      </li>
+        <li>
+        The file <span class="file">__[...].zcfg</span> is created depending on the current configuration when using scripts to copy platform dependent files.
+      </li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        When performing a non case-sensitive search with the <a class="linkapi" href="./classCZipArchive.html#09fc55e424f502c8a402cef0e8dd3ed6">CZipArchive::FindFile()</a> method (thanks to Kenny Prole).
+      </li>
+        <li>
+        In <code>CZipString</code> (STL) when using a different locale than English and non-English characters.
+      </li>
+        <li>
+        <a class="linkapi" href="./classCZipStorage.html#1230b2132fff67e636139c204735910f">CZipStorage::Flush()</a> calls now <code>m_pFile-&gt;Flush()</code> as well (it might have caused zip creation problems sometimes).
+      </li>
+      </ul>
+      <h2 class="kb" id="1.6.6" name="1.6.6">1.6.6 (2001-08-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>
+        The <a class="linkapi" href="./classCZipPathComponent.html">CZipPathComponent</a> class understands now a UNC path, so it is possible to extract files over a network (other operations over a network were already possible).
+      </li>
+      </ul>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        The sample application updated to reflect previous (version 1.6.5) and current changes.
+      </li>
+      </ul>
+      <h2 class="kb" id="1.6.5" name="1.6.5">1.6.5 (2001-07-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>
+        <a class="linkapi" href="./classCZipArchive.html#0e623537c7cbf00c6b255c3a5728acd9">CZipArchive::SetRootPath()</a> added that allows more flexible path manipulations when using <code>CZipArchive::AddNewFile()</code> or <code>CZipArchive::ExtractFile()</code> and their overrides.
+      </li>
+        <li>
+        Ability to set an archive system compatibility to a value different
+        than the current system ID with the <a class="linkapi" href="./classCZipArchive.html#3b22230148bd8a11a9f1f92bff446e1b">CZipArchive::SetSystemCompatibility()</a> method.
+      </li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        If the file had the read-only attribute set, the time stamp of an extracted file was not updated and an exception was thrown, (thanks to Arnon Meydav).
+      </li>
+        <li>Invalid Unix attributes conversion.</li>
+        <li>
+        Directories inside an archive are now recognized properly by Unix archivers if the archive was created for Unix platform.
+      </li>
+      </ul>
+      <h2 class="kb" id="1.6.4" name="1.6.4">1.6.4 (2001-06-01)
+            </h2>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        Fixed errors that made impossible using the <a class="linkapi" href="./classCZipMemFile.html">CZipMemFile</a> class and creation of archives in memory.
+      </li>
+      </ul>
+      <h2 class="kb" id="1.6.3" name="1.6.3">1.6.3 (2001-05-01)
+            </h2>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        The Zlib library sources incorporated into the ZipArchive Library projects
+        (it eliminates most often link errors).
+      </li>
+      </ul>
+      <h2 class="kb" id="1.6.2" name="1.6.2">1.6.2 (2001-04-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>Added a simple protection against compiling MFC or STL version without copying the proper files first.</li>
+        <li>Added several preprocessor directives for Borland compilers.</li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        <a class="linkapi" href="./namespaceZipPlatform.html#fbc76df6bca7bebfd4bdad351dc7697c">ZipPlatform::SetVolLabel()</a> appends now a directory separator to the drive name (lack of it caused errors sometimes).
+      </li>
+      </ul>
+      <h2 class="kb" id="1.6.1" name="1.6.1">1.6.1 (2001-03-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>STL version of the library.</li>
+        <li>Porting to different platforms made easier.</li>
+        <li>
+        Possibility to read zip files created on other platforms than Windows (correct interpretation of file and directory attributes).
+      </li>
+        <li>
+        <a class="linkindex" href="http://www.stack.nl/~dimitri/doxygen/" target="_blank">Doxygen</a> generated documentation.
+      </li>
+      </ul>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>LICENSING CHANGED.</li>
+        <li>Overall tuning.</li>
+        <li>Sample application updated.</li>
+      </ul>
+      <h2 class="kb" id="1.5.1" name="1.5.1">1.5.1 (2001-02-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>Ability to reuse an archive after an exception was thrown during extraction.</li>
+        <li>
+        Added progress notifications to <code>CZipArchive::AddNewFile()</code>, <code>CZipArchive::ExtractFile()</code>, <code>CZipArchive::TestFile()</code>.
+      </li>
+        <li>
+        When the central directory cannot be located, the library throws <a class="linkapi" href="./classCZipException.html#a4f3fc7c792e57a0a6881b6ea48725af62c9a10984629c00e661ef7e218dc1b0">CZipException::cdirNotFound</a>, which allows distinguishing from other exceptions.
+      </li>
+      </ul>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>
+        Improved performance of the <a class="linkapi" href="./classCZipArchive.html#09fc55e424f502c8a402cef0e8dd3ed6">CZipArchive::FindFile()</a> method (thanks to Darin Warling).
+      </li>
+        <li>The library name changed to ZipArchive.</li>
+        <li>The sample application updated.</li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>Incorrect extracting of an encrypted file of 0 size.</li>
+        <li>Incorrect extracting a file with an extra field in a local file header.</li>
+      </ul>
+      <h2 class="kb" id="1.4.1" name="1.4.1">1.4.1 (2001-01-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>
+        Adding and extracting without a full path in <code>CZipArchive::AddNewFile</code> and <code>CZipArchive::ExtractFile</code>.
+      </li>
+      </ul>
+      <h4 class="kb">Changes</h4>
+      <ul>
+        <li>Disk numbering in a spanned archive begins now with PKBACK# 001 not PKBACK# 000.</li>
+        <li>Several minor changes.</li>
+      </ul>
+      <h2 class="kb" id="1.3.1" name="1.3.1">1.3.1 (2000-11-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>Testing of archives made easier.</li>
+        <li>Added support for password encryption and decryption.</li>
+        <li>Support for compiling the sources for Unicode.</li>
+      </ul>
+      <h2 class="kb" id="1.2.2" name="1.2.2">1.2.2 (2000-08-01)
+            </h2>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        Several minor bugs fixed.
+      </li>
+      </ul>
+      <h2 class="kb" id="1.2.1" name="1.2.1">1.2.1 (2000-06-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>The code has been completely rewritten from the very beginning.</li>
+        <li>Support for archive segmentation.</li>
+        <li>Creation of segmented archives with the user-defined volume size.</li>
+        <li>Ability to modify existing archives (add, delete files).</li>
+        <li>Modification of self-extracting archives.</li>
+        <li>Write buffer used for faster disk write operations.</li>
+        <li>One class for zip and unzip functions.</li>
+        <li>Fast adding, deleting and extracting files with a single method call.</li>
+      </ul>
+      <h2 class="kb" id="1.1.3" name="1.1.3">1.1.3 (2000-03-01)
+            </h2>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>
+        International characters in filenames inside archive are now
+        converted in a compatible way with other archiving programs (they are stored
+        converted to an OEM code page inside an archive).
+      </li>
+      </ul>
+      <h2 class="kb" id="1.1.1" name="1.1.1">1.1.1 (2000-01-01)
+            </h2>
+      <h4 class="kb">New Features</h4>
+      <ul>
+        <li>
+        The first version. It is just a modified code from <span class="file">zip.c and</span> <span class="file">unzip.c</span> files
+        written by Gilles Vollant and distributed with the Zlib library.
+      </li>
+        <li>Added class' wrappers.</li>
+        <li>MFC support added.</li>
+        <li>Memory leaks eliminated when write error occurred.</li>
+        <li>Automatic freeing of the used memory on destruction or exception.</li>
+        <li>Error notification using exceptions instead of return codes.</li>
+        <li>Some enhancements added.</li>
+      </ul>
+      <h4 class="kb">Bugs Fixed</h4>
+      <ul>
+        <li>Several minor bugs fixed.</li>
+      </ul>
+    
+        </div>
+        <div class="kbafooter">
+            <strong>Article ID:&nbsp;history</strong>
+        </div>
+    </div>
+   <div style="font-size:11px; text-align:center;border-top:solid 1px gray;width:400px;margin:10px auto 5px auto;color:gray">
+Copyright &copy;&nbsp;2000 - 2006 Tadeusz Dracz.
+</div>
+</body>
+</html>

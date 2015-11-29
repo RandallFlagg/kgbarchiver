@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>ZipArchive:
+        Self-Extract Archives
+    </title>
+    <link href="articles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    body
+    {
+    	font-family: verdana, arial, helvetica, sans-serif;
+    }
+</style>
+</head>
+<body>
+    <div class="kbabody">
+        <div class="kbatitle">
+            Self-Extract Archives
+        </div>
+        <div class="kbaappliesto">
+            Applies To: <strong>All But Multi-Segment Archives</strong>
+        </div>
+        <div class="kbaindex">
+            <ul class="kbaindex">
+
+<li><a class="linkindex" href="#intro">Introduction</a></li>
+<li><a class="linkindex" href="#stub">Creating a Self-Extract Archive</a></li></ul>
+
+        </div>
+        <div class="kbacontents">
+            
+        <h2 id="intro" name="intro" class="kb">
+            Introduction</h2>
+        <ul>
+            <li>A self-extract archive contains an executable stub added at the beginning, which handles
+                the archive extraction.</li>
+            <li>The ZipArchive Library automatically detects self-extract archives.</li>
+            <li>You can request the size of the executable stub with the <a class="linkapi" href="./classCZipArchive.html#95cdda5fd6e8fb1f9b02f305746413ad">CZipArchive::GetBytesBeforeZip()</a>
+                method. If this method returns <code>0</code>, then the archive does not have extra
+                bytes at the beginning.</li>
+            <li>Do not use self-extract archives in the Zip64 format - this format does not support
+                it. For the information about the Zip64 format, see <a class="linkkb" href="0610051629.html">Zip64 Format: Crossing the Limits of File Sizes and Number of Files and Segments</a>.</li>
+        </ul>
+        <h2 id="stub" name="stub" class="kb">
+            Creating a Self-Extract Archive</h2>
+        First you need to create the executable stub. The following sample code shows the
+        idea.
+        <div class="codetitle">Sample Code</div><pre class="fragment"><span class="comment">//Windows code</span>
+<span class="keywordtype">int</span> APIENTRY WinMain(HINSTANCE hInstance,
+    HINSTANCE hPrevInstance,
+    LPSTR lpCmdLine,
+    <span class="keywordtype">int</span> nCmdShow)
+{
+    CZipArchive zip;
+    <span class="comment">// get the path of the executable</span>
+    TCHAR szBuff[_MAX_PATH];
+    <span class="keywordflow">if</span> (!::GetModuleFileName(hInstance, szBuff, _MAX_PATH))
+        <span class="keywordflow">return</span> -1;
+
+    CZipString szDest;
+    <span class="comment">// ...</span>
+    <span class="comment">// add some code here to get additional information from the user</span>
+    <span class="comment">// such as the destination directory or a password, if needed</span>
+    zip.Open(szBuff, CZipArchive::zipOpenReadOnly); 
+    <span class="comment">// zipOpenReadOnly mode is necessary for self extract archives</span>
+    <span class="keywordflow">for</span> (ZIP_U16_U64 i = 0; i &lt; zip.GetCount(); i++)
+        zip.ExtractFile(i, szDest);
+    zip.Close();
+    <span class="keywordflow">return</span> 0;
+}
+</pre>
+        Next, having your archive ready, you need to add at the beginning the compiled executable.
+        You can use the following DOS command: <span class="command">copy /b Stub.exe + Archive.zip
+            SelfExtract.exe</span>
+    
+        </div>
+        <div class="kbafooter">
+            <strong>Article ID:&nbsp;0610242241</strong>
+        </div>
+    </div>
+   <div style="font-size:11px; text-align:center;border-top:solid 1px gray;width:400px;margin:10px auto 5px auto;color:gray">
+Copyright &copy;&nbsp;2000 - 2006 Tadeusz Dracz.
+</div>
+</body>
+</html>

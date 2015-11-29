@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>ZipArchive:
+        Extracting Data and Testing Archives
+    </title>
+    <link href="articles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    body
+    {
+    	font-family: verdana, arial, helvetica, sans-serif;
+    }
+</style>
+</head>
+<body>
+    <div class="kbabody">
+        <div class="kbatitle">
+            Extracting Data and Testing Archives
+        </div>
+        <div class="kbaappliesto">
+            Applies To: <strong>All</strong>
+        </div>
+        <div class="kbaindex">
+            <ul class="kbaindex">
+
+<li><a class="linkindex" href="#intro">Introduction</a></li>
+<li><a class="linkindex" href="#simple">Easy Extraction</a>
+<ul class="kbaindex">
+<li><a class="linkindex" href="#unc">UNC Paths</a></li>
+<li><a class="linkindex" href="#callback">Callbacks Called</a></li>
+</ul>
+</li>
+<li><a class="linkindex" href="#advanced">Advanced Extraction: More Control Over How Data is Read</a></li>
+<li><a class="linkindex" href="#test">Testing Archives</a></li>
+<li><a class="linkindex" href="#api">See Also API Calls</a></li></ul>
+
+        </div>
+        <div class="kbacontents">
+            
+        <h2 id="intro" name="intro" class="kb">
+            Introduction</h2>
+        <ul>
+            <li>To open an existing archive, call <a class="linkapi" href="./classCZipArchive.html#451188ca55b5056aa7bd4f33d37ef089">CZipArchive::Open(LPCTSTR,                 int, ZIP_U32_U64)</a> and specify one of the following <a class="linkapi" href="./classCZipArchive.html#5d80f4df2aa34edda55d5fb98cffafdb">CZipArchive::OpenMode</a>
+                flags as a mode parameter:
+                <ul>
+                    <li><a class="linkapi" href="./classCZipArchive.html#5d80f4df2aa34edda55d5fb98cffafdb7932d6a8eb7d436b5003d0e2d6c10b7e">CZipArchive::zipOpen</a> to open archive for extraction
+                        and possibly for modifications.</li>
+                    <li><a class="linkapi" href="./classCZipArchive.html#5d80f4df2aa34edda55d5fb98cffafdbbf5fdf56b9ed21bb4439d72efbefb13d">CZipArchive::zipOpenReadOnly</a> to open an archive for
+                        reading only. It is useful when the archive is locked for writing by another application.
+                        For the information about creating segmented archives, see <a class="linkkb" href="0610051553.html">Segmented Archives: Splitting and Spanning</a>.</li>
+                </ul>
+            </li>
+            <li>For the information about processing archives in memory see <a class="linkkb" href="0610231924.html">In-Memory Archive Processing</a>.</li>
+            <li>You should call <a class="linkapi" href="./classCZipArchive.html#2477a9a1c292015338622027375665de">CZipArchive::Close()</a> after you have
+                finished working with an archive. To read how to safely close an archive if an exception
+                was thrown while processing an archive, see <a class="linkkb" href="0610222049.html#intro">Exceptions Handling</a>.</li>
+            <li>To extract Java<sup style="font-size: smaller">TM</sup> Archive (JAR) files, instruct
+                the ZipArchive Library to ignore CRC checking with the method <a class="linkapi" href="./classCZipArchive.html#dfa8fac6a0fed81431908febedadd13c">CZipArchive::SetIgnoreCRC()</a>.</li>
+        </ul>
+        <h2 id="simple" name="simple" class="kb">
+            Easy Extraction</h2>
+        To quickly extract a file from an archive, use the<br />
+        <a class="linkapi" href="./classCZipArchive.html#710e3ad1d7f7ca464c23d60120b3acd4">CZipArchive::ExtractFile(ZIP_U16_U64, LPCTSTR, bool, LPCTSTR,             DWORD)</a> method or its override. You need to specify an index of the file
+        to decompress and the destination location. Additionally, you may specify:
+        <ul>
+            <li>whether to extract the file with full path information or not,</li>
+            <li>a new name for the extracted file - it can be different from the original filename.</li>
+        </ul>
+        <div class="codetitle">Sample Code</div><pre class="fragment">    CZipArchive zip;
+    <span class="comment">// open an existing archive</span>
+    zip.Open(_T(<span class="stringliteral">"Z:\\Temp\\test.zip"</span>));
+    <span class="comment">// extract the first file</span>
+    zip.ExtractFile(0, _T(<span class="stringliteral">"Z:\\Temp"</span>));
+    <span class="comment">// extract the second file with the resulting filename changed</span>
+    zip.ExtractFile(1, _T(<span class="stringliteral">"Z:\\Temp"</span>), <span class="keyword">false</span>, _T(<span class="stringliteral">"just extracted.dat"</span>));    
+    zip.Close();    
+</pre>
+        <h3 id="unc" name="unc" class="kb">
+            UNC Paths</h3>
+        To use UNC paths with this method, replace <span class="file">\\</span> at the
+        beginning of the UNC path with <span class="file">\\?\UNC\</span>.
+        <h3 id="callback" name="callback" class="kb">
+            Callbacks Called</h3>
+        The methods for easy extraction can call the <a class="linkapi" href="./classCZipArchive.html#07cdf46e463d58a346e8446f7e7b8730a771f1d82703b548bf60e1203d7b6cca">CZipArchive::cbExtract</a>
+        callback to notify about the progress. To read more about using callback objects,
+        see <a class="linkkb" href="0610231200.html">Progress Notifications: Using Callback Objects</a>.
+        <h2 id="advanced" name="advanced" class="kb">
+            Advanced Extraction: More Control Over How Data is Read</h2>
+        The <a class="linkapi" href="./classCZipArchive.html#710e3ad1d7f7ca464c23d60120b3acd4">CZipArchive::ExtractFile(ZIP_U16_U64, LPCTSTR, bool, LPCTSTR,             DWORD)</a> method and its override do most of the work for you, however you
+        have little possibility to interfere in this process. To manually extract a file
+        follow these steps:
+        <ul class="dec">
+            <li>Open an existing file in an archive with the <a class="linkapi" href="./classCZipArchive.html#33d6ca3bf54fdb73fbf3dfd51c5d880e">CZipArchive::OpenFile()</a>
+                method.</li>
+            <li>Extract the data you want by calling the <a class="linkapi" href="./classCZipArchive.html#debd2684eca1d30e3ba50865c11a7cc6">CZipArchive::ReadFile()</a>
+                method. You can use this method in two ways:
+                <ul>
+                    <li>by repeatedly calling it until it returns <code>0</code></li>
+                    <li>by calling it once using the uncompressed size (<a class="linkapi" href="./classCZipFileHeader.html#88ec251f0caee80f40deb5e5b6de20b9">CZipFileHeader::m_uUncomprSize</a>)
+                        and checking that the same value is returned by this method; to make sure that the
+                        decompression was correct, you may call this method once more, to ensure that it
+                        returns <code>0</code>.</li>
+                </ul>
+            </li>
+            <li>When there is no more data to extract, call the <a class="linkapi" href="./classCZipArchive.html#90e6ef00e6b003871886f18e94e79360">CZipArchive::CloseFile()</a>
+                method.
+                <ul>
+                    <li>Examine the return value from this method to ensure that the extraction process
+                        was successful. It should equal to <code>1</code>.</li>
+                    <li>If an exception was thrown while extracting data, call this method with the <code>
+                        bAfterException</code> parameter set to <code>true</code>, to prevent further exceptions
+                        being thrown when closing.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="codetitle">Sample Code</div><pre class="fragment">    CZipArchive zip;
+    <span class="comment">// open an existing archive</span>
+    zip.Open(_T(<span class="stringliteral">"Z:\\Temp\\test.zip"</span>));    
+    <span class="comment">// open the first file in the archive for extraction</span>
+    zip.OpenFile(0);
+    <span class="comment">// for the simplicity of this example assume</span>
+    <span class="comment">// that the uncompressed size fits into the DWORD type</span>
+    DWORD uSize = (DWORD)zip[0]-&gt;m_uUncomprSize;
+    BYTE* buffer = (BYTE*)malloc(uSize);
+    <span class="keywordflow">try</span>
+    {
+        <span class="comment">// decompress data</span>
+        <span class="keywordflow">if</span> (zip.ReadFile(buffer, uSize) != uSize)
+            CZipException::Throw();
+
+        <span class="keywordtype">char</span> temp;
+        <span class="comment">// check if all the data was decompressed</span>
+        <span class="keywordflow">if</span> (zip.ReadFile(&amp;temp, 1) != 0)
+            <span class="comment">// there is more data to decompress than declared</span>
+            <span class="comment">// this is an invalid zip archive</span>
+            CZipException::Throw();
+
+        <span class="comment">// check the return code to ensure that the extraction was</span>
+        <span class="comment">// successful</span>
+        <span class="keywordflow">if</span> (zip.CloseFile() != 1)
+            CZipException::Throw();
+
+        zip.Close();
+
+        <span class="comment">// write the extracted file to the disk</span>
+        CZipFile file;
+        file.Open(_T(<span class="stringliteral">"Z:\\Temp\\file.out"</span>), 
+            CZipFile::modeCreate | CZipFile::modeWrite, <span class="keyword">true</span>);
+        file.Write(buffer, uSize);
+    }
+    <span class="comment">// a simplified exception handler</span>
+    <span class="keywordflow">catch</span>(...)
+    {
+        zip.Close(CZipArchive::afAfterException);
+        free(buffer);
+        <span class="keywordflow">throw</span>;
+    }        
+    free(buffer);
+</pre>
+        <h2 id="test" name="test" class="kb">
+            Testing Archives</h2>
+        To test, if a file inside an archive is correct, test the file with the <a class="linkapi" href="./classCZipArchive.html#2f16e0e82da4b8efcc42a07d824e38eb">CZipArchive::TestFile()</a> method.
+        <div class="codetitle">Sample Code</div><pre class="fragment">    CZipArchive zip;
+    <span class="comment">// open an existing archive</span>
+    zip.Open(_T(<span class="stringliteral">"Z:\\Temp\\test.zip"</span>));    
+    <span class="comment">// test all files</span>
+    <span class="keywordtype">bool</span> ret = <span class="keyword">true</span>;
+    <span class="keywordflow">for</span> (ZIP_U16_U64 index = 0; index &lt; zip.GetCount(); index++)
+    {
+        <span class="keywordflow">try</span>
+        {
+            <span class="keywordflow">if</span> (!zip.TestFile(index))
+            {
+                ret = <span class="keyword">false</span>;
+                <span class="keywordflow">break</span>;
+            }
+        }
+        <span class="comment">// a simplified exception handler</span>
+<span class="preprocessor">#ifdef ZIP_ARCHIVE_MFC</span>
+<span class="preprocessor"></span>        <span class="keywordflow">catch</span>(CException* e)
+        {
+            e-&gt;Delete();
+            ret = <span class="keyword">false</span>;
+            <span class="keywordflow">break</span>;
+        }
+<span class="preprocessor">#endif</span>
+<span class="preprocessor"></span>        <span class="keywordflow">catch</span>(...)
+        {
+            ret = <span class="keyword">false</span>;
+            <span class="keywordflow">break</span>;
+        }
+    }
+    zip.Close();
+    <span class="keywordflow">return</span> ret;
+</pre>
+        <h2 id="api" name="api" class="kb">
+            See Also API Calls</h2>
+        <ul class="non">
+            <li><a class="linkapi" href="./classCZipArchive.html#451188ca55b5056aa7bd4f33d37ef089">CZipArchive::Open(LPCTSTR, int, ZIP_U32_U64)</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#56f52e22fca716baa1178068224a1086">CZipArchive::Open(CZipAbstractFile&, int)</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#710e3ad1d7f7ca464c23d60120b3acd4">CZipArchive::ExtractFile(ZIP_U16_U64, LPCTSTR, bool, LPCTSTR,                 DWORD)</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#5383b01b21c840e35ba8391efb7fb5cd">CZipArchive::ExtractFile(ZIP_U16_U64, CZipMemFile&, bool,                 DWORD)</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#33d6ca3bf54fdb73fbf3dfd51c5d880e">CZipArchive::OpenFile()</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#debd2684eca1d30e3ba50865c11a7cc6">CZipArchive::ReadFile()</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#90e6ef00e6b003871886f18e94e79360">CZipArchive::CloseFile()</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#2f16e0e82da4b8efcc42a07d824e38eb">CZipArchive::TestFile()</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#dfa8fac6a0fed81431908febedadd13c">CZipArchive::SetIgnoreCRC()</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#2477a9a1c292015338622027375665de">CZipArchive::Close()</a></li>
+        </ul>
+    
+        </div>
+        <div class="kbafooter">
+            <strong>Article ID:&nbsp;0610241003</strong>
+        </div>
+    </div>
+   <div style="font-size:11px; text-align:center;border-top:solid 1px gray;width:400px;margin:10px auto 5px auto;color:gray">
+Copyright &copy;&nbsp;2000 - 2006 Tadeusz Dracz.
+</div>
+</body>
+</html>

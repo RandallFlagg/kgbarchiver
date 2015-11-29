@@ -1,0 +1,152 @@
+IDD_KGB_ARCH_MFC
+Archivio
+Formato archivio
+Livello compressione
+Minimo;Molto leggero;Leggero;Normale;Medio;Superiore a medio;Buono;Molto buono;Estremo;Massimo;
+Suddivisione archivio
+Password
+Modulo SFX
+Crea modulo SFX (solo Windows)
+Altro
+Mantieni l'intero percorso
+File da comprimere
+Aggiungi file
+Aggiungi cartella
+Elimina
+Annulla
+Avanti >
+
+IDD_COMPRESS
+Compressione
+File corrente
+Progressione file corrente
+Progressione totale
+Statistiche
+Dimensione prima della compressione:
+Dimensione dopo la compressione:
+Rapporto:
+Tempo:
+Tempo residuo:
+Priorita':
+Alta;Superiore a normale;Normale;Inferiore a normale;Bassa;
+Spegni il computer a lavoro ultimato
+Annulla
+
+STRING TABLE
+Informazioni su KGB Archiver
+Nome file
+Dimensione
+Processo non puo' accedere al file
+Dovresti specificare il nome dell'archivio e/o scegliere il file da comprimere!
+La password dovrebbe essere lunga da 4 a 32 caratteri!
+Compressione annullata dall'utente!
+Compressione riuscita!\nDimesione prima della compressione:\t%s\nDimensione dopo la compressione:\t%s\nRapporto:\t\t\t%.1f%%\nTempo trascorso:\t\t
+Per favore selezionare la cartella da comprimere
+Impossibile cambiare la priorita'!
+Compressione
+preparazione in corso...
+acquisizione dimensioni dei file...
+ordinamento dei file...
+aggiunta modulo SFX...
+codifica...
+Archivi KGB (*.kgb)|*.kgb|Archivi ZIP (*.zip)|*.zip|Tutti i file (*.*)|*.*|
+Tutti i file (*.*)|*.*|
+In questa opzione vengono accettati solo numeri!
+La compressione puo' richiedere piu' del 75% della tua memoria fisica, sei sicuro di volere continuare?
+Memoria in uso:\nCompressione KGB:\nMinima\t\t\t9MB\nMolto leggera\t\t11MB\nLeggera\t\t\t15MB\nNormale\t\t\t27MB\nMedia\t\t\t66MB\nSuperiore a media\t\t154MB\nBuona\t\t\t202MB\nMolto buona\t\t402MB\nEstrema\t\t\t800MB\nMassima\t\t\t1600MB\n\nCompressione ZIP:\nTutte le modalita' richiedono circa 10MB
+Non c'e' sufficiente memoria libera per continuare!
+La lista di file da comprimere contiene un file con lo stesso nome dell'archivio!
+
+
+IDD_KGB_ARCH_DECOMPRESS
+Nome archivio
+Estrai in: (ignorato se l'archivio contiene il percorso intero)
+Selezionare i file da decomprimere
+Informazioni archivio
+Annulla
+Avanti >
+
+IDD_DECOMPRESS
+Decompressione
+File corrente
+Progressione file corrente
+Progressione totale
+Statistiche
+Dimensione prima della compressione:
+Dimensione dopo la compressione:
+Rapporto:
+Tempo:
+Tempo residuo:
+Priorita':
+Alta;Superiore a normale;Normale;Inferiore a normale;Bassa;
+Spegni il computer a lavoro ultimato
+Annulla
+
+IDD_DECODING
+Decriptazione...
+Per favore attendere...
+
+IDD_PASSWD
+Password
+Per favore inserire la password
+OK
+Annulla
+
+STRING TABLE
+Informazioni su KGB Archiver
+Nome file
+Dimensione
+Per favore digita il nome dell'archivio e/o la cartella di destinazione!
+File archivio non trovato!
+Non posso estrarre nella cartella che non puo' essere creata!
+Scegliere i file da estrarre!
+Estrazione annullata dall'utente!
+Estrazione completata!\nDimensione prima della compressione:\t%s\nDimensione dopo la compressione:\t%s\nRapporto:\t\t\t%.1f%%\nTempo trascorso:\t\t
+Per favore selezionare la cartella di destinazione per estrazione!
+Password errata!
+Il file selezionato non e' un archivio KGB regolare!
+Impossibile cambiare la priorita'!
+Decompressione
+preparazione in corso...
+creazione cartelle...
+saltando...
+Tutti gli archivi supportati|*.kgb; *.kge; *.exe; *.zip;|Archivi KGB (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|Archivi ZIP (*.zip)|*.zip|
+Compresso: %s\tOriginale: %s\tRapporto: %.1f%%
+Non c'e' sufficiente memoria libera per continuare!
+Il file %.260s esiste gia'! Vuoi sovrascriverlo?
+
+
+IDD_ARCH_CONF_DIALOG
+Integrazione con sistema operativo
+Associa gli archivi KGB a KGB Archiver
+Associa gli archivi ZIP a KGB Archiver
+Crea menu context per explorer
+Lingua
+Italiano
+Altro
+Controlla la presenza di aggiornamenti all'avvio
+Controlla ora
+Mostra le statistiche dopo la compressione/decompressione
+Informazioni
+Annulla
+OK
+
+
+IDD_MAIN
+Per favore seleziona cosa vuoi fare:
+Comprimi file
+Decomprimi archivio
+Opzioni personalizzabili
+Primi 10 donatori
+Informazioni
+Annulla
+Avanti >
+
+
+STRING TABLE
+Inormazioni su KGB Archiver
+Comprimi in KGB
+Impossibile connettersi al server KGB!
+E' disponibile una versione piu' recente di KGB Archiver! La vuoi scaricare?
+Non sono stati trovati aggiornamenti
+Estrai qui

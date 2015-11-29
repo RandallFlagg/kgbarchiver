@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kgb_arch_sfx", "kgb_arch_sfx.vcproj", "{17E41F02-EE87-48A7-8CC4-A930F1A657FE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kgb_arch_sfx_zip", "..\kgb_arch_sfx_zip\kgb_arch_sfx_zip.vcproj", "{17E41F02-EE87-48A7-8CC4-A930F1A657FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Debug.ActiveCfg = Debug|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Debug.Build.0 = Debug|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Release.ActiveCfg = Release|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Release.Build.0 = Release|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Debug.ActiveCfg = Debug|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Debug.Build.0 = Debug|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Release.ActiveCfg = Release|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

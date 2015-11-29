@@ -1,0 +1,151 @@
+﻿TRANSLATION ENGLISH NAME: Elwen 
+TRANSLATION NATIVE NAME: Valdas Stonkus
+
+IDD_KGB_ARCH_MFC
+Archyvas
+Archyvo formatas
+Suspaudimo lygis
+Minimalus;Labai Mažas;Mažas;Normalus;Didelis;Didesnis;Geras;Labai geras;Ekstremalus;Maksimalus;
+Archyvas
+Slaptažodis
+SFX Modulis
+Sukurti SFX modulį (Tik Windows OS)
+Kita
+Išlaikyti kelią iki failo "Full path"
+Failai suspaudimui
+Įdėti failą
+Įdėti direktoriją
+Ištrinti
+Atšaukti
+Toliau >
+
+IDD_COMPRESS
+Archyvavimas
+Dabartinis failas
+Dabartinio failo progresas
+Visas progresas
+Statistika
+Dydis pries archyvavimą:
+Dydis po archyvavimo:
+Reitingas:
+Laikas:
+Likęs laikas:
+Prieinamumas:
+Aukštas;Didelis;Normalus;Žemas;Mažas;
+Išjungti kompiuterį kai baigs
+Atšaukti
+
+STRING TABLE
+Apie KGB Archiver
+Failo vardas
+Dydis
+Negalima prieiti prie failo
+Prašome įrašyti failo vardą arba pasirinkite kokį failą norite suarchyvuoti!
+Slaptažodis turi būti tarp 4-32 simbolių
+Archyvavimas atšauktas!
+Archyvavimas pavyko!\nDydis prieš archyvavimą:\t%s\nDydis po archyvavimo:\t%s\nReitingas:\t\t\t%.1f%%\nPraėjo laiko:\t\t
+Prašome pasirinkti direktoriją kurią norite suarchyvuoti
+Negalima pakeist prieinamumo!
+Archyvavimas
+Ruošiamąsi...
+Tikrinami failų dydžiai...
+Grupuojami failai...
+Dedamas SFX modulis...
+Dekoduojama...
+KGB Archyvai (*.kgb)|*.kgb|ZIP Archyvai (*.zip)|*.zip|Visi failai (*.*)|*.*|
+Visi failai (*.*)|*.*|
+Laukelyje prašome rašyti tik skaičius!
+Archyvavimo procesas sunaudos 75% jusu kompiuterio darbinės atminties (RAM), ar tikrai norite tęsti?
+Atminties naudojimas:\nKGB Archyvavimas:\nMinimalus\t\t\t9MB\nLabai žemas\t\t11MB\nžemas\t\t\t15MB\nNormalus\t\t\t27MB\nDidelis\t\t\t66MB\nAukštas\t\t154MB\nGeras\t\t\t202MB\nLabai geras\t\t402MB\nEkstremalus\t\t\t800MB\nMaksimalus\t\t\t1600MB\n\nZIP Archyvavimas\nVisi lygiai naudoja apie 10MB
+Nepakanka darbinės atminties pradėti darbui!
+Failų sąrašas priklausys vienam failui, kuris yra lygus archyvo vardui!
+
+IDD_KGB_ARCH_DECOMPRESS
+Archyvo vardas
+Išpakuoti į: (ignoruojama, kai archyvas turi opciją "Full path")
+Pasirinkite kuriuos failus išpakuoti
+Archyvo informacija
+Atšaukti
+Toliau >
+
+IDD_DECOMPRESS
+Išpakavimas
+Dabartinis failas
+Dabartinio failo progresas
+Visas progresas
+Statistika
+Dydis pries archyvavimą:
+Dydis po archyvavimo:
+Reitingas:
+Laikas:
+Likęs laikas:
+Prieinamumas:
+Aukštas;Didelis;Normalus;Žemas;Mažas;
+Išjungti kompiuterį kai baigs
+Atšaukti
+
+IDD_DECODING
+Dekoduojama...
+Prašome palaukti...
+
+IDD_PASSWD
+Slaptažodis
+Prasome įrašyti slaptažodį
+OK
+Atšaukti
+
+STRING TABLE
+Apie KGB Archiver
+Failo vardas
+Dydis
+Prašome irašyti failo vardą arba pasirinkite kokį failą norite suarchyvuoti!
+Archyvo failas nerastas!
+Negalima išpakuoti į direktoriją, kuri neegzistuoja, negalima jos sukurti!
+Pasirinkite kuriuos failus norite išpakuoti!
+Darbas atšauktas!
+Išpakavimas baigtas!\nDydis prieš archyvavimą:\t%s\nDydis po archyvavimo:\t%s\nReitingas:\t\t\t%.1f%%\nPraėjo laiko:\t\t
+Prašome pasirinkti kur išpakuoti!
+Slaptažodis neteisingas!
+Pasirinktas failas nepriklauso KGB Archiver!
+Negalima pakeisti prieinamumo!
+Išpakavimas
+Ruošiamąsi...
+Kuriamos direktorijos...
+Praleidžiama...
+Palaikomi archyvų tipai|*.kgb; *.kge; *.exe; *.zip;|KGB Archyvai (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP Archyvai (*.zip)|*.zip|
+Suarchyvuota: %s\tOriginalus: %s\tReitingas: %.1f%%
+Nepakanka darbinės atminties (RAM) darbui baigti!
+Failas %.260s jau egzistuoja! Ar jūs norite ji užrašyti?
+
+IDD_ARCH_CONF_DIALOG
+Šelo integravimas
+Asocijuoti KGB archyvus su KGB Archiver
+Asocijuoti ZIP archyvus su KGB Archiver
+Sukurti naršykles kontekstinį meniu
+Kalba
+Lietuvių
+Kitos
+Patikrinti ar nėra nauja versija programai startavus
+Patikrinti dabar
+Ar rodyti statistiką po išpakavimo/suarchyvavimo
+Apie
+Atšaukti
+OK
+
+IDD_MAIN
+Prašome pasirinkti ką norite daryti:
+Suspausti failus
+Išpakuoti archyvą
+Nustatymai
+Top 10 aukotojų
+Apie
+Atšaukti
+Toliau >
+
+STRING TABLE
+Apie KGB Archiver
+Suspausti į KGB archyvą
+Negalima prisijungti prie KGB Archiver serverio!
+Nauja KGB Archiver versija jau išleista! Ar norite parsisųsti?
+Atnaujinimų nerasta
+Išpakuoti čia 

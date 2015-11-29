@@ -1,0 +1,133 @@
+﻿IDD_KGB_ARCH_MFC
+Arquivo
+Formato de arquivo
+Nível de compressão
+Mínima;Muito Fraca;Fraca;Normal;Média;Acima da Média;Boa;Muito Boa;Extrema;Máxima;
+Camadas do arquivo
+Senha
+Módulo de SFX
+Criar módulo de SFX (apenas Windows)
+Outros
+Manter endereço
+Arquivos para comprimir
+Adicionar arquivo
+Adicionar pasta
+Apagar
+Cancelar
+Próximo >
+
+IDD_COMPRESS
+Compressão
+Arquivo atual
+Progresso do arquivo atual
+Progresso total
+Estatísticas
+Tamanho antes da compressão:
+Tamanho depois da compressão:
+Relação:
+Tempo:
+Tempo restante:
+Prioridade:
+Alta;Acima do normal;Normal;Abaixo do normal;Baixa;
+Desligar computador ao finalizar
+Cancelar
+
+STRING TABLE
+Sobre KGB Archiver
+Nome
+Tamanho
+Programa não pode acessar o arquivo
+Você deve digitar o nome de arquivo e/ou escolher o arquivo a comprimir!
+A senha deve ter de 4 a 32 caracteres!
+Compressão cancelada pelo usuário!
+Compressão efetuada!\nTamanho antes da compressão:\t%s\nTamanho depois da compressão:\t%s\nRelação:\t\t\t%.1f%%\nTempo decorrido:\t\t
+Por favor escolha uma pasta para comprimir
+Não pôde mudar a prioridade!
+Compressão
+preparando...
+adquirindo tamanho dos arquivos...
+ordenando arquivos...
+adicionando módulo de SFX...
+codificando...
+Arquivos KGB (*.kgb)|*.kgb|Arquivos ZIP (*.zip)|*.zip|Todos Arquivos (*.*)|*.*|
+Todos Arquivos (*.*)|*.*|
+Apenas números são aceitos neste campo!
+Compressão pode levar mais que 75% de sua memória física, você deseja continuar?
+Uso de Memória:\nKGB Compressão:\nMínima\t\t\t9MB\nMuito Fraca\t\t11MB\nFraca\t\t\t15MB\nNormal\t\t\t27MB\nMédia\t\t\t66MB\nAcima da média\t\t154MB\nBoa\t\t\t202MB\nMuito Boa\t\t402MB\nExtrema\t\t\t800MB\nMáxima\t\t\t1600MB\n\nZIP Compressão:\nAproximadamente 10MB
+Não há memória livre suficiente para continuar!
+
+IDD_KGB_ARCH_DECOMPRESS
+Nome do arquivo
+Extrair para: (ignorar se deseja o arquivo na mesma pasta)
+Escolha arquivos para descomprimir
+Cancelar
+Próximo >
+
+IDD_DECOMPRESS
+Descompressão
+Arquivo atual
+Progresso de arquivo atual
+Progresso total
+Estatísticas
+Tamanho antes de compressão:
+Tamanho depois de compressão:
+Relação:
+Tempo:
+Tempo restante:
+Prioridade:
+Alta;Acima do normal;Normal;Abaixo do normal;Baixa;
+Desligar computador ao finalizar
+Cancelar
+
+IDD_DECODING
+Decodificando...
+Aguarde...
+
+IDD_PASSWD
+Senha
+Digite a senha
+OK
+Cancelar
+
+STRING TABLE
+Sobre KGB Archiver
+Arquivo
+Tamanho
+Digite o nome do arquivo e/ou destino da pasta!
+Arquivo não encontrado!
+Não pode extrair para uma pasta que não pode ser criada!
+Escolha arquivos para extrair!
+Extração cancelada pelo usuário!
+Efetuada!\nTamanho antes de compressão:\t%s\nTamanho depois da compressão:\t%s\nRelação:\t\t\t%.1f%%\nTempo Decorrido:\t\t
+Por favor escolha uma pasta para extrair!
+Senha errada!
+Arquivo escolhido não é arquivo válido KGB!
+Não pôde mudar prioridade!
+Descompressão
+preparando...
+criando pastas...
+avançando...
+Todos arquivos suportados|*.kgb; *.kge; *.exe; *.zip;|Arquivos KGB (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|Arquivos ZIP (*.zip)|*.zip|
+Comprimido: %s Original: %s Relação: %.1f%%
+Não há memória livre suficiente para continuar!
+Arquivo %.260s já existe! Deseja sobrescrever ?
+
+IDD_ARCH_CONF_DIALOG
+Associar arquivos KGB com KGB Archiver
+Associar arquivos ZIP com KGB Archiver
+Criar menu no Explorer
+Checar atualizações ao iniciar
+Checar agora
+Idiomas
+Polonês;Inglês;Francês;Português (Brasil);Espanhol (Chile);Romeno;Italiano;Húngaro;
+Sobre
+Cancelar
+OK
+
+STRING TABLE
+Sobre KGB Archiver
+Comprimir para KGB
+Não pôde conectar ao servidor KGB!
+Existe uma nova versão disponível! Gostaria de atualizar?
+Nenhuma atualização foi encontrada
+Extrair aqui

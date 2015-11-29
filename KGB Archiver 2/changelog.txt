@@ -1,0 +1,41 @@
+BETA 2
+crashes:
+[*] - fixed out of range exception when open KGB v1 archives
+[*] - properties dialog: now shows right date & time for KGB archives, doesn't crash on directories in KGB archive, doesn't crash on ZIP archives
+[*] - fixed: crash when command line to kgb2compressor is greather than 2003 characters (.NET limitation)
+[*] - fixed: crash when creating ZIP archive and access is denied to file
+
+speed optimizations:
+[*] - about 50% faster creation of folder tree
+[*] - about 8% faster compression/decompression in 32-bit mode (requires Pentium 4 or Athlon64 or above)
+
+new features:
+[+] - input file optimizers added (creates about 5% smaller archives in similar time, only valid for archives contains multiple files)
+[+] - Explorer shell extension
+[+] - multilanguage support
+[+] - SFX options tab
+[+] - possibility to change file list to compress on New Archive dialog
+[+] - possibility to select files to decompress on Extract dialog
+[+] - grouping of files on file list (requires Windows XP/Vista)
+[+] - added available memory check before compression/decompression
+
+cosmetic changes:
+[*] - now file cannot be copied/moved to the same directory as original
+[*] - compress, rename, delete and wipe options are not available when it is not possible ;)
+[*] - all fields displaying percents or floating point values have fixed size now (eg. 14.0%, 14.1% instead of 14%, 14.1%)
+[*] - smaller installer (<4MB)
+[+] - added zip archives filter in open archive dialog
+[+] - archiver remembers last algorithm & compression level
+
+Vista compatibility updates:
+[*] - fixed: balloon tip on system tray icon blocks resume of program window
+
+Other updates:
+[*] - KGB SFX archives don't need VC++ runtime library
+[*] - fixed: In some cases clicking 'Cancel' during compression/decompression causes only form disappearance, but operation continues
+
+Translations added:
+[+] - Polish (Poland)
+[+] - Portuguese (Portugal)
+[+] - Arabic (Egipt)
+[+] - Serbian (Serbia, Latin) (not supported on Vista)

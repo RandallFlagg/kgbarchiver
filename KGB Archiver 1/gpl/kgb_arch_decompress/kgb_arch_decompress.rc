@@ -1,0 +1,3732 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,12,20,20
+    LTEXT           "KGB Archiver v1.2",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "©2005-2006 Tomasz Pawlak.\nSpread under GNU GPL v2 license",IDC_STATIC,40,25,167,23
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Czech resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+#ifdef _WIN32
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Název a cesta k archívu",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Rozbalit do: (ignorováno, jestliže archív obsahuje úplnou cestu)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Další >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Zrušit",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Vybrat soubory k dekompresi",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,109,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Info o archívu",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Dekomprese"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Aktuální soubor",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Prùbìh aktuálního souboru",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Prùbìh celkovì",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Statistiky",IDC_STATIC,7,91,241,62
+    LTEXT           "Èas:",IDC_STATIC,14,130,16,8
+    LTEXT           "Zbývající èas:",IDC_STATIC,14,140,44,8
+    PUSHBUTTON      "Zrušit",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,101,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,101,140,51,8
+    LTEXT           "Velikost po kompresi:",IDC_STATIC,14,110,80,9
+    LTEXT           "Pomìr:",IDC_STATIC,14,120,24,8
+    LTEXT           "Velikost pøed kompresí:",IDC_STATIC,14,100,84,9
+    LTEXT           "100MB",IDC_FULLSIZE,101,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,101,110,51,9
+    LTEXT           "100%",IDC_RATIO,101,120,51,8
+    LTEXT           "Priorita:",IDC_STATIC,9,158,26,8
+    COMBOBOX        IDC_CPRIORITY,41,156,84,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Po dokonèení vypnout PC",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,127,155,71,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Dekódování..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Prosím èekej...",IDC_STATIC,51,6,48,8
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Heslo"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Zrušit",IDCANCEL,129,20,50,14
+    GROUPBOX        "Prosím zadej heslo",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Potvrzení pøepsání obsahu"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Ano pro vše",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Ano",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "Ne",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "Ne pro vše",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "tento",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 7, 0
+0x7956, 0x6f73, 0xe16b, "\000" 
+    IDC_CPRIORITY, 0x403, 6, 0
+0x7956, 0x9a9a, 0x00ed, 
+    IDC_CPRIORITY, 0x403, 6, 0
+0xec42, 0x6e9e, 0x00e1, 
+    IDC_CPRIORITY, 0x403, 6, 0
+0x654d, 0x9a6e, 0x00ed, 
+    IDC_CPRIORITY, 0x403, 6, 0
+0xed4e, 0x6b7a, 0x00e1, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "O KGB Archiveru"
+    IDS_FILE                "Název souboru"
+    IDS_SIZE                "Velikost"
+    IDS_TYPE_ARCHIVE_NAME   "Napiš název k archívu a/nebo k umístìní adresáøe!"
+    IDS_ARCHIVE_DOESNT_EXIST "Archív nenalezen!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Nemohu rozbalit do adresáøe, který nebyl vytvoøen!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Vyber soubory pro dekompresi!"
+    IDS_EXTRACT_CANCELED    "Dekomprese pøerušena uživatelem!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Dekomprese dokonèena!\nVelikost pøed kompresí:\t%s\nVelikost po kompresi:\t%s\nPomìr:\t\t\t%.1f%%\nUplynulý èas:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS "Prosím zvol adresáø pro dekompresi!"
+    IDS_WRONG_PASSWD        "Nesprávné heslo!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "Vybraný soubor není regulérním archívem KGB!"
+    IDS_CANT_CHANGE_PRIORITY "Nemohu zmìnit prioritu!"
+    IDS_DECOMPRESS_PROGRESS "Dekomprese"
+    IDS_DECOMPRESS_STATUS   "pøipravuji..."
+    IDS_DECOMPRESS_STATUS2  "vytváøím adresáøe..."
+    IDS_DECOMPRESS_STATUS3  "pøeskakuji..."
+    IDS_FILETYPE            "Všechny podporované archívy|*.kgb; *.kge; *.exe; *.zip;|Archívy KGB (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|Archívy ZIP (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Po kompresi: %s\tPùvodnì: %s\tPomìr: %.1f%%"
+    IDS_OUT_OF_MEMORY       "Nedostatek volné pamìti pro pokraèování!"
+    IDS_FILE_ALREADY_EXISTS "Chceš opravdu pøepsat existující soubor %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Chceš opravdu zrušit dekompresi?"
+    IDS_OVERWRITE_SIZE      "Velikost: %s"
+    IDS_OVERWRITE_MOD       "Upravován: %s"
+END
+
+#endif    // Czech resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Hungarian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_HUN)
+#ifdef _WIN32
+LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Arhívum név",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Kitömörítés ide: (csak ha nem tartalmazza a teljes útvonalat)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Következõ >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Mégse",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Válassz fájlt a kicsomagoláshoz",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,115,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Archive info",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Kitömörítés"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Jelenlegi fájl",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Jelenlegi fájl állapot",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Teljes állapot",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Statisztika",IDC_STATIC,7,91,241,62
+    LTEXT           "Idõ:",IDC_STATIC,14,130,14,8
+    LTEXT           "Hátralévõ idõ:",IDC_STATIC,14,140,46,8
+    PUSHBUTTON      "Mégse",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,101,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,101,140,51,8
+    LTEXT           "Méret tömörítés után:",IDC_STATIC,14,110,80,9
+    LTEXT           "Arány:",IDC_STATIC,14,120,23,8
+    LTEXT           "Méret tömörítés elõtt:",IDC_STATIC,14,100,84,9
+    LTEXT           "100MB",IDC_FULLSIZE,101,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,101,110,51,9
+    LTEXT           "100%",IDC_RATIO,101,120,51,8
+    LTEXT           "Prioritás:",IDC_STATIC,9,158,30,8
+    COMBOBOX        IDC_CPRIORITY,39,156,78,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Gép kikapcs a végén",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,119,155,79,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Titkosítás..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Légy türelemmel...",IDC_STATIC,44,6,61,8
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Jelszó"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Mégse",IDCANCEL,129,20,50,14
+    GROUPBOX        "Add meg a jelszót",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "File overwrite confirm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Yes for all",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Yes",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "No",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "No for all",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "by this one",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 6, 0
+0x614d, 0x6167, 0x0073, 
+    IDC_CPRIORITY, 0x403, 19, 0
+0x6f4a, 0x6262, 0x6d20, 0x6e69, 0x2074, 0x2061, 0x6f6e, 0x6d72, 0x6ce1, 
+"\000" 
+    IDC_CPRIORITY, 0x403, 7, 0
+0x6f4e, 0x6d72, 0x6ce1, "\000" 
+    IDC_CPRIORITY, 0x403, 17, 0
+0x6f4e, 0x6d72, 0x6ce1, 0xe16e, 0x206c, 0x696b, 0x6573, 0x6262, "\000" 
+    IDC_CPRIORITY, 0x403, 9, 0
+0x6c41, 0x6361, 0x6f73, 0x796e, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "KGB Archiver névjegy"
+    IDS_FILE                "Fájlnév"
+    IDS_SIZE                "Méret"
+    IDS_TYPE_ARCHIVE_NAME   "Add meg az arhívum nevét és/vagy a célkönyvtárat!"
+    IDS_ARCHIVE_DOESNT_EXIST "Nincs mega a megadott arhívum fájl!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Nem lehet kitömöríteni mert nem lehet létrehozni!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Válassz fájlt a kitömörítéshez!"
+    IDS_EXTRACT_CANCELED    "A kitömörítést megszakította a felhasználó!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Kitömörítés kész!\nMéret tömörítés elõtt:\t%s\nMéret tömörítés után:\t%s\nArány:\t\t\t%.1f%%\nEltelt idõ:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS "Válassz célkönyvtárat a kitömörítéshez!"
+    IDS_WRONG_PASSWD        "Érvénytelen jelszó!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "A választott fájl nem KGB arhívum!"
+    IDS_CANT_CHANGE_PRIORITY "Nem változtatható a prioritás!"
+    IDS_DECOMPRESS_PROGRESS "Kitömörítés"
+    IDS_DECOMPRESS_STATUS   "elõkészítés..."
+    IDS_DECOMPRESS_STATUS2  "Könyvtárak létrehozása..."
+    IDS_DECOMPRESS_STATUS3  "átlépés..."
+    IDS_FILETYPE            "Minden támogatott arhívum|*.kgb; *.kge; *.exe; *.zip;|KGB arhívumok (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP arhívumok (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Tömörített: %s\tEredeti: %s\tArány: %.1f%%"
+    IDS_OUT_OF_MEMORY       "There is not enough free memory to continue!"
+    IDS_FILE_ALREADY_EXISTS "Would you like to overwrite existing file %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Are you sure to cancel decompression?"
+    IDS_OVERWRITE_SIZE      "Size: %s"
+    IDS_OVERWRITE_MOD       "Last modified: %s"
+END
+
+#endif    // Hungarian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Polish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+#ifdef _WIN32
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Archiwum",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Rozpakuj do: (Ignorowane w archiwach z zapisan¹ pe³n¹ œcie¿k¹)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Dalej >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Anuluj",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Wybierz pliki do dekompresji",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,105,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Anformacje o archiwum",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Dekompresja"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Aktualny plik",IDC_STATIC,7,6,241,23
+    LTEXT           "nazwa_pliku.rozszerzenie_pliku",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Postêp pliku",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Postêp ca³oœci",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Statystyki",IDC_STATIC,7,91,241,62
+    LTEXT           "Czas:",IDC_STATIC,14,130,19,8
+    LTEXT           "Czas pozosta³y:",IDC_STATIC,14,140,52,8
+    PUSHBUTTON      "Anuluj",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,101,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,101,140,51,8
+    LTEXT           "Rozmiar po kompresji:",IDC_STATIC,14,110,71,9
+    LTEXT           "Ratio:",IDC_STATIC,14,120,20,8
+    LTEXT           "Rozmiar przed kompresj¹:",IDC_STATIC,14,100,84,9
+    LTEXT           "100MB",IDC_FULLSIZE,101,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,101,110,51,9
+    LTEXT           "100%",IDC_RATIO,101,120,51,8
+    LTEXT           "Priorytet:",IDC_STATIC,9,158,32,8
+    COMBOBOX        IDC_CPRIORITY,42,156,84,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Wy³¹cz komputer po zakoñczeniu",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,128,155,70,16
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Has³o"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Anuluj",IDCANCEL,129,20,50,14
+    GROUPBOX        "WprowadŸ has³o",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Deszyfrowanie..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Proszê czekaæ...",IDC_STATIC,48,6,54,8
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Potwierdzenie nadpisania pliku"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Tak na wszystkie",IDC_BYESALL,2,78,58,14
+    PUSHBUTTON      "Tak",IDC_BYES,62,78,49,14
+    PUSHBUTTON      "Nie",IDC_BNO,113,78,49,14
+    PUSHBUTTON      "Nie na wszystkie",IDC_BNOALL,164,78,58,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "nastêpuj¹cym",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 7, 0
+0x7957, 0x6f73, 0x696b, "\000" 
+    IDC_CPRIORITY, 0x403, 19, 0
+0x6f50, 0x7977, 0x65bf, 0x206a, 0x6f6e, 0x6d72, 0x6c61, 0x656e, 0x6f67, 
+"\000" 
+    IDC_CPRIORITY, 0x403, 9, 0
+0x6f4e, 0x6d72, 0x6c61, 0x796e, "\000" 
+    IDC_CPRIORITY, 0x403, 19, 0
+0x6f50, 0x696e, 0x65bf, 0x206a, 0x6f6e, 0x6d72, 0x6c61, 0x656e, 0x6f67, 
+"\000" 
+    IDC_CPRIORITY, 0x403, 6, 0
+0x694e, 0x6b73, 0x0069, 
+    0
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\kgb_arch_decompress.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\program.ico"
+IDI_TRAY0               ICON                    "..\\tray1.ico"
+IDI_TRAY1               ICON                    "..\\tray2.ico"
+IDI_TRAY2               ICON                    "..\\tray3.ico"
+IDI_TRAY3               ICON                    "..\\tray4.ico"
+IDI_TRAY4               ICON                    "..\\tray5.ico"
+IDI_TRAY5               ICON                    "..\\tray6.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,1,24
+ PRODUCTVERSION 1,2,1,24
+ FILEFLAGSMASK 0x1fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004e2"
+        BEGIN
+            VALUE "CompanyName", "Tomasz Pawlak"
+            VALUE "FileDescription", "KGB Archiver"
+            VALUE "FileVersion", "1.2.1.24"
+            VALUE "InternalName", "kgb_arch_decompress.exe"
+            VALUE "LegalCopyright", "©2005-2006 Tomasz Pawlak. Spread under GNU GPL v2 license"
+            VALUE "OriginalFilename", "kgb_arch_decompress.exe"
+            VALUE "ProductName", "KGB Archiver"
+            VALUE "ProductVersion", "1.2.1.24"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1250
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+IDR_RT_MANIFEST1        RT_MANIFEST             "res\\kgb_arch_decompress.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "O programie..."
+    IDS_FILE                "Plik"
+    IDS_SIZE                "Rozmiar"
+    IDS_TYPE_ARCHIVE_NAME   "Podaj nazwê archiwum i/lub folder docelowy do dekompresji"
+    IDS_ARCHIVE_DOESNT_EXIST "Plik archiwum nie istnieje!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Nie mo¿na rozpakowaæ do nie istniej¹cego katalogu, którego nie mo¿na utworzyæ!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Zaznacz pliki do dekompresji!"
+    IDS_EXTRACT_CANCELED    "Dekompresja przerwana przez u¿ytkownika!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Dekompresja zakoñczona sukcesem!\nRozmiar przed kompresj¹:\t%s\nRozmiar po kompresji:\t%s\nRatio:\t\t\t%.1f%%\nCzas dekompresji:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS "Wybierz folder dla dekompresji"
+    IDS_WRONG_PASSWD        "Nieprawid³owe has³o!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "Wybrany plik nie jest prawid³owym archiwum KGB!"
+    IDS_CANT_CHANGE_PRIORITY "Nie mo¿na zmieniæ priorytetu!"
+    IDS_DECOMPRESS_PROGRESS "Dekompresja"
+    IDS_DECOMPRESS_STATUS   "przygotowywanie..."
+    IDS_DECOMPRESS_STATUS2  "przygotowywanie katalogów..."
+    IDS_DECOMPRESS_STATUS3  "pomijanie..."
+    IDS_FILETYPE            "Wszystkie obs³ugiwane archiwa|*.kgb; *.kge; *.exe; *.zip;|Archiwa KGB (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|Archiwa ZIP (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Skompresowany: %s\tOryginalny: %s\tRatio: %.1f%%"
+    IDS_OUT_OF_MEMORY       "Za ma³o wolnej pamiêci, aby kontynuowaæ!"
+    IDS_FILE_ALREADY_EXISTS "Czy chcesz nadpisaæ istniej¹cy plik %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Czy napewno chcesz anulowaæ dekompresjê?"
+    IDS_OVERWRITE_SIZE      "Rozmiar: %s"
+    IDS_OVERWRITE_MOD       "Zmodyfikowany: %s"
+END
+
+#endif    // Polish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Romanian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ROM)
+#ifdef _WIN32
+LANGUAGE LANG_ROMANIAN, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Nume arhiva",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Extrage catre: (ignorata daca arhiva are selectata calea)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Urmatorul >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Revocare",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Alegeti fisierele pentru dezarhivare",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,128,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Archive info",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Extragere"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Fisier curent",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Progres fisier curent",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Progres total",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Statistici",IDC_STATIC,7,91,241,62
+    LTEXT           "Timp:",IDC_STATIC,14,130,18,8
+    LTEXT           "Timp ramas:",IDC_STATIC,14,140,40,8
+    PUSHBUTTON      "Revocare",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,109,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,109,140,51,8
+    LTEXT           "Marime dupa compresie:",IDC_STATIC,14,110,80,9
+    LTEXT           "Rata:",IDC_STATIC,14,120,19,8
+    LTEXT           "Marime inainte de compresie:",IDC_STATIC,14,100,93,9
+    LTEXT           "100MB",IDC_FULLSIZE,109,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,109,110,51,9
+    LTEXT           "100%",IDC_RATIO,109,120,51,8
+    LTEXT           "Prioritate:",IDC_STATIC,9,158,33,8
+    COMBOBOX        IDC_CPRIORITY,41,156,84,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Inchide computer dupa terminare",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,127,155,71,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Decriptare..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Va rugam asteptati...",IDC_STATIC,42,6,70,8
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Parola"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Revocare",IDCANCEL,129,20,50,14
+    GROUPBOX        "Va rugam inserati parola",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "File overwrite confirm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Yes for all",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Yes",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "No",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "No for all",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "by this one",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 7, 0
+0x6e49, 0x6c61, 0x6174, "\000" 
+    IDC_CPRIORITY, 0x403, 14, 0
+0x6550, 0x7473, 0x2065, 0x6f6e, 0x6d72, 0x6c61, 0x0061, 
+    IDC_CPRIORITY, 0x403, 8, 0
+0x6f4e, 0x6d72, 0x6c61, 0x0061, 
+    IDC_CPRIORITY, 0x403, 12, 0
+0x7553, 0x2062, 0x6f6e, 0x6d72, 0x6c61, 0x0061, 
+    IDC_CPRIORITY, 0x403, 7, 0
+0x694d, 0x696e, 0x616d, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Despre KGB Archiver"
+    IDS_FILE                "Nume fisier"
+    IDS_SIZE                "Marime"
+    IDS_TYPE_ARCHIVE_NAME   "Tastati numele arhivei si/sau directorul destinatie!"
+    IDS_ARCHIVE_DOESNT_EXIST "Fisier arhiva nu a fost gasit!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Nu se poate extrage in directorul ce a fost tocmai creat!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Alegeti fisierele pentru extas!"
+    IDS_EXTRACT_CANCELED    "Extragerea a fost anulata de utilizator!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Extragere incheiata cu succes!\nMarime inainte de compresie:\t%s\nMarime dupa compresie:\t%s\nRata:\t\t\t%.1f%%\nTimp scurs:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS 
+                            "Va rugam alegeti directorul unde doriti extrage fisierele!"
+    IDS_WRONG_PASSWD        "Parola incorecta!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "Fisierul selectat nu e o arhiva KGB obisnuita!"
+    IDS_CANT_CHANGE_PRIORITY "Nu se poate schimba prioritatea!"
+    IDS_DECOMPRESS_PROGRESS "Dezarhivare"
+    IDS_DECOMPRESS_STATUS   "preparare..."
+    IDS_DECOMPRESS_STATUS2  "creare directoare..."
+    IDS_DECOMPRESS_STATUS3  "ocolire..."
+    IDS_FILETYPE            "Toate arhivele suportate|*.kgb; *.kge; *.exe; *.zip;|Arhive KGB (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|Arhive ZIP (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Compresie: %s\tOriginala: %s\tRata: %.1f%%"
+    IDS_OUT_OF_MEMORY       "There is not enough free memory to continue!"
+    IDS_FILE_ALREADY_EXISTS "Would you like to overwrite existing file %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Are you sure to cancel decompression?"
+    IDS_OVERWRITE_SIZE      "Size: %s"
+    IDS_OVERWRITE_MOD       "Last modified: %s"
+END
+
+#endif    // Romanian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Archivname",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Extrahiere nach: (wird ignoriert, falls Archiv vollständigen Pfad enthält)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Weiter >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Abbrechen",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Zu dekomprimierende Dateien auswählen",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,147,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Archivinfo",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Dekompression"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Aktuelle Datei",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Aktueller Dateifortschritt",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Gesamtfortschritt",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Statistik",IDC_STATIC,7,91,241,62
+    LTEXT           "Zeit:",IDC_STATIC,14,130,16,8
+    LTEXT           "Verbleibende Zeit:",IDC_STATIC,14,140,59,8
+    PUSHBUTTON      "Abbrechen",1014,200,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,101,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,101,140,51,8
+    LTEXT           "Größe nach Kompression:",IDC_STATIC,14,110,80,9
+    LTEXT           "Verhältnis:",IDC_STATIC,14,120,35,8
+    LTEXT           "Größe vor Kompression:",IDC_STATIC,14,100,84,9
+    LTEXT           "100MB",IDC_FULLSIZE,101,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,101,110,51,9
+    LTEXT           "100%",IDC_RATIO,101,120,51,8
+    LTEXT           "Priorität:",IDC_STATIC,9,158,29,8
+    COMBOBOX        IDC_CPRIORITY,39,156,82,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Nach Vollendung herunterfahren",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,123,155,75,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Entschlüssle..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Bitte warten...",IDC_STATIC,50,6,48,8
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Passwort"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,129,20,50,14
+    GROUPBOX        "Bitte Passwort eingeben",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Überschreiben der Datei bestätigen"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Ja für alle",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Ja",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "Nein",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "Nein für alle",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "mit dieser Datei überschreiben",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 5, 0
+0x6f48, 0x6863, "\000" 
+    IDC_CPRIORITY, 0x403, 17, 0
+0xf648, 0x6568, 0x2072, 0x6c61, 0x2073, 0x6f4e, 0x6d72, 0x6c61, "\000" 
+    IDC_CPRIORITY, 0x403, 7, 0
+0x6f4e, 0x6d72, 0x6c61, "\000" 
+    IDC_CPRIORITY, 0x403, 21, 0
+0x694e, 0x6465, 0x6972, 0x6567, 0x2072, 0x6c61, 0x2073, 0x6f4e, 0x6d72, 
+0x6c61, "\000" 
+    IDC_CPRIORITY, 0x403, 8, 0
+0x694e, 0x6465, 0x6972, 0x0067, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Über KGB Archiver"
+    IDS_FILE                "Dateiname"
+    IDS_SIZE                "Größe"
+    IDS_TYPE_ARCHIVE_NAME   "Bitte geben Sie den Archivnamen und/oder das Zielverzeichnis an!"
+    IDS_ARCHIVE_DOESNT_EXIST "Archiv wurde nicht gefunden!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Konnte in das Verzeichnis nicht extrahieren, da es nicht erstellt werden konnte!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Wählen Sie die zu extrahierenden Dateien!"
+    IDS_EXTRACT_CANCELED    "Extraktion wurde vom Benutzer abgebrochen!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Extraktion erfolgreich!\nGröße vor Kompression:\t%s\nGröße nach Kompression:\t%s\nVerhältnis:\t\t\t%.1f%%\nVerstrichene Zeit:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS 
+                            "Bitte wählen Sie das in das zu extrahierende Verzeichnis!"
+    IDS_WRONG_PASSWD        "Falsches Passwort!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "Gewählte Datei ist kein übliches KGB Archiv!"
+    IDS_CANT_CHANGE_PRIORITY "Konnte Priorität nicht ändern!"
+    IDS_DECOMPRESS_PROGRESS "Dekompression"
+    IDS_DECOMPRESS_STATUS   "bereite vor..."
+    IDS_DECOMPRESS_STATUS2  "erstelle Verzeichnisse..."
+    IDS_DECOMPRESS_STATUS3  "überspringe..."
+    IDS_FILETYPE            "Alle unterstützden Archive|*.kgb; *.kge; *.exe; *.zip;|KGB Archive (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP Archive (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Komprimiert: %s\tOriginal: %s\tVerhältnis: %.1f%%"
+    IDS_OUT_OF_MEMORY       "Zum Fortfahren ist nicht genügend freier Arbeitsspeicher verfügbar!"
+    IDS_FILE_ALREADY_EXISTS "Möchten Sie die existierende Datei %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Sind Sie sicher, dass Sie die Dekompression abbrechen wollen?"
+    IDS_OVERWRITE_SIZE      "Größe: %s"
+    IDS_OVERWRITE_MOD       "Letzte Änderung: %s"
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Archive name",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Extract to: (ignored if archive contains full path)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Next >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Choose files to decompress",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,103,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Archive info",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,20,50,14
+    GROUPBOX        "Please insert password",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Decompression"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Current file",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Current file progress",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Total progress",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Statistics",IDC_STATIC,7,91,241,62
+    LTEXT           "Time:",IDC_STATIC,14,130,18,8
+    LTEXT           "Remaining time:",IDC_STATIC,14,140,52,8
+    PUSHBUTTON      "Cancel",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,101,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,101,140,51,8
+    LTEXT           "Size after compression:",IDC_STATIC,14,110,80,9
+    LTEXT           "Ratio:",IDC_STATIC,14,120,20,8
+    LTEXT           "Size before compression:",IDC_STATIC,14,100,84,9
+    LTEXT           "100MB",IDC_FULLSIZE,101,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,101,110,51,9
+    LTEXT           "100%",IDC_RATIO,101,120,51,8
+    LTEXT           "Priority:",IDC_STATIC,9,158,26,8
+    COMBOBOX        IDC_CPRIORITY,41,156,84,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Turn off computer after done",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,127,155,71,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Decrypting..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Please wait...",IDC_STATIC,51,6,45,8
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "File overwrite confirm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Yes for all",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Yes",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "No",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "No for all",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "by this one",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 5, 0
+0x6948, 0x6867, "\000" 
+    IDC_CPRIORITY, 0x403, 13, 0
+0x6241, 0x766f, 0x2065, 0x6f6e, 0x6d72, 0x6c61, "\000" 
+    IDC_CPRIORITY, 0x403, 7, 0
+0x6f4e, 0x6d72, 0x6c61, "\000" 
+    IDC_CPRIORITY, 0x403, 13, 0
+0x6542, 0x6f6c, 0x2077, 0x6f6e, 0x6d72, 0x6c61, "\000" 
+    IDC_CPRIORITY, 0x403, 4, 0
+0x6f4c, 0x0077, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "About KGB Archiver"
+    IDS_FILE                "Filename"
+    IDS_SIZE                "Size"
+    IDS_TYPE_ARCHIVE_NAME   "Please type archive name and/or destination directory!"
+    IDS_ARCHIVE_DOESNT_EXIST "Archive file not found!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Cannot extract to directory, which cannot be created!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Choose files to extract!"
+    IDS_EXTRACT_CANCELED    "Extraction canceled by user!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Extraction succeeded!\nSize before compression:\t%s\nSize after compression:\t%s\nRatio:\t\t\t%.1f%%\nElapsed time:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS "Please choose directory to extract to!"
+    IDS_WRONG_PASSWD        "Wrong password!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "Chosen file isn't regular KGB archive!"
+    IDS_CANT_CHANGE_PRIORITY "Cannot change priority!"
+    IDS_DECOMPRESS_PROGRESS "Decompression"
+    IDS_DECOMPRESS_STATUS   "preparing..."
+    IDS_DECOMPRESS_STATUS2  "creating directories..."
+    IDS_DECOMPRESS_STATUS3  "skipping..."
+    IDS_FILETYPE            "All supported archives|*.kgb; *.kge; *.exe; *.zip;|KGB Archives (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP Archives (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Compressed: %s\tOriginal: %s\tRatio: %.1f%%"
+    IDS_OUT_OF_MEMORY       "There is not enough free memory to continue!"
+    IDS_FILE_ALREADY_EXISTS "Would you like to overwrite existing file %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Are you sure want to cancel decompression?"
+    IDS_OVERWRITE_SIZE      "Size: %s"
+    IDS_OVERWRITE_MOD       "Last modified: %s"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Nom de l’archive",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Extraire vers: (ignoré si l’archive contient le chemin complet)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Suivant >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Annuler",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Choisir les fichiers a décompresser",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,124,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Information sur l'archive",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Décompression"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Fichier en cours",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Progression pour le fichier en cours",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Progression complete",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Statistiques",IDC_STATIC,7,91,241,62
+    LTEXT           "Temps écoulé:",IDC_STATIC,14,130,47,8
+    LTEXT           "Temps restant:",IDC_STATIC,14,140,50,8
+    PUSHBUTTON      "Annuler",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,101,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,101,140,51,8
+    LTEXT           "Taille apres compression:",IDC_STATIC,14,110,80,9
+    LTEXT           "Ratio:",IDC_STATIC,14,120,20,8
+    LTEXT           "Taille avant compression:",IDC_STATIC,14,100,84,9
+    LTEXT           "100MB",IDC_FULLSIZE,101,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,101,110,51,9
+    LTEXT           "100%",IDC_RATIO,101,120,51,8
+    LTEXT           "Priorité:",IDC_STATIC,9,158,26,8
+    COMBOBOX        IDC_CPRIORITY,39,156,84,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Eteindre le PC apres compression",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,125,155,73,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Décryptage..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Attendez SVP...",IDC_STATIC,51,6,52,8
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Mot de passe"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Annuler",IDCANCEL,129,20,50,14
+    GROUPBOX        "Insérez le mot de passe SVP",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Demande de confirmation"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Oui pour tout",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Oui",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "Non",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "Non pour tout",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "par celui-ci",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 6, 0
+0x6148, 0x7475, 0x0065, 
+    IDC_CPRIORITY, 0x403, 19, 0
+0x7541, 0x642d, 0x6c65, 0x20e0, 0x6564, 0x4e20, 0x726f, 0x616d, 0x656c, 
+"\000" 
+    IDC_CPRIORITY, 0x403, 8, 0
+0x6f4e, 0x6d72, 0x6c61, 0x0065, 
+    IDC_CPRIORITY, 0x403, 22, 0
+0x6e45, 0x642d, 0x7365, 0x6f73, 0x7375, 0x6420, 0x2065, 0x6f4e, 0x6d72, 
+0x6c61, 0x0065, 
+    IDC_CPRIORITY, 0x403, 6, 0
+0x6142, 0x7373, 0x0065, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Au sujet de KGB Archiver"
+    IDS_FILE                "Nom"
+    IDS_SIZE                "Taille"
+    IDS_TYPE_ARCHIVE_NAME   "Tapez SVP le nom de l’archive et/ou le dossier de destination!"
+    IDS_ARCHIVE_DOESNT_EXIST "Fichier archive non trouvé!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Extraction impossible, le dossier ne peut etre créé!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Choisissez les fichiers a extraire!"
+    IDS_EXTRACT_CANCELED    "Extraction annulée par l’utilisateur!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Extraction réussie!\n\nTaille avant compression:\t%s\nTaille apres compression:\t%s\nRatio:\t\t%.1f%%\nTemps écoulé:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS "Choisissez le dossier d’extraction!"
+    IDS_WRONG_PASSWD        "Mot de passe incorrect!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "Le fichier choisi n’est pas une archive KGB correcte!"
+    IDS_CANT_CHANGE_PRIORITY "Impossible de changer de priorité!"
+    IDS_DECOMPRESS_PROGRESS "Décompression"
+    IDS_DECOMPRESS_STATUS   "préparation..."
+    IDS_DECOMPRESS_STATUS2  "création des dossiers..."
+    IDS_DECOMPRESS_STATUS3  "ce fichier est ignoré ..."
+    IDS_FILETYPE            "Tous les archives supportés|*.kgb; *.kge; *.exe; *.zip;|Archives KGB (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|Archives ZIP (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Compressé: %s\tOriginal: %s\tRatio: %.1f%%"
+    IDS_OUT_OF_MEMORY       "Il n'y a pas assez de mémoire pour continuer!"
+    IDS_FILE_ALREADY_EXISTS "Would you like to overwrite existing file %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Etes-vous certain de vouloir annuler la décompression?"
+    IDS_OVERWRITE_SIZE      "Taille: %s"
+    IDS_OVERWRITE_MOD       "Fichier daté du: %s"
+END
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Nome archivio",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Estrai in: (ignorato se l'archivio contiene il percorso intero)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Avanti >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Annulla",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Selezionare i file da decomprimere",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,124,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Informazioni archivio",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Decompressione"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "File corrente",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Progressione file corrente",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Progressione totale",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Statistiche",IDC_STATIC,7,91,241,62
+    LTEXT           "Tempo:",IDC_STATIC,14,130,25,8
+    LTEXT           "Tempo residuo:",IDC_STATIC,14,140,50,8
+    PUSHBUTTON      "Annulla",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,134,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,134,140,51,8
+    LTEXT           "Dimensione dopo la compressione:",IDC_STATIC,14,110,121,9
+    LTEXT           "Rapporto:",IDC_STATIC,14,120,34,8
+    LTEXT           "Dimensione prima della compressione:",IDC_STATIC,14,100,121,9
+    LTEXT           "100MB",IDC_FULLSIZE,134,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,134,110,51,9
+    LTEXT           "100%",IDC_RATIO,134,120,51,8
+    LTEXT           "Priorita':",IDC_STATIC,9,158,28,8
+    COMBOBOX        IDC_CPRIORITY,41,156,84,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Spegni il computer a lavoro ultimato",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,127,155,71,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Decriptazione..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Per favore attendere...",IDC_STATIC,37,6,77,8
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Annulla",IDCANCEL,129,20,50,14
+    GROUPBOX        "Per favore inserire la password",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "File overwrite confirm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Yes for all",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Yes",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "No",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "No for all",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "by this one",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 5, 0
+0x6c41, 0x6174, "\000" 
+    IDC_CPRIORITY, 0x403, 20, 0
+0x7553, 0x6570, 0x6972, 0x726f, 0x2065, 0x2061, 0x6f6e, 0x6d72, 0x6c61, 
+0x0065, 
+    IDC_CPRIORITY, 0x403, 8, 0
+0x6f4e, 0x6d72, 0x6c61, 0x0065, 
+    IDC_CPRIORITY, 0x403, 20, 0
+0x6e49, 0x6566, 0x6972, 0x726f, 0x2065, 0x2061, 0x6f6e, 0x6d72, 0x6c61, 
+0x0065, 
+    IDC_CPRIORITY, 0x403, 6, 0
+0x6142, 0x7373, 0x0061, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Informazioni su KGB Archiver"
+    IDS_FILE                "Nome file"
+    IDS_SIZE                "Dimensione"
+    IDS_TYPE_ARCHIVE_NAME   "Per favore digita il nome dell'archivio e/o la cartella di destinazione!"
+    IDS_ARCHIVE_DOESNT_EXIST "File archivio non trovato!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Non posso estrarre nella cartella che non puo' essere creata!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Scegliere i file da estrarre!"
+    IDS_EXTRACT_CANCELED    "Estrazione annullata dall'utente!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Estrazione completata!\nDimensione prima della compressione:\t%s\nDimensione dopo la compressione:\t%s\nRapporto:\t\t\t%.1f%%\nTempo trascorso:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS 
+                            "Per favore selezionare la cartella di destinazione per estrazione!"
+    IDS_WRONG_PASSWD        "Password errata!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "Il file selezionato non e' un archivio KGB regolare!"
+    IDS_CANT_CHANGE_PRIORITY "Impossibile cambiare la priorita'!"
+    IDS_DECOMPRESS_PROGRESS "Decompressione"
+    IDS_DECOMPRESS_STATUS   "preparazione in corso..."
+    IDS_DECOMPRESS_STATUS2  "creazione cartelle..."
+    IDS_DECOMPRESS_STATUS3  "saltando..."
+    IDS_FILETYPE            "Tutti gli archivi supportati|*.kgb; *.kge; *.exe; *.zip;|Archivi KGB (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|Archivi ZIP (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Compresso: %s\tOriginale: %s\tRapporto: %.1f%%"
+    IDS_OUT_OF_MEMORY       "Non c'e' sufficiente memoria libera per continuare!"
+    IDS_FILE_ALREADY_EXISTS "Would you like to overwrite existing file %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Are you sure to cancel decompression?"
+    IDS_OVERWRITE_SIZE      "Size: %s"
+    IDS_OVERWRITE_MOD       "Last modified: %s"
+END
+
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Dutch (Netherlands) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NLD)
+#ifdef _WIN32
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Archief naam",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Decomprimeer naar: (wordt genegeerd als het archief een volledig pad bevat)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Volgende >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Annuleren",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Kies bestanden om te decomprimeren",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,135,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Archive info",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Decompressie"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Huidig bestand",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Vooruitgang huidig bestand",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Totale vooruitgang",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Statistieken",IDC_STATIC,7,91,241,62
+    LTEXT           "Verstreken tijd:",IDC_STATIC,14,130,50,8
+    LTEXT           "Overgebleven tijd:",IDC_STATIC,14,140,61,8
+    PUSHBUTTON      "Annuleren",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,101,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,101,140,51,8
+    LTEXT           "Grootte na compressie:",IDC_STATIC,14,110,80,9
+    LTEXT           "Verhouding:",IDC_STATIC,14,120,40,8
+    LTEXT           "Grootte voor compressie:",IDC_STATIC,14,100,84,9
+    LTEXT           "100MB",IDC_FULLSIZE,101,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,101,110,51,9
+    LTEXT           "100%",IDC_RATIO,101,120,51,8
+    LTEXT           "Prioriteit:",IDC_STATIC,9,158,30,8
+    COMBOBOX        IDC_CPRIORITY,41,156,84,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Sluit computer af na voltooiing",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,127,155,71,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Decryptie..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Even geduld...",IDC_STATIC,51,6,48,8
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Paswoord"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Annuleren",IDCANCEL,129,20,50,14
+    GROUPBOX        "Gelieve het paswoord in te geven",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "File overwrite confirm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Yes for all",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Yes",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "No",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "No for all",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "by this one",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 5, 0
+0x6f48, 0x676f, "\000" 
+    IDC_CPRIORITY, 0x403, 14, 0
+0x6f42, 0x6576, 0x206e, 0x6f6e, 0x6d72, 0x6161, 0x006c, 
+    IDC_CPRIORITY, 0x403, 8, 0
+0x6f4e, 0x6d72, 0x6161, 0x006c, 
+    IDC_CPRIORITY, 0x403, 14, 0
+0x6e4f, 0x6564, 0x2072, 0x6f4e, 0x6d72, 0x6161, 0x006c, 
+    IDC_CPRIORITY, 0x403, 5, 0
+0x614c, 0x6761, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Over KGB Archiver"
+    IDS_FILE                "Bestandsnaam"
+    IDS_SIZE                "Grootte"
+    IDS_TYPE_ARCHIVE_NAME   "Gelieve de archiefnaam in te typen en/of het te comprimeren bestand te kiezen!"
+    IDS_ARCHIVE_DOESNT_EXIST "Archief niet gevonden!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Kan niet uitpakken naar de map: kan de map niet aanmaken!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Kies bestanden om uit te pakken!"
+    IDS_EXTRACT_CANCELED    "Decompressie geannuleerd door gebruiker!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Decompressie voltooid!\nGrootte voor compressie:\t%s\nGrootte na compressie:\t%s\nVerhouding:\t\t\t%.1f%%\nVerstreken tijd:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS 
+                            "Gelieve de map te kiezen om naar te decomprimeren!"
+    IDS_WRONG_PASSWD        "Verkeerde paswoord!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "Het gekozen bestand is geen KGB archief!"
+    IDS_CANT_CHANGE_PRIORITY "Kan de prioriteit niet veranderen!"
+    IDS_DECOMPRESS_PROGRESS "Decompressie"
+    IDS_DECOMPRESS_STATUS   "voorbereiden..."
+    IDS_DECOMPRESS_STATUS2  "aanmaken van mappen..."
+    IDS_DECOMPRESS_STATUS3  "overslaan..."
+    IDS_FILETYPE            "Alle ondersteunde archieven|*.kgb; *.kge; *.exe; *.zip;|KGB archieven (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP archieven (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Gecomprimeerd: %s\tOrigineel: %s\tVerhouding: %.1f%%"
+    IDS_OUT_OF_MEMORY       "There is not enough free memory to continue!"
+    IDS_FILE_ALREADY_EXISTS "Would you like to overwrite existing file %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Are you sure to cancel decompression?"
+    IDS_OVERWRITE_SIZE      "Size: %s"
+    IDS_OVERWRITE_MOD       "Last Modified: %s"
+END
+
+#endif    // Dutch (Netherlands) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Portuguese (Brazil) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PTB)
+#ifdef _WIN32
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Decodificando..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Aguarde...",IDC_STATIC,51,6,36,8
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Descompressao"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Arquivo atual",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Progresso de arquivo atual",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Progresso total",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Estatísticas",IDC_STATIC,7,91,241,62
+    LTEXT           "Tempo:",IDC_STATIC,14,130,25,8
+    LTEXT           "Tempo restante:",IDC_STATIC,14,140,54,8
+    PUSHBUTTON      "Cancelar",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,119,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,119,140,51,8
+    LTEXT           "Tamanho depois de compressao:",IDC_STATIC,14,110,105,9
+    LTEXT           "Relaçao:",IDC_STATIC,14,120,29,8
+    LTEXT           "Tamanho antes de compressao:",IDC_STATIC,14,100,102,9
+    LTEXT           "100MB",IDC_FULLSIZE,119,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,119,110,51,9
+    LTEXT           "100%",IDC_RATIO,119,120,51,8
+    LTEXT           "Prioridade:",IDC_STATIC,9,158,36,8
+    COMBOBOX        IDC_CPRIORITY,45,156,71,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Desligar computador ao finalizar",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,118,155,79,16
+END
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Nome do arquivo",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Extrair para: (ignorar se deseja o arquivo na mesma pasta)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Próximo >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Cancelar",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Escolha arquivos para descomprimir",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,129,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Archive info",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Senha"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,129,20,50,14
+    GROUPBOX        "Digite a senha",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "File overwrite confirm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Yes for all",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Yes",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "No",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "No for all",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "by this one",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 5, 0
+0x6c41, 0x6174, "\000" 
+    IDC_CPRIORITY, 0x403, 16, 0
+0x6341, 0x6d69, 0x2061, 0x6f64, 0x6e20, 0x726f, 0x616d, 0x006c, 
+    IDC_CPRIORITY, 0x403, 7, 0
+0x6f4e, 0x6d72, 0x6c61, "\000" 
+    IDC_CPRIORITY, 0x403, 17, 0
+0x6241, 0x6961, 0x6f78, 0x6420, 0x206f, 0x6f6e, 0x6d72, 0x6c61, "\000" 
+    IDC_CPRIORITY, 0x403, 6, 0
+0x6142, 0x7869, 0x0061, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Sobre KGB Archiver"
+    IDS_FILE                "Nome"
+    IDS_SIZE                "Tamanho"
+    IDS_TYPE_ARCHIVE_NAME   "Digite o nome do arquivo e/ou destino da pasta!"
+    IDS_ARCHIVE_DOESNT_EXIST "Arquivo nao encontrado!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Nao pode extrair para uma pasta que nao pode ser criada!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Escolha arquivos para extrair!"
+    IDS_EXTRACT_CANCELED    "Extraçao cancelada pelo usuário!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Efetuada!\nTamanho antes de compressao:\t%s\nTamanho depois da compressao:\t%s\nRelaçao:\t\t\t%.1f%%\nTempo Decorrido:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS "Por favor escolha uma pasta para extrair!"
+    IDS_WRONG_PASSWD        "Senha errada!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "Arquivo escolhido nao é arquivo válido KGB!"
+    IDS_CANT_CHANGE_PRIORITY "Nao pôde mudar prioridade!"
+    IDS_DECOMPRESS_PROGRESS "Descompressao"
+    IDS_DECOMPRESS_STATUS   "preparando..."
+    IDS_DECOMPRESS_STATUS2  "criando pastas..."
+    IDS_DECOMPRESS_STATUS3  "avançando..."
+    IDS_FILETYPE            "Todos arquivos suportados|*.kgb; *.kge; *.exe; *.zip;|Arquivos KGB (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|Arquivos ZIP (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Comprimido: %s\tOriginal: %s\tRelaçao: %.1f%%"
+    IDS_OUT_OF_MEMORY       "Nao há memória livre suficiente para continuar!"
+    IDS_FILE_ALREADY_EXISTS "Would you like to overwrite existing file %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Are you sure to cancel decompression?"
+    IDS_OVERWRITE_SIZE      "Size: %s"
+    IDS_OVERWRITE_MOD       "Last modified: %s"
+END
+
+#endif    // Portuguese (Brazil) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Swedish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_SVE)
+#ifdef _WIN32
+LANGUAGE LANG_SWEDISH, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Arkiv Namn",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Packa upp till: (Ignorerad om arkivet innehaller full sökväg)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Nästa >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Avbryt",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Välj filer att packa upp",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,87,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Arkiv Info",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Packa upp"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Nuvarande Fil",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Nuvarande Fil Status",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Total Status",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Statistik",IDC_STATIC,7,91,241,62
+    LTEXT           "Tid:",IDC_STATIC,14,130,13,8
+    LTEXT           "Aterstaende Tid:",IDC_STATIC,14,140,51,8
+    PUSHBUTTON      "Avbryt",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,101,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,101,140,51,8
+    LTEXT           "Storlek efter komprimering:",IDC_STATIC,14,110,88,9
+    LTEXT           "Kvot:",IDC_STATIC,14,120,18,8
+    LTEXT           "Storlek före Komprimering:",IDC_STATIC,14,100,87,9
+    LTEXT           "100MB",IDC_FULLSIZE,101,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,101,110,51,9
+    LTEXT           "100%",IDC_RATIO,101,120,51,8
+    LTEXT           "Prioritet:",IDC_STATIC,9,158,29,8
+    COMBOBOX        IDC_CPRIORITY,41,156,80,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Stäng av datorn efter utförd uppgift",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,123,155,75,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "De-Kryptering..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Var god vänta...",IDC_STATIC,48,6,54,8
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Lösenord"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Avbryt",IDCANCEL,129,20,50,14
+    GROUPBOX        "Var vänlig skriv in lösenord",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Fil överskrivning godkänn"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Ja till alla",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Ja",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "Nej",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "Nej till alla",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "med denna",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 4, 0
+0xf648, 0x0067, 
+    IDC_CPRIORITY, 0x403, 14, 0
+0x654d, 0x2072, 0x6ee4, 0x4e20, 0x726f, 0x616d, 0x006c, 
+    IDC_CPRIORITY, 0x403, 7, 0
+0x6f4e, 0x6d72, 0x6c61, "\000" 
+    IDC_CPRIORITY, 0x403, 17, 0
+0x694d, 0x646e, 0x6572, 0xe420, 0x206e, 0x6f4e, 0x6d72, 0x6c61, "\000" 
+    IDC_CPRIORITY, 0x403, 4, 0
+0xe54c, 0x0067, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Om KGB Archiver"
+    IDS_FILE                "Filnamn"
+    IDS_SIZE                "Storlek"
+    IDS_TYPE_ARCHIVE_NAME   "Var vänlig ange Arkiv Namn och/eller malkatalog"
+    IDS_ARCHIVE_DOESNT_EXIST "Arkiv kunde inte hittas!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Kan inte packa upp till katalogen som inte kan skapas!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Välj filer att packa upp!"
+    IDS_EXTRACT_CANCELED    "Uppackning avbryten av användaren!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Uppackning klar!\nStorlek före komprimering:\t%s\nStorlek efter komprimering:\t%s\nKvot:\t\t\t%.1f%%\nTidsatgang:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS "Var vänlig välj katalog att packa up till!"
+    IDS_WRONG_PASSWD        "Felaktigt Lösenord!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "Vald fil är ej ett kompatibelt KGB arkiv"
+    IDS_CANT_CHANGE_PRIORITY "Kan ej ändra Prioritet!"
+    IDS_DECOMPRESS_PROGRESS "Uppackning"
+    IDS_DECOMPRESS_STATUS   "förbereder..."
+    IDS_DECOMPRESS_STATUS2  "skapar kataloger..."
+    IDS_DECOMPRESS_STATUS3  "hoppar över..."
+    IDS_FILETYPE            "Alla kompatibla arkiv|*.kgb; *.kge; *.exe; *.zip;|KGB Arkivs (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP Arkiv (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Komprimerad: %s\tOriginal: %s\tKvot: %.1f%%"
+    IDS_OUT_OF_MEMORY       "Finns ej tillräckligt med fritt minne för att fortsätta"
+    IDS_FILE_ALREADY_EXISTS "Vill du skriva över befintlig fil %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Är du säker pa att du vill avbryta uppackningen?"
+    IDS_OVERWRITE_SIZE      "Storlek: %s"
+    IDS_OVERWRITE_MOD       "Senast ändrad: %s"
+END
+
+#endif    // Swedish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Nombre de Archivo",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Extraer a: (ignorar si el archivo contiene la ruta completa)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Siguiente >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Cancelar",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Elija los archivos a descomprimir",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,117,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Información de Archvo",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Descompresión"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Archivo actual",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Progreso del archivo actual",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Progreso total",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Estadísticas",IDC_STATIC,7,91,241,62
+    LTEXT           "Tiempo:",IDC_STATIC,14,130,26,8
+    LTEXT           "Tiempo restante:",IDC_STATIC,14,140,56,8
+    PUSHBUTTON      "Cancelar",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,105,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,105,140,51,8
+    LTEXT           "Tamano tras comprimir:",IDC_STATIC,14,110,105,9
+    LTEXT           "Ratio:",IDC_STATIC,14,120,20,8
+    LTEXT           "Tamano antes de comprimir:",IDC_STATIC,14,100,102,9
+    LTEXT           "100MB",IDC_FULLSIZE,105,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,105,110,51,9
+    LTEXT           "100%",IDC_RATIO,105,120,51,8
+    LTEXT           "Prioridad:",IDC_STATIC,9,158,32,8
+    COMBOBOX        IDC_CPRIORITY,41,156,77,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Apagar el ordenador al finalizar",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,120,155,78,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Desencriptando..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Espere por favor...",IDC_STATIC,42,6,63,8
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Contrasena"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,129,20,50,14
+    GROUPBOX        "Inserte la contrasena por favor",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "File overwrite confirm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Yes for all",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Yes",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "No",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "No for all",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "by this one",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 5, 0
+0x6c41, 0x6174, "\000" 
+    IDC_CPRIORITY, 0x403, 24, 0
+0x6f50, 0x2072, 0x6e65, 0x6963, 0x616d, 0x6420, 0x2065, 0x6f6c, 0x6e20, 
+0x726f, 0x616d, 0x006c, 
+    IDC_CPRIORITY, 0x403, 7, 0
+0x6f4e, 0x6d72, 0x6c61, "\000" 
+    IDC_CPRIORITY, 0x403, 24, 0
+0x6f50, 0x2072, 0x6564, 0x6162, 0x6f6a, 0x6420, 0x2065, 0x6f6c, 0x6e20, 
+0x726f, 0x616d, 0x006c, 
+    IDC_CPRIORITY, 0x403, 5, 0
+0x6142, 0x616a, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Acerca de KGB Archiver"
+    IDS_FILE                "Nombre de archivo"
+    IDS_SIZE                "Tamano"
+    IDS_TYPE_ARCHIVE_NAME   "Debes escribir un nombre de archivo y/o la carpeta destino!"
+    IDS_ARCHIVE_DOESNT_EXIST "No se encuentra el archivo!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "No se puede extraer el directorio porque no se puede crear!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Elija los archivos a extraer!"
+    IDS_EXTRACT_CANCELED    "Extracción cancelada por el usuario!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Extracción terminada!\nTamano antes de comprimir:\t%s\nTamano tras comprimir:\t%s\nRatio:\t\t\t%.1f%%\nTiempo transcurrido:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS "Elija la carpeta destino por favor!"
+    IDS_WRONG_PASSWD        "Contrasena errónea!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "El archivo elgido no es un archivo KGB!"
+    IDS_CANT_CHANGE_PRIORITY "No puede cambiar la prioridad!"
+    IDS_DECOMPRESS_PROGRESS "Descompresión"
+    IDS_DECOMPRESS_STATUS   "preparando..."
+    IDS_DECOMPRESS_STATUS2  "creando carpetas..."
+    IDS_DECOMPRESS_STATUS3  "ignorando..."
+    IDS_FILETYPE            "Todos los archivos soportados|*.kgb; *.kge; *.exe; *.zip;|Archivos KGB (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|Archivos ZIP (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Comprimido: %s\tOriginal: %s\tRatio: %.1f%%"
+    IDS_OUT_OF_MEMORY       "No hay suficiente memoria libre para continuar!"
+    IDS_FILE_ALREADY_EXISTS "Would you like to overwrite existing file %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Are you sure to cancel decompression?"
+    IDS_OVERWRITE_SIZE      "Size: %s"
+    IDS_OVERWRITE_MOD       "Last modified: %s"
+END
+
+#endif    // Spanish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Chile) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESL)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_CHILE
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Nombre de Archivo",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Extraer a: (ignorar si el archivo contiene rutas completas)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Siguiente >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Cancelar",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Elegir archivos para descomprimir",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,122,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Info de Archivo",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Descompresión"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Archivo actual",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Progreso de archivo actual",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Progreso total",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Estadísticas",IDC_STATIC,7,91,241,62
+    LTEXT           "Tiempo:",IDC_STATIC,14,130,26,8
+    LTEXT           "Tiempo restante:",IDC_STATIC,14,140,56,8
+    PUSHBUTTON      "Cancelar",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,105,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,105,140,51,8
+    LTEXT           "Tamano luego de comprimir:",IDC_STATIC,14,110,105,9
+    LTEXT           "Porcentaje:",IDC_STATIC,14,120,38,8
+    LTEXT           "Tamano antes de comprimir:",IDC_STATIC,14,100,102,9
+    LTEXT           "100MB",IDC_FULLSIZE,105,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,105,110,51,9
+    LTEXT           "100%",IDC_RATIO,105,120,51,8
+    LTEXT           "Prioridad:",IDC_STATIC,9,158,32,8
+    COMBOBOX        IDC_CPRIORITY,41,156,77,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Apagar computador luego de finalizar",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,120,155,78,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Desencriptando..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Porfavor espera...",IDC_STATIC,44,6,61,8
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Contrasena"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,129,20,50,14
+    GROUPBOX        "Porfavor ingresa la contrasena",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "File overwrite confirm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Yes for all",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Yes",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "No",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "No for all",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "by this one",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 5, 0
+0x6c41, 0x6174, "\000" 
+    IDC_CPRIORITY, 0x403, 16, 0
+0x6f53, 0x7262, 0x2065, 0x616c, 0x6e20, 0x726f, 0x616d, 0x006c, 
+    IDC_CPRIORITY, 0x403, 7, 0
+0x6f4e, 0x6d72, 0x6c61, "\000" 
+    IDC_CPRIORITY, 0x403, 12, 0
+0x6142, 0x6f6a, 0x6e20, 0x726f, 0x616d, 0x006c, 
+    IDC_CPRIORITY, 0x403, 5, 0
+0x6142, 0x616a, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Acerca de KGB Archiver"
+    IDS_FILE                "Nombre de archivo"
+    IDS_SIZE                "Tamano"
+    IDS_TYPE_ARCHIVE_NAME   "Por favor tipéa el nombre de archivo y/o carpeta de destino!"
+    IDS_ARCHIVE_DOESNT_EXIST "Nombre de archivo no encontrado!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "No se puede extraer al directorio, él que no puede ser creado!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Elige archivos para extraer!"
+    IDS_EXTRACT_CANCELED    "Extracción cancelada por el usuario!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Extracción exitosa!\nTamano antes de comprimir:\t%s\nTamano luego de comprimir:\t%s\nPorcentaje:\t\t%.1f%%\nTiempo transcurrido:\t"
+    IDS_CHOOSE_DIR2DECOMPRESS "Por favor elige el directorio donde extraerlo!"
+    IDS_WRONG_PASSWD        "Contrasena erronea!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "El archivo seleccionado no es un archivo regular KGB!"
+    IDS_CANT_CHANGE_PRIORITY "No se puede cambiar la prioridad!"
+    IDS_DECOMPRESS_PROGRESS "Descompresión"
+    IDS_DECOMPRESS_STATUS   "preparando..."
+    IDS_DECOMPRESS_STATUS2  "creando directorios..."
+    IDS_DECOMPRESS_STATUS3  "saltando..."
+    IDS_FILETYPE            "Todos los archivos soportados|*.kgb; *.kge; *.exe; *.zip;|Archivos KGB (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|Archivos ZIP (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Comprimido: %s\tOriginal: %s\tProcentaje: %.1f%%"
+    IDS_OUT_OF_MEMORY       "No hay memoria libre para continuar!"
+    IDS_FILE_ALREADY_EXISTS "Would you like to overwrite existing file %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Are you sure to cancel decompression?"
+    IDS_OVERWRITE_SIZE      "Size: %s"
+    IDS_OVERWRITE_MOD       "Last modified: %s"
+END
+
+#endif    // Spanish (Chile) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Turkish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_TRK)
+#ifdef _WIN32
+LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
+#pragma code_page(1254)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Arsiv Adi",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Dosyalari Çikar:(Eger tam dizin içeriyorsa yoksayilir.)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Ileri >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Iptal",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Arsivi açmak için dosya seçin",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,107,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Arsiv Bilgisi",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Arsiv Açilimi"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Dosya",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Dosyanin Durumu",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Genel Durum",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Istatistikler",IDC_STATIC,7,91,241,62
+    LTEXT           "Zaman:",IDC_STATIC,14,130,25,8
+    LTEXT           "Kalan Zaman:",IDC_STATIC,14,140,44,8
+    PUSHBUTTON      "Iptal",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,117,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,117,140,51,8
+    LTEXT           "Sikistirdiktan Sonra Boyut:",IDC_STATIC,14,110,102,9
+    LTEXT           "Oran:",IDC_STATIC,14,120,20,8
+    LTEXT           "Sikistirmadan önce boyut:",IDC_STATIC,14,100,103,9
+    LTEXT           "100MB",IDC_FULLSIZE,117,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,117,110,51,9
+    LTEXT           "100%",IDC_RATIO,117,120,51,8
+    LTEXT           "Öncelik:",IDC_STATIC,9,158,26,8
+    COMBOBOX        IDC_CPRIORITY,41,156,84,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Bittikten sonra bilgisayari kapat",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,127,155,71,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Çözülüyor..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Lütfen Bekleyin...",IDC_STATIC,48,6,58,8
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Sifre"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Tamam",IDOK,129,3,50,14
+    PUSHBUTTON      "Iptal",IDCANCEL,129,20,50,14
+    GROUPBOX        "Lütfen sifreyi girin",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Dosya üstüne yazma onayi"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Hepsine Evet",IDC_BYESALL,6,78,52,14
+    PUSHBUTTON      "Evet",IDC_BYES,61,78,50,14
+    PUSHBUTTON      "Hayir",IDC_BNO,113,78,50,14
+    PUSHBUTTON      "Hepsine Hayir",IDC_BNOALL,166,78,52,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "by this one",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 7, 0
+0xfc59, 0x736b, 0x6b65, "\000" 
+    IDC_CPRIORITY, 0x403, 17, 0
+0x6f4e, 0x6d72, 0x6c61, 0x6e69, 0xdc20, 0x7473, 0x6efc, 0x6564, "\000" 
+    IDC_CPRIORITY, 0x403, 7, 0
+0x6f4e, 0x6d72, 0x6c61, "\000" 
+    IDC_CPRIORITY, 0x403, 17, 0
+0x6f4e, 0x6d72, 0x6c61, 0x6e69, 0x4120, 0x746c, 0x6e69, 0x6164, "\000" 
+    IDC_CPRIORITY, 0x403, 6, 0
+0xfc44, 0xfc73, 0x006b, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "KGB Archiver Hakkinda"
+    IDS_FILE                "Dosya Adi"
+    IDS_SIZE                "Boyutu"
+    IDS_TYPE_ARCHIVE_NAME   "Lütfen arsivin ismini ve/veya hedef dizini girin!"
+    IDS_ARCHIVE_DOESNT_EXIST "Arsiv dosyasi bulunamadi!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Dosyalar dizine çikarilamadi, çünkü dizin olusturulamadi!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Dosyalari çikarmak için dosyalari seçin!"
+    IDS_EXTRACT_CANCELED    "Dosyalari çikarma islemi kullanici tarafindan iptal edildi!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Dosyalari çikarma basarili!\nSikistirmadan önceki boyut:\t%s\nSikistirmadan sonraki boyut:\t%s\nOran:\t\t\t%.1f%%\nGeçen Zaman:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS "Dosyalari çikarmak için lütfen dizin seçin!"
+    IDS_WRONG_PASSWD        "Yanlis sifre!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "Seçtiginiz dosya bir KGB Arsivi degil!"
+    IDS_CANT_CHANGE_PRIORITY "Öncelik degistirilemedi!"
+    IDS_DECOMPRESS_PROGRESS "Arsiv Açilimi"
+    IDS_DECOMPRESS_STATUS   "hazirlaniyor..."
+    IDS_DECOMPRESS_STATUS2  "dizinler olusturuluyor..."
+    IDS_DECOMPRESS_STATUS3  "atlaniyor..."
+    IDS_FILETYPE            "Desteklenen Arsiv Formatlari|*.kgb; *.kge; *.exe; *.zip;|KGB Arsivleri (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP Arsivleri (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Sikistirilmis: %s Orjinal: %s Oran: %.1f%%"
+    IDS_OUT_OF_MEMORY       "Devam etmek için yeterli hafiza yok!"
+    IDS_FILE_ALREADY_EXISTS "%.260s zaten var! Üstüne yazmak ister misiniz?"
+    IDS_ARE_YOU_SURE_CANCEL "Arsiv açilimini iptal etmek istediginize emin misiniz?"
+    IDS_OVERWRITE_SIZE      "Boyut: %s"
+    IDS_OVERWRITE_MOD       "Son düzenleme: %s"
+END
+
+#endif    // Turkish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Estonian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ETI)
+#ifdef _WIN32
+LANGUAGE LANG_ESTONIAN, SUBLANG_DEFAULT
+#pragma code_page(1257)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Arhiivi nimi",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "Väljustama: (ignoreeritud kui arhiiv sisaldab täispikka teekonda)",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Järgmine >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "Tühista",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Vali failid lahtipakkimiseks",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,95,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Arhiivi Info",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Lahtipakkimine"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Hetke fail",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Hetke faili edenemine",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Kogu edenemine",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Statistika",IDC_STATIC,7,91,241,62
+    LTEXT           "Aeg:",IDC_STATIC,14,130,16,8
+    LTEXT           "Järelejäänud aeg:",IDC_STATIC,14,140,59,8
+    PUSHBUTTON      "Tühista",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,101,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,101,140,51,8
+    LTEXT           "Suurus pärast pakkimist:",IDC_STATIC,14,110,80,9
+    LTEXT           "Suhe:",IDC_STATIC,14,120,20,8
+    LTEXT           "Suurus enne pakkimist:",IDC_STATIC,14,100,84,9
+    LTEXT           "100MB",IDC_FULLSIZE,101,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,101,110,51,9
+    LTEXT           "100%",IDC_RATIO,101,120,51,8
+    LTEXT           "Prioriteet:",IDC_STATIC,9,158,33,8
+    COMBOBOX        IDC_CPRIORITY,41,156,80,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Lülita arvuti välja peale lahtipakkimist",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,123,155,75,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Krüpteerin lahti..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Palun oodake...",IDC_STATIC,47,6,52,8
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Salasona"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "Tühista",IDCANCEL,129,20,50,14
+    GROUPBOX        "Palun sisestage salasona",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "File overwrite confirm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Yes for all",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Yes",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "No",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "No for all",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "by this one",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 6, 0
+0xf54b, 0x6772, 0x0065, 
+    IDC_CPRIORITY, 0x403, 14, 0
+0x6cdc, 0x2065, 0x6f6e, 0x6d72, 0x6161, 0x736c, 0x0065, 
+    IDC_CPRIORITY, 0x403, 10, 0
+0x6f4e, 0x6d72, 0x6161, 0x6e6c, 0x0065, 
+    IDC_CPRIORITY, 0x403, 15, 0
+0x6c41, 0x616c, 0x6e20, 0x726f, 0x616d, 0x6c61, 0x6573, "\000" 
+    IDC_CPRIORITY, 0x403, 6, 0
+0x614d, 0x6164, 0x006c, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "KGB Archiver kohta"
+    IDS_FILE                "Failinimi"
+    IDS_SIZE                "Suurus"
+    IDS_TYPE_ARCHIVE_NAME   "Palun kirjutage arhiivi nimi ja/voi sihtkaust!"
+    IDS_ARCHIVE_DOESNT_EXIST "Arhiivi fail ei leitud!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Ei suuda pakkida lahti kausta, mida ei saa tekitada!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Vali failid lahtipakkimiseks!"
+    IDS_EXTRACT_CANCELED    "Lahtipakkimine tühistatud kasutaja poolt!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "Lahtipakkimine onnestus!\nSuurus enne pakkimist:\t%s\nSuurus peale pakkimist:\t%s\nSuhe:\t\t\t%.1f%%\nLäbitud aeg:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS "Palun vali kaust kuhu pakkida lahti!"
+    IDS_WRONG_PASSWD        "Vale salasona!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "Valitud fail ei ole regulaarne KGB arhiiv!"
+    IDS_CANT_CHANGE_PRIORITY "Ei suuda muuta prioriteeti!"
+    IDS_DECOMPRESS_PROGRESS "Lahti pakkimine"
+    IDS_DECOMPRESS_STATUS   "ettevalmistus..."
+    IDS_DECOMPRESS_STATUS2  "kaustade moodustamine..."
+    IDS_DECOMPRESS_STATUS3  "vahelejätmine..."
+    IDS_FILETYPE            "Koik toetatud arhiivid|*.kgb; *.kge; *.exe; *.zip;|KGB Arhiivid (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP Arhiivid (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Pakitult: %s\toriginaal: %s\tSuhe: %.1f%%"
+    IDS_OUT_OF_MEMORY       "Ei ole küllalt vaba mälu et jätkata!"
+    IDS_FILE_ALREADY_EXISTS "Would you like to overwrite existing file %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Are you sure to cancel decompression?"
+    IDS_OVERWRITE_SIZE      "Size: %s"
+    IDS_OVERWRITE_MOD       "Last modified: %s"
+END
+
+#endif    // Estonian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Lithuanian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_LTH)
+#ifdef _WIN32
+LANGUAGE LANG_LITHUANIAN, SUBLANG_DEFAULT
+#pragma code_page(1257)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KGB_ARCH_DECOMPRESS_DIALOG DIALOGEX 0, 0, 320, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KGB Archiver"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Archyvo vardas",IDC_STATIC,7,7,306,26
+    EDITTEXT        IDC_EARCHNAME,11,15,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE,282,15,18,14
+    GROUPBOX        "I?pakuoti i: (ignoruojama, kai archyvas turi opcij1 ""Full path"")",IDC_STATIC,7,34,306,25
+    EDITTEXT        IDC_EARCHNAME2,11,42,265,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "...",IDC_BBROWSE2,282,41,18,14
+    GROUPBOX        "",IDC_STATIC,7,60,306,134
+    DEFPUSHBUTTON   "Toliau >",IDC_BUTTON1,263,221,50,14
+    PUSHBUTTON      "At?aukti",IDC_BUTTON2,207,221,50,14
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,11,70,298,119
+    CONTROL         "Pasirinkite kuriuos failus i?pakuoti",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,59,121,10
+    LTEXT           "",IDC_ARCHIVE_INFO,13,203,294,8
+    GROUPBOX        "Archyvo informacija",IDC_STATIC,7,195,306,20
+    PUSHBUTTON      "»",IDC_BRECENTARCHIVES,300,15,10,14,BS_FLAT
+    PUSHBUTTON      "»",IDC_BRECENTDIRS,300,41,10,14,BS_FLAT
+END
+
+IDD_DECOMPRESS DIALOGEX 0, 0, 255, 174
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "I?pakavimas"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Dabartinis failas",IDC_STATIC,7,6,241,23
+    LTEXT           "file_name.file_extension",IDC_FILENAME,11,15,232,8
+    GROUPBOX        "Dabartinio failo progresas",IDC_STATIC,7,31,241,28
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,11,40,233,14
+    GROUPBOX        "Visas progresas",IDC_STATIC,7,61,241,28
+    CONTROL         "",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,11,70,233,14
+    GROUPBOX        "Statistika",IDC_STATIC,7,91,241,62
+    LTEXT           "Laikas:",IDC_STATIC,14,130,23,8
+    LTEXT           "Lik?s laikas:",IDC_STATIC,14,140,47,8
+    PUSHBUTTON      "At?aukti",1014,198,156,50,14
+    LTEXT           "0:00:00",IDC_ELAPSEDTIME,101,130,51,8
+    LTEXT           "0:00:00",IDC_REMAININGTIME,101,140,51,8
+    LTEXT           "Dydis po archyvavimo:",IDC_STATIC,14,110,80,9
+    LTEXT           "Reitingas:",IDC_STATIC,14,120,33,8
+    LTEXT           "Dydis pries archyvavim1:",IDC_STATIC,14,100,84,9
+    LTEXT           "100MB",IDC_FULLSIZE,101,100,51,9
+    LTEXT           "100MB",IDC_COMPRESSEDSIZE,101,110,51,9
+    LTEXT           "100%",IDC_RATIO,101,120,51,8
+    LTEXT           "Prieinamumas:",IDC_STATIC,8,158,47,8
+    COMBOBOX        IDC_CPRIORITY,54,156,72,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "I?jungti kompiuteri kai baigs",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,128,155,69,16
+END
+
+IDD_DECODING DIALOGEX 0, 0, 148, 23
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Dekoduojama..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Pra?ome palaukti...",IDC_STATIC,44,6,63,8
+END
+
+IDD_PASSWD DIALOGEX 0, 0, 186, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Slapta2odis"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,3,50,14
+    PUSHBUTTON      "At?aukti",IDCANCEL,129,20,50,14
+    GROUPBOX        "Prasome ira?yti slapta2odi",IDC_STATIC,6,2,120,30
+    EDITTEXT        IDC_EPASSWD,12,12,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_OVERWRITE DIALOGEX 0, 0, 224, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "File overwrite confirm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Yes for all",IDC_BYESALL,6,78,50,14
+    PUSHBUTTON      "Yes",IDC_BYES,60,78,50,14
+    PUSHBUTTON      "No",IDC_BNO,114,78,50,14
+    PUSHBUTTON      "No for all",IDC_BNOALL,168,78,50,14
+    LTEXT           "Would you like to overwrite existing file %.260s",IDC_SORIGINALFILE,6,6,216,8
+    ICON            "",IDC_OLDICON,6,18,20,20
+    LTEXT           "Size: %s",IDC_SORIGINALSIZE,36,18,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SORIGINALMOD,36,30,180,8
+    LTEXT           "by this one",IDC_STATIC,6,42,216,8
+    ICON            "",IDC_NEWICON,6,54,20,20
+    LTEXT           "Size: %s",IDC_SNEWSIZE,36,54,180,8
+    LTEXT           "Last modified: yyyy/mm/dd hh:mm:ss",IDC_SNEWMOD,36,66,180,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_KGB_ARCH_DECOMPRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DECOMPRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DECODING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_PASSWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 29
+    END
+
+    IDD_OVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DECOMPRESS DLGINIT
+BEGIN
+    IDC_CPRIORITY, 0x403, 8, 0
+0x7541, 0x9a6b, 0x6174, 0x0073, 
+    IDC_CPRIORITY, 0x403, 8, 0
+0x6944, 0x6564, 0x696c, 0x0073, 
+    IDC_CPRIORITY, 0x403, 9, 0
+0x6f4e, 0x6d72, 0x6c61, 0x7375, "\000" 
+    IDC_CPRIORITY, 0x403, 6, 0
+0x658e, 0x616d, 0x0073, 
+    IDC_CPRIORITY, 0x403, 6, 0
+0x614d, 0x619e, 0x0073, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Apie KGB Archiver"
+    IDS_FILE                "Failo vardas"
+    IDS_SIZE                "Dydis"
+    IDS_TYPE_ARCHIVE_NAME   "Pra?ome ira?yti failo vard1 arba pasirinkite koki fail1 norite suarchyvuoti!"
+    IDS_ARCHIVE_DOESNT_EXIST "Archyvo failas nerastas!"
+    IDS_CANT_EXTRACT_DIR_NOT_FOUND 
+                            "Negalima i?pakuoti i direktorij1, kuri neegzistuoja, negalima jos sukurti!"
+    IDS_CHOOSE_FILES2DECOMPRESS "Pasirinkite kuriuos failus norite i?pakuoti!"
+    IDS_EXTRACT_CANCELED    "Darbas at?auktas!"
+    IDS_EXTRACT_SUCCED_STATS 
+                            "I?pakavimas baigtas!\nDydis prie? archyvavim1:\t%s\nDydis po archyvavimo:\t%s\nReitingas:\t\t\t%.1f%%\nPraejo laiko:\t\t"
+    IDS_CHOOSE_DIR2DECOMPRESS "Pra?ome pasirinkti kur i?pakuoti!"
+    IDS_WRONG_PASSWD        "Slapta2odis neteisingas!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROKEN_ARCHIVE      "Pasirinktas failas nepriklauso KGB Archiver!"
+    IDS_CANT_CHANGE_PRIORITY "Negalima pakeisti prieinamumo!"
+    IDS_DECOMPRESS_PROGRESS "I?pakavimas"
+    IDS_DECOMPRESS_STATUS   "ruo?iam1si..."
+    IDS_DECOMPRESS_STATUS2  "kuriamos direktorijos..."
+    IDS_DECOMPRESS_STATUS3  "praleid2iama..."
+    IDS_FILETYPE            "Palaikomi archyvu tipai|*.kgb; *.kge; *.exe; *.zip;|KGB Archyvai (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP Archyvai (*.zip)|*.zip|"
+    IDS_ARCHIVE_INFO        "Suarchyvuota: %s\tOriginalus: %s\tReitingas: %.1f%%"
+    IDS_OUT_OF_MEMORY       "Nepakanka darbines atminties (RAM) darbui baigti!"
+    IDS_FILE_ALREADY_EXISTS "Would you like to overwrite existing file %.260s"
+    IDS_ARE_YOU_SURE_CANCEL "Are you sure to cancel decompression?"
+    IDS_OVERWRITE_SIZE      "Size: %s"
+    IDS_OVERWRITE_MOD       "Last modified: %s"
+END
+
+#endif    // Lithuanian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\kgb_arch_decompress.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

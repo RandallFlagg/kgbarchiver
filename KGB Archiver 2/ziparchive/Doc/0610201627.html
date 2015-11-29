@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>ZipArchive:
+        Encryption Methods: How to Best Protect Your Data
+    </title>
+    <link href="articles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    body
+    {
+    	font-family: verdana, arial, helvetica, sans-serif;
+    }
+</style>
+</head>
+<body>
+    <div class="kbabody">
+        <div class="kbatitle">
+            Encryption Methods: How to Best Protect Your Data
+        </div>
+        <div class="kbaappliesto">
+            Applies To: <strong>All. AES needs the commercial version.</strong>
+        </div>
+        <div class="kbaindex">
+            <ul class="kbaindex">
+
+<li><a class="linkindex" href="#intro">Introduction</a></li>
+<li><a class="linkindex" href="#std">Standard Zip Encryption</a></li>
+<li><a class="linkindex" href="#aes">Strong AES Encryption Conforming to the WinZip Format</a>
+<ul class="kbaindex">
+<li><a class="linkindex" href="#enabling">Enabling AES Encryption in the ZipArchive Library</a></li>
+<li><a class="linkindex" href="#using">Encrypting Archives with AES</a></li>
+</ul>
+</li>
+<li><a class="linkindex" href="#api">See Also API Calls</a></li></ul>
+
+        </div>
+        <div class="kbacontents">
+            
+        <h2 id="intro" name="intro" class="kb">
+            Introduction</h2>
+        <ul>
+            <li>To compress a file with encryption, set the password with the <a class="linkapi" href="./classCZipArchive.html#bbe0d1ba17c664a8c9c15bfecb37a274">CZipArchive::SetPassword()</a> method before compression. You will need to set
+                the same password with this method before decompressing this file later. You can
+                set different passwords for different files.</li>
+            <li>To clear the password, call the <a class="linkapi" href="./classCZipArchive.html#bbe0d1ba17c664a8c9c15bfecb37a274">CZipArchive::SetPassword()</a>
+                method without arguments or with an empty string as an argument.</li>
+            <li>You should avoid using characters other than ASCII in the password string. There
+                may be problems with extracting such an archive on a system with a different code
+                page.</li>
+            <li>To find out, if a file inside an archive is encrypted, call the <a class="linkapi" href="./classCZipFileHeader.html#d8b33eb8b9e30110b6b6789917aede8c">CZipFileHeader::IsEncrypted()</a> method. You can retrieve the file information
+                object, e.g. with the <a class="linkapi" href="./classCZipArchive.html#d9eb5b4496aeb880bda52d9a3c8f4cc5">CZipArchive::GetFileInfo()</a> method.</li>
+            <li>Choose the encryption method with the <a class="linkapi" href="./classCZipArchive.html#00d53cf407629000c551cb134c8c7993">CZipArchive::SetEncryptionMethod()</a>
+                method when compressing. The encryption method used to compress a file will be automatically
+                detected while decompressing. </li>
+        </ul>
+        <h2 id="std" name="std" class="kb">
+            Standard Zip Encryption</h2>
+        The standard zip encryption method is considered weak and should be only used with
+        low security requirements or for preserving compatibility with applications that
+        do not support <a class="linkindex" href="#aes">the strong encryption</a>.
+        <div class="codetitle">Sample Code</div><pre class="fragment">    LPCTSTR zipFileName = _T(<span class="stringliteral">"Z:\\Temp\\test.zip"</span>);
+    LPCTSTR password = _T(<span class="stringliteral">"secret"</span>);
+    CZipArchive zip;
+    zip.Open(zipFileName, CZipArchive::zipCreate);
+    <span class="comment">// there is no need to set the encryption method with the </span>
+    <span class="comment">// standard zip encryption, it is used by default</span>
+
+    <span class="comment">// set the password to encrypt the next file</span>
+    zip.SetPassword(password);
+    zip.AddNewFile(_T(<span class="stringliteral">"Z:\\Temp\\file1.dat"</span>));
+    <span class="comment">// clear the password</span>
+    zip.SetPassword();
+    zip.AddNewFile(_T(<span class="stringliteral">"Z:\\Temp\\file2.dat"</span>));
+    zip.Close();
+    <span class="comment">// decompress the files</span>
+    zip.Open(zipFileName);
+    <span class="comment">// the first file is encrypted</span>
+    ASSERT(zip[0]-&gt;IsEncrypted());
+    <span class="comment">// the second file is not</span>
+    ASSERT(!zip[1]-&gt;IsEncrypted());
+    zip.SetPassword(password);
+    <span class="comment">// there is no need to set the encryption method</span>
+    <span class="comment">// when decrypting</span>
+    zip.ExtractFile(0, _T(<span class="stringliteral">"Z:\\Temp"</span>), <span class="keyword">false</span>, _T(<span class="stringliteral">"file1.ext"</span>));
+    <span class="comment">// there is no need to clear the password</span>
+    <span class="comment">// when decrypting a not encrypted file</span>
+    zip.ExtractFile(1, _T(<span class="stringliteral">"Z:\\Temp"</span>), <span class="keyword">false</span>, _T(<span class="stringliteral">"file2.ext"</span>));
+    zip.Close();
+</pre>
+        <h2 id="aes" name="aes" class="kb">
+            Strong AES Encryption Conforming to the WinZip Format</h2>
+        The ZipArchive Library supports AES encryption with key sizes <span class="nowrap">128-bit</span>,
+        <span class="nowrap">192-bit</span> and <span class="nowrap">256-bit</span>. The
+        format of AES encrypted data conforms to <a class="linkindex" href="http://www.winzip.com/aes_info.htm" target="_blank">the WinZip AE-2 specifications</a>. It is the prefered way to
+        ensure that your data is secure. To perform the AES encryption, The ZipArchive Library
+        uses a modified source code originally written by Dr Brian Gladman. Dr Brian Gladman
+        has generously made his AES function available publicly on his <a class="linkindex" href="http://fp.gladman.plus.com/cryptography_technology/fileencrypt/" target="_blank">
+            AES project page</a>.
+        <h3 id="enabling" name="enabling" class="kb">
+            Enabling AES Encryption in the ZipArchive Library</h3>
+        To use the AES encryption, you need to make sure that <span class="preproc">_ZIP_AES</span>
+        is defined in the file <span class="file">_features.h</span>. Rebuild the ZipArchive
+        Library and your application, if you modify this definition. You should keep the
+        encryption disabled, if you don't use it, to keep the size of the compiled library
+        smaller.
+        <h3 id="using" name="using" class="kb">
+            Encrypting Archives with AES</h3>
+        You need to choose the encryption method with the <a class="linkapi" href="./classCZipArchive.html#00d53cf407629000c551cb134c8c7993">CZipArchive::SetEncryptionMethod()</a>
+        using one of the <a class="linkapi" href="./classCZipCryptograph.html#b3e0a46c0680f616ccf7a163f4f40332">CZipCryptograph::EncryptionMethod</a>
+        values.
+        <div class="codetitle">Sample Code</div><pre class="fragment">    LPCTSTR zipFileName = _T(<span class="stringliteral">"Z:\\Temp\\test.zip"</span>);
+    LPCTSTR password = _T(<span class="stringliteral">"secret"</span>);
+    CZipArchive zip;
+    zip.Open(zipFileName, CZipArchive::zipCreate);
+    zip.SetPassword(password);
+    <span class="comment">// set the strongest encryption</span>
+    zip.SetEncryptionMethod(CZipCryptograph::encWinZipAes256);
+    zip.AddNewFile(_T(<span class="stringliteral">"Z:\\Temp\\file1.dat"</span>));
+    <span class="comment">// use the standard encryption for the second file</span>
+    zip.SetEncryptionMethod(CZipCryptograph::encStandard);
+    zip.AddNewFile(_T(<span class="stringliteral">"Z:\\Temp\\file2.dat"</span>));
+    zip.Close();
+    <span class="comment">// decompress the files</span>
+    zip.Open(zipFileName);
+    ASSERT(zip[0]-&gt;IsEncrypted());
+    ASSERT(zip[1]-&gt;IsEncrypted());
+    zip.SetPassword(password);
+    <span class="comment">// there is no need to set the encryption method</span>
+    <span class="comment">// when decrypting, even if files are encrypted</span>
+    <span class="comment">// using different methods</span>
+    zip.ExtractFile(0, _T(<span class="stringliteral">"Z:\\Temp"</span>), <span class="keyword">false</span>, _T(<span class="stringliteral">"file1.ext"</span>));
+    zip.ExtractFile(1, _T(<span class="stringliteral">"Z:\\Temp"</span>), <span class="keyword">false</span>, _T(<span class="stringliteral">"file2.ext"</span>));
+    zip.Close();
+</pre>
+        <h2 id="api" name="api" class="kb">
+            See Also API Calls</h2>
+        <ul class="non">
+            <li><a class="linkapi" href="./classCZipArchive.html#bbe0d1ba17c664a8c9c15bfecb37a274">CZipArchive::SetPassword()</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#1ae3937a27e2bcae5993ea6eb5d2f22c">CZipArchive::GetPassword()</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#00d53cf407629000c551cb134c8c7993">CZipArchive::SetEncryptionMethod()</a></li>
+            <li><a class="linkapi" href="./classCZipArchive.html#31b4d1f238c27c15e971aa3a949c39c2">CZipArchive::GetEncryptionMethod()</a></li>
+            <li><a class="linkapi" href="./classCZipFileHeader.html#d8b33eb8b9e30110b6b6789917aede8c">CZipFileHeader::IsEncrypted()</a></li>
+        </ul>
+    
+        </div>
+        <div class="kbafooter">
+            <strong>Article ID:&nbsp;0610201627</strong>
+        </div>
+    </div>
+   <div style="font-size:11px; text-align:center;border-top:solid 1px gray;width:400px;margin:10px auto 5px auto;color:gray">
+Copyright &copy;&nbsp;2000 - 2006 Tadeusz Dracz.
+</div>
+</body>
+</html>

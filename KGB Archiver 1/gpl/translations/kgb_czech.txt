@@ -1,0 +1,164 @@
+TRANSLATION ENGLISH NAME:
+TRANSLATION NATIVE NAME:
+
+IDD_KGB_ARCH_MFC
+Kam archivovat
+Formát archívu
+Stupeò komprese
+Minimální;Velmi malá;Malá;Bìžná;Støední;Silnìjší;Lepší;Nejlepší;Extrémní;Maximální;
+Segment archívu
+Heslo
+Modul SFX
+Vytvoøit modul SFX (pouze Windows)
+Další
+Zachovat úplnou cestu
+Soubory ke kompresi
+Pøidat soubor
+Pøidat adresáø
+Odstranit
+Zrušit
+Další >
+
+IDD_COMPRESS
+Komprese
+Aktuální soubor
+Prùbìh tohoto souboru
+Prùbìh celkem
+Statistiky
+Velikost pøed kompresí:
+Velikost po kompresi:
+Pomìr:
+Èas:
+Zbývající èas:
+Priorita:
+Vysoká;Vyšší;Bìžná;Malá;Nízká;
+Po dokonèení vypnout PC
+Zrušit
+
+STRING TABLE
+O KGB Archiveru
+Název souboru
+Velikost
+Soubor nelze pøipojit
+Napiš název k archívu a/nebo zvol soubor ke kompresi!
+Heslo by mìlo obsahovat od 4 do 32 znakù!
+Komprese pøerušena uživatelem!
+Komprese dokonèena!\nVelikost pøed kompresí:\t%s\nVelikost po kompresi:\t%s\nPøevod:\t\t\t%.1f%%\nUplynulý èas:\t\t
+Prosím zvol adresáø ke kompresi
+Nemohu zmìnit prioritu!
+Kompresováno
+pøipravuji...
+získávám velikost souborù...
+tøídím soubory...
+pøidávám modul SFX...
+kódování...
+Archívy KGB (*.kgb)|*.kgb|Archívy ZIP (*.zip)|*.zip|Všechny soubory (*.*)|*.*|
+Všechny soubory (*.*)|*.*|
+Do pole lze zapsat pouze èísla!
+Komprese mùže zabrat více než 75% fyzické pamìti, skuteènì mám pokraèovat?
+Komprese KGB:\t\tPamì\tRychlost\nMinimální\t\t\t      9MB\t200%\nVelmi slabá\t\t    11MB\t190%\nSlabá\t\t\t    15MB\t180%\nBìžná\t\t\t    27MB\t100%\nStøední\t\t\t    66MB\t  29%\nSilnìjší\t\t  154MB\t  17%\nLepší\t\t\t  202MB\t  16%\nNejlepší\t\t  402MB\t  15%\nExtrémní\t\t\t  800MB\t  14%\nMaximální\t\t\t1600MB\t  13%\n\nKomprese ZIP:\nVšechny módy zaberou kolem 10MB // \t MÍNÌNO 2 SOUBORY S DLOUHÝM A 3 S KRÁTKÝM SLOVNÍKEM
+Nedostatek volné pamìti pro pokraèování!
+Seznam souborù pro kompresi obsahuje soubor, který se shoduje s názvem archívu!
+Jsi si jist, že chceš zrušit kompresi?
+KGB Archiver podporuje soubory jen do 4GB!
+
+IDD_KGB_ARCH_DECOMPRESS
+Název a cesta k archívu
+Rozbalit do: (ignorováno, jestliže archív obsahuje úplnou cestu)
+Vybrat soubory k dekompresi
+Info o archívu
+Zrušit
+Další >
+
+IDD_DECOMPRESS
+Dekomprese
+Aktuální soubor
+Prùbìh aktuálního souboru
+Prùbìh celkovì
+Statistiky
+Velikost pøed kompresí:
+Velikost po kompresi:
+Pomìr:
+Èas:
+Zbývající èas:
+Priorita:
+Vysoká;Vyšší;Bìžná;Menší;Nízká;
+Po dokonèení vypnout PC
+Zrušit
+
+IDD_DECODING
+Dekódování...
+Prosím èekej...
+
+IDD_PASSWD
+Heslo
+Prosím zadej heslo
+OK
+Zrušit
+
+IDD_OVERWRITE
+Potvrzení pøepsání obsahu
+tento //Èást vìty: Chceš pøepsat existující soubor %.260s (DETAILNÍ INFO O SOUBORU) tímto (DETAILNÍ INFO O SOUBORU)
+Ano pro vše
+Ano
+Ne
+Ne pro vše
+
+STRING TABLE
+O KGB Archiveru
+Název souboru
+Velikost
+Napiš název k archívu a/nebo k umístìní adresáøe!
+Archív nenalezen!
+Nemohu rozbalit do adresáøe, který nebyl vytvoøen!
+Vyber soubory pro dekompresi!
+Dekomprese pøerušena uživatelem!
+Dekomprese dokonèena!\nVelikost pøed kompresí:\t%s\nVelikost po kompresi:\t%s\nPomìr:\t\t\t%.1f%%\nUplynulý èas:\t\t
+Prosím zvol adresáø pro dekompresi!
+Nesprávné heslo!
+Vybraný soubor není regulérním archívem KGB!
+Nemohu zmìnit prioritu!
+Dekomprese
+pøipravuji...
+vytváøím adresáøe...
+pøeskakuji...
+Všechny podporované archívy|*.kgb; *.kge; *.exe; *.zip;|Archívy KGB (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|Archívy ZIP (*.zip)|*.zip|
+Po kompresi: %s\tPùvodnì: %s\tPomìr: %.1f%%
+Nedostatek volné pamìti pro pokraèování!
+Chceš opravdu pøepsat existující soubor %.260s
+Chceš opravdu zrušit dekompresi?
+Velikost: %s
+Upravován: %s
+
+IDD_ARCH_CONF_DIALOG
+Vnitøní integrace
+Asociovat archívy KGB s KGB Archiverem
+Asociovat archívy ZIP s KGB Archiverem
+Pøidat do nabídky Prùzkumníka
+Jazyk
+ZDE PROSÍM NAPIŠ NÁZEV SVÉHO JAZYKA - Èesky
+Další
+Po spuštìní aktualizovat
+Zkontrolovat nyní
+Zobrazit statistiky po kompresi/dekompresi
+O programu
+Zrušit
+OK
+
+IDD_MAIN
+Prosím vyber, co chceš udìlat:
+Zabalit soubory
+Rozbalit archív
+Pøizpùsobit možnosti
+Top 10 dárcù
+O programu
+Zrušit
+Dále >
+
+STRING TABLE
+O KGB Archiveru
+Komprese do KGB
+Nemohu se pøipojit na KGB server!
+Je dostupná nová verze KGB Archiveru! Chceš jí stáhnout?
+Aktualizace nenalezeny
+Rozbalit sem

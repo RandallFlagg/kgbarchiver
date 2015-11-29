@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>ZipArchive:
+        Frequently Asked Questions
+    </title>
+    <link href="articles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    body
+    {
+    	font-family: verdana, arial, helvetica, sans-serif;
+    }
+</style>
+</head>
+<body>
+    <div class="kbabody">
+        <div class="kbatitle">
+            Frequently Asked Questions
+        </div>
+        <div class="kbaappliesto">
+            Applies To: <strong>All</strong>
+        </div>
+        <div class="kbaindex">
+            <ul class="kbaindex">
+
+<li><a class="linkindex" href="#link">How to deal with linking problems in Microsoft Visual Studio?</a></li>
+<li><a class="linkindex" href="#commercial">How to create &gt;2GB archive or compress more than 65535 files inside it?</a></li>
+<li><a class="linkindex" href="#segmmode">How can I detect the segmentation mode of an archive?</a></li>
+<li><a class="linkindex" href="#noextract">Why the library doesn't extract archives (mostly old)?</a></li>
+<li><a class="linkindex" href="#">How to use a partial path for the filename inside an archive?</a></li>
+<li><a class="linkindex" href="#forlinux">How to create an archive under Windows that will be readable under Linux?</a></li>
+<li><a class="linkindex" href="#patterns">How to extract or delete files that match a specified wildcard pattern?</a></li></ul>
+
+        </div>
+        <div class="kbacontents">
+            
+        <h3 id="link" name="link" class="kb">
+            How to deal with linking problems in Microsoft Visual Studio?</h3>
+        <ul>
+            <li>If you have <span class="preproc">LNK2005</span>, your application probably uses
+                different run-time libraries that the ZipArchive Library was compiled for.</li>
+            <li>If you have <span class="preproc">LNK1104</span> (e.g. cannot open the <span class="file">mfc42u.lib</span> file), you probably haven't installed Unicode libraries.</li>
+        </ul>
+        To resolve both problems, make sure you have followed the information given in <a class="linkkb" href="0610050933.html#vsnotes">Compilation of the ZipArchive Library and Integration with Applications</a>.
+        <h3 id="commercial" name="commercial" class="kb">
+            How to create &gt;2GB archive or compress more than 65535 files inside it?</h3>
+        The standard zip format does not support large archives. You need to use the Zip64
+        extensions. See <a class="linkkb" href="0610051629.html">Zip64 Format: Crossing the Limits of File Sizes and Number of Files and Segments</a> for more information. This functionality
+        is available only to the purchasers of the commercial license.
+        <h3 id="lastdisk" class="kb">
+            Why I receive the <a class="linkapi" href="./classCZipException.html#a4f3fc7c792e57a0a6881b6ea48725af62c9a10984629c00e661ef7e218dc1b0">CZipException::cdirNotFound</a> exception
+            when trying to open a segmented archive?</h3>
+        You need to open the last segment. For more information about dealing with this
+        problem in spanned archives, see <a class="linkkb" href="0610051553.html#spanlast">Segmented Archives: Splitting and Spanning</a>.
+        <h3 id="segmmode" name="segmmode" class="kb">
+            How can I detect the segmentation mode of an archive?</h3>
+        You need to open the archive and the call the <a class="linkapi" href="./classCZipArchive.html#57b5e58cf7278484892cf6fa9fbaa9b5">CZipArchive::GetSegmMode()</a>
+        method.
+        <h3 id="noextract" name="noextract" class="kb">
+            Why the library doesn't extract archives (mostly old)?</h3>
+        The common reason is that the data is compressed using imploded method (usually
+        using old archivers). The only methods supported by the ZipArchive Library are deflation
+        which is the most commonly used by archivers and storing. To determine the compression
+        method for a particular file, obtain the information data (see <a class="linkkb" href="0610242128.html#file">Requesting Information, Predicting Names and Sizes</a> for more information) and examine the <a class="linkapi" href="./classCZipFileHeader.html#565b52e5bc6a1e76f1397db36bee4c44">CZipFileHeader::m_uMethod</a>
+        field.
+        <h3 id="" name="" class="kb">
+            How to use a partial path for the filename inside an archive?</h3>
+        For example, if you compress a directory <span class="file">c:\Program Files\Example</span>,
+        the full path of the file inside the archive is stored. If you would like to store
+        the path for the file, e.g. in <span class="file">c:\Program Files\Example\text\txt\file.dat</span>,
+        as <span class="file">Example\text\txt\file.dat</span>, use the <a class="linkapi" href="./classCZipArchive.html#0e623537c7cbf00c6b255c3a5728acd9">CZipArchive::SetRootPath()</a> method. In this example, you would set it
+        to <span class="file">c:\Program Files\</span>. Remember about setting <code>bFullPath</code>
+        argument in compression methods to <code>false</code>.
+        <h3 id="forlinux" name="forlinux" class="kb">
+            How to create an archive under Windows that will be readable under Linux?</h3>
+        Inside archives there is information stored about the system it was created under.
+        It helps converting the file attributes that are stored inside the archive to file
+        attributes that are used on the system on which the file is extracted. Some Linux
+        archivers cannot convert Windows attributes to Unix, so that it is needed to create
+        the archive with the Linux attributes already (and the internal info about the system
+        set to the Linux value). To do it, simply call the <a class="linkapi" href="./classCZipArchive.html#3b22230148bd8a11a9f1f92bff446e1b">CZipArchive::SetSystemCompatibility()</a>
+        method with the argument set to <a class="linkapi" href="./namespaceZipCompatibility.html#e66702f3e1756c3a13834602f88612095e253388a2ec345b03c84b36883ff63e">ZipCompatibility::zcUnix</a>.
+        <h3 id="patterns" name="patterns" class="kb">
+            How to extract or delete files that match a specified wildcard pattern?</h3>
+        You need to build a <code>CZipIndexesArray</code> object with the <a class="linkapi" href="./classCZipArchive.html#b6d202ba9404fb24e27c23497638b6e0">CZipArchive::FindMatches()</a> method and then:
+        <ul>
+            <li>To <strong>delete</strong>, use the array as an argument to the<br />
+                <a class="linkapi" href="./classCZipArchive.html#10a1432df092d44764fe12676ffbe9d4">CZipArchive::DeleteFiles(CZipIndexesArray&)</a> method.</li>
+            <li>To <strong>extract</strong>, you need to enumerate over the array and pass the indexes
+                one-by-one, e.g. to the <a class="linkapi" href="./classCZipArchive.html#710e3ad1d7f7ca464c23d60120b3acd4">CZipArchive::ExtractFile(ZIP_U16_U64,                     LPCTSTR, bool, LPCTSTR, DWORD )</a> method.</li>
+        </ul>
+        <h3 id="exceptionwhenclose" class="kb">
+            Why an exception is thrown when I call one of <code>CZipArchive::CloseFile()</code>
+            methods?</h3>
+        If you haven't extracted all of the file contents (e.g. only the beginning) or you
+        have encountered an exception during extraction, you need to call the <a class="linkapi" href="./classCZipArchive.html#90e6ef00e6b003871886f18e94e79360">CZipArchive::CloseFile(LPCTSTR, bool)</a> with <code>bAfterException</code>
+        parameter set to <code>true</code>.
+    
+        </div>
+        <div class="kbafooter">
+            <strong>Article ID:&nbsp;faq</strong>
+        </div>
+    </div>
+   <div style="font-size:11px; text-align:center;border-top:solid 1px gray;width:400px;margin:10px auto 5px auto;color:gray">
+Copyright &copy;&nbsp;2000 - 2006 Tadeusz Dracz.
+</div>
+</body>
+</html>

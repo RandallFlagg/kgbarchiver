@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Release\ZipArc.exe"/>
+    <OBJFILES value="Release\BrowseForFolder.obj Release\CheckStatic.obj Release\ChildFrm.obj 
+      Release\CreditsCtrl.obj Release\DlgContainer.obj Release\DlgExtract.obj 
+      Release\DlgFileInfo.obj Release\DlgNew.obj Release\DlgOptAbout.obj 
+      Release\DlgOptAppear.obj Release\DlgOptCompr.obj Release\DlgOptGen.obj 
+      Release\DlgOptSmart.obj Release\DlgPassword.obj Release\DlgReport.obj 
+      Release\DlgSave.obj Release\DropFiles.obj Release\InfoButton.obj 
+      Release\MainFrm.obj Release\MMStatusBar.obj Release\Options.obj 
+      Release\ProgressBar.obj Release\RegistrySerialize.obj 
+      Release\ResizableDialog.obj Release\ResizableGrip.obj 
+      Release\ResizableLayout.obj Release\ResizableMinMax.obj 
+      Release\ResizableState.obj Release\SAPrefsDialog.obj 
+      Release\SAPrefsStatic.obj Release\SAPrefsSubDlg.obj Release\Signal.obj 
+      Release\SortableObArray.obj Release\StdAfx.obj Release\ZipArc.obj 
+      Release\ZipArcDoc.obj Release\ZipArcView.obj Release\DlgSelect.obj 
+      Release\DlgGetFrom.obj Release\DlgReplace.obj"/>
+    <RESFILES value="Release\ZipArc.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value=""/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
+      vcldbx.bpi ibxpress.bpi cds.bpi dsnap.bpi bdecds.bpi qrpt.bpi teeui.bpi 
+      teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
+      dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="WIN32;NDEBUG;_WINDOWS;_AFXDLL;_MBCS;ZIP_ARCHIVE_MFC"/>
+    <SYSDEFINES value="_NO_VCL;_ASSERTE;NO_STRICT;INC_OLE2;_X86_;_WINDOWS;_MSC_VER=1100;_AFX_PORTABLE;__MSC;_AFX_NOFORCE_LIBS;_MT;_CRT_PORTABLE;_AFX_NO_DEBUG_CRT;_DLL;_RTLDLL"/>
+    <MAINSOURCE value="ZipArc.bpf"/>
+    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\mfc;$(BCB)\include\atl"/>
+    <LIBPATH value="$(BCB)\lib;$(RELEASELIBPATH);$(BCB)\lib\psdk"/>
+    <WARNINGS value="-w-8026 -w-8027 -w-par -w-aus -w-hid -w-inl"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\mfc -I$(BCB)\include\atl -src_suffix cpp 
+      -DWIN32 -DNDEBUG -D_WINDOWS -D_AFXDLL -D_MBCS -DZIP_ARCHIVE_MFC"/>
+    <CFLAG1 value="-O2 -w -VF -X- -a8 -b -k -vi -q -tWR -tWM -c -g0"/>
+    <PFLAGS value="-N2Release -N0Release -$YD -$A8"/>
+    <RFLAGS value="/l 0x409 /d &quot;NDEBUG&quot; /d &quot;_AFXDLL&quot; /i$(BCB)\include;$(BCB)\include\mfc"/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-IRelease -D&quot;&quot; -aa -Tpe -x -Gn -v -q"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) bfcs42.lib bfc42.lib ole2w32.lib odbc32.lib 
+      import32.lib cw32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="ZipArc.bpf" FORMNAME="" UNITNAME="ZipArc" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="BrowseForFolder.cpp" FORMNAME="" UNITNAME="BrowseForFolder" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CheckStatic.cpp" FORMNAME="" UNITNAME="CheckStatic" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ChildFrm.cpp" FORMNAME="" UNITNAME="ChildFrm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CreditsCtrl.cpp" FORMNAME="" UNITNAME="CreditsCtrl" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgContainer.cpp" FORMNAME="" UNITNAME="DlgContainer" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgExtract.cpp" FORMNAME="" UNITNAME="DlgExtract" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgFileInfo.cpp" FORMNAME="" UNITNAME="DlgFileInfo" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgNew.cpp" FORMNAME="" UNITNAME="DlgNew" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgOptAbout.cpp" FORMNAME="" UNITNAME="DlgOptAbout" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgOptAppear.cpp" FORMNAME="" UNITNAME="DlgOptAppear" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgOptCompr.cpp" FORMNAME="" UNITNAME="DlgOptCompr" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgOptGen.cpp" FORMNAME="" UNITNAME="DlgOptGen" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgOptSmart.cpp" FORMNAME="" UNITNAME="DlgOptSmart" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgPassword.cpp" FORMNAME="" UNITNAME="DlgPassword" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgReport.cpp" FORMNAME="" UNITNAME="DlgReport" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgSave.cpp" FORMNAME="" UNITNAME="DlgSave" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DropFiles.cpp" FORMNAME="" UNITNAME="DropFiles" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="InfoButton.cpp" FORMNAME="" UNITNAME="InfoButton" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MainFrm.cpp" FORMNAME="" UNITNAME="MainFrm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MMStatusBar.cpp" FORMNAME="" UNITNAME="MMStatusBar" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Options.cpp" FORMNAME="" UNITNAME="Options" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ProgressBar.cpp" FORMNAME="" UNITNAME="ProgressBar" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="RegistrySerialize.cpp" FORMNAME="" UNITNAME="RegistrySerialize" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ResizableDialog.cpp" FORMNAME="" UNITNAME="ResizableDialog" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ResizableGrip.cpp" FORMNAME="" UNITNAME="ResizableGrip" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ResizableLayout.cpp" FORMNAME="" UNITNAME="ResizableLayout" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ResizableMinMax.cpp" FORMNAME="" UNITNAME="ResizableMinMax" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ResizableState.cpp" FORMNAME="" UNITNAME="ResizableState" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SAPrefsDialog.cpp" FORMNAME="" UNITNAME="SAPrefsDialog" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SAPrefsStatic.cpp" FORMNAME="" UNITNAME="SAPrefsStatic" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SAPrefsSubDlg.cpp" FORMNAME="" UNITNAME="SAPrefsSubDlg" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Signal.cpp" FORMNAME="" UNITNAME="Signal" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SortableObArray.cpp" FORMNAME="" UNITNAME="SortableObArray" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="StdAfx.cpp" FORMNAME="" UNITNAME="StdAfx" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipArc.cpp" FORMNAME="" UNITNAME="ZipArc" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipArcDoc.cpp" FORMNAME="" UNITNAME="ZipArcDoc" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipArcView.cpp" FORMNAME="" UNITNAME="ZipArcView" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipArc.rc" FORMNAME="" UNITNAME="ZipArc" CONTAINERID="RCCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgSelect.cpp" FORMNAME="" UNITNAME="DlgSelect" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgGetFrom.cpp" FORMNAME="" UNITNAME="DlgGetFrom" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DlgReplace.cpp" FORMNAME="" UNITNAME="DlgReplace" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=1
+Item0=$(BCB)\include;$(BCB)\include\mfc;$(BCB)\include\atl;
+
+[HistoryLists\hlLibraryPath]
+Count=1
+Item0=$(BCB)\lib;$(RELEASELIBPATH);;$(BCB)\lib\psdk;
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=2
+Item0=WIN32;NDEBUG;_WINDOWS;_AFXDLL;_MBCS;ZIP_ARCHIVE_MFC
+Item1=WIN32;NDEBUG;_WINDOWS;_AFXDLL;_MBCS
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=Release
+
+[HistoryLists\hlFinalOutputDir]
+Count=1
+Item0=Release\
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

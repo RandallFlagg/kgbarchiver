@@ -1,0 +1,903 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;gStatistics.Name" xml:space="preserve">
+    <value>gStatistics</value>
+  </data>
+  <data name="lProjected.Text" xml:space="preserve">
+    <value>100MB</value>
+  </data>
+  <data name="cPriority.Items1" xml:space="preserve">
+    <value>Above normal</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cPriority.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 21</value>
+  </data>
+  <data name="&gt;&gt;gCurrentProgress.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="gCurrentProgress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 52</value>
+  </data>
+  <data name="&gt;&gt;lProjectedDesc.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lRatio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 50</value>
+  </data>
+  <data name="&gt;&gt;lBefore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pCurrent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pTotal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 19</value>
+  </data>
+  <data name="&gt;&gt;cShutdown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gFilename.Name" xml:space="preserve">
+    <value>gFilename</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lBefore.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pCurrent.Name" xml:space="preserve">
+    <value>pCurrent</value>
+  </data>
+  <data name="gFilename.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gTotalProgress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 114</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lRatio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="lTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 67</value>
+  </data>
+  <data name="&gt;&gt;lRatio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="bCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 282</value>
+  </data>
+  <data name="lFilename.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 16</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Ratio:</value>
+  </data>
+  <data name="lRemaining.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 84</value>
+  </data>
+  <data name="&gt;&gt;lFilename.Name" xml:space="preserve">
+    <value>lFilename</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="&gt;&gt;cPriority.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lRemaining.Text" xml:space="preserve">
+    <value>00:00:00</value>
+  </data>
+  <data name="&gt;&gt;gFilename.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;gStatistics.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Time:</value>
+  </data>
+  <data name="lTime.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lProjected.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 13</value>
+  </data>
+  <data name="lProjected.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gTotalProgress.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;iTrayList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Size before compression:</value>
+  </data>
+  <data name="iTray.Text" xml:space="preserve">
+    <value>KGB Archiver 2</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>KGB Archiver 2</value>
+  </data>
+  <data name="&gt;&gt;lProjectedDesc.Name" xml:space="preserve">
+    <value>lProjectedDesc</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="lProjectedDesc.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lTime.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lBefore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 16</value>
+  </data>
+  <data name="cPriority.Items" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="cPriority.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pThis.Type" xml:space="preserve">
+    <value>System.Diagnostics.Process, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gFilename.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gFilename.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;iTray.Name" xml:space="preserve">
+    <value>iTray</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lProjected.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lFilename.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gStatistics.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="bCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="pTotal.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lBefore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="lProjected.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 33</value>
+  </data>
+  <data name="&gt;&gt;iTrayList.Name" xml:space="preserve">
+    <value>iTrayList</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>gStatistics</value>
+  </data>
+  <data name="&gt;&gt;lTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="iTray.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lRemaining.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lRatio.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lFilename.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 67</value>
+  </data>
+  <data name="&gt;&gt;gTotalProgress.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="gStatistics.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pTotal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lBefore.Name" xml:space="preserve">
+    <value>lBefore</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lBefore.Parent" xml:space="preserve">
+    <value>gStatistics</value>
+  </data>
+  <data name="&gt;&gt;lRemaining.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lTime.Text" xml:space="preserve">
+    <value>00:00:00</value>
+  </data>
+  <data name="cPriority.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 283</value>
+  </data>
+  <data name="lRemaining.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gTotalProgress.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="bCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="gTotalProgress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 52</value>
+  </data>
+  <data name="pCurrent.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pCurrent.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;cShutdown.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lProjected.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="gFilename.Text" xml:space="preserve">
+    <value>Current file</value>
+  </data>
+  <data name="&gt;&gt;gTotalProgress.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>gStatistics</value>
+  </data>
+  <data name="&gt;&gt;gTotalProgress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lProjected.Name" xml:space="preserve">
+    <value>lProjected</value>
+  </data>
+  <data name="&gt;&gt;lProjected.Parent" xml:space="preserve">
+    <value>gStatistics</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;bCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gFilename.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="pCurrent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 19</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 50</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lFilename.Text" xml:space="preserve">
+    <value>filename.fileextension</value>
+  </data>
+  <data name="&gt;&gt;pThis.Name" xml:space="preserve">
+    <value>pThis</value>
+  </data>
+  <data name="&gt;&gt;pTotal.Name" xml:space="preserve">
+    <value>pTotal</value>
+  </data>
+  <data name="&gt;&gt;gFilename.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lFilename.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lRatio.Name" xml:space="preserve">
+    <value>lRatio</value>
+  </data>
+  <data name="&gt;&gt;gTotalProgress.Name" xml:space="preserve">
+    <value>gTotalProgress</value>
+  </data>
+  <data name="gCurrentProgress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 56</value>
+  </data>
+  <data name="lBefore.Text" xml:space="preserve">
+    <value>100MB</value>
+  </data>
+  <data name="&gt;&gt;lTime.Name" xml:space="preserve">
+    <value>lTime</value>
+  </data>
+  <data name="lRemaining.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="&gt;&gt;cShutdown.Name" xml:space="preserve">
+    <value>cShutdown</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>gStatistics</value>
+  </data>
+  <data name="gFilename.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 38</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="gTotalProgress.Text" xml:space="preserve">
+    <value>Total progress</value>
+  </data>
+  <data name="lTime.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;iTray.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lRatio.Text" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="lProjectedDesc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 33</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 286</value>
+  </data>
+  <data name="cPriority.Items2" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="&gt;&gt;bCancel.Name" xml:space="preserve">
+    <value>bCancel</value>
+  </data>
+  <data name="&gt;&gt;lRatio.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cPriority.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lRatio.Parent" xml:space="preserve">
+    <value>gStatistics</value>
+  </data>
+  <data name="cShutdown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 32</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pTotal.Parent" xml:space="preserve">
+    <value>gTotalProgress</value>
+  </data>
+  <data name="gCurrentProgress.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Priority:</value>
+  </data>
+  <data name="&gt;&gt;lRemaining.Parent" xml:space="preserve">
+    <value>gStatistics</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 13</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>gStatistics</value>
+  </data>
+  <data name="&gt;&gt;pCurrent.Parent" xml:space="preserve">
+    <value>gCurrentProgress</value>
+  </data>
+  <data name="gStatistics.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 104</value>
+  </data>
+  <data name="&gt;&gt;cPriority.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Remaining time:</value>
+  </data>
+  <data name="&gt;&gt;gStatistics.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lProjectedDesc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cPriority.Name" xml:space="preserve">
+    <value>cPriority</value>
+  </data>
+  <data name="lRatio.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lProjectedDesc.Parent" xml:space="preserve">
+    <value>gStatistics</value>
+  </data>
+  <data name="cPriority.Items3" xml:space="preserve">
+    <value>Below normal</value>
+  </data>
+  <data name="lRemaining.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="pCurrent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;lRemaining.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lProjectedDesc.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;bCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gCurrentProgress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lFilename.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="lBefore.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="gStatistics.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 172</value>
+  </data>
+  <data name="gStatistics.Text" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="bCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="cShutdown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;lRemaining.Name" xml:space="preserve">
+    <value>lRemaining</value>
+  </data>
+  <data name="lProjectedDesc.Text" xml:space="preserve">
+    <value>Archive size:</value>
+  </data>
+  <data name="gStatistics.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="iTrayList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB0
+        IQAAAk1TRnQBSQFMAgEBBgEAAQwBAAEEAQABEAEAARABAAT/ASEBEAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABIAMAAQEBAAEgBgABIDIAAQkBPAGZAf8BCQE8AZkB/wE8AZkBzAH/AQkBPAGZAf8DDQH/AdYC5wH/
+        AdYC5wH/Aw0B/yAAAQkBPAGZAf8BCQE8AZkB/wE8AZkBzAH/AQkBPAGZAf8DDQH/AdYC5wH/AdYC5wH/
+        Aw0B/5QAAQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/AQkBPAGZAf8BPAGZAv8BPAGZAv8BPAGZAv8DDQH/
+        AdYC5wH/AdYC5wH/Aw0B/xQAAQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/AQkBPAGZAf8BPAGZAv8BPAGZ
+        Av8BPAGZAv8DDQH/AdYC5wH/AdYC5wH/Aw0B/4AAAZkBzAL/AQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/
+        AQkBPAGZAf8BCQFvAcwB/wE8AZkC/wE8AZkC/wE8AW8BzAH/AQkBPAGZAf8BCQFvAcwB/wE8AZkC/wMN
+        Af8B1gLnAf8B1gLnAf8DDQH/AZkBzAL/AQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/AQkBPAGZAf8BCQFv
+        AcwB/wE8AZkC/wE8AZkC/wE8AW8BzAH/AQkBPAGZAf8BCQFvAcwB/wE8AZkC/wMNAf8B1gLnAf8B1gLn
+        Af8DDQH/gAABPAGZAv8BPAGZAv8BPAFvAcwB/wEJAW8BzAH/AQkBPAGZAf8BPAGZAv8BPAGZAv8BPAGZ
+        Av8BCQE8AZkB/wFvAcwC/wFvAcwC/wE8AW8BzAH/Aw0B/wHWAucB/wHWAucB/wMNAf8BPAGZAv8BPAGZ
+        Av8BPAFvAcwB/wEJAW8BzAH/AQkBPAGZAf8BPAGZAv8BPAGZAv8BPAGZAv8BCQE8AZkB/wFvAcwC/wFv
+        AcwC/wE8AW8BzAH/Aw0B/wHWAucB/wHWAucB/wMNAf+AAAE8AZkC/wE8AZkC/wE8AZkC/wE8AZkC/wE8
+        AW8BzAH/ATwBmQL/ATwBmQL/ATwBbwGZAf8BCQFvAcwB/wFvAcwC/wFvAcwC/wFvAcwC/wMNAf8B1gLn
+        Af8B1gLnAf8DDQH/ATwBmQL/ATwBmQL/ATwBmQL/ATwBmQL/ATwBbwHMAf8BPAGZAv8BPAGZAv8BPAFv
+        AZkB/wEJAW8BzAH/AW8BzAL/AW8BzAL/AW8BzAL/Aw0B/wHWAucB/wHWAucB/wMNAf+EAAE8AcwC/wE8
+        AcwC/wE8AZkC/wE8AZkC/wE8AZkC/wE8AZkC/wGZAcwC/wEJATwBmQH/AQkBbwGZAf8BPAFvAcwB/wEJ
+        AW8BzAH/Aw0B/wHWAucB/wHWAucB/wMNAf8EAAE8AcwC/wE8AcwC/wE8AZkC/wE8AZkC/wE8AZkC/wE8
+        AZkC/wGZAcwC/wEJATwBmQH/AQkBbwGZAf8BPAFvAcwB/wEJAW8BzAH/Aw0B/wHWAucB/wHWAucB/wMN
+        Af+EAAFvAcwC/wFvAcwC/wFvAcwC/wE8AcwC/wE8AcwC/wE8AcwC/wGZAcwC/wE8AW8BmQH/AW8BzAL/
+        AW8BzAL/AW8BzAL/Aw0B/wHWAucB/wHWAucB/wMNAf8EAAFvAcwC/wFvAcwC/wFvAcwC/wE8AcwC/wE8
+        AcwC/wE8AcwC/wGZAcwC/wE8AW8BmQH/AW8BzAL/AW8BzAL/AW8BzAL/Aw0B/wHWAucB/wHWAucB/wMN
+        Af+EAAE8AZkC/wE8AZkC/wE8AZkC/wE8AZkC/wFvAcwC/wFvAcwC/wGZAcwC/wEJATwBmQH/ATwBbwHM
+        Af8BPAFvAcwB/wFvAcwC/wMNAf8B1gLnAf8B1gLnAf8DDQH/BAABPAGZAv8BPAGZAv8BPAGZAv8BPAGZ
+        Av8BbwHMAv8BbwHMAv8BmQHMAv8BCQE8AZkB/wE8AW8BzAH/ATwBbwHMAf8BbwHMAv8DDQH/AdYC5wH/
+        AdYC5wH/Aw0B/4QAAQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/AQkBPAGZAf8BbwHMAv8BbwHMAv8BbwHM
+        Av8BCQFvAcwB/wGZAcwC/wFvAZkBzAH/ATwBbwGZAf8DDQH/AdYC5wH/AdYC5wH/Aw0B/wQAAQkBPAGZ
+        Af8BCQE8AZkB/wEJATwBmQH/AQkBPAGZAf8BbwHMAv8BbwHMAv8BbwHMAv8BCQFvAcwB/wGZAcwC/wFv
+        AZkBzAH/ATwBbwGZAf8DDQH/AdYC5wH/AdYC5wH/Aw0B/4wAAQkBPAGZAf8BCQE8AZkB/wFvAcwC/wFv
+        AcwC/wFvAcwC/wEJAW8BzAH/AW8BmQL/AW8BzAL/AZkBzAL/Aw0B/wHWAucB/wHWAucB/wMNAf8MAAEJ
+        ATwBmQH/AQkBPAGZAf8BbwHMAv8BbwHMAv8BbwHMAv8BCQFvAcwB/wFvAZkC/wFvAcwC/wGZAcwC/wMN
+        Af8B1gLnAf8B1gLnAf8DDQH/iAABCQE8AZkB/wEJATwBmQH/AW8BzAL/AW8BmQL/ATwBmQHMAf8BbwHM
+        Av8BbwHMAv8BCQFvAZkB/wE8AW8BzAH/AW8BzAL/Aw0B/wHWAucB/wHWAucB/wMNAf8IAAEJATwBmQH/
+        AQkBPAGZAf8BbwHMAv8BbwGZAv8BPAGZAcwB/wFvAcwC/wFvAcwC/wEJAW8BmQH/ATwBbwHMAf8BbwHM
+        Av8DDQH/AdYC5wH/AdYC5wH/Aw0B/4AAAQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/AW8BzAL/AW8BzAL/
+        AW8BmQHMAf8BCQE8AZkB/wEJATwBmQH/AQkBbwGZAf8BbwHMAv8BbwHMAv8BbwHMAv8DDQH/Aw0B/wMN
+        Af8DDQH/AQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/AW8BzAL/AW8BzAL/AW8BmQHMAf8BCQE8AZkB/wEJ
+        ATwBmQH/AQkBbwGZAf8BbwHMAv8BbwHMAv8BbwHMAv8DDQH/AdYC5wH/AdYC5wH/Aw0B/4AAAQkBPAGZ
+        Af8BPAFvAcwB/wFvAcwC/wFvAcwC/wGZAcwC/wFvAZkBzAH/AQkBPAGZAf8EAAEJATwBmQH/AQkBPAGZ
+        Af8BCQE8AZkB/wFvAZkBzAH/AW8BmQHMAf8BCQE8AZkB/wgAAQkBPAGZAf8BPAFvAcwB/wFvAcwC/wFv
+        AcwC/wGZAcwC/wFvAZkBzAH/AQkBPAGZAf8EAAEJATwBmQH/AQkBPAGZAf8BCQE8AZkB/wFvAZkBzAH/
+        Aw0B/wHWAucB/wHWAucB/wMNAf+AAAEJATwBmQH/AW8BzAL/AW8BzAL/AW8BzAL/AcwD/wE8AZkBzAH/
+        AQkBPAGZAf8MAAEJATwBmQH/AQkBPAGZAf8BCQE8AZkB/wwAAQkBPAGZAf8BbwHMAv8BbwHMAv8BbwHM
+        Av8BzAP/ATwBmQHMAf8BCQE8AZkB/wwAAQkBPAGZAf8BCQE8AZkB/wMNAf8B1gLnAf8B1gLnAf8DDQH/
+        gAABCQE8AZkB/wE8AZkBzAH/AZkBzAL/AZkD/wGZAcwC/wEJATwBmQH/AQkBPAGZAf8kAAEJATwBmQH/
+        ATwBmQHMAf8BmQHMAv8BmQP/AZkBzAL/AQkBPAGZAf8BCQE8AZkB/xQAAw0B/wMNAf8DDQH/Aw0B/4AA
+        AQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/ATwBbwGZAf8BCQE8AZkB/wEJATwBmQH/KAABCQE8AZkB/wEJ
+        ATwBmQH/AQkBPAGZAf8BPAFvAZkB/wEJATwBmQH/AQkBPAGZAf/IAAEJATwBmQH/AQkBPAGZAf8BPAGZ
+        AcwB/wEJATwBmQH/AQkBPAGZAf8BCQE8AZkB/ygAAQkBPAGZAf8BCQE8AZkB/wE8AZkBzAH/AQkBPAGZ
+        Af8DDQH/AdYC5wH/AdYC5wH/Aw0B/yAAAQkBPAGZAf8BCQE8AZkB/wE8AZkBzAH/AQkBPAGZAf8DDQH/
+        AdYC5wH/AdYC5wH/Aw0B/yAAAQkBPAGZAf8BCQE8AZkB/wE8AZkBzAH/AQkBPAGZAf8DDQH/AdYC5wH/
+        AdYC5wH/Aw0B/xQAAQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/AQkBPAGZAf8BPAGZAv8BPAGZAv8BPAGZ
+        Av8BbwHMAv8BCQE8AZkB/xwAAQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/AQkBPAGZAf8BPAGZAv8BPAGZ
+        Av8BPAGZAv8DDQH/AdYC5wH/AdYC5wH/Aw0B/xQAAQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/AQkBPAGZ
+        Af8BPAGZAv8BPAGZAv8BPAGZAv8DDQH/AdYC5wH/AdYC5wH/Aw0B/xQAAQkBPAGZAf8BCQE8AZkB/wEJ
+        ATwBmQH/AQkBPAGZAf8BPAGZAv8BPAGZAv8BPAGZAv8DDQH/AdYC5wH/AdYC5wH/Aw0B/wGZAcwC/wEJ
+        ATwBmQH/AQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/AQkBbwHMAf8BPAGZAv8BPAGZAv8BPAFvAcwB/wEJ
+        ATwBmQH/AQkBbwHMAf8BPAGZAv8BbwHMAv8BPAGZAcwB/wgAAZkBzAL/AQkBPAGZAf8BCQE8AZkB/wEJ
+        ATwBmQH/AQkBPAGZAf8BCQFvAcwB/wE8AZkC/wE8AZkC/wE8AW8BzAH/AQkBPAGZAf8BCQFvAcwB/wE8
+        AZkC/wMNAf8DDQH/Aw0B/wMNAf8BmQHMAv8BCQE8AZkB/wEJATwBmQH/AQkBPAGZAf8BCQE8AZkB/wEJ
+        AW8BzAH/ATwBmQL/ATwBmQL/ATwBbwHMAf8BCQE8AZkB/wEJAW8BzAH/ATwBmQL/Aw0B/wHWAucB/wHW
+        AucB/wMNAf8BmQHMAv8BCQE8AZkB/wEJATwBmQH/AQkBPAGZAf8BCQE8AZkB/wEJAW8BzAH/ATwBmQL/
+        ATwBmQL/ATwBbwHMAf8BCQE8AZkB/wEJAW8BzAH/ATwBmQL/Aw0B/wHWAucB/wHWAucB/wMNAf8BPAGZ
+        Av8BPAGZAv8BPAFvAcwB/wEJAW8BzAH/AQkBPAGZAf8BPAGZAv8BPAGZAv8BPAGZAv8BCQE8AZkB/wFv
+        AcwC/wFvAcwC/wE8AW8BzAH/AQkBbwGZAf8BPAFvAZkB/wgAATwBmQL/ATwBmQL/ATwBbwHMAf8BCQFv
+        AcwB/wEJATwBmQH/ATwBmQL/ATwBmQL/ATwBmQL/AQkBPAGZAf8BbwHMAv8BbwHMAv8BPAFvAcwB/wEJ
+        AW8BmQH/ATwBbwGZAf8IAAE8AZkC/wE8AZkC/wE8AW8BzAH/AQkBbwHMAf8BCQE8AZkB/wE8AZkC/wE8
+        AZkC/wE8AZkC/wEJATwBmQH/AW8BzAL/AW8BzAL/ATwBbwHMAf8DDQH/AdYC5wH/AdYC5wH/Aw0B/wE8
+        AZkC/wE8AZkC/wE8AW8BzAH/AQkBbwHMAf8BCQE8AZkB/wE8AZkC/wE8AZkC/wE8AZkC/wEJATwBmQH/
+        AW8BzAL/AW8BzAL/ATwBbwHMAf8DDQH/AdYC5wH/AdYC5wH/Aw0B/wE8AZkC/wE8AZkC/wE8AZkC/wE8
+        AZkC/wE8AW8BzAH/ATwBmQL/ATwBmQL/ATwBbwGZAf8BCQFvAcwB/wFvAcwC/wFvAcwC/wFvAcwC/wFv
+        AZkBzAH/AQkBPAGZAf8IAAE8AZkC/wE8AZkC/wE8AZkC/wE8AZkC/wE8AW8BzAH/ATwBmQL/ATwBmQL/
+        ATwBbwGZAf8BCQFvAcwB/wFvAcwC/wFvAcwC/wFvAcwC/wFvAZkBzAH/AQkBPAGZAf8IAAE8AZkC/wE8
+        AZkC/wE8AZkC/wE8AZkC/wE8AW8BzAH/ATwBmQL/ATwBmQL/ATwBbwGZAf8BCQFvAcwB/wFvAcwC/wFv
+        AcwC/wFvAcwC/wMNAf8B1gLnAf8B1gLnAf8DDQH/ATwBmQL/ATwBmQL/ATwBmQL/ATwBmQL/ATwBbwHM
+        Af8BPAGZAv8BPAGZAv8BPAFvAZkB/wEJAW8BzAH/AW8BzAL/AW8BzAL/AW8BzAL/Aw0B/wHWAucB/wHW
+        AucB/wMNAf8EAAE8AcwC/wE8AcwC/wE8AZkC/wE8AZkC/wE8AZkC/wE8AZkC/wGZAcwC/wEJATwBmQH/
+        AQkBbwGZAf8BPAFvAcwB/wEJAW8BzAH/AZkBzAL/AQkBPAGZAf8MAAE8AcwC/wE8AcwC/wE8AZkC/wE8
+        AZkC/wE8AZkC/wE8AZkC/wGZAcwC/wEJATwBmQH/AQkBbwGZAf8BPAFvAcwB/wEJAW8BzAH/AZkBzAL/
+        AQkBPAGZAf8MAAE8AcwC/wE8AcwC/wE8AZkC/wE8AZkC/wE8AZkC/wE8AZkC/wGZAcwC/wEJATwBmQH/
+        AQkBbwGZAf8BPAFvAcwB/wEJAW8BzAH/Aw0B/wMNAf8DDQH/Aw0B/wQAATwBzAL/ATwBzAL/ATwBmQL/
+        ATwBmQL/ATwBmQL/ATwBmQL/AZkBzAL/AQkBPAGZAf8BCQFvAZkB/wE8AW8BzAH/AQkBbwHMAf8DDQH/
+        AdYC5wH/AdYC5wH/Aw0B/wQAAW8BzAL/AW8BzAL/AW8BzAL/ATwBzAL/ATwBzAL/ATwBzAL/AZkBzAL/
+        ATwBbwGZAf8BbwHMAv8BbwHMAv8BbwHMAv8BCQE8AZkB/wEJATwBmQH/DAABbwHMAv8BbwHMAv8BbwHM
+        Av8BPAHMAv8BPAHMAv8BPAHMAv8BmQHMAv8BPAFvAZkB/wFvAcwC/wFvAcwC/wFvAcwC/wEJATwBmQH/
+        AQkBPAGZAf8MAAFvAcwC/wFvAcwC/wFvAcwC/wE8AcwC/wE8AcwC/wE8AcwC/wGZAcwC/wE8AW8BmQH/
+        AW8BzAL/AW8BzAL/AW8BzAL/AQkBPAGZAf8BCQE8AZkB/wwAAW8BzAL/AW8BzAL/AW8BzAL/ATwBzAL/
+        ATwBzAL/ATwBzAL/AZkBzAL/ATwBbwGZAf8BbwHMAv8BbwHMAv8BbwHMAv8DDQH/AdYC5wH/AdYC5wH/
+        Aw0B/wQAATwBmQL/ATwBmQL/ATwBmQL/ATwBmQL/AW8BzAL/AW8BzAL/AZkBzAL/AQkBPAGZAf8BPAFv
+        AcwB/wE8AW8BzAH/AW8BzAL/AZkBzAL/AQkBPAGZAf8MAAE8AZkC/wE8AZkC/wE8AZkC/wE8AZkC/wFv
+        AcwC/wFvAcwC/wGZAcwC/wEJATwBmQH/ATwBbwHMAf8BPAFvAcwB/wFvAcwC/wGZAcwC/wEJATwBmQH/
+        DAABPAGZAv8BPAGZAv8BPAGZAv8BPAGZAv8BbwHMAv8BbwHMAv8BmQHMAv8BCQE8AZkB/wE8AW8BzAH/
+        ATwBbwHMAf8BbwHMAv8BmQHMAv8BCQE8AZkB/wwAATwBmQL/ATwBmQL/ATwBmQL/ATwBmQL/AW8BzAL/
+        AW8BzAL/AZkBzAL/AQkBPAGZAf8BPAFvAcwB/wE8AW8BzAH/AW8BzAL/Aw0B/wHWAucB/wHWAucB/wMN
+        Af8EAAEJATwBmQH/AQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/AW8BzAL/AW8BzAL/AW8BzAL/AQkBbwHM
+        Af8BmQHMAv8BbwGZAcwB/wE8AW8BmQH/ATwBbwHMAf8BPAGZAcwB/wwAAQkBPAGZAf8BCQE8AZkB/wEJ
+        ATwBmQH/AQkBPAGZAf8BbwHMAv8BbwHMAv8BbwHMAv8BCQFvAcwB/wGZAcwC/wFvAZkBzAH/ATwBbwGZ
+        Af8BPAFvAcwB/wE8AZkBzAH/DAABCQE8AZkB/wEJATwBmQH/AQkBPAGZAf8BCQE8AZkB/wFvAcwC/wFv
+        AcwC/wFvAcwC/wEJAW8BzAH/AZkBzAL/AW8BmQHMAf8BPAFvAZkB/wE8AW8BzAH/ATwBmQHMAf8MAAEJ
+        ATwBmQH/AQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/AW8BzAL/AW8BzAL/AW8BzAL/AQkBbwHMAf8BmQHM
+        Av8BbwGZAcwB/wE8AW8BmQH/Aw0B/wMNAf8DDQH/Aw0B/wwAAQkBPAGZAf8BCQE8AZkB/wFvAcwC/wFv
+        AcwC/wFvAcwC/wEJAW8BzAH/AW8BmQL/AW8BzAL/AZkBzAL/AW8BmQHMAf8BCQE8AZkB/xQAAQkBPAGZ
+        Af8BCQE8AZkB/wFvAcwC/wFvAcwC/wFvAcwC/wEJAW8BzAH/AW8BmQL/AW8BzAL/AZkBzAL/AW8BmQHM
+        Af8BCQE8AZkB/xQAAQkBPAGZAf8BCQE8AZkB/wFvAcwC/wFvAcwC/wFvAcwC/wEJAW8BzAH/AW8BmQL/
+        AW8BzAL/AZkBzAL/AW8BmQHMAf8BCQE8AZkB/xQAAQkBPAGZAf8BCQE8AZkB/wFvAcwC/wFvAcwC/wFv
+        AcwC/wEJAW8BzAH/AW8BmQL/AW8BzAL/AZkBzAL/AW8BmQHMAf8BCQE8AZkB/xAAAQkBPAGZAf8BCQE8
+        AZkB/wFvAcwC/wFvAZkC/wE8AZkBzAH/AW8BzAL/AW8BzAL/AQkBbwGZAf8BPAFvAcwB/wFvAcwC/wGZ
+        AcwC/wEJAW8BmQH/EAABCQE8AZkB/wEJATwBmQH/AW8BzAL/AW8BmQL/ATwBmQHMAf8BbwHMAv8BbwHM
+        Av8BCQFvAZkB/wE8AW8BzAH/AW8BzAL/AZkBzAL/AQkBbwGZAf8QAAEJATwBmQH/AQkBPAGZAf8BbwHM
+        Av8BbwGZAv8BPAGZAcwB/wFvAcwC/wFvAcwC/wEJAW8BmQH/ATwBbwHMAf8BbwHMAv8BmQHMAv8BCQFv
+        AZkB/xAAAQkBPAGZAf8BCQE8AZkB/wFvAcwC/wFvAZkC/wE8AZkBzAH/AW8BzAL/AW8BzAL/AQkBbwGZ
+        Af8BPAFvAcwB/wFvAcwC/wGZAcwC/wEJAW8BmQH/CAABCQE8AZkB/wEJATwBmQH/AQkBPAGZAf8BbwHM
+        Av8BbwHMAv8BbwGZAcwB/wEJATwBmQH/AQkBPAGZAf8BCQFvAZkB/wFvAcwC/wFvAcwC/wFvAcwC/wHM
+        A/8BPAFvAZkB/wgAAQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/AW8BzAL/AW8BzAL/AW8BmQHMAf8BCQE8
+        AZkB/wEJATwBmQH/AQkBbwGZAf8BbwHMAv8BbwHMAv8BbwHMAv8BzAP/ATwBbwGZAf8IAAEJATwBmQH/
+        AQkBPAGZAf8BCQE8AZkB/wFvAcwC/wFvAcwC/wFvAZkBzAH/AQkBPAGZAf8BCQE8AZkB/wEJAW8BmQH/
+        AW8BzAL/AW8BzAL/AW8BzAL/AcwD/wE8AW8BmQH/CAABCQE8AZkB/wEJATwBmQH/AQkBPAGZAf8BbwHM
+        Av8BbwHMAv8BbwGZAcwB/wEJATwBmQH/AQkBPAGZAf8BCQFvAZkB/wFvAcwC/wFvAcwC/wFvAcwC/wHM
+        A/8BPAFvAZkB/wgAAQkBPAGZAf8BPAFvAcwB/wFvAcwC/wFvAcwC/wGZAcwC/wFvAZkBzAH/AQkBPAGZ
+        Af8EAAEJATwBmQH/AQkBPAGZAf8BCQE8AZkB/wFvAZkBzAH/AW8BmQHMAf8BCQE8AZkB/wgAAQkBPAGZ
+        Af8BPAFvAcwB/wFvAcwC/wFvAcwC/wGZAcwC/wFvAZkBzAH/AQkBPAGZAf8EAAEJATwBmQH/AQkBPAGZ
+        Af8BCQE8AZkB/wFvAZkBzAH/AW8BmQHMAf8BCQE8AZkB/wgAAQkBPAGZAf8BPAFvAcwB/wFvAcwC/wFv
+        AcwC/wGZAcwC/wFvAZkBzAH/AQkBPAGZAf8EAAEJATwBmQH/AQkBPAGZAf8BCQE8AZkB/wFvAZkBzAH/
+        AW8BmQHMAf8BCQE8AZkB/wgAAQkBPAGZAf8BPAFvAcwB/wFvAcwC/wFvAcwC/wGZAcwC/wFvAZkBzAH/
+        AQkBPAGZAf8EAAEJATwBmQH/AQkBPAGZAf8BCQE8AZkB/wFvAZkBzAH/AW8BmQHMAf8BCQE8AZkB/wgA
+        AQkBPAGZAf8BbwHMAv8BbwHMAv8BbwHMAv8BzAP/ATwBmQHMAf8BCQE8AZkB/wwAAQkBPAGZAf8BCQE8
+        AZkB/wEJATwBmQH/DAABCQE8AZkB/wFvAcwC/wFvAcwC/wFvAcwC/wHMA/8BPAGZAcwB/wEJATwBmQH/
+        DAABCQE8AZkB/wEJATwBmQH/AQkBPAGZAf8MAAEJATwBmQH/AW8BzAL/AW8BzAL/AW8BzAL/AcwD/wE8
+        AZkBzAH/AQkBPAGZAf8MAAEJATwBmQH/AQkBPAGZAf8BCQE8AZkB/wwAAQkBPAGZAf8BbwHMAv8BbwHM
+        Av8BbwHMAv8BzAP/ATwBmQHMAf8BCQE8AZkB/wwAAQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/DAABCQE8
+        AZkB/wE8AZkBzAH/AZkBzAL/AZkD/wGZAcwC/wEJATwBmQH/AQkBPAGZAf8kAAEJATwBmQH/ATwBmQHM
+        Af8BmQHMAv8BmQP/AZkBzAL/AQkBPAGZAf8BCQE8AZkB/yQAAQkBPAGZAf8BPAGZAcwB/wGZAcwC/wGZ
+        A/8BmQHMAv8BCQE8AZkB/wEJATwBmQH/JAABCQE8AZkB/wE8AZkBzAH/AZkBzAL/AZkD/wGZAcwC/wEJ
+        ATwBmQH/AQkBPAGZAf8kAAEJATwBmQH/AQkBPAGZAf8BCQE8AZkB/wE8AW8BmQH/AQkBPAGZAf8BCQE8
+        AZkB/ygAAQkBPAGZAf8BCQE8AZkB/wEJATwBmQH/ATwBbwGZAf8BCQE8AZkB/wEJATwBmQH/KAABCQE8
+        AZkB/wEJATwBmQH/AQkBPAGZAf8BPAFvAZkB/wEJATwBmQH/AQkBPAGZAf8oAAEJATwBmQH/AQkBPAGZ
+        Af8BCQE8AZkB/wE8AW8BmQH/AQkBPAGZAf8BCQE8AZkB/ygAAUIBTQE+BwABPgMAASgDAAFAAwABIAMA
+        AQEBAAEBBgABARYAA/8BAAH/AQAB/wUAAfgBAAH4HQABgAEAAYAFAAGAAQABgAUAAYABAAGABQABgAEA
+        AYAFAAHgAQAB4AUAAcABAAHADQABAQEDAQEFAAEBAccBAQHABAABAQH/AQEB8AQAAQMB/wEDAf8EAAH/
+        AQMB/wEAAf8BAAH/AQAB+AEDAfgBAAH4AQAB+AIAAQMHAAEDAQABAwUAAQMBAAEDBAABgAEDAYABAwGA
+        AQABgAEAAYABAwGAAQMBgAEDAYABAAGAAQMBgAEDAYABAwGAAQABgAEDAYABAwGAAQMBgAEAAeABAwHg
+        AQMB4AEDAeABAwHAAQMBwAEDAcABAwHAAQMBAAEDAQABAwEAAQMBAAEDAQEBAwEBAQMBAQEDAQEBAwEB
+        AccBAQHHAQEBxwEBAccBAQH/AQEB/wEBAf8BAQH/AQMB/wEDAf8BAwH/AQMB/xYACw==
+</value>
+  </data>
+  <data name="&gt;&gt;cShutdown.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cShutdown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 277</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>374, 308</value>
+  </data>
+  <data name="cPriority.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;gCurrentProgress.Name" xml:space="preserve">
+    <value>gCurrentProgress</value>
+  </data>
+  <data name="&gt;&gt;lBefore.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lTime.Parent" xml:space="preserve">
+    <value>gStatistics</value>
+  </data>
+  <data name="cPriority.Items4" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;lFilename.Parent" xml:space="preserve">
+    <value>gFilename</value>
+  </data>
+  <data name="cShutdown.Text" xml:space="preserve">
+    <value>Shutdown computer when done</value>
+  </data>
+  <data name="gCurrentProgress.Text" xml:space="preserve">
+    <value>Current file progress</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;bCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 23</value>
+  </data>
+  <data name="&gt;&gt;gCurrentProgress.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pCurrent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 23</value>
+  </data>
+  <data name="pTotal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lProjectedDesc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 13</value>
+  </data>
+  <data name="&gt;&gt;lProjected.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pTotal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="gCurrentProgress.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="cShutdown.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <metadata name="iTray.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>95, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="iTrayList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>171, 17</value>
+  </metadata>
+  <metadata name="pThis.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Arabic (Egypt)</value>
+  </metadata>
+</root>

@@ -1,0 +1,26 @@
+kgb2compressor.exe
+
+Compress:
+-m(c|d|t|u)	- mode (Compress, Decompress, Test, Update (not implemented))
+-f(k|z)		- format (Kgb, Zip)
+-ppassword	- password
+-a(0-7)		- algorithm for KGB mode-> 0 - no compression, 1-7 - PAQ1-PAQ7 algorithm
+-s		- sfx
+-k		- keep full path
+-t"file"	- file contains list of files to compress (in addition to command line) (TODO)
+Ex:
+kgb2compressor.exe -mc -fk -a6 -l5 archive_name "file1" "file2"
+
+
+Decompress:
+-ppassword	- password
+-o(f|a|n)	- overwrite mode (Force, Ask, Never)
+-d		- open directory after extraction
+-r		- remove archive after extraction
+-b		- run in background
+-t"file"	- file contains list of files to decompress (TODO)
+Ex:
+kgb2compressor.exe -md archive c:/
+
+Test:
+kgb2compressor.exe -mt archive

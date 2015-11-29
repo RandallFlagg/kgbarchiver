@@ -1,0 +1,128 @@
+IDD_KGB_ARCH_MFC
+Архив //Archive
+Формат на архива //Archive format
+Ниво на компресия //Compression level
+Минимална;Много слаба;Слаба;Нормална;Средна;Над средната;Добра;Много добра;Екстремна;Максимална //Minimal;Very weak;Weak;Normal;Medium;Above medium;Good;Very good;Extreme;Maximum;
+Разделяне на архива //Archive spanning
+Парола //Password
+SFX модул //SFX Module
+Създай SFX модул (само за Windows) //Create SFX module (Windows only)
+Други //Others
+Запази пълния път //Keep full path
+Файлове за компресиране //Files to compress
+Добави файл //Add file
+Добави директория //Add directory
+Изтрий //Delete
+Отказ //Cancel
+Нататък > //Next >
+
+IDD_COMPRESS
+Компресиране //Compression
+Текущ файл //Current file
+Напредък на текущия файл //Current file progress
+Общ напредък //Total progress
+Статистика //Statistics
+Размер преди компресията: //Size before compression:
+Размер след компресията: //Size after compression:
+Съотношение: //Ratio:
+Време: //Time:
+Оставащо време: //Remaining time:
+Приоритет: //Priority:
+Висок;Над нормалният;Нормален;Под нормалният;Нисък; //High;Above normal;Normal;Below normal;Low;
+Изключи компютъра като приключиш //Turn off computer after done
+Отказ //Cancel
+
+STRING TABLE
+Относно архиватора KGB //About KGB Archiver
+Име на файл //Filename
+Размер //Size
+Процесът няма достъп до файла //Process cannot access file
+Трябва да дадете име на архива и/или да изберете файл, в който да се извърши компресията! //You should type archive name and/or choose file to compression!
+Паролата трябва да бъде между 4 и 32 знака! //Password should have from 4 to 32 chars!
+Компресирането е прекратено от потребителя! //Compression canceled by user!
+Компресирането е успешно!\nРазмер преди компресията:\t%s\nРазмер след компресията:\t%s\nСъотношение:\t\t\t%.1f%%\nИзминало време:\t\t //Compression succeeded!\nSize before compression:\t%s\nSize after compression:\t%s\nRatio:\t\t\t%.1f%%\nElapsed time:\t\t
+Моля изберете директория за компресиране! //Please choose directory to compress
+Приоритетът не може да бъде сменен!  //Cannot change priority!
+Компресиране //Compression
+подготвяне... //preparing...
+получаване размерите на файловете... //getting file sizes...
+подреждане на файловете... //sorting files...
+добавяне на SFX модул... //adding SFX module...
+кодиране... //encoding...
+KGB архиви (*.kgb)|*.kgb|ZIP архиви (*.zip)|*.zip|Всички файлове (*.*)|*.*| //KGB Archives (*.kgb)|*.kgb|ZIP Archives (*.zip)|*.zip|All files (*.*)|*.*|
+Всички файлове (*.*)|*.*| //All files (*.*)|*.*|
+В това поле се приемат само числа! //Only numbers are accepted in this field!
+Процесът на компресиране може да отнеме повече от 75% от физическата памет на компютъра! Сигурни ли сте, че желаете да продължите? //Compression may take more than 75% of your phisical memory, are you sure to continue?
+Използвана памет:\nKGB компресия:\nМинимална\t\t\t9MB\nМного слабаk\t\t11MB\nСлаба\t\t\t15MB\nНормална\t\t\t27MB\nСредна\t\t\t66MB\nНад средната\t\t154MB\nДобра\t\t\t202MB\nМного добра\t\t402MB\nЕкстремна\t\t\t800MB\nМаксимална\t\t\t1600MB\n\nZIP компресия:\nВсички режими използват около 10MB //Memory usage:\nKGB Compression:\nMinimal\t\t\t9MB\nVery weak\t\t11MB\nWeak\t\t\t15MB\nNormal\t\t\t27MB\nMedium\t\t\t66MB\nAbove medium\t\t154MB\nGood\t\t\t202MB\nVery good\t\t402MB\nExtreme\t\t\t800MB\nMaximum\t\t\t1600MB\n\nZIP Compression:\nAll modes take about 10MB
+
+
+IDD_KGB_ARCH_DECOMPRESS
+Име на архива //Archive name
+Разархивирай в: (ще бъде пропуснато, ако архивът съдържа пълни пътища) //Extract to: (ignored if archive contains full path)
+Избор на файлове за разкомпресиране //Choose files to decompress
+Отказ //Cancel
+Нататък > //Next >
+
+IDD_DECOMPRESS
+Разкомпресиране //Decompression
+Текущ файл //Current file
+Напредък на текущият файл //Current file progress
+Общ напредък //Total progress
+Статистика //Statistics
+Размер преди компресията: //Size before compression:
+Размер след компресията: //Size after compression:
+Съотношение: //Ratio:
+Време: //Time:
+Оставащо време: //Remaining time:
+Приоритет: //Priority:
+Висок;Над нормалният;Нормален;Под нормалният;Нисък; //High;Above normal;Normal;Below normal;Low;
+Изключи компютъра като приключиш //Turn off computer after done
+Отказ //Cancel
+
+IDD_DECODING
+Разшифроване... //Decrypting...
+Моля почакайте... //Please wait...
+
+IDD_PASSWD
+Парола //Password
+Моля въведете парола //Please insert password
+OK //OK
+Отказ //Cancel
+
+STRING TABLE
+Относно архиватора KGB //About KGB Archiver
+Име на файл //Filename
+Размер //Size
+Моля въведете име на архив и/или целева директория! //Please type archive name and/or destination directory!
+Архив с такова име не е намерен! //Archive file not found!
+Не мога да разархивирам в директория, която не може да бъде създадена! //Cannot extract to directory, which cannot be created!
+Изберете файлове, които да бъдат разархивирани! //Choose files to extract!
+Разархивирането е прекъснато от потребителя! //Extraction canceled by user!
+Разархивирането е успешно!\nРазмер преди компресията:\t%s\nРазмер след компресията:\t%s\nСъотношение:\t\t\t%.1f%%\nИзминало време:\t\t //Extraction succeeded!\nSize before compression:\t%s\nSize after compression:\t%s\nRatio:\t\t\t%.1f%%\nElapsed time:\t\t
+Моля изберете директория, в която да се разархивира! //Please choose directory to extract to!
+Грешна парола! //Wrong password!
+Избраният файл НЕ Е редовен KGB архив! //Choosen file isn't regular KGB archive!
+Приоритетът не може да бъде сменен!  //Cannot change priority!
+Разкомпресиране //Decompression
+подготвяне... //preparing...
+създаване на дирекоториите... //creating directories...
+пропускане... //skipping...
+Всички поддържани архиви|*.kgb; *.kge; *.exe; *.zip;|KGB архиви (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP архиви (*.zip)|*.zip| //All supported archives|*.kgb; *.kge; *.exe; *.zip;|KGB Archives (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP Archives (*.zip)|*.zip|
+Компресирано: %s Действително: %s Съотношение: %.1f%% //Compressed: %s Original: %s Ratio: %.1f%%
+
+IDD_ARCH_CONF_DIALOG
+Асоциирай KGB архивите с архиватора KGB //Associate KGB archives with KGB Archiver
+Асоциирай ZIP архивите с архиватора KGB //Associate ZIP archives with KGB Archiver
+Създай контекстно меню във Windows Explorer //Create explorer context menu
+Проверявай за обновления при стартиране //Check for updates at startup
+Провери сега... //Check now...
+Относно... //About...
+Отказ //Cancel
+OK //OK
+
+STRING TABLE
+Относно архиватора KGB //About KGB Archiver
+Компресирай с KGB //Compress to KGB
+Не може да бъде направена връзка с KGB сървъра! //Cannot connect to KGB server!
+Налична е нова версия на архиватора KGB! Желаете ли да я свалите? //New version of KGB Archiver is available! Would you like to download it?
+Няма намерени обновления! //No updates have been found!

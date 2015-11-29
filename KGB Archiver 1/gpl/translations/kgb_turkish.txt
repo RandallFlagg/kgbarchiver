@@ -1,0 +1,164 @@
+TRANSLATION ENGLISH NAME: Turkish
+TRANSLATION NATIVE NAME: Türkçe
+
+IDD_KGB_ARCH_MFC
+Arsiv
+Arsiv Formatý
+Sýkýstýrma Oraný
+Minimum;Çok zayýf;Zayýf;Normal;Orta;Ortadan yüksek;Ýyi;Çok iyi;Daha iyi;Maksimum;
+Arsiv spanning
+Sifre
+SFX Modül
+SFX Modülu Olustur(Sadece Windows)
+Diðerleri
+Bütün dosya yollarýný koru
+Sýkýstýrýlacak Dosyalar
+Dosya Ekle
+Dizin Ekle
+Sil
+Ýptal
+Ýleri >
+
+IDD_COMPRESS
+Sýkýstýrma
+Dosya
+Dosyanýn durumu
+Genel durum
+Ýstatistikler
+Sýkýstýrdýktan önceki boyutu:
+Sýkýstýrdýktan sonraki boyutu:
+Oran:
+Zaman:
+Kalan Zaman:
+Öncelik:
+Yüksek;Normalin üstünde;Normal;Normalin altýnda;Düsük;
+Bittikten sonra bilgisayarý kapat.
+Ýptal
+
+STRING TABLE
+KGB Archiver Hakkýnda
+Dosya Adý
+Boyut
+Dosyaya ulasýlamadý
+Arsivin ismini girin ve/veya dosyayý seçin!
+Sifre 4 ile 32 karakter arasýnda olmalý!
+Sýkýstýrma kullanýcý tarafýndan iptal edildi!
+Sýkýstýrma Basarýlý!\nSýkýstýrmadan önceki boyutu:\t%s\nSýkýstýrdýktan sonraki boyutu:\t%s\nOran:\t\t\t%.1f%%\nGeçen Zaman:\t\t
+Dosyayý çýkarmak için lütfen bir dizin seçin!
+Öncelik deðistirilemedi!
+Sýkýstýrma
+hazýrlanýyor...
+dosyalarýn boyutlarý alýnýyor...
+Dosyalar sýralanýyor...
+SFX modülü ekleniyor...
+kodlanýyor...
+KGB Arsivleri (*.kgb)|*.kgb|ZIP Arsivleri (*.zip)|*.zip|Bütün Dosyalar (*.*)|*.*|
+Bütün Dosyalar (*.*)|*.*|
+Bu alanda sadece rakamlar geçerlidir!
+Sýkýstýrma fiziksel hafýzanýn %75'nden fazlasýný harcayabilir, devam etmek istediðinizden emin misiniz ?
+KGB Sýkýstýrmasý:t\t\tHafýza\tHýz\nMinimum\t\t\t      9MB\t200%\nÇok zayýf\t\t\t    11MB\t190%\nZayýf\t\t\t    15MB\t180%\nNormal\t\t\t    27MB\t100%\nOrta\t\t\t    66MB\t  29%\nOrtadan yüksek\t\t  154MB\t  17%\nÝyi\t\t\t  202MB\t  16%\nÇok iyi\t\t\t  402MB\t  15%\nDaha iyi\t\t\t  800MB\t  14%\nMaksimum\t\t1600MB\t  13%\n\nZIP Sýkýstýrmasý:\nBütün modlar yaklasýk 10MB alýr. // \t MEANS TAB, USE 2 TABS WITH LONG TRANSLATION AND 3 WITH SHORT
+Devam etmek için yeterli hafýza yok!
+Bilesen dosyalar arsiv ismiyle ayný !
+Sýkýstýrmayý iptal etmek istediðinize emin misiniz?
+KGB Archiver en fazla 4GB'a kadar olan dosyalarý destekler.
+
+IDD_KGB_ARCH_DECOMPRESS
+Arsiv Adý
+Dosyalarý Çýkar:(Eðer tam dizin içeriyorsa yoksayýlýr.)
+Arsivi açmak için dosya seçin
+Arsiv Bilgisi
+Ýptal
+Ýleri >
+
+IDD_DECOMPRESS
+Arsiv Açýlýmý
+Dosya
+Dosyanýn Durumu
+Genel Durum
+Ýstatistikler
+Sýkýstýrmadan önce boyut:
+Sýkýstýrdýktan Sonra Boyut:
+Oran:
+Zaman:
+Kalan Zaman:
+Öncelik:
+Yüksek;Normalin Üstünde;Normal;Normalin Altýnda;Düsük;
+Bittikten sonra bilgisayarý kapat
+Ýptal
+
+IDD_DECODING
+Çözülüyor...
+Lütfen Bekleyin...
+
+IDD_PASSWD
+Sifre
+Lütfen sifreyi girin
+Tamam
+Ýptal
+
+IDD_OVERWRITE
+Dosya üstüne yazma onayý
+by this one //PART OF SENTENCE: %.260s zaten var. Üstüne yazmak ister misiniz? (DETAILED FILE INFO) by this one (DETAILED FILE INFO)
+Hepsine Evet
+Evet
+Hayýr
+Hepsine Hayýr
+
+STRING TABLE
+KGB Archiver Hakkýnda
+Dosya Adý
+Boyutu
+Lütfen arsivin ismini ve/veya hedef dizini girin !
+Arsiv dosyasý bulunamadý!
+Dosyalar dizine çýkarýlamadý, çünkü dizin olusturulamadý !
+Dosyalarý çýkarmak için dosyalarý seçin !
+Dosyalarý çýkarma islemi kullanýcý tarafýndan iptal edildi !
+Dosyalarý çýkarma basarýlý!\nSýkýstýrmadan önceki boyut:\t%s\nSýkýstýrmadan sonraki boyut:\t%s\nOran:\t\t\t%.1f%%\nGeçen Zaman:\t\t
+Dosyalarý çýkarmak için lütfen dizin seçin!
+Yanlýs sifre!
+Seçtiðiniz dosya bir KGB Arsivi deðil!
+Öncelik deðistirilemedi!
+Arsiv Açýlýmý
+hazýrlanýyor...
+dizinler olusturuluyor...
+atlanýyor...
+Desteklenen Arsiv Formatlarý|*.kgb; *.kge; *.exe; *.zip;|KGB Arsivleri (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP Arsivleri (*.zip)|*.zip|
+Sýkýstýrýlmýs: %s Orjinal: %s Oran: %.1f%%
+Devam etmek için yeterli hafýza yok!
+%.260s zaten var! Üstüne yazmak ister misiniz ?
+Arsiv açýlýmýný iptal etmek istediðinize emin misiniz?
+Boyut: %s
+Son düzenleme: %s
+
+IDD_ARCH_CONF_DIALOG
+Bütünlesme Ayarlarý
+KGB Arsivlerini KGB Archiver ile aç
+ZIP Arsivlerini KGB Archiver ile aç
+Windows Explorer menusü olustur(Sað týk menüsüne "KGB Archiver ile sýkýstýr" seçeneði gelir.)
+Dil
+Türkçe
+Diðerleri
+Güncellemeleri her Windows basladýðýnda kontrol et
+Kontrol Et
+Sýkýstýrma/Açma isleminden sonra istatistikleri göster
+Hakkýnda...
+Ýptal
+Tamam
+
+IDD_MAIN
+Lütfen seçin, ne yapmak istiyorsunuz:
+Dosyalarý sýkýstýr
+Arsivi Çýkart
+Seçenekleri Düzenle
+Top 10 Baðýs Yapanlar
+Hakkýnda...
+Geri
+Ýleri >
+
+STRING TABLE
+KGB Archiver Hakkýnda
+KGB Archiver ile Sýkýstýr
+KGB Sunucularý ile baðlantý kurulamadý!
+KGB Archiver'ýn yeni versiyonu mevcut! Ýndirmek ister misiniz?
+Güncelleme bulunamadý
+Buraya çýkart

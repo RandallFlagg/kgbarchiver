@@ -1,0 +1,134 @@
+IDD_KGB_ARCH_MFC
+Arhiiv
+Arhiivi Formaat
+Pakkimise aste
+Minimaalne;Väga nõrk;Nõrk;Normaalne;Keskmine;Üle keskmise;Hea;Väga hea;Ekstreemne;Maksimaalne;
+Arhiivi ulatamine
+Salasõna
+SFX Moodul
+Valmista SFX moodul (Windows ainult)
+Muu
+Säilita täisteekond
+Failid pakkida
+Lisa fail
+Lisa kaust
+Kustuta
+Tühista
+Järgmine >
+
+IDD_COMPRESS
+Kompressioon
+Hetke fail
+Hetkelise faili edenemine
+Kogu edenemine
+Statistika
+Suurus enne pakkimist:
+Suurus pärast pakkimist:
+Suhe:
+Aeg:
+Järele jäänud aeg:
+Prioriteet:
+Kõrge;Üle normaalse;Normaalne;Alla normaalse;Madal;
+Lülita arvuti välja peale valmist saamist
+Tühista
+
+STRING TABLE
+KGB Archiver kohta
+Failinimi
+Suurus
+Protsess ei suuda siseneda faili
+Sa peaksid kirjutama faili nime ja/või valima faili mida pakkida!
+Salasõnas peaks olema 4 kuni 32 märki!
+Pakkimine tühistatud kasutaja poolt!
+Pakkimine õnnestus!\nSuurus enne pakkimist:\t%s\nSuurus pärast pakkimist:\t%s\nSuhe:\t\t\t%.1f%%\nAeg kulunud:\t\t
+Palun valige kaust mida pakkida
+Ei saa vahetada prioriteeti!
+Kompressioon
+valmistan...
+hangin failide suurused...
+sorteerin failid...
+lisan SFX mooduli...
+kodeeriminie...
+KGB Arhiivid (*.kgb)|*.kgb|ZIP Arhiivid (*.zip)|*.zip|Kõik failid (*.*)|*.*|
+Kõik failid (*.*)|*.*|
+Ainult numbrid on selles väljas lubatud!
+Pakkimine võib võtta rohkem kui 75% teie mälust,kas olete kindel jätkama pakkimist?
+Mälu kasutus:\nKGB Kompressioon:\nMinimaalne\t\t\t9MB\nVäga nõrk\t\t11MB\nNõrk\t\t\t15MB\nNormaalne\t\t\t27MB\nKeskmine\t\t\t66MB\nÜle keskmise\t\t154MB\nHea\t\t\t202MB\nVäga hea\t\t402MB\nEkstreemne\t\t\t800MB\nMaksimaalne\t\t\t1600MB\n\nZIP Kompressioon:\nKõik viisid võtavad umbes 10MB
+Ei ole küllalt mälu et jätkata!
+
+IDD_KGB_ARCH_DECOMPRESS
+Arhiivi nimi
+Väljustama: (ignoreeritud kui arhiiv sisaldab täispikka teekonda)
+Vali failid lahtipakkimiseks
+Arhiivi Info
+Tühista
+Järgmine >
+
+IDD_DECOMPRESS
+Lahtipakkimine
+Hetke fail
+Hetke faili edenemine
+Kogu edenemine
+Statistika
+Suurus enne pakkimist:
+Suurus pärast pakkimist:
+Suhe:
+Aeg:
+Järelejäänud aeg:
+Prioriteet:
+Kõrge;Üle normaalse;Normaalne;Alla normaalse;Madal;
+Lülita arvuti välja peale lahtipakkimist
+Tühista
+
+IDD_DECODING
+Krüpteerin lahti...
+Palun oodake...
+
+IDD_PASSWD
+Salasõna
+Palun sisestage salasõna
+OK
+Tühista
+
+STRING TABLE
+KGB Archiver kohta
+Failinimi
+Suurus
+Palun kirjutage arhiivi nimi ja/või sihtkaust!
+Arhiivi fail ei leitud!
+Ei suuda pakkida lahti kausta, mida ei saa tekitada!
+Vali failid lahtipakkimiseks!
+Lahtipakkimine tühistatud kasutaja poolt!
+Lahtipakkimine õnnestus!\nSuurus enne pakkimist:\t%s\nSuurus peale pakkimist:\t%s\nSuhe:\t\t\t%.1f%%\nLäbitud aeg:\t\t
+Palun vali kaust kuhu pakkida lahti!
+Vale salasõna!
+Valitud fail ei ole regulaarne KGB arhiiv!
+Ei suuda muuta prioriteeti!
+Lahti pakkimine
+ettevalmistus...
+kaustade moodustamine...
+vahelejätmine...
+Kõik toetatud arhiivid|*.kgb; *.kge; *.exe; *.zip;|KGB Arhiivid (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP Arhiivid (*.zip)|*.zip|
+Pakitult: %s\toriginaal: %s\tSuhe: %.1f%%
+Ei ole küllalt vaba mälu et jätkata!
+Fail %.260s eksisteerib juba! Kas te tahaksite seda üle kirjutada?
+
+IDD_ARCH_CONF_DIALOG
+Seosta KGB arhiive KGB Arhiiveerijaga
+Seosta ZIP arhiive KGB Arhiveerijaga
+Tekita exploreri kontekstimenüü
+Kontrolli uuendusi käivitusel
+Kontrolli nüüd
+Keel
+Polish;English;French;Portuguese (Brazilia);Spanish (Chile);Romanian;Italian;Hungarian;
+Teave
+Tühista
+OK
+
+STRING TABLE
+KGB Archiver kohta
+Paki KGB'ks
+Ei suuda ühendada KGB serveriga!
+Uus versioon KGB Arhiveerijast on olemas! Kas te tahaks seda tõmmata?
+Uuendusi ei leitud
+Paki siia lahti

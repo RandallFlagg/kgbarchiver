@@ -1,0 +1,127 @@
+IDD_KGB_ARCH_MFC
+Archief
+Archief formaat
+Compressie niveau
+Verdeel archief in volumes
+Paswoord
+SFX module
+Maak SFX module (alleen Windows)
+Andere
+Bewaar volledige pad
+Bestanden om te comprimeren
+Bestand toevoegen
+Map toevoegen
+Verwijderen
+Annuleren
+Volgende >
+
+IDD_COMPRESS
+Compressie
+Huidig bestand
+Vooruitgang huidig bestand
+Totale vooruitgang
+Statistieken
+Grootte voor compressie:
+Grootte na compressie:
+Verhouding:
+Verstreken tijd:
+Overgebleven tijd:
+Prioriteit:
+Hoog;Boven normaal;Normaal;Onder Normaal;Laag;
+Sluit computer af na voltooiing
+Annuleren
+
+STRING TABLE
+Over KGB Archiver
+Bestandsnaam
+Grootte
+Kan bestand niet openen
+Gelieve de archiefnaam in te typen en/of het te comprimeren bestand te kiezen!
+Het paswoord moet 4 tot 32 tekens bevatten!
+Compressie geannuleerd door de gebruiker!
+Compressie succesvol!\nGrootte voor compressie:\t%s\nGrootte na compressie:\t%s\nVerhouding:\t\t\t%.1f%%\nVerstreken tijd:\t\t
+Gelieve een map te kiezen om te comprimeren
+Kan de prioriteit niet veranderen!
+Compressie!
+voorbereiden...
+bestandgroottes uitlezen...
+bestanden sorteren...
+SFX module toevoegen...
+encoderen...
+KGB archieven (*.kgb)|*.kgb|ZIP archieven (*.zip)|*.zip|Alle bestanden (*.*)|*.*|
+Alle bestanden (*.*)|*.*|
+Enkel getallen zijn geldige waardes in dit veld!
+Compressie kan meer dan 75% van het fysieke geheugen innemen, wilt u verdergaan?
+Geheugen gebruik:\nKGB compressie:\nMinimaal\t\t\t9MB\nZeer laag\t\t11MB\nLaag\t\t\t15MB\nNormaal\t\t\t27MB\nMedium\t\t\t66MB\nHoger dan medium\t\t154MB\nGoed\t\t\t202MB\nZeer goed\t\t402MB\nExtreem\t\t\t800MB\nMaximum\t\t\t1600MB\n\nZIP compressie:\nAlle modi vereisen ongeveer 10MB
+
+
+IDD_KGB_ARCH_DECODE
+Archief naam
+Decomprimeer naar: (wordt genegeerd als het archief een volledig pad bevat)
+Kies bestanden om te decomprimeren
+Annuleren
+Volgende >
+
+IDD_DECOMPRESS
+Decompressie
+Huidig bestand
+Vooruitgang huidig bestand
+Totale vooruitgang:
+Statistieken
+Grootte voor compressie:
+Grootte na compressie:
+Verhouding:
+Verstreken tijd:
+Overgebleven tijd:
+Prioriteit:
+Hoog;Boven normaal;Normaal;Onder Normaal;Laag;
+Sluit computer af na voltooiing
+Annuleren
+
+IDD_DECODING
+Decryptie
+Even geduld...
+
+IDD_PASSWD
+Paswoord
+Gelieve het paswoord in te geven
+OK
+Annuleren
+
+STRING TABLE
+Over KGB Archiver
+Bestandsnaam
+Grootte
+Gelieve de archiefnaam in te typen en/of het te comprimeren bestand te kiezen!
+Archief niet gevonden!
+Kan niet uitpakken naar de map: kan de map niet aanmaken!
+Kies bestanden om uit te pakken
+Decompressie geannuleerd door gebruiker!
+Decompressie voltooid!\nGrootte voor compressie:\t%s\nGrootte na compressie:\t%s\nVerhouding:\t\t\t%.1f%%\nVerstreken tijd:\t\t
+Gelieve de map te kiezen om naar te decomprimeren!
+Verkeerde paswoord!
+Het gekozen bestand is geen KGB archief!
+Kan de prioriteit niet veranderen
+Decompressie
+voorbereiden...
+aanmaken van mappen...
+overslaan...
+Alle ondersteunde archieven|*.kgb; *.kge; *.exe; *.zip;|KGB archieven (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP archieven (*.zip)|*.zip|
+Gecomprimeerd: %s\tOrigineel: %s\tVerhouding: %.1f%%
+
+IDD_ARCH_CONF_DIALOG
+Associeer KGB archieven met KGB Archiver
+Associeer ZIP archieven met KGB Archiver
+Windows Explorer context menu
+Controleren op een nieuwe versie bij het opstarten
+Controleer nu
+Over
+Annuleren
+OK
+
+STRING TABLE
+Over KGB Archiver
+Comprimeer met KGB
+Kan niet verbinden met de KGB server!
+Er is een nieuwe versie van KGB Archiver beschikbaar! Wilt u deze downloaden?
+Geen updates gevonden.

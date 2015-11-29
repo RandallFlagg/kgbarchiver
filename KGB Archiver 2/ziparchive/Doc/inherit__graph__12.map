@@ -1,0 +1,4 @@
+base referer
+rect $structCZipCallback.html 7,32 108,59
+rect $structCZipActionCallback.html 156,7 295,34
+rect $structCZipSpanCallback.html 160,58 291,84

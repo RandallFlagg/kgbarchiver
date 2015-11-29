@@ -1,0 +1,46 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kgb_arch_compress", "kgb_arch_mfc.vcproj", "{E582D0CA-9F34-4C76-B898-699F87A22427}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kgb_arch_decompress", "..\kgb_arch_decompress\kgb_arch_decompress.vcproj", "{17E41F02-EE87-48A7-8CC4-A930F1A657FE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kgb_arch_browser", "..\kgb_arch_browser\kgb_arch_browser.vcproj", "{1DF94E62-6C83-42D3-8815-01B397D0F353}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ext", "..\ext\ext.vcproj", "{D1D98334-2B0D-47C6-8193-12A122FD7EB2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kgb_arch_sfx", "..\kgb_arch_sfx\kgb_arch_sfx.vcproj", "{17E41F02-EE87-48A7-8CC4-A930F1A657FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E582D0CA-9F34-4C76-B898-699F87A22427}.Debug.ActiveCfg = Debug|Win32
+		{E582D0CA-9F34-4C76-B898-699F87A22427}.Debug.Build.0 = Debug|Win32
+		{E582D0CA-9F34-4C76-B898-699F87A22427}.Release.ActiveCfg = Release|Win32
+		{E582D0CA-9F34-4C76-B898-699F87A22427}.Release.Build.0 = Release|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Debug.ActiveCfg = Debug|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Debug.Build.0 = Debug|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Release.ActiveCfg = Release|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Release.Build.0 = Release|Win32
+		{1DF94E62-6C83-42D3-8815-01B397D0F353}.Debug.ActiveCfg = Debug|Win32
+		{1DF94E62-6C83-42D3-8815-01B397D0F353}.Release.ActiveCfg = Release|Win32
+		{D1D98334-2B0D-47C6-8193-12A122FD7EB2}.Debug.ActiveCfg = Debug|Win32
+		{D1D98334-2B0D-47C6-8193-12A122FD7EB2}.Release.ActiveCfg = Release|Win32
+		{D1D98334-2B0D-47C6-8193-12A122FD7EB2}.Release.Build.0 = Release|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Debug.ActiveCfg = Debug|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Debug.Build.0 = Debug|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Release.ActiveCfg = Release|Win32
+		{17E41F02-EE87-48A7-8CC4-A930F1A657FE}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+		Item:1 = ..\file.ico
+		Item:2 = ..\program.ico
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

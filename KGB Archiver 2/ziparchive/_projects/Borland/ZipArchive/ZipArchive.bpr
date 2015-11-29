@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Release\ZipArchive.lib"/>
+    <OBJFILES value="Release\adler32.obj Release\compress.obj Release\crc32.obj 
+      Release\deflate.obj Release\infback.obj Release\inffast.obj 
+      Release\inflate.obj Release\inftrees.obj Release\trees.obj 
+      Release\uncompr.obj Release\zutil.obj Release\ZipPlatform_win.obj 
+      Release\ZipPlatformComm.obj Release\ZipStorage.obj Release\ZipString.obj 
+      Release\ZipArchive.obj Release\ZipAutoBuffer.obj Release\ZipCentralDir.obj 
+      Release\ZipCompatibility.obj Release\ZipException.obj 
+      Release\ZipExtraData.obj Release\ZipExtraField.obj Release\ZipFile_mfc.obj 
+      Release\ZipFile_stl.obj Release\ZipFileHeader.obj Release\ZipMemFile.obj 
+      Release\ZipPathComponent_lnx.obj Release\ZipPathComponent_win.obj 
+      Release\ZipPlatform_lnx.obj Release\BytesWriter.obj 
+      Release\ZipCryptograph.obj Release\ZipCrc32Cryptograph.obj Release\Aes.obj 
+      Release\Hmac.obj Release\RandomPool.obj Release\ZipAesCryptograph.obj 
+      Release\Sha1.obj"/>
+    <RESFILES value=""/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value=""/>
+    <PACKAGES value=""/>
+    <PATHCPP value=".;zlib;zlib;zlib;zlib;zlib;zlib;zlib;zlib;zlib;zlib;zlib"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="TLib"/>
+    <USERDEFINES value="NDEBUG;_MBCS;_AFXDLL;WIN32;_WINDOWS;ZIP_ARCHIVE_MFC"/>
+    <SYSDEFINES value="_NO_VCL;_ASSERTE;NO_STRICT;INC_OLE2;_X86_;_WINDOWS;_AFX_PORTABLE;__MSC;_AFX_NOFORCE_LIBS;_MT;_CRT_PORTABLE;_AFX_NO_DEBUG_CRT;_DLL"/>
+    <MAINSOURCE value="ZipArchive.bpf"/>
+    <INCLUDEPATH value="zlib;$(BCB)\include;$(BCB)\include\mfc;$(BCB)\include\atl"/>
+    <LIBPATH value="zlib;$(BCB)\lib;$(RELEASELIBPATH);$(BCB)\lib\psdk"/>
+    <WARNINGS value="-w-8026 -w-8027 -w-par -w-aus -w-hid -w-inl"/>
+    <LISTFILE value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-Izlib -I$(BCB)\include -I$(BCB)\include\mfc -I$(BCB)\include\atl 
+      -src_suffix cpp -DNDEBUG -D_MBCS -D_AFXDLL -DWIN32 -D_WINDOWS 
+      -DZIP_ARCHIVE_MFC"/>
+    <CFLAG1 value="-O2 -w -VF -X- -a8 -b -k -vi -q -tWR -tWM -c -g0"/>
+    <PFLAGS value="-N2Release -N0Release -$YD -$A8"/>
+    <RFLAGS value="/l 0x415 /d &quot;NDEBUG&quot; /d &quot;_AFXDLL&quot; /i$(BCB)\include;$(BCB)\include\mfc"/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value=""/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="$(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES)"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="ZipArchive.bpf" FORMNAME="" UNITNAME="ZipArchive" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="zlib\adler32.c" FORMNAME="" UNITNAME="adler32.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="zlib\compress.c" FORMNAME="" UNITNAME="compress.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="zlib\crc32.c" FORMNAME="" UNITNAME="crc32.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="zlib\deflate.c" FORMNAME="" UNITNAME="deflate.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="zlib\infback.c" FORMNAME="" UNITNAME="infback.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="zlib\inffast.c" FORMNAME="" UNITNAME="inffast.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="zlib\inflate.c" FORMNAME="" UNITNAME="inflate.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="zlib\inftrees.c" FORMNAME="" UNITNAME="inftrees.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="zlib\trees.c" FORMNAME="" UNITNAME="trees.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="zlib\uncompr.c" FORMNAME="" UNITNAME="uncompr.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="zlib\zutil.c" FORMNAME="" UNITNAME="zutil.c" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipPlatform_win.cpp" FORMNAME="" UNITNAME="ZipPlatform_win.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipPlatformComm.cpp" FORMNAME="" UNITNAME="ZipPlatformComm.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipStorage.cpp" FORMNAME="" UNITNAME="ZipStorage.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipString.cpp" FORMNAME="" UNITNAME="ZipString.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipArchive.cpp" FORMNAME="" UNITNAME="ZipArchive.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipAutoBuffer.cpp" FORMNAME="" UNITNAME="ZipAutoBuffer.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipCentralDir.cpp" FORMNAME="" UNITNAME="ZipCentralDir.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipCompatibility.cpp" FORMNAME="" UNITNAME="ZipCompatibility.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipException.cpp" FORMNAME="" UNITNAME="ZipException.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipExtraData.cpp" FORMNAME="" UNITNAME="ZipExtraData.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipExtraField.cpp" FORMNAME="" UNITNAME="ZipExtraField.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipFile_mfc.cpp" FORMNAME="" UNITNAME="ZipFile_mfc.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipFile_stl.cpp" FORMNAME="" UNITNAME="ZipFile_stl.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipFileHeader.cpp" FORMNAME="" UNITNAME="ZipFileHeader.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipMemFile.cpp" FORMNAME="" UNITNAME="ZipMemFile.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipPathComponent_lnx.cpp" FORMNAME="" UNITNAME="ZipPathComponent_lnx.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipPathComponent_win.cpp" FORMNAME="" UNITNAME="ZipPathComponent_win.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipPlatform_lnx.cpp" FORMNAME="" UNITNAME="ZipPlatform_lnx.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="BytesWriter.cpp" FORMNAME="" UNITNAME="BytesWriter.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipExtraData.cpp" FORMNAME="" UNITNAME="ZipExtraData.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipExtraField.cpp" FORMNAME="" UNITNAME="ZipExtraField.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipCryptograph.cpp" FORMNAME="" UNITNAME="ZipCryptograph.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipCrc32Cryptograph.cpp" FORMNAME="" UNITNAME="ZipCrc32Cryptograph.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Aes.cpp" FORMNAME="" UNITNAME="Aes.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Hmac.cpp" FORMNAME="" UNITNAME="Hmac.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="RandomPool.cpp" FORMNAME="" UNITNAME="RandomPool.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ZipAesCryptograph.cpp" FORMNAME="" UNITNAME="ZipAesCryptograph.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Sha1.cpp" FORMNAME="" UNITNAME="Sha1.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=2
+Item0=zlib;$(BCB)\include;$(BCB)\include\mfc;$(BCB)\include\atl
+Item1=zlib;$(BCB)\include;$(BCB)\include\mfc;$(BCB)\include\atl;
+
+[HistoryLists\hlLibraryPath]
+Count=2
+Item0=zlib;$(BCB)\lib;$(RELEASELIBPATH);$(BCB)\lib\psdk
+Item1=zlib;$(BCB)\lib;$(RELEASELIBPATH);;$(BCB)\lib\psdk;
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=3
+Item0=NDEBUG;_MBCS;_AFXDLL;WIN32;_WINDOWS;ZIP_ARCHIVE_MFC
+Item1=NDEBUG;_MBCS;_AFXDLL;WIN32;_WINDOWS
+Item2=NDEBUG;_MBCS;_AFXDLL;WIN32;_WINDOWS;
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=Release
+
+[HistoryLists\hlFinalOutputDir]
+Count=1
+Item0=Release\
+
+[HistoryLists\hlTlibPageSize]
+Count=1
+Item0=0x0010
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

@@ -1,0 +1,164 @@
+GERMAN:
+DEUTSCH:
+
+IDD_KGB_ARCH_MFC
+Archiv
+Archivformat
+Kompressionsgrad
+Minimal;Sehr schwach;Schwach;Normal;Medium;Über Medium;Gut;Sehr gut;Extrem;Maximum;
+Archivteilung
+Passwort
+SFX-Modul
+Erzeuge SFX-Modul (nur Windows)
+Weiteres
+Vollständigen Pfad beibehalten
+Zu komprimierende Dateien
+Datei hinzufügen
+Verzeichnis hinzufügen
+Löschen
+Abbrechen
+Weiter >
+
+IDD_COMPRESS
+Kompression
+Aktuelle Datei
+Aktueller Dateifortschritt
+Gesamtfortschritt
+Statistik
+Größe vor Kompression:
+Größe nach Kompression:
+Verhältnis:
+Zeit:
+Verbleibende Zeit:
+Priorität:
+Hoch;Höher als Normal;Normal;Niedriger als Normal;Niedrig;
+Nach Vollendung herunterfahren
+Abbrechen
+
+STRING TABLE
+Über KGB Archiver
+Dateiname
+Größe
+Prozess kann auf Datei nicht zugreifen
+Sie sollten den Archivnamen und/oder die zu komprimierende Datei angeben!
+Das Passwort sollte aus 4 bis 32 Zeichen bestehen!
+Kompression wurde vom Benutzer abgebrochen!
+Kompression erfolgreich!\nGröße vor Kompression:\t%s\nGröße nach Kompression:\t%s\nVerhältnis:\t\t\t%.1f%%\nVerstrichene Zeit:\t\t
+Bitte wählen Sie das zu komprimierende Verzeichnis
+Konnte Priorität nicht ändern!
+Kompression
+bereite vor...
+ermittle Dateigrößen...
+sortiere Dateien...
+füge SFX-Modul hinzu...
+verschlüssle...
+KGB Archive (*.kgb)|*.kgb|ZIP Archive (*.zip)|*.zip|Alle Dateien (*.*)|*.*|
+Alle Dateien (*.*)|*.*|
+In diesem Feld werden nur Nummern akzeptiert!
+Die Kompression kann mehr als 75% des physikalischen Arbeitsspeichers beanspruchen, möchten Sie wirklich fortfahren?
+KGB Kompression:\t\tArbeitsspeicher\tGeschwindigkeit\nMinimal\t\t\t      9MB\t200%\nSehr schwach\t\t    11MB\t190%\nSchwach\t\t\t    15MB\t180%\nNormal\t\t\t    27MB\t100%\nMedium\t\t\t    66MB\t  29%\nÜber Medium\t\t  154MB\t  17%\nGut\t\t\t  202MB\t  16%\nSehr gut\t\t  402MB\t  15%\nExtrem\t\t\t  800MB\t  14%\nMaximum\t\t\t1600MB\t  13%\n\nZIP Kompression:\nAlle Modi nutzen ungefähr 10MB
+Zum Fortfahren ist nicht genügend Arbeitsspeicher verfügbar!
+Die Liste der zu komprimierenden Dateien enthält eine Datei, die mit dem Archivnamen übereinstimmt!
+Sind Sie sicher, dass Sie die Kompression abbrechen wollen?
+KGB Archiver unterstützt Dateien nur bis zu einer Größe von 4GB!
+
+IDD_KGB_ARCH_DECOMPRESS
+Archivname
+Extrahiere nach: (wird ignoriert, falls Archiv vollständigen Pfad enthält)
+Zu dekomprimierende Dateien auswählen
+Archivinfo
+Abbrechen
+Weiter >
+
+IDD_DECOMPRESS
+Dekompression
+Aktuelle Datei
+Aktueller Dateifortschritt
+Gesamtfortschritt
+Statistik
+Größe vor Kompression:
+Größe nach Kompression:
+Verhältnis:
+Zeit:
+Verbleibende Zeit:
+Priorität:
+Hoch;Höher als Normal;Normal;Niedriger als Normal;Niedrig;
+Nach Vollendung herunterfahren
+Abbrechen
+
+IDD_DECODING
+Entschlüssle...
+Bitte warten...
+
+IDD_PASSWD
+Passwort
+Bitte Passwort eingeben
+OK
+Abbrechen
+
+IDD_OVERWRITE
+Überschreiben der Datei bestätigen // UGLY ONE-TO-ONE TRANSLATION WOULD BE: "Dateiüberschreibungsbestätigung"
+mit dieser //VERY UGLY GERMAN TRANSLATION! BETTER WOULD BE: "Möchten Sie die existierende Datei %.260s mit dieser <FILE> überschreiben"
+Ja für alle
+Ja
+Nein
+Nein für alle
+
+STRING TABLE
+Über KGB Archiver
+Dateiname
+Größe
+Bitte geben Sie den Archivnamen und/oder das Zielverzeichnis an!
+Archiv wurde nicht gefunden!
+Konnte in das Verzeichnis nicht extrahieren, da es nicht erstellt werden konnte!
+Wählen Sie die zu extrahierenden Dateien!
+Extraktion wurde vom Benutzer abgebrochen!
+Extraktion erfolgreich!\nGröße vor Kompression:\t%s\nGröße nach Kompression:\t%s\nVerhältnis:\t\t\t%.1f%%\nVerstrichene Zeit::\t\t
+Bitte wählen Sie das in das zu extrahierende Verzeichnis!
+Falsches Passwort!
+Gewählte Datei ist kein übliches KGB Archiv!
+Konnte Priorität nicht ändern!
+Dekompression
+bereite vor...
+erstelle Verzeichnisse...
+überspringe...
+Alle unterstützden Archive|*.kgb; *.kge; *.exe; *.zip;|KGB Archive (*.kgb, *.kge, *.exe)|*.kgb; *.kge; *.exe|ZIP Archive (*.zip)|*.zip|
+Komprimiert: %s\tOriginal: %s\tVerhältnis: %.1f%%
+Zum Fortfahren ist nicht genügend freier Arbeitsspeicher verfügbar!
+Möchten Sie die existierende Datei %.260s überschreiben
+Sind Sie sicher, dass Sie die Dekompression abbrechen wollen?
+Größe: %s
+Letzte Änderung: %s
+
+IDD_ARCH_CONF_DIALOG
+Oberflächenintegration
+KGB Archive dem KGB Archiver zuordnen
+ZIP Archive dem KGB Archiver zuordnen
+Erzeuge Explorer-Kontextmenü
+Sprache
+Deutsch
+Weiteres
+Beim Start auf Updates überprüfen
+Nun überprüfen
+Zeige Statistik nach Kompression/Dekompression
+Über
+Abbrechen
+OK
+
+IDD_MAIN
+Bitte wählen Sie ihr Vorhaben:
+Dateien komprimieren
+Archiv dekomprimieren
+Optionen anpassen
+Top 10 Spender
+Über
+Abbrechen
+Weiter >
+
+STRING TABLE
+Über KGB Archiver
+Zu KGB komprimieren
+Konnte keine Verbindung zum KGB Server aufbauen!
+Eine neue Version von KGB Archiver ist verfügbar! Möchten Sie diese herunterladen?
+Es wurden keine Updates gefunden
+Hierher extrahieren

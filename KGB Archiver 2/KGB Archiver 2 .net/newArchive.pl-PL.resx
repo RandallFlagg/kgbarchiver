@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="dSave.Filter" xml:space="preserve">
+    <value>Archiwa KGB (*.kgb)|*.kgb|Archiwa ZIP (*.zip)|*.zip|Wszystkie pliki (*.*)|*.*</value>
+  </data>
+  <data name="bCancel.Text" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="bNext.Text" xml:space="preserve">
+    <value>Dalej &gt;</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lMemInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="lMemInfo.Text" xml:space="preserve">
+    <value>Użycie pamięci:</value>
+  </data>
+  <data name="lMem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 261</value>
+  </data>
+  <data name="cFullpath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 17</value>
+  </data>
+  <data name="cFullpath.Text" xml:space="preserve">
+    <value>Zachowaj pełne ścieżki</value>
+  </data>
+  <data name="gOther.Text" xml:space="preserve">
+    <value>Inne opcje</value>
+  </data>
+  <data name="cSFX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 17</value>
+  </data>
+  <data name="cSFX.Text" xml:space="preserve">
+    <value>Utwórz samo-rozpakowujące się archiwum</value>
+  </data>
+  <data name="gSFX.Text" xml:space="preserve">
+    <value>Moduł SFX</value>
+  </data>
+  <data name="cShow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 23</value>
+  </data>
+  <data name="cShow.Text" xml:space="preserve">
+    <value>Pokaż</value>
+  </data>
+  <data name="gPassword.Text" xml:space="preserve">
+    <value>Hasło</value>
+  </data>
+  <data name="cLevel.Items" xml:space="preserve">
+    <value>Minimalny</value>
+  </data>
+  <data name="cLevel.Items1" xml:space="preserve">
+    <value>Bardzo słaby</value>
+  </data>
+  <data name="cLevel.Items2" xml:space="preserve">
+    <value>Słaby</value>
+  </data>
+  <data name="cLevel.Items3" xml:space="preserve">
+    <value>Normalny</value>
+  </data>
+  <data name="cLevel.Items4" xml:space="preserve">
+    <value>Średni</value>
+  </data>
+  <data name="cLevel.Items5" xml:space="preserve">
+    <value>Powyżej średniego</value>
+  </data>
+  <data name="cLevel.Items6" xml:space="preserve">
+    <value>Dobry</value>
+  </data>
+  <data name="cLevel.Items7" xml:space="preserve">
+    <value>Bardzo dobry</value>
+  </data>
+  <data name="cLevel.Items8" xml:space="preserve">
+    <value>Ekstremalny</value>
+  </data>
+  <data name="cLevel.Items9" xml:space="preserve">
+    <value>Maksymalny</value>
+  </data>
+  <data name="gLevel.Text" xml:space="preserve">
+    <value>Poziom kompresji</value>
+  </data>
+  <data name="gMethod.Text" xml:space="preserve">
+    <value>Algorytm kompresji</value>
+  </data>
+  <data name="gFormat.Text" xml:space="preserve">
+    <value>Format archiwum</value>
+  </data>
+  <data name="gDestination.Text" xml:space="preserve">
+    <value>Nazwa archiwum</value>
+  </data>
+  <data name="tGeneral.Text" xml:space="preserve">
+    <value>Główne opcje</value>
+  </data>
+  <data name="bDelete.Text" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="bAddFile.Text" xml:space="preserve">
+    <value>Dodaj plik</value>
+  </data>
+  <data name="bAddDir.Text" xml:space="preserve">
+    <value>Dodaj katalog</value>
+  </data>
+  <data name="cFilename.Text" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="tFileList.Text" xml:space="preserve">
+    <value>Pliki do kompresji</value>
+  </data>
+  <data name="tSFXRunArg.ToolTip" xml:space="preserve">
+    <value>%a - ścieżka do archiwum
+%c - obecny katalog
+%p - katalog Program Files
+%w - katalog Windows
+%s - katalog System32
+%t - katalog Temp
+%% - procent</value>
+  </data>
+  <data name="lSFXRunArguments.Text" xml:space="preserve">
+    <value>Argumenty:</value>
+  </data>
+  <data name="tSFXRunFileName.ToolTip" xml:space="preserve">
+    <value>%a - ścieżka do archiwum
+%c - obecny katalog
+%p - katalog Program Files
+%w - katalog Windows
+%s - katalog System32
+%t - katalog Temp
+%% - procent
+
+Przykład: %p\Internet Explorer\iexplore.exe</value>
+  </data>
+  <data name="lSFXRunFileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
+  </data>
+  <data name="lSFXRunFileName.Text" xml:space="preserve">
+    <value>Nazwa pliku:</value>
+  </data>
+  <data name="gSFXCommand.Text" xml:space="preserve">
+    <value>Urochom po rozpakowaniu</value>
+  </data>
+  <data name="tSFXDestination.ToolTip" xml:space="preserve">
+    <value>%a - ścieżka do archiwum
+%c - obecny katalog
+%p - katalog Program Files
+%w - katalog Windows
+%s - katalog System32
+%t - katalog Temp
+%% - procent
+
+Przykład: %t</value>
+  </data>
+  <data name="gSFXDestination.Text" xml:space="preserve">
+    <value>Domyślny katalog do rozpakowania (zostaw puste jeżeli aktualny)</value>
+  </data>
+  <data name="lSFXMsgType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="lSFXMsgType.Text" xml:space="preserve">
+    <value>Typ:</value>
+  </data>
+  <data name="gSFXMsg.Text" xml:space="preserve">
+    <value>Wiadomość do pokazania przed rozpakowywaniem (zostaw puste jeżeli nieużywane)</value>
+  </data>
+  <data name="tSFX.Text" xml:space="preserve">
+    <value>Opcje SFX</value>
+  </data>
+  <data name="dAddDir.Description" xml:space="preserve">
+    <value>Zaznacz katalog do dodania</value>
+  </data>
+  <data name="dAddFile.Filter" xml:space="preserve">
+    <value>Wszystkie pliki (*.*)|*.*</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Nowe archiwum</value>
+  </data>
+</root>
